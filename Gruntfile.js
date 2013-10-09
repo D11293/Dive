@@ -199,6 +199,30 @@ module.exports = function (grunt) {
         }
       }
     },
+    compress: {
+      compiled: {
+        options: {
+          archive: '<%= yeoman.dist %>/DiVE-boilerplate.zip'
+        },
+        files: [
+          {expand: true, cwd: '<%= yeoman.app %>/_boilerplate/', src: ['**'], dest: 'DiVE/', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.dist %>/css/', src: ['dive.min.css', 'dive.css'], dest: 'DiVE/css/', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.app %>/js/', src: ['dive.min.js', 'dive.js'], dest: 'DiVE/js/', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.app %>/fonts/', src: ['**'], dest: 'DiVE/fonts/', filter: 'isFile'}
+
+        ]
+
+      },
+      source: {
+        options: {
+          archive: '<%= yeoman.dist %>/DiVE-source.zip'
+        },
+        files: [
+          {expand: true, cwd: '<%= yeoman.dist %>', src: ['**'], dest: 'DiVE'}
+        ]
+      }
+
+    },
     concat: {
       dist: {
         files: {
@@ -206,15 +230,16 @@ module.exports = function (grunt) {
             '<%= yeoman.app %>/bower_components/jquery/jquery.min.js',
             '<%= yeoman.app %>/js/plugins.js',
             '<%= yeoman.app %>/js/vendor/google-code-prettify/prettify.js',
-            '<%= yeoman.app %>/js/vendor/imagesloaded.js'
+            '<%= yeoman.app %>/js/vendor/imagesloaded.js',
+            '<%= yeoman.app %>/bower_components/prismjs/prismjs.js',
           ],
 
           '<%= yeoman.dist %>/js/dive.js' : [
             '<%= yeoman.app %>/js/vendor/ion.rangeSlider.js',
-            '<%= yeoman.app %>/js/dive.js',
+            '<%= yeoman.app %>/js/dive.js'
           ],
           '<%= yeoman.dist %>/js/main.js' : [
-            '<%= yeoman.app %>/js/main.js',
+            '<%= yeoman.app %>/js/main.js'
           ]
         }
       }
@@ -393,7 +418,7 @@ module.exports = function (grunt) {
         'copy:styles',
         'imagemin',
        // 'svgmin',
-        'htmlmin:dist'
+        //'htmlmin:dist'
       ]
     },
     assemble: {
@@ -477,7 +502,26 @@ module.exports = function (grunt) {
     'bless:dist',
     //'rev',
     //'usemin',
-    'htmlmin:deploy'
+    'htmlmin:deploy',
+    'compress'
+  ]);
+
+    grunt.registerTask('devbuild', [
+    'clean:dist',
+    'assemble',
+    //'useminPrepare',
+    'concurrent:dist',
+    'autoprefixer',
+    'concat',
+    'cssmin',
+    'uglify',
+    'modernizr',
+    'copy:dist',
+    //'bless:dist',
+    //'rev',
+    //'usemin',
+    //'htmlmin:deploy',
+    'compress'
   ]);
 
   grunt.registerTask('default', [

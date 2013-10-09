@@ -73,3 +73,7 @@
 
 // Utility classes
 @import 'modules/utilities'; // Has to be last to override when necessary
+
+// Vendor styles
+  @import 'modules/vendor/prism';
+
