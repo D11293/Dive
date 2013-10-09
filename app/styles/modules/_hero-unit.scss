@@ -1,0 +1,41 @@
+//
+// Hero unit
+// --------------------------------------------------
+
+
+.hero-unit {
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: -20px;
+  font-size: 16px;
+  font-weight: 200;
+  text-align: center;
+  line-height: $baseLineHeight * 1.25;
+  color: $heroUnitLeadColor;
+  background-color: $heroUnitBackground;
+  h1 {
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 1;
+    color: $heroUnitHeadingColor;
+    letter-spacing: -1px;
+  }
+  li {
+    line-height: $baseLineHeight * 1.5; // Reset since we specify in type.less
+  }
+  @media (min-width: $bigBreak) {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-unit {
+    text-align: left;
+    padding: 30px 60px;
+    font-size: 18px;
+    line-height: $baseLineHeight * 1.5;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}

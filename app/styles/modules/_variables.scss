@@ -1,0 +1,389 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays GRAYS = Monochrome GREY = Not Monochrome
+// -------------------------
+$black:                 #000 !default;
+$grayDarker:            #222 !default;
+$grayDark:              #333 !default;
+$gray:                  #555 !default;
+$grayLight:             #999 !default;
+$grayLighter:           #eee !default;
+$white:                 #fff !default;
+
+$yellow:                #ffc40d !default; // Not PMI
+$pink:                  #c3325f !default; // Not PMI
+$purple:                #7a43b6 !default; // Not PMI
+
+// PMI Color Palette
+// -------------------------
+
+// Primary Colors
+$primaryA:              #003DA5 !default; // PMI Blue
+$primaryB:              #00A3E0 !default; // PMI Light Blue
+$primaryC:              #B1B3B4 !default; // PMI Silver
+
+// Secondary Colors
+$secondaryA:            #97BF0D !default; // PMI Light Green
+$secondaryB:            #538928 !default; // PMI Dark Green
+$secondaryC:            #F49D00 !default; // PMI Light Orange
+$secondaryD:            #EB690B !default; // PMI Dark Orange
+$secondaryE:            #B80718 !default; // PMI Light Red
+$secondaryF:            #8B0D19 !default; // PMI Dark Red
+$secondaryG:            #707173 !default; // PMI Grey
+
+// Tertiary Colors
+$tertiaryA:             #3870B2 !default; // Les Blues
+$tertiaryB:             #7AB2DC !default;
+$tertiaryC:             #DEE3EF !default;
+$tertiaryD:             #76AD1C !default; // Les Greens
+$tertiaryE:             #ADCB57 !default;
+$tertiaryF:             #E3E8A3 !default;
+$tertiaryG:             #F08927 !default; // Les Oranges
+$tertiaryH:             #F9B962 !default;
+$tertiaryI:             #FDDDAD !default;
+$tertiaryJ:             #E95C55 !default; // Les Reds
+$tertiaryK:             #EF8987 !default;
+$tertiaryL:             #F8CDCF !default;
+$tertiaryM:             #98999B !default; // Les Silvers
+$tertiaryN:             #CDCFD0 !default;
+$tertiaryO:             #E7E7E8 !default;
+
+// Semantic Colors
+$blue:                  $primaryA !default;
+$blueLight:             $primaryB !default;
+$silver:                $primaryC;
+
+$greenLight:            $secondaryA !default;
+$greenDark:             $secondaryB !default;
+$orangeLight:           $secondaryC !default;
+$orangeDark:            $secondaryD !default;
+$redLight:              $secondaryE !default;
+$redDark:               $secondaryF !default;
+$grey:                  $secondaryG !default;
+
+// Even more semantics mapping base color name to dark
+$green:                 $greenDark !default;
+$red:                   $redLight !default;
+$orange:                $orangeLight !default;
+
+
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+$screen-xsmall:              480px;
+$screen-phone:               $screen-xsmall;
+
+// Small screen / tablet
+$screen-small:               768px;
+$screen-tablet:              $screen-small;
+
+// Medium screen / desktop
+$screen-medium:              992px;
+$screen-desktop:             $screen-medium;
+
+// Large screen / wide desktop
+$screen-large:               1200px;
+$screen-large-desktop:       $screen-large;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-small-max:           ($screen-medium - 1);
+$screen-tablet-max:          ($screen-desktop - 1);
+$screen-desktop-max:         ($screen-large-desktop - 1);
+
+
+
+// Transition
+// ------------------
+$default-transition-duration: 250ms;
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        $white !default;
+$textColor:             $grayDark !default;
+
+
+// Links
+// -------------------------
+$linkColor:             $blueLight !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        Arial, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$baseFontSize:          14px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$baseLineHeight:        20px !default;
+$altFontFamily:         $serifFontFamily !default;
+
+$headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    normal;    // instead of browser default, bold
+$headingsColor:         inherit; // empty to use BS default, $textColor
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+
+$paddingLarge:          11px 19px; // 44px
+$paddingSmall:          2px 10px;  // 26px
+$paddingMini:           0 6px;   // 22px
+
+$baseBorderRadius:      4px !default;
+$borderRadiusLarge:     4px !default;
+$borderRadiusSmall:     3px !default;
+
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent; // overall background-color
+$tableBackgroundAccent:             rgba($blue, .06); // for striping
+$tableBackgroundHover:              #f5f5f5; // for hover
+$tableBorder:                       $grayLighter - 10; // table and cell border
+
+// Buttons
+// -------------------------
+$btnBackground:                     $blueLight !default;
+$btnBackgroundHighlight:            $blueLight !default;
+$btnBackgroundHover:                lighten($blueLight, 5%) !default;
+$btnBorder:                         #bbb !default;
+
+$btnPrimaryBackground:              $blueLight !default;
+$btnPrimaryBackgroundHover:         lighten($blueLight, 5%) !default;
+$btnPrimaryBackgroundHighlight:     $blueLight !default;
+
+
+$btnSecondaryBackground:            darken($white, 5%) !default;
+$btnSecondaryBackgroundHighlight:   darken($white, 5%) !default;
+$btnSecondaryBackgroundHover:       $white !default;
+
+
+$btnInfoBackground:                 $blue !default;
+$btnInfoBackgroundHover:            lighten($blue, 5%) !default;
+$btnInfoBackgroundHighlight:        $blue !default;
+
+$btnSuccessBackground:              $green !default;
+$btnSuccessBackgroundHover:         lighten($green, 5%) !default;
+$btnSuccessBackgroundHighlight:     $green !default;
+
+$btnWarningBackground:              $orange !default;
+$btnWarningBackgroundHover:         lighten($orange, 5%) !default;
+$btnWarningBackgroundHighlight:     $orange !default;
+
+$btnDangerBackground:               $red !default;
+$btnDangerBackgroundHover:          lighten($red, 5%) !default;
+$btnDangerBackgroundHighlight:      $red !default;
+
+$btnInverseBackground:              $grey !default;
+$btnInverseBackgroundHover:         lighten($grey, 5%) !default;
+$btnInverseBackgroundHighlight:     $grey !default;
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white !default;
+$inputBorder:                   #ccc !default;
+$inputBorderRadius:             0 !default;
+$inputDisabledBackground:       $grayLighter !default;
+$formActionsBackground:         $grayLighter + 10 !default;
+$formActionsBorderColor:        $grayLighter - 20 !default;
+
+$inputHeight:                   $baseLineHeight + 10; // base line-height + 8px vertical padding + 2px top/bottom border
+
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white !default;
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownDividerTop:            #e5e5e5 !default;
+$dropdownDividerBottom:         $white !default;
+
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkColorActive:       $white !default;
+
+$dropdownLinkBackgroundActive:  $linkColor !default;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000 !default;
+$zindexPopover:           1010 !default;
+$zindexImageOverlay:      1029 !default;
+$zindexTooltip:           1030 !default;
+$zindexFixedNavbar:       1030 !default;
+$zindexModalBackdrop:     1040 !default;
+$zindexModal:             1050 !default;
+
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight !default;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter !default;
+
+
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px !default;
+
+
+// Wells
+// -------------------------
+$wellBackground:                  #f5f5f5 !default;
+
+// Draggable Circle Buttons
+// -------------------------
+$dragBtnColor:                 $grayLighter;
+$dragBtnColorHover:            $grayLighter - 10;
+$dragBtnBorder:                $grayLight;
+
+
+// Navbar
+// -------------------------
+$navbarCollapseWidth:             $screen-medium !default;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
+$bigBreak:                        $navbarCollapseWidth + 1;
+
+$navbarHeight:                    40px !default;
+$navbarBackgroundHighlight:       $white !default;
+$navbarBackground:                $white !default;
+$navbarBorder:                    darken($navbarBackground, 12%) !default;
+
+$navbarText:                      $linkColor !default;
+$navbarLinkColor:                 $linkColor !default;
+$navbarLinkColorHover:            $linkColor !default;
+$navbarLinkColorActive:           $white !default;
+$navbarLinkBackgroundHover:       rgba($linkColor, .1) !default;
+$navbarLinkBackgroundActive:      $linkColor !default;
+
+$navbarBrandColor:                $navbarLinkColor !default;
+
+// Inverted navbar
+$navbarInverseBackground:                $linkColor !default;
+$navbarInverseBackgroundHighlight:       $linkColor + 10 !default;
+$navbarInverseBorder:                    $linkColor + 15 !default;
+
+$navbarInverseText:                      $white !default;
+$navbarInverseLinkColor:                 $grayLighter !default;
+$navbarInverseLinkColorHover:            $white !default;
+$navbarInverseLinkColorActive:           $navbarInverseLinkColorHover !default;
+$navbarInverseLinkBackgroundHover:       transparent !default;
+$navbarInverseLinkBackgroundActive:      $navbarInverseBackground !default;
+
+$navbarInverseSearchBackground:          lighten($navbarInverseBackground, 25%) !default;
+$navbarInverseSearchBackgroundFocus:     $white !default;
+$navbarInverseSearchBorder:              $navbarInverseBackground !default;
+$navbarInverseSearchPlaceholderColor:    #ccc !default;
+
+$navbarInverseBrandColor:                $navbarInverseLinkColor !default;
+
+
+// Pagination
+// -------------------------
+$paginationBackground:                #fff !default;
+$paginationBorder:                    #ddd !default;
+$paginationActiveBackground:          #f5f5f5 !default;
+
+
+// Hero unit
+// -------------------------
+$heroUnitBackground:              $grayLighter !default;
+$heroUnitHeadingColor:            $gray !default;
+$heroUnitLeadColor:               $gray !default;
+
+
+// Form states and alerts
+// -------------------------
+$warningText:             $orangeDark !default;
+$warningBackground:       lighten($orange, 45%) !default;
+$warningBorder:           $orangeDark !default;
+
+$errorText:               $red !default;
+$errorBackground:         lighten($red, 55%) !default;
+$errorBorder:             $red !default;
+
+$successText:             $green !default;
+$successBackground:       lighten($green, 55%) !default;
+$successBorder:           $green !default;
+
+$infoText:                $blue !default;
+$infoBackground:          lighten($blueLight, 47%) !default;
+$infoBorder:              $blue !default;
+
+
+// Tooltips and popovers
+// -------------------------
+$tooltipColor:            #fff !default;
+$tooltipBackground:       #000 !default;
+$tooltipArrowWidth:       5px !default;
+$tooltipArrowColor:       $tooltipBackground !default;
+
+$popoverBackground:       #fff !default;
+$popoverArrowWidth:       10px !default;
+$popoverArrowColor:       #fff !default;
+$popoverTitleBackground:  $white !default;
+
+// Special enhancement for popovers
+$popoverArrowOuterWidth:  $popoverArrowWidth + 1 !default;
+$popoverArrowOuterColor:  rgba(0,0,0,.25) !default;
+
+
+
+// GRID
+// --------------------------------------------------
+
+
+// Number of columns in the grid system
+$grid-columns:               12 !default;
+
+// Padding, to be divided by two and applied to the left and right of all columns
+$grid-gutter-width:           30px !default;
+
+// Point at which the navbar stops collapsing
+$grid-float-breakpoint:       768px !default;
+
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+$container-tablet:          728px !default;
+
+// Medium screen / desktop
+$container-desktop:         940px !default;
+
+// Large screen / wide desktop
+$container-large-desktop:   1170px !default;
+
+
+

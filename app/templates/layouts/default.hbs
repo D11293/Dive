@@ -1,0 +1,116 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {{#if page.title }}
+      <title>{{ page.title }}</title>
+    {{else}}
+      <title>DiVE Library</title>
+    {{/if}}
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="{{ page.base_url }}styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body data-spy="scroll" data-target="#dive-side-nav" data-offset="-250">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="components/es5-shim/es5-shim.js"></script>
+      <script src="components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div class="ie8-warning">
+      <div class="container">
+        <h1>Sorry. the DiVE Library is not compatible with Internet Explorer 8.</h1>
+        <p>Please visit this site from a modern browser such as IE10, Chrome, Safari or Firefox.  You can also download the DiVE Guidelines PDF:</p>
+        <a href="#" class="btn btn-primary btn-large">Download DiVE Guidelines PDF</a> or <a href="http://preview.waxlab.be/pmi-dive-demo/index.php" class="btn btn-large btn-secondary">Visit the classic components library</a>
+      </div>
+    </div>
+
+    <!--
+    <div class="hero-unit dive-docs-super-hero-unit">
+      <div class="container">
+        <img src="{{ page.base_url }}img/DiVE.svg" alt="DiVE Logo">
+        <div class="dive-docs-tagline">
+          <p><strong>Digital Visual Experiences</strong></p>
+          <p>for <strong>PMI Applications</strong></p>
+        </div>
+      </div>
+    </div>
+
+     -->
+     <div class="page-ribbon-wrapper right">
+       <div class="page-ribbon">
+          <span>IN BETA</span>
+       </div>
+     </div>
+
+    <div class="navbar navbar-fixed-top dive-docs-navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{ page.base_url }}">DiVE Library <span class="beta-block">BETA</span></a>
+
+
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <div class="nav-collapse collapse">
+            {{> navigation }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{> body }}
+
+
+    <footer class="dive-docs-footer">
+      <div class="container">
+
+        <hr>
+        <div class="row">
+          <div class="col-sm-5 col-md-7 col-lg-8">
+            <img src="{{ page.base_url }}img/pmi-logo.png" class="footer-logo" alt="PMI">
+          </div>
+
+          <div class="col-sm-7 col-md-5 col-lg-4">
+            <p>Copyright Philip Morris International Management SA, all rights reserved</p>
+            <ul class="unstyled inline">
+              <li><a href="{{ page.base_url }}changelog/">Changelog</a></li>
+              <li><a href="{{ page.base_url }}license/">License</a></li>
+            </ul>
+          </div>
+
+        </div> <!--  /row  -->
+      </div> <!--  /container  -->
+    </footer>
+
+    <!-- JS scripts go here -->
+
+    {{> scripts }}
+    {{> google-analytics }}
+
+  </body>
+</html>

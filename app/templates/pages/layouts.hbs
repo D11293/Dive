@@ -1,0 +1,45 @@
+---
+base_url: "../"
+nav: Layouts
+title: DiVE Library - Layouts
+---
+
+<div class="hero-unit dive-docs-hero-unit">
+  <div class="container">
+    <h1>Layouts</h1>
+    <p>Concepts defining the layout structures.</p>
+  </div>
+</div>
+
+<div class="container main-container">
+
+  <a href="#top" id="back-to-top" class="icon icon-back-to-top back-to-top is-hidden"></a>
+
+  <div class="row">
+
+    <!-- Page Navigation -->
+    <div id="dive-side-nav" class="col-sm-4 col-md-3 dive-docs-sidebar">
+
+      <ul class="nav nav-list dive-docs-sidenav affix-top" data-spy="affix" data-offset-top="197">
+
+        <li><a href="#grid"><i class="icon-chevron-right"></i> DiVE Grid</a></li>
+        <li><a href="#masonry"><i class="icon-chevron-right"></i> Masonry</a></li>
+
+
+      </ul>
+      &nbsp;
+    </div>
+
+    <!-- Main Content -->
+    <div class="col-sm-8 col-md-9">
+
+      {{> grid }}
+      {{> masonry }}
+
+
+
+    </div>
+
+  </div>
+
+</div>

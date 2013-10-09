@@ -1,0 +1,296 @@
+  <!-- Grid system
+  ================================================== -->
+  <section id="grid">
+    <div class="page-header">
+      <h1 id="grid">Grid system</h1>
+    </div>
+    <p class="lead">DiVE Library includes a responsive, mobile-first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.</p>
+
+    <h3 id="grid-options">Grid options</h3>
+    <p>See how aspects of the DiVE Library grid system work across multiple devices with a handy table.</p>
+    <div class="bs-table-scrollable">
+      <table class="table table-bordered table-striped bs-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>
+              Extra small devices
+              <small>Phones (&lt;768px)</small>
+            </th>
+            <th>
+              Small devices
+              <small>Tablets (&gt;768px)</small>
+            </th>
+            <th>
+              Medium devices
+              <small>Desktops (&gt;992px)</small>
+            </th>
+            <th>
+              Large devices
+              <small>Desktops (&gt;1200px)</small>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Grid behavior</th>
+            <td>Horizontal at all times</td>
+            <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+          </tr>
+          <tr>
+            <th>Max container width</th>
+            <td>None (auto)</td>
+            <td>728px</td>
+            <td>940px</td>
+            <td>1170px</td>
+          </tr>
+          <tr>
+            <th>Class prefix</th>
+            <td><code>.col-</code></td>
+            <td><code>.col-sm-</code></td>
+            <td colspan="2"><code>.col-lg-</code></td>
+          </tr>
+          <tr>
+            <th># of columns</th>
+            <td colspan="4">12</td>
+          </tr>
+          <tr>
+            <th>Max column width</th>
+            <td>Auto</td>
+            <td>~60px</td>
+            <td>~78px</td>
+            <td>~98px</td>
+          </tr>
+          <tr>
+            <th>Gutter width</th>
+            <td colspan="4">30px (15px on each side of a column)</td>
+          </tr>
+          <tr>
+            <th>Nestable</th>
+            <td colspan="4">Yes</td>
+          </tr>
+          <tr>
+            <th>Offsets</th>
+            <td colspan="1" class="text-muted">N/A</td>
+            <td colspan="3">Yes</td>
+          </tr>
+          <tr>
+            <th>Column ordering</th>
+            <td class="text-muted">N/A</td>
+            <td colspan="3">Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="grid-example-basic">Example: Stacked-to-horizontal</h3>
+    <p>Using a single set of grid classes, you can create a basic grid system that starts out stacked on mobile and tablet devices before becoming horizontal on desktop devices.</p>
+    <div class="dive-docs-grid">
+      <div class="row show-grid">
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+        <div class="col-lg-1">1</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-lg-8">8</div>
+        <div class="col-lg-4">4</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-lg-4">4</div>
+        <div class="col-lg-4">4</div>
+        <div class="col-lg-4">4</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-lg-6">6</div>
+        <div class="col-lg-6">6</div>
+      </div>
+    </div>
+{% highlight html %}
+<div class="row">
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+  <div class="col-lg-1">1</div>
+</div>
+<div class="row">
+  <div class="col-lg-8">8</div>
+  <div class="col-lg-4">4</div>
+</div>
+<div class="row">
+  <div class="col-lg-4">4</div>
+  <div class="col-lg-4">4</div>
+  <div class="col-lg-4">4</div>
+</div>
+<div class="row">
+  <div class="col-lg-6">6</div>
+  <div class="col-lg-6">6</div>
+</div>
+{% endhighlight %}
+
+    <h3 id="grid-example-mixed">Example: Combining mobile with desktop</h3>
+    <p>Don't want your columns to simply stack in smaller devices? Use the small device grid system by adding <code>.col-*</code> classes to the existing <code>.col-lg-*</code> ones. See the example below for a better idea of how it all works.</p>
+    <div class="dive-docs-grid">
+      <div class="row show-grid">
+        <div class="col-12 col-lg-8">8</div>
+        <div class="col-6 col-lg-4">4</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-6 col-lg-4">4</div>
+        <div class="col-6 col-lg-4">4</div>
+        <div class="col-6 col-lg-4">4</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-6 col-lg-6">6</div>
+        <div class="col-6 col-lg-6">6</div>
+      </div>
+    </div>
+{% highlight html %}
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-12 col-lg-8">8</div>
+  <div class="col-6 col-lg-4">4</div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+  <div class="col-6 col-lg-4">4</div>
+  <div class="col-6 col-lg-4">4</div>
+  <div class="col-6 col-lg-4">4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+  <div class="col-6 col-lg-6">6</div>
+  <div class="col-6 col-lg-6">6</div>
+</div>
+{% endhighlight %}
+
+    <h3 id="grid-example-mixed-complete">Example: Mobile, tablet, and desktop</h3>
+    <p>Build on the previous example by creating even more dynamic and powerful layouts with tablet <code>.col-sm-*</code> classes.</p>
+    <div class="dive-docs-grid">
+      <div class="row show-grid">
+        <div class="col-12 col-sm-8 col-lg-8">.col-12 .col-sm-8 .col-lg-8</div>
+        <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+        <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+        <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+      </div>
+      <div class="row show-grid">
+        <div class="col-6 col-sm-6 col-lg-6">.col-6 .col-sm-6 .col-lg-6</div>
+        <div class="col-6 col-sm-6 col-lg-6">.col-6 .col-sm-6 .col-lg-6</div>
+      </div>
+    </div>
+{% highlight html %}
+<div class="row">
+  <div class="col-12 col-sm-8 col-lg-8">.col-12 .col-sm-8 .col-lg-8</div>
+  <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+</div>
+<div class="row">
+  <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+  <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+  <div class="col-6 col-sm-4 col-lg-4">.col-6 .col-sm-4 .col-lg-4</div>
+</div>
+<div class="row">
+  <div class="col-6 col-sm-6 col-lg-6">.col-6 .col-sm-6 .col-lg-6</div>
+  <div class="col-6 col-sm-6 col-lg-6">.col-6 .col-sm-6 .col-lg-6</div>
+</div>
+{% endhighlight %}
+
+
+    <h3 id="grid-offsetting">Offsetting columns</h3>
+    <p>Move columns to the right using <code>.col-lg-offset-*</code> classes. These classes increase the left margin of a column by <code>*</code> columns. For example, <code>.col-lg-offset-4</code> moves <code>.col-lg-4</code> over four columns.</p>
+    <div class="dive-docs-grid">
+      <div class="row show-grid">
+        <div class="col-lg-4">4</div>
+        <div class="col-lg-4 col-lg-offset-4">4 offset 4</div>
+      </div><!-- /row -->
+      <div class="row show-grid">
+        <div class="col-lg-3 col-lg-offset-3">3 offset 3</div>
+        <div class="col-lg-3 col-lg-offset-3">3 offset 3</div>
+      </div><!-- /row -->
+      <div class="row show-grid">
+        <div class="col-lg-6 col-lg-offset-3">6 offset 3</div>
+      </div><!-- /row -->
+    </div>
+{% highlight html %}
+<div class="row">
+  <div class="col-lg-4">...</div>
+  <div class="col-lg-4 col-lg-offset-4">...</div>
+</div>
+<div class="row">
+  <div class="col-lg-3 col-lg-offset-3">3 offset 3</div>
+  <div class="col-lg-3 col-lg-offset-3">3 offset 3</div>
+</div>
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">...</div>
+</div>
+{% endhighlight %}
+
+
+    <h3 id="grid-nesting">Nesting columns</h3>
+    <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-lg-*</code> columns within an existing <code>.col-lg-*</code> column. Nested rows should include a set of columns that add up to 12.</p>
+    <div class="row show-grid">
+      <div class="col-lg-9">
+        Level 1: 9 columns
+        <div class="row show-grid">
+          <div class="col-lg-6">
+            Level 2: 6 columns
+          </div>
+          <div class="col-lg-6">
+            Level 2: 6 columns
+          </div>
+        </div>
+      </div>
+    </div>
+{% highlight html %}
+<div class="row">
+  <div class="col-lg-9">
+    Level 1: 9 columns
+    <div class="row">
+      <div class="col-lg-6">
+        Level 2: 6 columns
+      </div>
+      <div class="col-lg-6">
+        Level 2: 6 columns
+      </div>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+    <h3 id="grid-column-ordering">Column ordering</h3>
+    <p>Easily change the order of our built-in grid columns with <code>.col-lg-push-*</code> and <code>.col-lg-pull-*</code> modifier classes.</p>
+    <div class="row show-grid">
+      <div class="col-lg-9 col-lg-push-3">9</div>
+      <div class="col-lg-3 col-lg-pull-9">3</div>
+    </div>
+
+{% highlight html %}
+<div class="row">
+  <div class="col-lg-9 col-lg-push-3">9</div>
+  <div class="col-lg-3 col-lg-pull-9">3</div>
+</div>
+{% endhighlight %}
+
+
+
+  </section>

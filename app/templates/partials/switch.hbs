@@ -1,0 +1,189 @@
+<!-- Switch Buttons AI_004
+================================================== -->
+<section id="switch">
+
+  <div class="page-header">
+    <h1>Toggle Switch</h1>
+  </div>
+
+  <h2>Switch Buttons</h2>
+
+  <p>Take a regular <code>&lt;ul&gt;</code> of links and add <code>.nav-tabs</code>:</p>
+
+
+  <div class="dive-docs-example">
+    <input type="checkbox" id="switch-main" class="switch-checkbox" />
+    <label class="switch" for="switch-main">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>ON</span></div>
+        <div class="switch-content switch-content--right"><span>OFF</span></div>
+      </div>
+    </label>
+  </div>
+<pre class="prettyprint linenums">
+&lt;input type="checkbox" id="1" class="switch-checkbox" /&gt;
+&lt;label class="switch" for="1"&gt;
+  &lt;div class="switch-slider"&gt;
+    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;ON&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;OFF&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+</pre>
+
+  <h3>BEWARE!</h3>
+  <p><strong>IMPORTANT:</strong> the <code>id=""</code> of the <code>&lt;input&gt;</code>  must match the <code>for=""</code> attribute of the <code>&lt;label&gt;</code>. So if you have multiple Switch buttons on a single page, each must have a unique <code>id</code> and <code>for</code> attribute.</p>
+
+  <p><strong>Also:</strong> the markup has to be structured exactly how it is structured in the example.  The <code>&lt;input&gt;</code> must immediately precede the <code>&lt;label&gt;</code> otherwise it will not work.</p>
+
+  <h2>Switch Sizes</h2>
+  <p>Want to say more than just "ON" or "OFF"? Well, you'll need to use a larger switch.  Don't worry, we've got options for you...</p>
+
+  <div class="dive-docs-example">
+
+    <input type="checkbox" id="switch-mini" class="switch-checkbox" />
+    <label class="switch switch-mini" for="switch-mini">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>|</span></div>
+        <div class="switch-content switch-content--right"><span>O</span></div>
+      </div>
+    </label>
+
+    <input type="checkbox" id="switch-sm" class="switch-checkbox" />
+    <label class="switch switch-sm" for="switch-sm">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>ON</span></div>
+        <div class="switch-content switch-content--right"><span>OFF</span></div>
+      </div>
+    </label>
+
+    <input type="checkbox" id="switch-md" class="switch-checkbox" />
+    <label class="switch switch-md" for="switch-md">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>Active</span></div>
+        <div class="switch-content switch-content--right"><span>Inactive</span></div>
+      </div>
+    </label>
+
+    <input type="checkbox" id="switch-lg" class="switch-checkbox" />
+    <label class="switch switch-lg" for="switch-lg">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>CHECKED</span></div>
+        <div class="switch-content switch-content--right"><span>UNCHECKED</span></div>
+      </div>
+    </label>
+
+  </div>
+<pre class="prettyprint linenums">
+&lt;input type="checkbox" id="switch-mini" class="switch-checkbox" /&gt;
+&lt;label class="switch switch-mini" for="switch-mini"&gt;
+  &lt;div class="switch-slider"&gt;
+    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;|&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;O&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+
+&lt;input type="checkbox" id="switch-sm" class="switch-checkbox" /&gt;
+&lt;label class="switch switch-sm" for="switch-sm"&gt;
+  &lt;div class="switch-slider"&gt;
+    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;ON&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;OFF&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+
+&lt;input type="checkbox" id="switch-md" class="switch-checkbox" /&gt;
+&lt;label class="switch switch-md" for="switch-md"&gt;
+  &lt;div class="switch-slider"&gt;
+    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;Active&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;Inactive&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+
+&lt;input type="checkbox" id="switch-lg" class="switch-checkbox" /&gt;
+&lt;label class="switch switch-lg" for="switch-lg"&gt;
+  &lt;div class="switch-slider"&gt;
+    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;CHECKED&lt;/span&gt;&lt;/div&gt;
+    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;UNCHECKED&lt;/span&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+</pre>
+
+  <h2>Switch Colors</h2>
+
+  <p>Want some color options? No problem.</p>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Switch</th>
+        <th>class=""</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="checkbox" id="switch-default-color" class="switch-checkbox" checked />
+          <label class="switch" for="switch-default-color">
+            <div class="switch-slider">
+              <div class="switch-button">&nbsp;</div>
+              <div class="switch-content switch-content--left"><span>On</span></div>
+              <div class="switch-content switch-content--right"><span>Off</span></div>
+            </div>
+          </label>
+        </td>
+        <td><code>switch</code></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="switch-green-color" class="switch-checkbox" checked />
+          <label class="switch switch-green" for="switch-green-color">
+            <div class="switch-slider">
+              <div class="switch-button">&nbsp;</div>
+              <div class="switch-content switch-content--left"><span>On</span></div>
+              <div class="switch-content switch-content--right"><span>Off</span></div>
+            </div>
+          </label>
+        </td>
+        <td><code>switch switch-green</code></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="switch-orange-color" class="switch-checkbox" checked />
+          <label class="switch switch-orange" for="switch-orange-color">
+            <div class="switch-slider">
+              <div class="switch-button">&nbsp;</div>
+              <div class="switch-content switch-content--left"><span>On</span></div>
+              <div class="switch-content switch-content--right"><span>Off</span></div>
+            </div>
+          </label>
+        </td>
+        <td><code>switch switch-orange</code></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox" id="switch-red-color" class="switch-checkbox" checked />
+          <label class="switch switch-red" for="switch-red-color">
+            <div class="switch-slider">
+              <div class="switch-button">&nbsp;</div>
+              <div class="switch-content switch-content--left"><span>On</span></div>
+              <div class="switch-content switch-content--right"><span>Off</span></div>
+            </div>
+          </label>
+        </td>
+        <td><code>switch switch-red</code></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</section>
