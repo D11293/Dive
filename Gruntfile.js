@@ -392,7 +392,7 @@ module.exports = function (grunt) {
         'compass',
         'copy:styles',
         'imagemin',
-        'svgmin',
+       // 'svgmin',
         'htmlmin:dist'
       ]
     },
@@ -475,7 +475,7 @@ module.exports = function (grunt) {
     'modernizr',
     'copy:dist',
     'bless:dist',
-    'rev',
+    //'rev',
     //'usemin',
     'htmlmin:deploy'
   ]);
