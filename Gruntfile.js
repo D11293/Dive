@@ -396,7 +396,6 @@ module.exports = function (grunt) {
         flatten: true,
         layout: '<%= yeoman.app %>/templates/layouts/default.hbs',
         partials: [
-          '<%= yeoman.app %>/templates/partials/*.hbs',
           '<%= yeoman.app %>/templates/partials/**/*.hbs',
         ],
       },
@@ -409,6 +408,18 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.dist %>/': ['<%= yeoman.app %>/templates/pages/*.hbs', '!<%= yeoman.app %>/templates/pages/index.hbs']
+        }
+      },
+      examples: {
+        options: {
+           layout: '<%= yeoman.app %>/templates/layouts/example.hbs',
+          plugins: ['permalinks'],
+          permalinks: {
+            structure: ':basename/index.html'
+          }
+        },
+        files: {
+          '<%= yeoman.dist %>/examples/': ['<%= yeoman.app %>/templates/pages/examples/*.hbs']
         }
       },
       index: {

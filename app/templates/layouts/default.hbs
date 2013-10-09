@@ -4,26 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    {{#if page.title }}
-      <title>{{ page.title }}</title>
-    {{else}}
-      <title>DiVE Library</title>
-    {{/if}}
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="{{ page.base_url }}styles/main.css">
-    <!-- endbuild -->
-
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+     {{> head }}
   </head>
   <body data-spy="scroll" data-target="#dive-side-nav" data-offset="-250">
     <!--[if lt IE 7]>
@@ -109,8 +90,7 @@
 
     <!-- JS scripts go here -->
 
-    {{> scripts }}
-    {{> google-analytics }}
+    {{> scripts }} 
 
   </body>
 </html>
