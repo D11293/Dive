@@ -270,9 +270,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
+          cwd: '<%= yeoman.app %>/img',
           src: '{,*/}*.{png,jpg,jpeg}',
-          dest: '<%= yeoman.dist %>/images'
+          dest: '<%= yeoman.dist %>/img'
         }]
       }
     },
@@ -280,13 +280,18 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
+          cwd: '<%= yeoman.app %>/img',
           src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/images'
+          dest: '<%= yeoman.dist %>/img'
         }]
       }
     },
     cssmin: {
+      combine: {
+         files: {
+           '<%= yeoman.dist %>/css/main.css': ['.tmp/css/{,*/}*.css']
+         }
+       }
       // This task is pre-configured if you do not wish to use Usemin
       // blocks for your CSS. By default, the Usemin block from your
       // `index.html` will take care of minification, e.g.
@@ -461,7 +466,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'assemble',
-    'useminPrepare',
+    //'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
     'concat',
@@ -471,7 +476,7 @@ module.exports = function (grunt) {
     'copy:dist',
     'bless:dist',
     'rev',
-    'usemin',
+    //'usemin',
     'htmlmin:deploy'
   ]);
 
