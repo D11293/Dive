@@ -412,7 +412,7 @@ module.exports = function (grunt) {
       },
       examples: {
         options: {
-           layout: '<%= yeoman.app %>/templates/layouts/example.hbs',
+          layout: '<%= yeoman.app %>/templates/layouts/example.hbs',
           plugins: ['permalinks'],
           permalinks: {
             structure: ':basename/index.html'
