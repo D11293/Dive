@@ -231,7 +231,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/js/plugins.js' : [
             '<%= yeoman.app %>/bower_components/jquery/jquery.min.js',
             '<%= yeoman.app %>/js/plugins.js',
-            '<%= yeoman.app %>/js/vendor/google-code-prettify/prettify.js',
+           '<%= yeoman.app %>/js/vendor/google-code-prettify/prettify.js',
             '<%= yeoman.app %>/js/vendor/imagesloaded.js',
            // '<%= yeoman.app %>/bower_components/prismjs/prismjs.js',
            // '<%= yeoman.app %>/bower_components/x-tag-code-prism/src/code-prism.js',
@@ -435,7 +435,7 @@ module.exports = function (grunt) {
         marked:{ 
         //  highlight: function (code, lang) {
         //return hljs.highlightAuto(lang, code).value;
-        //},
+        //high},
         gfm: true,
         
           tables: true,
@@ -444,7 +444,7 @@ module.exports = function (grunt) {
           sanitize: false,
           smartLists: true,
           smartypants: false,
-          langPrefix: 'language-'
+          langPrefix: 'prettyprint '
     }
       },
    
