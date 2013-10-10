@@ -424,6 +424,7 @@ module.exports = function (grunt) {
         //'htmlmin:dist'
       ]
     },
+
     assemble: {
       options: {
         flatten: true,
@@ -431,7 +432,22 @@ module.exports = function (grunt) {
         partials: [
           '<%= yeoman.app %>/templates/partials/**/*.hbs',
         ],
+        marked:{ 
+        //  highlight: function (code, lang) {
+        //return hljs.highlightAuto(lang, code).value;
+        //},
+        gfm: true,
+        
+          tables: true,
+          breaks: true,
+          pedantic: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false,
+          langPrefix: 'language-'
+    }
       },
+   
       pages: {
         options: {
           plugins: ['permalinks'],
