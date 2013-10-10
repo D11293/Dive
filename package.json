@@ -32,6 +32,7 @@
     "grunt-bless": "~0.1.1",
     "permalinks": "~0.1.4",
     "grunt-contrib-compress": "~0.5.2"
+  
   },
   "engines": {
     "node": ">=0.8.0"

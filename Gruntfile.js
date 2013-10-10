@@ -199,6 +199,8 @@ module.exports = function (grunt) {
         }
       }
     },
+   
+  
     compress: {
       compiled: {
         options: {
@@ -509,6 +511,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('devbuild', [
     'clean:dist',
+  
     'assemble',
     //'useminPrepare',
     'concurrent:dist',
@@ -523,6 +526,7 @@ module.exports = function (grunt) {
     //'usemin',
     //'htmlmin:deploy',
     'compress'
+    
   ]);
 
   grunt.registerTask('default', [
