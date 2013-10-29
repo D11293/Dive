@@ -50,7 +50,7 @@ module.exports = function(grunt) {
           '{.tmp,<%= yeoman.app %>}/js/{,*/}*.js',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
-        tasks: ['assemble', 'bless:server']
+        tasks: ['assemble']
       }
     },
     connect: {
@@ -143,11 +143,11 @@ module.exports = function(grunt) {
         sassDir: '<%= yeoman.app %>/scss',
         cssDir: '.tmp/css',
         generatedImagesDir: '.tmp/img/generated',
-        imagesDir: '<%= yeoman.app %>/images',
+        imagesDir: '<%= yeoman.app %>/img',
         javascriptsDir: '<%= yeoman.app %>/scripts',
         fontsDir: '<%= yeoman.app %>/fonts',
         importPath: '<%= yeoman.app %>/bower_components',
-        httpImagesPath: '/images',
+        httpImagesPath: '/img',
         httpGeneratedImagesPath: '/img/generated',
         httpFontsPath: '/fonts',
         relativeAssets: false
@@ -334,18 +334,17 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [{
-            expand: true,
-            dot: true,
-            cwd: '<%= yeoman.app %>',
-            dest: '<%= yeoman.dist %>',
-            src: [
-              '*.{ico,png,txt}',
-              '.htaccess',
-              'img/{,*/}*.{webp,gif,png,jpg,svg}',
-              'fonts/{,*/}*.*'
-                  //  'bower_components/sass-bootstrap/fonts/*.*'
-            ]
-          }]
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            'img/{,*/}*.{webp,gif,png,jpg,svg}',
+            'fonts/{,*/}*.*'
+          ]
+        }]
       },
       styles: {
         expand: true,
@@ -371,25 +370,6 @@ module.exports = function(grunt) {
         '!<%= yeoman.dist %>/js/vendor/*'
       ],
       uglify: true
-    },
-    concurrent: {
-      server: [
-        'compass',
-        'assemble',
-        'copy:styles',
-        'copy:fonts'
-      ],
-      test: [
-        'copy:styles',
-        'copy:fonts'
-      ],
-      dist: [
-        'compass',
-        'copy:styles',
-        'imagemin',
-        'svgmin',
-        'htmlmin'
-      ]
     },
     assemble: {
       options: {
@@ -427,7 +407,28 @@ module.exports = function(grunt) {
           '.tmp/': ['<%= yeoman.app %>/templates/pages/index.hbs']
         }
       }
+    },
+
+
+    concurrent: {
+      server: [
+        'compass',
+        'assemble',
+        'copy:fonts'
+      ],
+      test: [
+        'copy:styles',
+        'copy:fonts'
+      ],
+      dist: [
+        'compass',
+        'copy:styles',
+        'imagemin',
+        //'svgmin',
+        'htmlmin'
+      ]
     }
+
   });
 
 
@@ -476,4 +477,9 @@ module.exports = function(grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('andy', [
+    'clean:server',
+    'compass'
+  ])
 };
