@@ -175,7 +175,7 @@ module.exports = function(grunt) {
             dest: '.tmp/css/'
           }]
       }
-    }
+    },
     compress: {
       compiled: {
         options: {
@@ -412,7 +412,7 @@ module.exports = function(grunt) {
       },
       examples: {
         options: {
-          layout: '<%= yeoman.app %>/templates/layouts/example.hbs',
+          layout: 'example.hbs',
           plugins: ['permalinks'],
           permalinks: {
             structure: ':basename/index.html'
