@@ -434,7 +434,7 @@ module.exports = function(grunt) {
                         structure: ':basename/index.html'
                     }
                 },
-                files: {
+                files: { 
                     '.tmp/': ['<%= yeoman.app %>/templates/pages/*.hbs', '!<%= yeoman.app %>/templates/pages/index.hbs']
                 }
             },
