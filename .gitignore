@@ -3,4 +3,5 @@ dist
 .tmp
 .sass-cache
 app/bower_components
-/nbproject/private/
+nbproject
+.DS_Store

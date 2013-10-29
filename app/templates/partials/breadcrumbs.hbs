@@ -1,125 +1,32 @@
 <!-- Breadcrumbs NV_005
 ================================================== -->
 <section id="breadcrumbs">
-    <div class="page-header">
-        <h1>Breadcrumbs</h1>
-    </div>
+  <div class="page-header">
+    <h1>Breadcrumbs</h1>
+  </div>
 
+  <h2>Examples</h2>
+  <p>A single example shown as it might be displayed across multiple pages.</p>
+  <div class="dive-docs-example">
+    <ul class="breadcrumb">
+      <li class="active">Home</li>
+    </ul>
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a> <span class="divider">►</span></li>
+      <li class="active">Library</li>
+    </ul>
+    <ul class="breadcrumb" style="margin-bottom: 5px;">
+      <li><a href="#">Home</a> <span class="divider">►</span></li>
+      <li><a href="#">Library</a> <span class="divider">►</span></li>
+      <li class="active">Data</li>
+    </ul>
+  </div>
+<pre class="prettyprint linenums">
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
 
-    <div id="rationale-breadcrumbs" class="dive-docs-rationale collapse">
-        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#rationale-breadcrumbs">
-            Read the Rationale
-        </button>
-
-
-        <h5>What is it?</h5>
-        <p>Breadcrumbs (or breadcrumb trail) is a navigation help. </p>
-
-        <h5>What problem does it solve?</h5>
-        <p>It allows users to keep track of their location within the website or the application. </p>
-        <p>It provides a trail for the user to follow back to the starting or entry point.</p>
-        <p>It reduces the number of actions a website visitor needs to take in order to get to a higher-level page, and they improve the “findability” of website sections and pages.</p>
-
-        <h5>When should I use it?</h5>
-        <p>Use it on websites or applications with numerous pages and evident structuring steps to guide user through the website.</p>
-
-        <h5>How should I use it?</h5>
-        <p>Breadcrumbs typically appear horizontally across the top of a web page, often below title bars or headers. </p>
-        <p>They provide links back to each previous page the user navigated through to get to the current page or—in hierarchical site structures—the parent pages of the current one.</p>
-        <p>Label the steps clearly, and make clear that they are clickable links.</p>
-    </div>
-
-    <h2>Examples</h2>
-    <p>A single example shown as it might be displayed across multiple pages.</p>
-    <div class="dive-docs-example">
-        <ul class="breadcrumb">
-            <li class="active">Home</li>
-        </ul>
-        <ul class="breadcrumb">
-            <li><a href="#">Home</a> <span class="divider">►</span></li>
-            <li class="active">Library</li>
-        </ul>
-        <ul class="breadcrumb" style="margin-bottom: 5px;">
-            <li><a href="#">Home</a> <span class="divider">►</span></li>
-            <li><a href="#">Library</a> <span class="divider">►</span></li>
-            <li class="active">Data</li>
-        </ul>
-    </div>
-
-
-
-{{#markdown}}
-``` javascript
-  gfgfg
-    <br>
-    fddf
-```
-{{/markdown}}
-
-
-{{#markdown}}
-``` markup
-function hello2 () {
-    console.log('oh hai again');
-};
-options: {
-  highlight: function  (lang, code)  {
-    return  hljs.highlightAuto(lang, code).value;
-  }
-}
-<ul><li>dds</li></ul>
-
-´´´
-{{/markdown}}
-
-{{#markdown}}
-``` markup
-    ## Inline Markdown is awesome
-    > this is markdown content
-    *  useful for simple content
-    *  great for blog posts
-    *  easier on the eyes than angle brackets
-    *  even links look prettier
-    ### Pretty links
-    
-	
-
-	
-    <script src="js/plugins.js"></script>
-´´´
-{{/markdown}}
-
-
-{{#markdown}}
-``` markup
-    YOUR HTML CONTENT
-```
-{{/markdown}}
-
-{{#markdown}}
-    ```` javascript
-    YOUR HTML CONTENT
-    ````
-{{/markdown}}
-
-
-
-{{#markdown}}
-``` markup
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    <div class="nocode">  <script src="js/dive.min.js"></script>/<div>
-            <script src="js/plugins.js"></script>
-            <script src="js/main.js"></script>
-
-
-```
-{{/markdown}}
-
-
-
-
-
-
-            </section>
+</section>
