@@ -458,6 +458,7 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('build', [
     'clean:dist',
+    'compass',
     'assemble',
     'useminPrepare',
     'concurrent:dist',
