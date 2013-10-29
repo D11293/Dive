@@ -335,6 +335,12 @@ module.exports = function(grunt) {
           '.tmp/': '<%= yeoman.app %>/templates/pages/*.hbs'
         }
       },
+       index: {
+         
+        files: {
+          '.tmp/': '<%= yeoman.app %>/templates/pages/index.hbs'
+        }
+      },
       examples: {
         options: {
           layout: 'example.hbs',
