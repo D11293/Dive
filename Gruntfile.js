@@ -406,7 +406,7 @@ module.exports = function(grunt) {
 
     concurrent: {
       server: [
-        'compass',
+      
         'assemble',
         'copy:fonts'
       ],
@@ -435,6 +435,7 @@ module.exports = function(grunt) {
     }
     grunt.task.run([
       'clean:server',
+        'compass',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
@@ -451,6 +452,7 @@ module.exports = function(grunt) {
   ]);
   grunt.registerTask('build', [
     'clean:dist',
+    'compass',
     'assemble',
     'useminPrepare',
     'concurrent:dist',
@@ -475,5 +477,5 @@ module.exports = function(grunt) {
   grunt.registerTask('andy', [
     'clean:server',
     'compass'
-  ])
+  ]);
 };
