@@ -20,14 +20,6 @@ module.exports = function(grunt) {
       dist: 'dist'
     },
     watch: {
-      coffee: {
-        files: ['<%= yeoman.app %>/js/{,*/}*.coffee'],
-        tasks: ['clean:scripts', 'coffee:dist', 'copy:scripts']
-      },
-      coffeeTest: {
-        files: ['test/spec/{,*/}*.coffee'],
-        tasks: ['coffee:test']
-      },
       compass: {
         files: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
@@ -35,10 +27,6 @@ module.exports = function(grunt) {
       styles: {
         files: ['<%= yeoman.app %>/scss/{,*/}*.css'],
         tasks: ['copy:styles', 'autoprefixer']
-      },
-      js: {
-        files: ['<%= yeoman.app %>/js/**/*.js'],
-        tasks: ['dist-js']
       },
       livereload: {
         options: {
@@ -88,13 +76,13 @@ module.exports = function(grunt) {
     clean: {
       dist: {
         files: [{
-            dot: true,
-            src: [
-              '.tmp/**/*',
-              '<%= yeoman.dist %>/*',
-              '!<%= yeoman.dist %>/.git*'
-            ]
-          }]
+          dot: true,
+          src: [
+            '.tmp/**/*',
+            '<%= yeoman.dist %>/*',
+            '!<%= yeoman.dist %>/.git*'
+          ]
+        }]
       },
       server: '.tmp/**/*'
     },
@@ -115,26 +103,6 @@ module.exports = function(grunt) {
           run: true,
           urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
         }
-      }
-    },
-    coffee: {
-      dist: {
-        files: [{
-            expand: true,
-            cwd: '<%= yeoman.app %>/scripts',
-            src: '{,*/}*.coffee',
-            dest: '.tmp/scripts',
-            ext: '.js'
-          }]
-      },
-      test: {
-        files: [{
-            expand: true,
-            cwd: 'test/spec',
-            src: '{,*/}*.coffee',
-            dest: '.tmp/spec',
-            ext: '.js'
-          }]
       }
     },
     compass: {
@@ -199,38 +167,16 @@ module.exports = function(grunt) {
       }
 
     },
+    /*
     concat: {
       dist: {
-        files: {
-          '<%= yeoman.dist %>/js/plugins.js': [
-            '<%= yeoman.app %>/bower_components/jquery/jquery.min.js',
-            '<%= yeoman.app %>/js/plugins.js',
-            '<%= yeoman.app %>/js/vendor/google-code-prettify/prettify.js',
-            '<%= yeoman.app %>/js/vendor/imagesloaded.js',
-                // '<%= yeoman.app %>/bower_components/prismjs/prismjs.js',
-                // '<%= yeoman.app %>/bower_components/x-tag-code-prism/src/code-prism.js',
-          ],
-          '<%= yeoman.dist %>/js/dive.js': [
-            '<%= yeoman.app %>/js/vendor/ion.rangeSlider.js',
-            '<%= yeoman.app %>/js/dive.js'
-          ],
-          '<%= yeoman.dist %>/js/main.js': [
-            '<%= yeoman.app %>/js/main.js'
-          ]
-        }
       }
     },
     uglify: {
       dist: {
-        files: {
-          '<%= yeoman.dist %>/js/plugins.min.js': ['<%= yeoman.dist %>/js/plugins.js'],
-          '<%= yeoman.dist %>/js/dive.min.js': ['<%= yeoman.dist %>/js/dive.js'],
-          '<%= yeoman.dist %>/js/main.min.js': ['<%= yeoman.dist %>/js/main.js'],
-          '<%= yeoman.dist %>/js/modernizr.min.js': ['<%= yeoman.app %>/bower_components/modernizr/modernizr.js'],
-          '<%= yeoman.dist %>/js/masonry.min.js': ['<%= yeoman.app %>/js/vendor/masonry.js']
-        }
       }
     },
+    */
     'bower-install': {
       app: {
         html: '<%= yeoman.app %>/index.html',
@@ -406,7 +352,6 @@ module.exports = function(grunt) {
 
     concurrent: {
       server: [
-      
         'assemble',
         'copy:fonts'
       ],
@@ -418,7 +363,6 @@ module.exports = function(grunt) {
         'compass',
         'copy:styles',
         'imagemin',
-        //'svgmin',
         'htmlmin'
       ]
     }
@@ -435,14 +379,13 @@ module.exports = function(grunt) {
     }
     grunt.task.run([
       'clean:server',
-        'compass',
+      'compass',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
       'watch'
     ]);
   });
-  // grunt.registerTask('dist-js', ['concat', 'uglify']);
   grunt.registerTask('test', [
     'clean:server',
     'concurrent:test',
