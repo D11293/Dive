@@ -90,14 +90,13 @@ module.exports = function(grunt) {
         files: [{
             dot: true,
             src: [
-              '.tmp',
+              '.tmp/**/*',
               '<%= yeoman.dist %>/*',
               '!<%= yeoman.dist %>/.git*'
             ]
           }]
       },
-      server: '.tmp'
-          // scripts: '.tmp/js/*'
+      server: '.tmp/**/*'
     },
     jshint: {
       options: {
@@ -387,7 +386,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          '.tmp/': ['<%= yeoman.app %>/templates/pages/*.hbs', '!<%= yeoman.app %>/templates/pages/index.hbs']
+          '.tmp/': '<%= yeoman.app %>/templates/pages/*.hbs'
         }
       },
       examples: {
@@ -400,11 +399,6 @@ module.exports = function(grunt) {
         },
         files: {
           '.tmp/examples/': ['<%= yeoman.app %>/templates/pages/examples/*.hbs']
-        }
-      },
-      index: {
-        files: {
-          '.tmp/': ['<%= yeoman.app %>/templates/pages/index.hbs']
         }
       }
     },
