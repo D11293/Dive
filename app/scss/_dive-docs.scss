@@ -5,13 +5,13 @@
 
 // Compensating for the fixed Navbar
 @media (min-width: $navbarCollapseWidth) {
-  body {
-    padding-top: $navbarHeight + 9;
-    background-color: #f2f2f2;
-  }
+    body {
+        padding-top: $navbarHeight + 9;
+        background-color: #f2f2f2;
+    }
 }
 body {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
 
@@ -19,153 +19,153 @@ body {
 // ------------------
 
 .dive-docs-navbar {
-  .brand {
-    font-weight: bold;
-    color: $orangeDark;
-  }
-  .navbar-inner { padding: 4px; }
+    .brand {
+        font-weight: bold;
+        color: $orangeDark;
+    }
+    .navbar-inner { padding: 4px; }
 }
 
 
 
 .ie8-warning { display: none; }
 .lt-ie9 .ie8-warning {
-  display: block;
-  padding: 40px;
-  color: $white;
-  background-color: $red;
-  font-size: 18px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-  h1 {
-    //text-transform: uppercase;
-  }
+    display: block;
+    padding: 40px;
+    color: $white;
+    background-color: $red;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    h1 {
+        //text-transform: uppercase;
+    }
 }
 
 
 
 section,
 .dive-docs-main > h1 {
-padding-top: 20px;
+    padding-top: 20px;
 }
 
-@media (min-width: $screen-small) {
-  section,
-  .dive-docs-main > h1 {
-    padding-top: 40px;
-  }
-  section:first-child {
-    padding-top: 0;
-    .page-header,
-    .page-header > h1 {
-      margin-top: 0;
+@media (min-width: $screen-sm) {
+    section,
+    .dive-docs-main > h1 {
+        padding-top: 40px;
     }
-  }
+    section:first-child {
+        padding-top: 0;
+        .page-header,
+        .page-header > h1 {
+            margin-top: 0;
+        }
+    }
 }
 
 section {
-  > h1 {
-    padding-top: $baseLineHeight * 2;
-  }
-  > h2,
-  > h3,
-  > h4 {
-    margin-top: $baseLineHeight;
-    margin-bottom: $baseLineHeight / 2;
-    font-weight: 500;
-  }
-  > h4 {
-    color: $textColor;
-  }
-  > h6 {
-    margin-bottom: $baseLineHeight / 2;
-  }
-  > .page-header {
-    //margin-bottom: 0;
-  }
-  > p {
-    margin-bottom: $baseLineHeight / 2;
-  }
+    > h1 {
+        padding-top: $baseLineHeight * 2;
+    }
+    > h2,
+    > h3,
+    > h4 {
+        margin-top: $baseLineHeight;
+        margin-bottom: $baseLineHeight / 2;
+        font-weight: 500;
+    }
+    > h4 {
+        color: $textColor;
+    }
+    > h6 {
+        margin-bottom: $baseLineHeight / 2;
+    }
+    > .page-header {
+        //margin-bottom: 0;
+    }
+    > p {
+        margin-bottom: $baseLineHeight / 2;
+    }
 
 }
 
 
 .page-header + h2 {
-  margin-top: $baseLineHeight;
+    margin-top: $baseLineHeight;
 }
 
 
 // Sidebar and Sidenav
 
 .dive-docs-sidenav {
-  width: 100%;
-  margin: 0 0 2em;
-  padding: 0;
-  background-color: #fff;
-  @include border-radius(6px);
-  @include box-shadow(0 1px 4px rgba($black, .065));
+    width: 100%;
+    margin: 0 0 2em;
+    padding: 0;
+    background-color: #fff;
+    @include border-radius(6px);
+    @include box-shadow(0 1px 4px rgba($black, .065));
 
-  @media (min-width: $screen-small)   { width: 212px; }
-  @media (min-width: $screen-medium)  { width: 205px; }
-  @media (min-width: $screen-large)   { width: 270px; }
+    @media (min-width: $screen-sm)   { width: 212px; }
+    @media (min-width: $screen-md)  { width: 205px; }
+    @media (min-width: $screen-lg)   { width: 270px; }
 }
 
 .dive-docs-sidenav > li > a {
-  display: block;
-  margin: 0 0 -1px;
-  padding: 8px 14px;
-  border: 1px solid #e5e5e5;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+    border: 1px solid #e5e5e5;
 }
 .dive-docs-sidenav > li:first-child > a {
-  -webkit-border-radius: 6px 6px 0 0;
-     -moz-border-radius: 6px 6px 0 0;
-          border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
 }
 .dive-docs-sidenav > li:last-child > a {
-  -webkit-border-radius: 0 0 6px 6px;
-     -moz-border-radius: 0 0 6px 6px;
-          border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
 }
 .dive-docs-sidenav > .active > a {
-  position: relative;
-  z-index: 2;
-  padding: 9px 15px;
-  border: 0;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15);
-  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+    position: relative;
+    z-index: 2;
+    padding: 9px 15px;
+    border: 0;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15);
+    -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
 }
 /* Chevrons */
 .dive-docs-sidenav .icon-chevron-right {
-  float: right;
-  margin-top: 2px;
-  margin-right: -6px;
-  opacity: .25;
+    float: right;
+    margin-top: 2px;
+    margin-right: -6px;
+    opacity: .25;
 }
 .dive-docs-sidenav > li > a:hover {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 .dive-docs-sidenav a:hover .icon-chevron-right {
-  opacity: .5;
+    opacity: .5;
 }
 .dive-docs-sidenav .active .icon-chevron-right,
 .dive-docs-sidenav .active a:hover .icon-chevron-right {
-  opacity: 1;
+    opacity: 1;
 }
 
 .dive-docs-sidenav.affix {
-  position: static;
-  @media (min-width: 768px) {
-    position: fixed;
-    top: 20px;
-  }
-  @media (min-width: 980px) {
-    top: 60px;
-  }
+    position: static;
+    @media (min-width: 768px) {
+        position: fixed;
+        top: 20px;
+    }
+    @media (min-width: 980px) {
+        top: 60px;
+    }
 }
 
 
@@ -173,9 +173,9 @@ section {
 
 
 .dive-docs-sidenav.affix-bottom {
-  position: absolute;
-  top: auto;
-  bottom: 270px;
+    position: absolute;
+    top: auto;
+    bottom: 270px;
 }
 
 
@@ -183,32 +183,32 @@ section {
 // ------------------
 .back-to-top,
 .back-to-top:hover {
-  @include border-radius(50%);
-  @include box-shadow(1px 1px 5px rgba($black, .6));
-  color: $linkColor;
-  background-color: $white;
-  border: 2px solid $white;
-  bottom: 20px;
-  font-size: 32px;
-  right: 20px;
-  position: fixed;
-  z-index: 99999;
-  @include translateY(0);
-  @include transition-property("-webkit-transform, -moz-transform, -ms-transform, -o-transform, transform");
-  @include transition-duration();
+    @include border-radius(50%);
+    @include box-shadow(1px 1px 5px rgba($black, .6));
+    color: $linkColor;
+    background-color: $white;
+    border: 2px solid $white;
+    bottom: 20px;
+    font-size: 32px;
+    right: 20px;
+    position: fixed;
+    z-index: 99999;
+    @include translateY(0);
+    @include transition-property("-webkit-transform, -moz-transform, -ms-transform, -o-transform, transform");
+    @include transition-duration();
 
 
-  &.is-hidden {
-    @include translateY(80px);
-  }
-  &:hover {
-    color: $blueLight;
-    text-decoration: none;
-    @include translateY(-2px);
-  }
-  @media (min-width: $bigBreak) {
-    font-size: 26px;
-  }
+    &.is-hidden {
+        @include translateY(80px);
+    }
+    &:hover {
+        color: $blueLight;
+        text-decoration: none;
+        @include translateY(-2px);
+    }
+    @media (min-width: $bigBreak) {
+        font-size: 26px;
+    }
 }
 
 /* DiVE code examples
@@ -216,162 +216,162 @@ section {
 
 /* Base class */
 .dive-docs-example {
-  position: relative;
-  margin: 15px 0;
-  padding: 39px 19px 12px;
-  *padding-top: 19px;
-  min-height: 90px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  @include box-shadow(0 0 3px rgba($black, .2));
+    position: relative;
+    margin: 15px 0;
+    padding: 39px 19px 12px;
+    *padding-top: 19px;
+    min-height: 90px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    @include box-shadow(0 0 3px rgba($black, .2));
 }
 
 /* Echo out a label for the example */
 .dive-docs-example:after {
-  content: "Example";
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  color: #9da0a4;
-  -webkit-border-radius: 4px 0 4px 0;
-     -moz-border-radius: 4px 0 4px 0;
-          border-radius: 4px 0 4px 0;
+    content: "Example";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    color: #9da0a4;
+    -webkit-border-radius: 4px 0 4px 0;
+    -moz-border-radius: 4px 0 4px 0;
+    border-radius: 4px 0 4px 0;
 }
 
 /* Remove spacing between an example and it's code */
 .dive-docs-example + .prettyprint,
- {
-  margin-top: -20px;
-  padding-top: 15px;
+{
+    margin-top: -20px;
+    padding-top: 15px;
 }
 
 /* Add vertical spacing between buttons that stack */
 .dive-docs-example > .btn-toolbar .btn {
-  margin-top: .5em;
+    margin-top: .5em;
 }
 
 .dive-docs-example footer {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 // Custom Hero Unit
 // ------------------
 
 .dive-docs-hero-unit {
-  color: $textColor;
-  background-color: #DDD;
-  &.orange     {
-    @include background(linear-gradient(lighten($orangeLight, 5%), $orangeLight) transparent);
-    color: $white;
-    h1 {
-      color: $white;
+    color: $textColor;
+    background-color: #DDD;
+    &.orange     {
+        @include background(linear-gradient(lighten($orangeLight, 5%), $orangeLight) transparent);
+        color: $white;
+        h1 {
+            color: $white;
+        }
     }
-  }
-  &.green      {
-    @include background(linear-gradient(lighten($greenLight, 5%), $greenLight) transparent);
-    color: $white;
-    h1 {
-      color: $white;
+    &.green      {
+        @include background(linear-gradient(lighten($greenLight, 5%), $greenLight) transparent);
+        color: $white;
+        h1 {
+            color: $white;
+        }
     }
-  }
-  &.red        {
-    @include background(linear-gradient(lighten($redLight, 5%), $redLight) transparent);
-    color: $white;
-    h1 {
-      color: $white;
+    &.red        {
+        @include background(linear-gradient(lighten($redLight, 5%), $redLight) transparent);
+        color: $white;
+        h1 {
+            color: $white;
+        }
     }
-  }
-  &.blue       {
-    @include background(linear-gradient(lighten($blueLight, 5%), $blueLight) transparent);
-    color: $white;
-    h1 {
-      color: $white;
+    &.blue       {
+        @include background(linear-gradient(lighten($blueLight, 5%), $blueLight) transparent);
+        color: $white;
+        h1 {
+            color: $white;
+        }
     }
-  }
 
 }
 
 .home-hero {
-  text-align: center;
-  p {
-    max-width: 650px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .btn {
-    display: inline-block;
-    background-color: $blue;
-    &:hover { background-color: $blue + 20; }
-  }
+    text-align: center;
+    p {
+        max-width: 650px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .btn {
+        display: inline-block;
+        background-color: $blue;
+        &:hover { background-color: $blue + 20; }
+    }
 }
 
 .hero-logo {
-  display: block;
-  margin: 0 auto $baseLineHeight;
-  max-width: 100%;
-  width: 700px;
-  //@include translateX(-80px);
+    display: block;
+    margin: 0 auto $baseLineHeight;
+    max-width: 100%;
+    width: 700px;
+    //@include translateX(-80px);
 }
 
 .dive-docs-super-hero-unit {
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0 !important;
-  text-align: left !important;
-  height: 100px;
-  @include box-sizing(border-box);
-  @include background(linear-gradient(rgba($red, 0), rgba($red, .4)) $orangeDark);
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0 !important;
+    text-align: left !important;
+    height: 100px;
+    @include box-sizing(border-box);
+    @include background(linear-gradient(rgba($red, 0), rgba($red, .4)) $orangeDark);
 
-  img {
-    height: 40px;
-    margin: 15px auto 0;
-    display: block;
-  }
-
-  @media (min-width: 550px) {
     img {
-      display: inline-block;
-      height: 60px;
-      margin: 20px 0 0;
+        height: 40px;
+        margin: 15px auto 0;
+        display: block;
     }
-    .dive-docs-tagline {
-      float: right;
-      width: auto;
-      display: inline-block;
-      text-align: right;
-      font-size: $baseFontSize;
-      line-height: $baseLineHeight;
-      margin-top: 30px;
-      p { margin: 0; }
+
+    @media (min-width: 550px) {
+        img {
+            display: inline-block;
+            height: 60px;
+            margin: 20px 0 0;
+        }
+        .dive-docs-tagline {
+            float: right;
+            width: auto;
+            display: inline-block;
+            text-align: right;
+            font-size: $baseFontSize;
+            line-height: $baseLineHeight;
+            margin-top: 30px;
+            p { margin: 0; }
+        }
     }
-  }
 }
 
 .dive-docs-home-gs {
-  p {
-    @media (min-width: $screen-small) {
-      min-height: 60px;
+    p {
+        @media (min-width: $screen-sm) {
+            min-height: 60px;
+        }
     }
-  }
 }
 
 .dive-docs-tagline {
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: $baseFontSize - 2;
-  line-height: $baseLineHeight - 6;
-  color: $white;
-  margin-top: .75em;
-  p { margin: 0; }
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: $baseFontSize - 2;
+    line-height: $baseLineHeight - 6;
+    color: $white;
+    margin-top: .75em;
+    p { margin: 0; }
 }
 
 
@@ -381,104 +381,104 @@ section {
 
 
 .dive-docs-rationale {
-  background: rgba($blueLight, .2);
-  position: relative;
-  border: 1px solid $blueLight;
-  @include border-radius(4px);
-  padding: 40px 20px 20px;
-  &:after {
-    content: "DiVE Rationale";
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    padding: 3px 7px;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: rgba($blueLight, .3);
+    background: rgba($blueLight, .2);
+    position: relative;
     border: 1px solid $blueLight;
-    color: rgba($blue, .8);
-    @include border-radius(4px 0 4px 0);
-  }
+    @include border-radius(4px);
+    padding: 40px 20px 20px;
+    &:after {
+        content: "DiVE Rationale";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        padding: 3px 7px;
+        font-size: 12px;
+        font-weight: bold;
+        background-color: rgba($blueLight, .3);
+        border: 1px solid $blueLight;
+        color: rgba($blue, .8);
+        @include border-radius(4px 0 4px 0);
+    }
 
 
-  h5 {
-    margin-top: $baseLineHeight * 2;
-    font-weight: bold;
-  }
+    h5 {
+        margin-top: $baseLineHeight * 2;
+        font-weight: bold;
+    }
 
-  > .btn {
-    position: absolute;
-    top: 15px;
-    right: 10px;
-  }
+    > .btn {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
 }
 
 // Section is incomplete and not ready for any review
 .needs-diving {
-  background: $white;
-  @include box-shadow( 0 0 10px 0 rgba($red, .4) inset );
-  position: relative;
-  &:after {
-    @include box-sizing(border-box);
-    content: "This section is incomplete";
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 5px;
-    color: $red;
-    font-size: 13px;
-    font-weight: bold;
-    background: rgba($red, .1);
-    border-bottom: 1px solid rgba($red, .25);
-    width: 100%;
-    text-align: center;
-  }
+    background: $white;
+    @include box-shadow( 0 0 10px 0 rgba($red, .4) inset );
+    position: relative;
+    &:after {
+        @include box-sizing(border-box);
+        content: "This section is incomplete";
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        color: $red;
+        font-size: 13px;
+        font-weight: bold;
+        background: rgba($red, .1);
+        border-bottom: 1px solid rgba($red, .25);
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .table .switch {
-  margin-top: 0;
-  margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
 // Icons Example
 // ------------------
 .dive-docs-the-icons {
-  margin-left: 0;
-  list-style-type: none;
+    margin-left: 0;
+    list-style-type: none;
 
-  @media (min-width: 500px)  { @include columns(2); }
-  @media (min-width: 800px)  { @include columns(3); }
-  @media (min-width: 1200px) { @include columns(4); }
+    @media (min-width: 500px)  { @include columns(2); }
+    @media (min-width: 800px)  { @include columns(3); }
+    @media (min-width: 1200px) { @include columns(4); }
 
-  li {
-    line-height: 2em;
-    cursor: pointer;
-    padding-left: 3em;
-    position: relative;
-    i {
-      position: absolute;
-      left: 8px;
-      top: 0;
-      height: 16px;
-      font-size: 16px;
+    li {
+        line-height: 2em;
+        cursor: pointer;
+        padding-left: 3em;
+        position: relative;
+        i {
+            position: absolute;
+            left: 8px;
+            top: 0;
+            height: 16px;
+            font-size: 16px;
+        }
+        &:hover i {
+            font-size: 32px;
+            line-height: 32px;
+            left: 0;
+            top: -8px;
+        }
     }
-    &:hover i {
-      font-size: 32px;
-      line-height: 32px;
-      left: 0;
-      top: -8px;
-    }
-  }
 }
 
 // Form Example
 .form-example {
-  padding: 19px 29px;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  @include border-radius(5px);
-  @include box-shadow(0 1px 2px rgba($black, .05));
+    padding: 19px 29px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    @include border-radius(5px);
+    @include box-shadow(0 1px 2px rgba($black, .05));
 }
 
 
@@ -486,53 +486,53 @@ section {
 
 
 .beta-block {
-  background: $blue;
-  color: $white;
-  @include text-shadow(none);
-  font-size: .75em;
-  padding: 3px 6px;
-  @media (min-width: 1000px) {
-    display: none;
-  }
+    background: $blue;
+    color: $white;
+    @include text-shadow(none);
+    font-size: .75em;
+    padding: 3px 6px;
+    @media (min-width: 1000px) {
+        display: none;
+    }
 }
 
 .page-everything {
-  .btn-block,
-  .btn-group {
-    margin-bottom: $baseLineHeight;
-  }
-  h2,
-  h4 {
-    margin-top: $baseLineHeight * 1.5;
-  }
-  h2 {
-    margin-top: $baseLineHeight * 2.5;
-    &:first-of-type {
-      margin-top: $baseLineHeight * 1.5;
+    .btn-block,
+    .btn-group {
+        margin-bottom: $baseLineHeight;
     }
-  }
-  h2 + h4 {
-    margin-top: $baseLineHeight;
-  }
-  .popover {
-    position: relative;
-    display: block;
-    float: left;
-    wieth: 250px;
-    margin: 20px;
-  }
-  .the-icons {
-    font-size: 36px;
-    list-style-type: none;
-    margin-left: 0;
-    @include columns(4);
-    @media (min-width: $screen-small) {
-      @include columns(6);
+    h2,
+    h4 {
+        margin-top: $baseLineHeight * 1.5;
     }
-    li {
-      margin-bottom: $baseLineHeight / 2;
+    h2 {
+        margin-top: $baseLineHeight * 2.5;
+        &:first-of-type {
+            margin-top: $baseLineHeight * 1.5;
+        }
     }
-  }
+    h2 + h4 {
+        margin-top: $baseLineHeight;
+    }
+    .popover {
+        position: relative;
+        display: block;
+        float: left;
+        wieth: 250px;
+        margin: 20px;
+    }
+    .the-icons {
+        font-size: 36px;
+        list-style-type: none;
+        margin-left: 0;
+        @include columns(4);
+        @media (min-width: $screen-sm) {
+            @include columns(6);
+        }
+        li {
+            margin-bottom: $baseLineHeight / 2;
+        }
+    }
 }
 
 
@@ -540,181 +540,181 @@ section {
 // -------------------------
 
 .masonry-container {
-  margin: $baseLineHeight auto;
+    margin: $baseLineHeight auto;
 }
 .msnry {
-  width: 200px;
-  margin-bottom: 20px;
-  padding: $baseLineHeight;
-  background-color: $grayLighter;
+    width: 200px;
+    margin-bottom: 20px;
+    padding: $baseLineHeight;
+    background-color: $grayLighter;
 }
 
 .msnry-2x {
-  width: 400px + $baseLineHeight;
+    width: 400px + $baseLineHeight;
 }
 
 // /examples/
 // -------------------------
 .dive-docs-example-thumb {
-  min-height: 340px;
+    min-height: 340px;
 }
 
 
 // Ribbon
 // -------------------------
 .page-ribbon {
-  display: none;
+    display: none;
 }
 @media (min-width: 1000px) {
-  /* Left will inherit from right (so we don't need to duplicate code */
-  .page-ribbon {
-    /* The right and left lasses determine the side we attach our banner to */
-    position: absolute;
-    display: block;
-    /* Add a bit of padding to give some substance outside the "stitching" */
-    padding: 2px 0;
+    /* Left will inherit from right (so we don't need to duplicate code */
+    .page-ribbon {
+        /* The right and left lasses determine the side we attach our banner to */
+        position: absolute;
+        display: block;
+        /* Add a bit of padding to give some substance outside the "stitching" */
+        padding: 2px 0;
 
-    /* Set the base colour */
-    background-color: $blue;
+        /* Set the base colour */
+        background-color: $blue;
 
-    /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
+        /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.00)), to(rgba(0, 0, 0, 0.15)));
+        background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+        background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+        background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+        background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+        background-image: linear-gradient(top, rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.15));
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
 
-    /* Add a drop shadow */
-    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+        /* Add a drop shadow */
+        -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
 
-    z-index: 9999;
-  }
+        z-index: 9999;
+    }
 
-  .page-ribbon span,
-  .page-ribbon span:hover {
-    /* Set the font */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: white;
+    .page-ribbon span,
+    .page-ribbon span:hover {
+        /* Set the font */
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: white;
 
-    /* Set the text properties */
-    text-decoration: none;
-    text-shadow: 0 -1px rgba(0,0,0,0.5);
-    text-align: center;
+        /* Set the text properties */
+        text-decoration: none;
+        text-shadow: 0 -1px rgba(0,0,0,0.5);
+        text-align: center;
 
-    /* Set the geometry. If you fiddle with these you'll also need to tweak the top and right values in #github-fork-ribbon. */
-    width: 200px;
-    line-height: 20px;
+        /* Set the geometry. If you fiddle with these you'll also need to tweak the top and right values in #github-fork-ribbon. */
+        width: 200px;
+        line-height: 20px;
 
-    /* Set the layout properties */
-    display: inline-block;
-    padding: 2px 0;
+        /* Set the layout properties */
+        display: inline-block;
+        padding: 2px 0;
 
-    /* Add "stitching" effect */
-    border-width: 1px 0;
-    border-style: dotted;
-    border-color: rgba(255,255,255,0.7);
-  }
+        /* Add "stitching" effect */
+        border-width: 1px 0;
+        border-style: dotted;
+        border-color: rgba(255,255,255,0.7);
+    }
 
-  .page-ribbon-wrapper {
-    width: 110px;
-    height: 110px;
-    position: fixed;
-    overflow: hidden;
-    top: 0;
-    z-index: 9999;
-  }
+    .page-ribbon-wrapper {
+        width: 110px;
+        height: 110px;
+        position: fixed;
+        overflow: hidden;
+        top: 0;
+        z-index: 9999;
+    }
 
-  .page-ribbon-wrapper.fixed {
-    position: fixed;
-  }
+    .page-ribbon-wrapper.fixed {
+        position: fixed;
+    }
 
-  .page-ribbon-wrapper.left {
-    left: 0;
-  }
+    .page-ribbon-wrapper.left {
+        left: 0;
+    }
 
-  .page-ribbon-wrapper.right {
-    right: 0;
-  }
+    .page-ribbon-wrapper.right {
+        right: 0;
+    }
 
-  .page-ribbon-wrapper.left-bottom {
-    position: fixed;
-    top: inherit;
-    bottom: 0;
-    left: 0;
-  }
+    .page-ribbon-wrapper.left-bottom {
+        position: fixed;
+        top: inherit;
+        bottom: 0;
+        left: 0;
+    }
 
-  .page-ribbon-wrapper.right-bottom {
-    position: fixed;
-    top: inherit;
-    bottom: 0;
-    right: 0;
-  }
+    .page-ribbon-wrapper.right-bottom {
+        position: fixed;
+        top: inherit;
+        bottom: 0;
+        right: 0;
+    }
 
-  .page-ribbon-wrapper.right .page-ribbon {
-    top: 27px;
-    right: -60px;
+    .page-ribbon-wrapper.right .page-ribbon {
+        top: 27px;
+        right: -60px;
 
-    /* Rotate the banner 45 degrees */
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+        /* Rotate the banner 45 degrees */
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 
-  .page-ribbon-wrapper.left .page-ribbon {
-    top: 42px;
-    left: -43px;
+    .page-ribbon-wrapper.left .page-ribbon {
+        top: 42px;
+        left: -43px;
 
-    /* Rotate the banner -45 degrees */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+        /* Rotate the banner -45 degrees */
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
 
 
-  .page-ribbon-wrapper.left-bottom .page-ribbon {
-    top: 80px;
-    left: -43px;
+    .page-ribbon-wrapper.left-bottom .page-ribbon {
+        top: 80px;
+        left: -43px;
 
-    /* Rotate the banner -45 degrees */
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+        /* Rotate the banner -45 degrees */
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 
-  .page-ribbon-wrapper.right-bottom .page-ribbon {
-    top: 80px;
-    right: -43px;
+    .page-ribbon-wrapper.right-bottom .page-ribbon {
+        top: 80px;
+        right: -43px;
 
-    /* Rotate the banner -45 degrees */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+        /* Rotate the banner -45 degrees */
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
 }
 
 
 // Horizontal rules
 hr {
-  border-top: 1px solid #e3e3e3;
-  border-bottom: 1px solid #fcfcfc;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #fcfcfc;
 }
 
 .thumbnail {
-  background-color: $white;
+    background-color: $white;
 }
 
 .scrollspy-example {
-  height: 250px;
-  overflow: scroll;
+    height: 250px;
+    overflow: scroll;
 }
 
 
@@ -723,85 +723,186 @@ hr {
 
 .dive-docs-navbar-top-example,
 .dive-docs-navbar-bottom-example {
-  z-index: 1;
-  padding: 0;
-  height: 90px;
-  overflow: hidden; /* cut the drop shadows off */
+    z-index: 1;
+    padding: 0;
+    height: 90px;
+    overflow: hidden; /* cut the drop shadows off */
 }
 .dive-docs-navbar-top-example .navbar-fixed-top,
 .dive-docs-navbar-bottom-example .navbar-fixed-bottom {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 .dive-docs-navbar-top-example {
-  -webkit-border-radius: 0 0 4px 4px;
-     -moz-border-radius: 0 0 4px 4px;
-          border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
 }
 .dive-docs-navbar-top-example:after {
-  top: auto;
-  bottom: -1px;
-  -webkit-border-radius: 0 4px 0 4px;
-     -moz-border-radius: 0 4px 0 4px;
-          border-radius: 0 4px 0 4px;
+    top: auto;
+    bottom: -1px;
+    -webkit-border-radius: 0 4px 0 4px;
+    -moz-border-radius: 0 4px 0 4px;
+    border-radius: 0 4px 0 4px;
 }
 .dive-docs-navbar-bottom-example {
-  -webkit-border-radius: 4px 4px 0 0;
-     -moz-border-radius: 4px 4px 0 0;
-          border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 .dive-docs-navbar-bottom-example .navbar {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .dive-docs-home-everything {
-  position: relative;
-  img {
-    border: 1px solid #ddd;
-    @include box-shadow(0 0 3px rgba($black, .2));
-    margin: 5px 0;
     position: relative;
-    z-index: 989;
-  }
-  .overlay-img {
-    opacity: 0;
-    @include transition-property(all);
-    @include transition-duration();
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    bottom: 5px;
-    left: 15px;
-    background: rgba($black, .3);
-    z-index: 990;
-    text-align: center;
-    line-height: 400px;
-    text-decoration: none;
-    .icon-eye {
-      color: $white;
-      font-size: $baseFontSize * 8;
-      @include transition-property(all);
-      @include transition-duration();
-      @include translateY(30px);
+    img {
+        border: 1px solid #ddd;
+        @include box-shadow(0 0 3px rgba($black, .2));
+        margin: 5px 0;
+        position: relative;
+        z-index: 989;
     }
-  }
-  &:hover .overlay-img {
-    opacity: 1;
-    .icon-eye {
-      @include translateY(0);
+    .overlay-img {
+        opacity: 0;
+        @include transition-property(all);
+        @include transition-duration();
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        bottom: 5px;
+        left: 15px;
+        background: rgba($black, .3);
+        z-index: 990;
+        text-align: center;
+        line-height: 400px;
+        text-decoration: none;
+        .icon-eye {
+            color: $white;
+            font-size: $baseFontSize * 8;
+            @include transition-property(all);
+            @include transition-duration();
+            @include translateY(30px);
+        }
     }
-  }
+    &:hover .overlay-img {
+        opacity: 1;
+        .icon-eye {
+            @include translateY(0);
+        }
+    }
 }
 
 // External Hyperlinks have an icon after them
 a[href^="http"] {
-  &:after {
-    content: "\e01e";
-    font-family: DIVEicons;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-  }
+    &:after {
+        content: "\e01e";
+        font-family: DIVEicons;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: inherit;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+
+/* Utility classes table  */
+.bs-table th small,
+.responsive-utilities th small {
+  display: block;
+  font-weight: normal;
+  color: #999;
+}
+.responsive-utilities tbody th {
+  font-weight: normal;
+}
+.responsive-utilities td {
+  text-align: center;
+}
+.responsive-utilities td.is-visible {
+  color: #468847;
+  background-color: #dff0d8 !important;
+}
+.responsive-utilities td.is-hidden {
+  color: #ccc;
+  background-color: #f9f9f9 !important;
+}
+
+/* Responsive tests */
+.responsive-utilities-test {
+  margin-top: 5px;
+}
+.responsive-utilities-test .col-xs-6 {
+  margin-bottom: 10px;
+}
+.responsive-utilities-test span {
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  border-radius: 4px;
+}
+.visible-on .col-xs-6 .hidden-xs,
+.visible-on .col-xs-6 .hidden-sm,
+.visible-on .col-xs-6 .hidden-md,
+.visible-on .col-xs-6 .hidden-lg,
+.hidden-on .col-xs-6 .hidden-xs,
+.hidden-on .col-xs-6 .hidden-sm,
+.hidden-on .col-xs-6 .hidden-md,
+.hidden-on .col-xs-6 .hidden-lg {
+  color: #999;
+  border: 1px solid #ddd;
+}
+.visible-on .col-xs-6 .visible-xs,
+.visible-on .col-xs-6 .visible-sm,
+.visible-on .col-xs-6 .visible-md,
+.visible-on .col-xs-6 .visible-lg,
+.hidden-on .col-xs-6 .visible-xs,
+.hidden-on .col-xs-6 .visible-sm,
+.hidden-on .col-xs-6 .visible-md,
+.hidden-on .col-xs-6 .visible-lg {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+/* Responsive tests */
+.responsive-utilities-test {
+    margin-top: 5px;
+}
+.responsive-utilities-test .col-xs-6 {
+    margin-bottom: 10px;
+}
+.responsive-utilities-test span {
+    padding: 15px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    border-radius: 4px;
+}
+.visible-on .col-xs-6 .hidden-xs,
+.visible-on .col-xs-6 .hidden-sm,
+.visible-on .col-xs-6 .hidden-md,
+.visible-on .col-xs-6 .hidden-lg,
+.hidden-on .col-xs-6 .hidden-xs,
+.hidden-on .col-xs-6 .hidden-sm,
+.hidden-on .col-xs-6 .hidden-md,
+.hidden-on .col-xs-6 .hidden-lg {
+    color: #999;
+    border: 1px solid #ddd;
+}
+.visible-on .col-xs-6 .visible-xs,
+.visible-on .col-xs-6 .visible-sm,
+.visible-on .col-xs-6 .visible-md,
+.visible-on .col-xs-6 .visible-lg,
+.hidden-on .col-xs-6 .visible-xs,
+.hidden-on .col-xs-6 .visible-sm,
+.hidden-on .col-xs-6 .visible-md,
+.hidden-on .col-xs-6 .visible-lg {
+    color: #468847;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
 }
