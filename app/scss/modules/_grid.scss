@@ -264,7 +264,7 @@
 //
 // Columns, offsets, pushes, and pulls for the large desktop device range.
 
-@media (min-width: $screen-large-desktop) {
+@media (min-width: $screen-lg-desktop) {
   .container {
     max-width: $container-large-desktop;
   }
