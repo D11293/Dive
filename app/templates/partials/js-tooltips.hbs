@@ -34,7 +34,12 @@
 
   <h2>Usage</h2>
   <p>Trigger the tooltip via JavaScript:</p>
-  <pre class="prettyprint linenums">$('#example').tooltip(options)</pre>
+
+{{#markdown}}
+```javascript
+$('#example').tooltip(options)
+```
+{{/markdown}}
 
   <h3>Options</h3>
   <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
@@ -110,21 +115,50 @@
   </div>
 
   <h3>Markup</h3>
-  <pre class="prettyprint linenums">&lt;a href="#" data-toggle="tooltip" title="first tooltip"&gt;hover over me&lt;/a&gt;</pre>
+
+{{#markdown}}
+```markup
+<a href="#" data-toggle="tooltip" title="first tooltip">hover over me</a>
+```
+{{/markdown}}
 
   <h3>Methods</h3>
   <h4>$().tooltip(options)</h4>
   <p>Attaches a tooltip handler to an element collection.</p>
   <h4>.tooltip('show')</h4>
   <p>Reveals an element's tooltip.</p>
-  <pre class="prettyprint linenums">$('#element').tooltip('show')</pre>
+
+{{#markdown}}
+```javascript
+$('#element').tooltip('show')
+```
+{{/markdown}}
+
   <h4>.tooltip('hide')</h4>
   <p>Hides an element's tooltip.</p>
-  <pre class="prettyprint linenums">$('#element').tooltip('hide')</pre>
+
+{{#markdown}}
+```javascript
+$('#element').tooltip('hide')
+```
+{{/markdown}}
+
   <h4>.tooltip('toggle')</h4>
   <p>Toggles an element's tooltip.</p>
-  <pre class="prettyprint linenums">$('#element').tooltip('toggle')</pre>
+
+{{#markdown}}
+```javascript
+$('#element').tooltip('toggle')
+```
+{{/markdown}}
+
   <h4>.tooltip('destroy')</h4>
   <p>Hides and destroys an element's tooltip.</p>
-  <pre class="prettyprint linenums">$('#element').tooltip('destroy')</pre>
+
+{{#markdown}}
+```javascript
+$('#element').tooltip('destroy')
+```
+{{/markdown}}
+
 </section>

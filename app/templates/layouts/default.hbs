@@ -1,53 +1,25 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
      {{> head }}
   </head>
   <body data-spy="scroll" data-target="#dive-side-nav" data-offset="-250">
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-    <![endif]-->
 
-    <!--[if lt IE 9]>
-      <script src="components/es5-shim/es5-shim.js"></script>
-      <script src="components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
-    <!-- Add your site or application content here -->
+  <!-- Add your site or application content here -->
 
     <div class="ie8-warning">
       <div class="container">
-        <h1>Sorry. the DiVE Library is not compatible with Internet Explorer 8.</h1>
-        <p>Please visit this site from a modern browser such as IE10, Chrome, Safari or Firefox.  You can also download the DiVE Guidelines PDF:</p>
-        <a href="#" class="btn btn-primary btn-large">Download DiVE Guidelines PDF</a> or <a href="http://preview.waxlab.be/pmi-dive-demo/index.php" class="btn btn-large btn-secondary">Visit the classic components library</a>
+        <h1>Sorry. the DiVE Library is not compatible with your Web-Browser.</h1>
+        <p>Please visit this site from a modern browser such as Internet Explorer 10.  You can also download the DiVE Guidelines PDF:</p>
+        <a href="#" class="btn btn-primary btn-large">Download DiVE Guidelines PDF</a> or <a href="#" class="btn btn-large btn-secondary">Visit the classic components library</a>
       </div>
     </div>
-
-    <!--
-    <div class="hero-unit dive-docs-super-hero-unit">
-      <div class="container">
-        <img src="{{ page.base_url }}img/DiVE.svg" alt="DiVE Logo">
-        <div class="dive-docs-tagline">
-          <p><strong>Digital Visual Experiences</strong></p>
-          <p>for <strong>PMI Applications</strong></p>
-        </div>
-      </div>
-    </div>
-
-     -->
-     <div class="page-ribbon-wrapper right">
-       <div class="page-ribbon">
-          <span>IN BETA</span>
-       </div>
-     </div>
 
     <div class="navbar navbar-fixed-top dive-docs-navbar">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="{{ page.base_url }}">DiVE Library <span class="beta-block">BETA</span></a>
+          <a class="brand" href="{{ page.base_url }}">DiVE Library</a>
 
 
           <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -79,6 +51,7 @@
           <div class="col-sm-7 col-md-5 col-lg-4">
             <p>Copyright Philip Morris International Management SA, all rights reserved</p>
             <ul class="unstyled inline">
+              <li><a href="{{ page.base_url }}contact/">Contact</a></li>
               <li><a href="{{ page.base_url }}changelog/">Changelog</a></li>
               <li><a href="{{ page.base_url }}license/">License</a></li>
             </ul>
@@ -90,7 +63,7 @@
 
     <!-- JS scripts go here -->
 
-    {{> scripts }} 
+    {{> scripts }}
 
   </body>
 </html>

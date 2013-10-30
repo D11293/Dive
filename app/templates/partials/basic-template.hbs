@@ -1,16 +1,17 @@
   <!-- Template
   ================================================== -->
-  <section id="template">
+<section id="simple">
+    <hr class="soften">
     <div class="page-header">
-      <h1>The Basic Template</h1>
+      <h1>Start simple</h1>
     </div>
-    <p class="lead">Make use of a super basic HTML template, or dive into a <a href="{{ page.base_url }}examples">few examples</a> we've started for you. We encourage folks to iterate on these examples and not simply use them as an end result.</p>
+    <p class="lead">Make use of the Boilerplate (a super basic HTML template), or <a href="../examples"> browse the examples</a> we've setup for you. We encourage you to iterate on these examples. Be inspired, reuse. And tell us about your experience!</p>
 
-    <p>The following HTML can be found in the index.html file in the <a href="{{ page.base_url }}{{ site.dive-boilerplate }}">DiVE Boilerplate zip</a>.</p>
-<x-code-prism language="html">
+    <p>The following HTML structure is the index.html file from the <a href="../DiVE-boilerplate.zip">DiVE Boilerplate zip</a>.</p>
+
+{{#markdown}}
+```markup
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
@@ -19,9 +20,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link rel="stylesheet" href="css/dive.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -33,17 +32,15 @@
 
     <!-- Add your site or application content here -->
     <p>Hello world! This was created using the PMI DiVE LIbrary!</p>
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
     <script src="js/dive.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
   </body>
 </html>
 
-</x-code-prism >
+```
+{{/markdown}}
   </section>
 

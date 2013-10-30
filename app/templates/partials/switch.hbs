@@ -21,16 +21,18 @@
       </div>
     </label>
   </div>
-<pre class="prettyprint linenums">
-&lt;input type="checkbox" id="1" class="switch-checkbox" /&gt;
-&lt;label class="switch" for="1"&gt;
-  &lt;div class="switch-slider"&gt;
-    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;ON&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;OFF&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/label&gt;
-</pre>
+{{#markdown}}
+```markup
+<input type="checkbox" id="1" class="switch-checkbox" />
+<label class="switch" for="1">
+  <div class="switch-slider">
+    <div class="switch-button">&nbsp;</div>
+    <div class="switch-content switch-content--left"><span>ON</span></div>
+    <div class="switch-content switch-content--right"><span>OFF</span></div>
+  </div>
+</label>
+```
+{{/markdown}}
 
   <h3>BEWARE!</h3>
   <p><strong>IMPORTANT:</strong> the <code>id=""</code> of the <code>&lt;input&gt;</code>  must match the <code>for=""</code> attribute of the <code>&lt;label&gt;</code>. So if you have multiple Switch buttons on a single page, each must have a unique <code>id</code> and <code>for</code> attribute.</p>
@@ -79,43 +81,46 @@
     </label>
 
   </div>
-<pre class="prettyprint linenums">
-&lt;input type="checkbox" id="switch-mini" class="switch-checkbox" /&gt;
-&lt;label class="switch switch-mini" for="switch-mini"&gt;
-  &lt;div class="switch-slider"&gt;
-    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;|&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;O&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/label&gt;
 
-&lt;input type="checkbox" id="switch-sm" class="switch-checkbox" /&gt;
-&lt;label class="switch switch-sm" for="switch-sm"&gt;
-  &lt;div class="switch-slider"&gt;
-    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;ON&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;OFF&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/label&gt;
+{{#markdown}}
+```markup
+<input type="checkbox" id="switch-mini" class="switch-checkbox" />
+<label class="switch switch-mini" for="switch-mini">
+  <div class="switch-slider">
+    <div class="switch-button">&nbsp;</div>
+    <div class="switch-content switch-content--left"><span>|</span></div>
+    <div class="switch-content switch-content--right"><span>O</span></div>
+  </div>
+</label>
 
-&lt;input type="checkbox" id="switch-md" class="switch-checkbox" /&gt;
-&lt;label class="switch switch-md" for="switch-md"&gt;
-  &lt;div class="switch-slider"&gt;
-    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;Active&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;Inactive&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/label&gt;
+<input type="checkbox" id="switch-sm" class="switch-checkbox" />
+<label class="switch switch-sm" for="switch-sm">
+  <div class="switch-slider">
+    <div class="switch-button">&nbsp;</div>
+    <div class="switch-content switch-content--left"><span>ON</span></div>
+    <div class="switch-content switch-content--right"><span>OFF</span></div>
+  </div>
+</label>
 
-&lt;input type="checkbox" id="switch-lg" class="switch-checkbox" /&gt;
-&lt;label class="switch switch-lg" for="switch-lg"&gt;
-  &lt;div class="switch-slider"&gt;
-    &lt;div class="switch-button"&gt;&amp;nbsp;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--left"&gt;&lt;span&gt;CHECKED&lt;/span&gt;&lt;/div&gt;
-    &lt;div class="switch-content switch-content--right"&gt;&lt;span&gt;UNCHECKED&lt;/span&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/label&gt;
-</pre>
+<input type="checkbox" id="switch-md" class="switch-checkbox" />
+<label class="switch switch-md" for="switch-md">
+  <div class="switch-slider">
+    <div class="switch-button">&nbsp;</div>
+    <div class="switch-content switch-content--left"><span>Active</span></div>
+    <div class="switch-content switch-content--right"><span>Inactive</span></div>
+  </div>
+</label>
+
+<input type="checkbox" id="switch-lg" class="switch-checkbox" />
+<label class="switch switch-lg" for="switch-lg">
+  <div class="switch-slider">
+    <div class="switch-button">&nbsp;</div>
+    <div class="switch-content switch-content--left"><span>CHECKED</span></div>
+    <div class="switch-content switch-content--right"><span>UNCHECKED</span></div>
+  </div>
+</label>
+```
+{{/markdown}}
 
   <h2>Switch Colors</h2>
 

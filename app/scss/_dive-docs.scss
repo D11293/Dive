@@ -27,7 +27,6 @@ body {
 }
 
 
-
 .ie8-warning { display: none; }
 .lt-ie9 .ie8-warning {
   display: block;
@@ -49,10 +48,10 @@ body {
 
 section,
 .dive-docs-main > h1 {
-padding-top: 20px;
+  padding-top: 20px;
 }
 
-@media (min-width: $screen-small) {
+@media (min-width: $screen-sm) {
   section,
   .dive-docs-main > h1 {
     padding-top: 40px;
@@ -108,9 +107,9 @@ section {
   @include border-radius(6px);
   @include box-shadow(0 1px 4px rgba($black, .065));
 
-  @media (min-width: $screen-small)   { width: 212px; }
-  @media (min-width: $screen-medium)  { width: 205px; }
-  @media (min-width: $screen-large)   { width: 270px; }
+  @media (min-width: $screen-sm)   { width: 212px; }
+  @media (min-width: $screen-md)  { width: 205px; }
+  @media (min-width: $screen-lg)   { width: 270px; }
 }
 
 .dive-docs-sidenav > li > a {
@@ -121,13 +120,13 @@ section {
 }
 .dive-docs-sidenav > li:first-child > a {
   -webkit-border-radius: 6px 6px 0 0;
-     -moz-border-radius: 6px 6px 0 0;
-          border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 .dive-docs-sidenav > li:last-child > a {
   -webkit-border-radius: 0 0 6px 6px;
-     -moz-border-radius: 0 0 6px 6px;
-          border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
 }
 .dive-docs-sidenav > .active > a {
   position: relative;
@@ -136,8 +135,8 @@ section {
   border: 0;
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
   -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
-          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+  -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+  box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
 }
 /* Chevrons */
 .dive-docs-sidenav .icon-chevron-right {
@@ -224,8 +223,8 @@ section {
   background-color: #fff;
   border: 1px solid #ddd;
   -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   @include box-shadow(0 0 3px rgba($black, .2));
 }
 
@@ -242,14 +241,13 @@ section {
   border: 1px solid #ddd;
   color: #9da0a4;
   -webkit-border-radius: 4px 0 4px 0;
-     -moz-border-radius: 4px 0 4px 0;
-          border-radius: 4px 0 4px 0;
+  -moz-border-radius: 4px 0 4px 0;
+  border-radius: 4px 0 4px 0;
 }
 
 /* Remove spacing between an example and it's code */
-.dive-docs-example + .prettyprint,
- {
-  margin-top: -20px;
+.dive-docs-example + pre {
+  margin-top: -20px !important;
   padding-top: 15px;
 }
 
@@ -357,7 +355,7 @@ section {
 
 .dive-docs-home-gs {
   p {
-    @media (min-width: $screen-small) {
+    @media (min-width: $screen-sm) {
       min-height: 60px;
     }
   }
@@ -526,7 +524,7 @@ section {
     list-style-type: none;
     margin-left: 0;
     @include columns(4);
-    @media (min-width: $screen-small) {
+    @media (min-width: $screen-sm) {
       @include columns(6);
     }
     li {
@@ -735,20 +733,20 @@ hr {
 }
 .dive-docs-navbar-top-example {
   -webkit-border-radius: 0 0 4px 4px;
-     -moz-border-radius: 0 0 4px 4px;
-          border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
 }
 .dive-docs-navbar-top-example:after {
   top: auto;
   bottom: -1px;
   -webkit-border-radius: 0 4px 0 4px;
-     -moz-border-radius: 0 4px 0 4px;
-          border-radius: 0 4px 0 4px;
+  -moz-border-radius: 0 4px 0 4px;
+  border-radius: 0 4px 0 4px;
 }
 .dive-docs-navbar-bottom-example {
   -webkit-border-radius: 4px 4px 0 0;
-     -moz-border-radius: 4px 4px 0 0;
-          border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 .dive-docs-navbar-bottom-example .navbar {
   margin-bottom: 0;
@@ -804,4 +802,105 @@ a[href^="http"] {
     text-decoration: inherit;
     -webkit-font-smoothing: antialiased;
   }
+}
+
+
+/* Utility classes table  */
+.bs-table th small,
+.responsive-utilities th small {
+  display: block;
+  font-weight: normal;
+  color: #999;
+}
+.responsive-utilities tbody th {
+  font-weight: normal;
+}
+.responsive-utilities td {
+  text-align: center;
+}
+.responsive-utilities td.is-visible {
+  color: #468847;
+  background-color: #dff0d8 !important;
+}
+.responsive-utilities td.is-hidden {
+  color: #ccc;
+  background-color: #f9f9f9 !important;
+}
+
+/* Responsive tests */
+.responsive-utilities-test {
+  margin-top: 5px;
+}
+.responsive-utilities-test .col-xs-6 {
+  margin-bottom: 10px;
+}
+.responsive-utilities-test span {
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  border-radius: 4px;
+}
+.visible-on .col-xs-6 .hidden-xs,
+.visible-on .col-xs-6 .hidden-sm,
+.visible-on .col-xs-6 .hidden-md,
+.visible-on .col-xs-6 .hidden-lg,
+.hidden-on .col-xs-6 .hidden-xs,
+.hidden-on .col-xs-6 .hidden-sm,
+.hidden-on .col-xs-6 .hidden-md,
+.hidden-on .col-xs-6 .hidden-lg {
+  color: #999;
+  border: 1px solid #ddd;
+}
+.visible-on .col-xs-6 .visible-xs,
+.visible-on .col-xs-6 .visible-sm,
+.visible-on .col-xs-6 .visible-md,
+.visible-on .col-xs-6 .visible-lg,
+.hidden-on .col-xs-6 .visible-xs,
+.hidden-on .col-xs-6 .visible-sm,
+.hidden-on .col-xs-6 .visible-md,
+.hidden-on .col-xs-6 .visible-lg {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+/* Responsive tests */
+.responsive-utilities-test {
+  margin-top: 5px;
+}
+.responsive-utilities-test .col-xs-6 {
+  margin-bottom: 10px;
+}
+.responsive-utilities-test span {
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  border-radius: 4px;
+}
+.visible-on .col-xs-6 .hidden-xs,
+.visible-on .col-xs-6 .hidden-sm,
+.visible-on .col-xs-6 .hidden-md,
+.visible-on .col-xs-6 .hidden-lg,
+.hidden-on .col-xs-6 .hidden-xs,
+.hidden-on .col-xs-6 .hidden-sm,
+.hidden-on .col-xs-6 .hidden-md,
+.hidden-on .col-xs-6 .hidden-lg {
+  color: #999;
+  border: 1px solid #ddd;
+}
+.visible-on .col-xs-6 .visible-xs,
+.visible-on .col-xs-6 .visible-sm,
+.visible-on .col-xs-6 .visible-md,
+.visible-on .col-xs-6 .visible-lg,
+.hidden-on .col-xs-6 .visible-xs,
+.hidden-on .col-xs-6 .visible-sm,
+.hidden-on .col-xs-6 .visible-md,
+.hidden-on .col-xs-6 .visible-lg {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
 }

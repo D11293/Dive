@@ -6,7 +6,7 @@
         </div>
 
         <h2>Examples</h2>
-        <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="#tooltips">Tooltip</a> to be included.</strong></p>
+        <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="#tooltips">Tooltips</a> to be included.</strong></p>
 
         <h3>Static popover</h3>
         <p>Four options are available: top, right, bottom, and left aligned.</p>
@@ -68,7 +68,11 @@
 
         <h2>Usage</h2>
         <p>Enable popovers via JavaScript:</p>
-        <pre class="prettyprint linenums">$('#example').popover(options)</pre>
+{{#markdown}}
+```javascript
+  $('#example').popover(options)
+```
+{{/markdown}}
 
         <h3>Options</h3>
         <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=""</code>.</p>
@@ -157,16 +161,32 @@
         <p>Initializes popovers for an element collection.</p>
         <h4>.popover('show')</h4>
         <p>Reveals an elements popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('show')</pre>
+{{#markdown}}
+```javascript
+  $('#element').popover('show')
+```
+{{/markdown}}
         <h4>.popover('hide')</h4>
         <p>Hides an elements popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
+{{#markdown}}
+```javascript
+  $('#element').popover('hide')
+```
+{{/markdown}}
         <h4>.popover('toggle')</h4>
         <p>Toggles an elements popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
+{{#markdown}}
+```javascript
+  $('#element').popover('toggle')
+```
+{{/markdown}}
         <h4>.popover('destroy')</h4>
         <p>Hides and destroys an element's popover.</p>
-        <pre class="prettyprint linenums">$('#element').popover('destroy')</pre>
+{{#markdown}}
+```javascript
+  $('#element').popover('destroy')
+```
+{{/markdown}}
       </section>
 
 

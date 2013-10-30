@@ -15,14 +15,23 @@
                 Loading state
               </button>
             </div>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-primary" data-loading-text="Loading..."&gt;Loading state&lt;/button&gt;</pre>
+{{#markdown}}
+```markup
+<button type="button" class="btn btn-primary" data-loading-text="Loading...">Loading state</button>
+```
+{{/markdown}}
 
             <h4>Single toggle</h4>
             <p>Add <code>data-toggle="button"</code> to activate toggling on a single button.</p>
             <div class="dive-docs-example" style="padding-bottom: 24px;">
               <button type="button" class="btn btn-primary" data-toggle="button">Single Toggle</button>
             </div>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-primary" data-toggle="button"&gt;Single Toggle&lt;/button&gt;</pre>
+
+{{#markdown}}
+```markup
+<button type="button" class="btn btn-primary" data-toggle="button">Single Toggle</button>
+```
+{{/markdown}}
 
             <h4>Checkbox</h4>
             <p>Add <code>data-toggle="buttons-checkbox"</code> for checkbox style toggling on btn-group.</p>
@@ -33,13 +42,15 @@
                 <button type="button" class="btn btn-primary">Right</button>
               </div>
             </div>
-<pre class="prettyprint linenums">
-&lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
-  &lt;button type="button" class="btn btn-primary"&gt;Left&lt;/button&gt;
-  &lt;button type="button" class="btn btn-primary"&gt;Middle&lt;/button&gt;
-  &lt;button type="button" class="btn btn-primary"&gt;Right&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="btn-group" data-toggle="buttons-checkbox">
+  <button type="button" class="btn btn-primary">Left</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
+</div>
+```
+{{/markdown}}
 
             <h4>Radio</h4>
             <p>Add <code>data-toggle="buttons-radio"</code> for radio style toggling on btn-group.</p>
@@ -50,13 +61,15 @@
                 <button type="button" class="btn btn-primary">Right</button>
               </div>
             </div>
-<pre class="prettyprint linenums">
-&lt;div class="btn-group" data-toggle="buttons-radio"&gt;
-  &lt;button type="button" class="btn btn-primary"&gt;Left&lt;/button&gt;
-  &lt;button type="button" class="btn btn-primary"&gt;Middle&lt;/button&gt;
-  &lt;button type="button" class="btn btn-primary"&gt;Right&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="btn-group" data-toggle="buttons-radio">
+  <button type="button" class="btn btn-primary">Left</button>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
+</div>
+```
+{{/markdown}}
 
 
             <hr class="dive-docs-separator">
@@ -64,7 +77,11 @@
 
             <h2>Usage</h2>
             <p>Enable buttons via JavaScript:</p>
-            <pre class="prettyprint linenums">$('.nav-tabs').button()</pre>
+{{#markdown}}
+```javascript
+$('.nav-tabs').button()
+```
+{{/markdown}}
 
             <h3>Markup</h3>
             <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
@@ -79,11 +96,19 @@
               <strong>Heads up!</strong>
               You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.
             </div>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-secondary" data-toggle="button" &gt;…&lt;/button&gt;</pre>
+{{#markdown}}
+```markup
+<button type="button" class="btn btn-secondary" data-toggle="button" >…</button>
+```
+{{/markdown}}
             <h4>$().button('loading')</h4>
             <p>Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.
             </p>
-            <pre class="prettyprint linenums">&lt;button type="button" class="btn btn-secondary" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
+{{#markdown}}
+```markup
+<button type="button" class="btn btn-secondary" data-loading-text="loading stuff..." >...</button>
+```
+{{/markdown}}
             <div class="alert alert-info">
               <strong>Heads up!</strong>
               <a href="https://github.com/twitter/bootstrap/issues/793">Firefox persists the disabled state across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>.
@@ -92,9 +117,19 @@
             <p>Resets button state - swaps text to original text.</p>
             <h4>$().button(string)</h4>
             <p>Resets button state - swaps text to any data defined text state.</p>
-<pre class="prettyprint linenums">&lt;button type="button" class="btn btn-secondary" data-complete-text="finished!" &gt;...&lt;/button&gt;
-&lt;script&gt;
+
+{{#markdown}}
+```markup
+<button type="button" class="btn btn-secondary" data-complete-text="finished!" >...</button>
+```
+{{/markdown}}
+
+{{#markdown}}
+```javascript
+<script>
   $('.btn').button('complete')
-&lt;/script&gt;
-</pre>
+</script>
+```
+{{/markdown}}
+
           </section>

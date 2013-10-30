@@ -3,10 +3,10 @@
         ================================================== -->
         <section id="navs">
           <div class="page-header">
-            <h1>Nav: tabs, pills, and lists</small></h1>
+            <h1>Navigations: tabs, pills, and lists</small></h1>
           </div>
 
-          <h2>Lightweight defaults <small>Same markup, different classes</small></h2>
+          <h2>Navigation defaults <small>Same markup, different classes</small></h2>
           <p>All nav components here&mdash;tabs, pills, and lists&mdash;<strong>share the same base markup and styles</strong> through the <code>.nav</code> class.</p>
 
           <h3>Basic tabs</h3>
@@ -18,15 +18,17 @@
               <li><a href="#">Messages</a></li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs"&gt;
-  &lt;li class="active"&gt;
-    &lt;a href="#"&gt;Home&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#">Home</a>
+  </li>
+  <li><a href="#">...</a></li>
+  <li><a href="#">...</a></li>
+</ul>
+```
+{{/markdown}}
 
           <h3>Basic pills</h3>
           <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
@@ -37,15 +39,17 @@
               <li><a href="#">Messages</a></li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-pills"&gt;
-  &lt;li class="active"&gt;
-    &lt;a href="#"&gt;Home&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="nav nav-pills">
+  <li class="active">
+    <a href="#">Home</a>
+  </li>
+  <li><a href="#">...</a></li>
+  <li><a href="#">...</a></li>
+</ul>
+```
+{{/markdown}}
 
           <h3>Disabled state</h3>
           <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>. Links will remain clickable, however, unless you remove the <code>href</code> attribute. Alternatively, you could implement custom JavaScript to prevent those clicks.</p>
@@ -56,13 +60,15 @@
               <li class="disabled"><a href="#">Disabled link</a></li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-pills"&gt;
+{{#markdown}}
+```markup
+<ul class="nav nav-pills">
   ...
-  &lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  <li class="disabled"><a href="#">Home</a></li>
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
 
           <h3>Component alignment</h3>
           <p>To align nav links, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
@@ -82,11 +88,13 @@
               <li><a href="#">Messages</a></li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs nav-stacked"&gt;
+{{#markdown}}
+```markup
+<ul class="nav nav-tabs nav-stacked">
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
 
           <h3>Stacked pills</h3>
           <div class="dive-docs-example">
@@ -96,11 +104,13 @@
               <li><a href="#">Messages</a></li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-pills nav-stacked"&gt;
+{{#markdown}}
+```markup
+<ul class="nav nav-pills nav-stacked">
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
 
 
           <hr class="dive-docs-separator">
@@ -126,21 +136,23 @@
               </li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs"&gt;
-  &lt;li class="dropdown"&gt;
-    &lt;a class="dropdown-toggle"
+{{#markdown}}
+```markup
+<ul class="nav nav-tabs">
+  <li class="dropdown">
+    <a class="dropdown-toggle"
        data-toggle="dropdown"
-       href="#"&gt;
+       href="#">
         Dropdown
-        &lt;b class="caret"&gt;&lt;/b&gt;
-      &lt;/a&gt;
-    &lt;ul class="dropdown-menu"&gt;
-      &lt;!-- links --&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+        <b class="caret"></b>
+      </a>
+    <ul class="dropdown-menu">
+      <!-- links -->
+    </ul>
+  </li>
+</ul>
+```
+{{/markdown}}
 
           <h3>Pills with dropdowns</h3>
           <div class="dive-docs-example">
@@ -159,21 +171,23 @@
               </li>
             </ul>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-pills"&gt;
-  &lt;li class="dropdown"&gt;
-    &lt;a class="dropdown-toggle"
+{{#markdown}}
+```markup
+<ul class="nav nav-pills">
+  <li class="dropdown">
+    <a class="dropdown-toggle"
        data-toggle="dropdown"
-       href="#"&gt;
+       href="#">
         Dropdown
-        &lt;b class="caret"&gt;&lt;/b&gt;
-      &lt;/a&gt;
-    &lt;ul class="dropdown-menu"&gt;
-      &lt;!-- links --&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+        <b class="caret"></b>
+      </a>
+    <ul class="dropdown-menu">
+      <!-- links -->
+    </ul>
+  </li>
+</ul>
+```
+{{/markdown}}
 
 
           <hr class="dive-docs-separator">
@@ -199,14 +213,16 @@
               </ul>
             </div> <!-- /well -->
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-list"&gt;
-  &lt;li class="nav-header"&gt;List header&lt;/li&gt;
-  &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+{{#markdown}}
+```markup
+<ul class="nav nav-list">
+  <li class="nav-header">List header</li>
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
           <p>
             <span class="label label-info">Note</span>
             For nesting within a nav list, include <code>class="nav nav-list"</code> on any nested <code>&lt;ul&gt;</code>.
@@ -214,13 +230,15 @@
 
           <h3>Horizontal dividers</h3>
           <p>Add a horizontal divider by creating an empty list item with the class <code>.divider</code>, like so:</p>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-list"&gt;
+{{#markdown}}
+```markup
+<ul class="nav nav-list">
   ...
-  &lt;li class="divider"&gt;&lt;/li&gt;
+  <li class="divider"></li>
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
 
 
           <hr class="dive-docs-separator">
@@ -251,22 +269,24 @@
               </div>
             </div> <!-- /tabbable -->
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="tab1"&gt;
-      &lt;p&gt;I'm in Section 1.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="tab2"&gt;
-      &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p>I'm in Section 1.</p>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>Howdy, I'm in Section 2.</p>
+    </div>
+  </div>
+</div>
+```
+{{/markdown}}
 
           <h4>Fade in tabs</h4>
           <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>.</p>
@@ -295,16 +315,18 @@
               </ul>
             </div> <!-- /tabbable -->
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable tabs-below"&gt;
-  &lt;div class="tab-content"&gt;
+{{#markdown}}
+```markup
+<div class="tabbable tabs-below">
+  <div class="tab-content">
     ...
-  &lt;/div&gt;
-  &lt;ul class="nav nav-tabs"&gt;
+  </div>
+  <ul class="nav nav-tabs">
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+  </ul>
+</div>
+```
+{{/markdown}}
 
           <h4>Tabs on the left</h4> <!-- CC_002 -->
           <p>Swap the class to put tabs on the left.</p>
@@ -328,16 +350,18 @@
               </div>
             </div> <!-- /tabbable -->
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable tabs-left"&gt;
-  &lt;ul class="nav nav-tabs"&gt;
+{{#markdown}}
+```markup
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs">
     ...
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
+  </ul>
+  <div class="tab-content">
     ...
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
+{{/markdown}}
 
           <h4>Tabs on the right</h4>
           <p>Swap the class to put tabs on the right.</p>
@@ -361,15 +385,17 @@
               </div>
             </div> <!-- /tabbable -->
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable tabs-right"&gt;
-  &lt;ul class="nav nav-tabs"&gt;
+{{#markdown}}
+```markup
+<div class="tabbable tabs-right">
+  <ul class="nav nav-tabs">
     ...
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
+  </ul>
+  <div class="tab-content">
     ...
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  </div>
+</div>
+```
+{{/markdown}}
 
         </section>

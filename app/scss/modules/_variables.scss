@@ -75,30 +75,32 @@ $orange:                $orangeLight !default;
 
 
 
+ 
+
+
 // Media queries breakpoints
 // --------------------------------------------------
 
 // Extra small screen / phone
-$screen-xsmall:              480px;
-$screen-phone:               $screen-xsmall;
+$screen-xs:                  480px !default;
+$screen-phone:               $screen-xs !default;
 
 // Small screen / tablet
-$screen-small:               768px;
-$screen-tablet:              $screen-small;
+$screen-sm:                  768px !default;
+$screen-tablet:              $screen-sm !default;
 
 // Medium screen / desktop
-$screen-medium:              992px;
-$screen-desktop:             $screen-medium;
+$screen-md:                  992px !default;
+$screen-desktop:             $screen-md !default;
 
 // Large screen / wide desktop
-$screen-large:               1200px;
-$screen-large-desktop:       $screen-large;
+$screen-lg:                  1200px !default;
+$screen-lg-desktop:          $screen-lg !default;
 
 // So media queries don't overlap when required, provide a maximum
-$screen-small-max:           ($screen-medium - 1);
-$screen-tablet-max:          ($screen-desktop - 1);
-$screen-desktop-max:         ($screen-large-desktop - 1);
-
+$screen-xs-max:              ($screen-sm - 1) !default;
+$screen-sm-max:              ($screen-md - 1) !default;
+$screen-md-max:              ($screen-lg - 1) !default;
 
 
 // Transition
@@ -270,7 +272,7 @@ $dragBtnBorder:                $grayLight;
 
 // Navbar
 // -------------------------
-$navbarCollapseWidth:             $screen-medium !default;
+$navbarCollapseWidth:             $screen-md !default;
 $navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1 !default;
 $bigBreak:                        $navbarCollapseWidth + 1;
 

@@ -42,55 +42,64 @@
 
           <h2>Usage</h2>
           <p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
-<pre class="prettyprint linenums">
+{{#markdown}}
+```javascript
 $('#myTab a').click(function (e) {
   e.preventDefault();
   $(this).tab('show');
-})</pre>
+})```
+{{/markdown}}
           <p>You can activate individual tabs in several ways:</p>
-<pre class="prettyprint linenums">
+{{#markdown}}
+```javascript
 $('#myTab a[href="#profile"]').tab('show'); // Select tab by name
 $('#myTab a:first').tab('show'); // Select first tab
 $('#myTab a:last').tab('show'); // Select last tab
 $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
-</pre>
+```
+{{/markdown}}
 
           <h3>Markup</h3>
           <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the DiVE Library tab styling.</p>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs"&gt;
-  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+{{#markdown}}
+```markup
+<ul class="nav nav-tabs">
+  <li><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+</ul>
+```
+{{/markdown}}
 
           <h3>Methods</h3>
           <h4>$().tab</h4>
           <p>
             Activates a tab element and content container. Tab should have either a <code>data-target</code> or an <code>href</code> targeting a container node in the DOM.
           </p>
-<pre class="prettyprint linenums">
-&lt;ul class="nav nav-tabs" id="myTab"&gt;
-  &lt;li class="active"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#profile"&gt;Profile&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#messages"&gt;Messages&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#settings"&gt;Settings&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+{{#markdown}}
+```markup
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#home">Home</a></li>
+  <li><a href="#profile">Profile</a></li>
+  <li><a href="#messages">Messages</a></li>
+  <li><a href="#settings">Settings</a></li>
+</ul>
 
-&lt;div class="tab-content"&gt;
-  &lt;div class="tab-pane active" id="home"&gt;...&lt;/div&gt;
-  &lt;div class="tab-pane" id="profile"&gt;...&lt;/div&gt;
-  &lt;div class="tab-pane" id="messages"&gt;...&lt;/div&gt;
-  &lt;div class="tab-pane" id="settings"&gt;...&lt;/div&gt;
-&lt;/div&gt;
+<div class="tab-content">
+  <div class="tab-pane active" id="home">...</div>
+  <div class="tab-pane" id="profile">...</div>
+  <div class="tab-pane" id="messages">...</div>
+  <div class="tab-pane" id="settings">...</div>
+</div>
 
-&lt;script&gt;
+<script>
   $(function () {
     $('#myTab a:last').tab('show');
   })
-&lt;/script&gt;
-</pre>
+</script>
+```
+{{/markdown}}
 
           <h3>Events</h3>
           <table class="table table-bordered table-striped">
@@ -111,10 +120,12 @@ $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
              </tr>
             </tbody>
           </table>
-<pre class="prettyprint linenums">
+{{#markdown}}
+```javascript
 $('a[data-toggle="tab"]').on('shown', function (e) {
   e.target // activated tab
   e.relatedTarget // previous tab
 })
-</pre>
+```
+{{/markdown}}
         </section>

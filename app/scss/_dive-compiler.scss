@@ -71,9 +71,12 @@
   // Bootstrap 3
   @import 'modules/panels';
 
-// Utility classes
-@import 'modules/utilities'; // Has to be last to override when necessary
 
 // Vendor styles
   @import 'modules/vendor/xcode-prism';
 
+
+// Utility classes
+@import 
+    'modules/responsive-utilities', 
+    'modules/utilities'; // Has to be last to override when necessary
