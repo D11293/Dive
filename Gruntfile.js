@@ -152,9 +152,9 @@ module.exports = function(grunt) {
                     {expand: true, cwd: '<%= yeoman.app %>/_boilerplate/', src: ['**'], dest: 'DiVE/', filter: 'isFile'},
                     {expand: true, cwd: '.tmp/css/', src: ['dive.min.css'], dest: 'DiVE/css/', filter: 'isFile'},
                     {expand: true, cwd: '<%= yeoman.dist %>/img/', src: ['**'], dest: 'DiVE/img/', filter: 'isFile'},
-                    {expand: true, cwd: '<%= yeoman.app %>/js/', src: ['dive.min.js', 'dive.js'], dest: 'DiVE/js/', filter: 'isFile'},
+                    {expand: true, cwd: '.tmp/js/', src: ['dive.min.js'], dest: 'DiVE/js/', filter: 'isFile'},
                     {expand: true, cwd: '<%= yeoman.app %>/fonts/', src: ['**'], dest: 'DiVE/fonts/', filter: 'isFile'},
-                    {expand: true, cwd: '<%= yeoman.dist %>', src: ['everything/index.html'], dest: 'DiVE', filter: 'isFile'},
+               //     {expand: true, cwd: '<%= yeoman.dist %>', src: ['everything/index.html'], dest: 'DiVE', filter: 'isFile'},
                     {expand: true, cwd: '<%= yeoman.dist %>', src: ['favicon.ico'], dest: 'DiVE', filter: 'isFile'}
                 ]
             },
@@ -178,6 +178,13 @@ module.exports = function(grunt) {
         // check index.html to edit your build targets
         // enable this task if you prefer defining your build targets here
         // Usemin adds files to uglify
+        uglify: {
+            dive_min: {
+                files: {
+                    '.tmp/js/dive.min.js': ['<%= yeoman.app %>/js/dive.js']
+                }
+            }
+        },
         rev: {
             dist: {
                 files: {
@@ -409,7 +416,7 @@ module.exports = function(grunt) {
     grunt.registerTask('aldo', [
         'clean:dist',
         'compass',
-       'cssmin',
+        'cssmin',
         'copy:dist'
 
     ]);
