@@ -5,7 +5,6 @@
           <h2>Alert messages</h2>
         </div>
 
-
         <h3>Example alerts</h3>
         <p>Add dismiss functionality to all alert messages with this plugin.</p>
         <div class="dive-docs-example">
@@ -26,24 +25,37 @@
           </div>
         </div>
 
-
         <hr class="dive-docs-separator">
-
 
         <h3>Usage</h3>
         <p>Enable dismissal of an alert via JavaScript:</p>
-        <pre class="prettyprint linenums">$(".alert").alert()</pre>
+
+{{#markdown}}
+```javascript
+$(".alert").alert()
+```
+{{/markdown}}
 
         <h3>Markup</h3>
         <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.</p>
-        <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+
+{{#markdown}}
+```markup
+<a class="close" data-dismiss="alert" href="#">&times;</a>
+```
+{{/markdown}}
 
         <h3>Methods</h3>
         <h4>$().alert()</h4>
         <p>Wraps all alerts with close functionality. To have your alerts animate out when closed, make sure they have the <code>.fade</code> and <code>.in</code> class already applied to them.</p>
         <h4>.alert('close')</h4>
         <p>Closes an alert.</p>
-        <pre class="prettyprint linenums">$(".alert").alert('close')</pre>
+
+{{#markdown}}
+```javascript
+$(".alert").alert('close')
+```
+{{/markdown}}
 
 
         <h3>Events</h3>
@@ -66,9 +78,13 @@
            </tr>
           </tbody>
         </table>
-<pre class="prettyprint linenums">
+
+{{#markdown}}
+```javascript
 $('#my-alert').bind('closed', function () {
   // do something…
 })
-</pre>
+```
+{{/markdown}}
+
       </section>

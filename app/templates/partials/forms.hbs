@@ -18,20 +18,22 @@
       <button type="submit" class="btn btn-secondary">Submit</button>
     </fieldset>
   </form>
-<pre class="prettyprint linenums">
-&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Legend&lt;/legend&gt;
-    &lt;label&gt;Label name&lt;/label&gt;
-    &lt;input type="text" placeholder="Type something…"&gt;
-    &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
-    &lt;label class="checkbox"&gt;
-      &lt;input type="checkbox"&gt; Check me out
-    &lt;/label&gt;
-    &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form>
+  <fieldset>
+    <legend>Legend</legend>
+    <label>Label name</label>
+    <input type="text" placeholder="Type something…">
+    <span class="help-block">Example block-level help text here.</span>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -46,12 +48,14 @@
     <input type="text" class="input-medium search-query">
     <button type="submit" class="btn">Search</button>
   </form>
-<pre class="prettyprint linenums">
-&lt;form class="form-search"&gt;
-  &lt;input type="text" class="input-medium search-query"&gt;
-  &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form class="form-search">
+  <input type="text" class="input-medium search-query">
+  <button type="submit" class="btn">Search</button>
+</form>
+```
+{{/markdown}}
 
   <h3>Inline form</h3>
   <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
@@ -63,16 +67,18 @@
     </label>
     <button type="submit" class="btn">Sign in</button>
   </form>
-<pre class="prettyprint linenums">
-&lt;form class="form-inline"&gt;
-  &lt;input type="text" class="input-small" placeholder="Email"&gt;
-  &lt;input type="password" class="input-small" placeholder="Password"&gt;
-  &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; Remember me
-  &lt;/label&gt;
-  &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form class="form-inline">
+  <input type="text" class="input-small" placeholder="Email">
+  <input type="password" class="input-small" placeholder="Password">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button type="submit" class="btn">Sign in</button>
+</form>
+```
+{{/markdown}}
 
   <h3>Horizontal form</h3>
   <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
@@ -104,31 +110,33 @@
       </div>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;form class="form-horizontal"&gt;
-  &lt;div class="control-group"&gt;
-    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
-    &lt;div class="controls"&gt;
-      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="control-group"&gt;
-    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
-    &lt;div class="controls"&gt;
-      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="control-group"&gt;
-    &lt;div class="controls"&gt;
-      &lt;label class="checkbox"&gt;
+{{#markdown}}
+```markup
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
 
-      &lt;input type="checkbox"&gt; Remember me
-      &lt;/label&gt;
-      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+      <input type="checkbox"> Remember me
+      </label>
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </div>
+</form>
+```
+{{/markdown}}
 
 
 
@@ -144,18 +152,22 @@
   <form class="dive-docs-example form-inline">
     <input type="text" placeholder="Text input">
   </form>
-<pre class="prettyprint linenums">
-&lt;input type="text" placeholder="Text input"&gt;
-</pre>
+{{#markdown}}
+```markup
+<input type="text" placeholder="Text input">
+```
+{{/markdown}}
 
   <h3>Textarea</h3>
   <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
   <form class="dive-docs-example form-inline">
     <textarea rows="3"></textarea>
   </form>
-<pre class="prettyprint linenums">
-&lt;textarea rows="3"&gt;&lt;/textarea&gt;
-</pre>
+{{#markdown}}
+```markup
+<textarea rows="3"></textarea>
+```
+{{/markdown}}
 
   <h3>Checkboxes and radios</h3> <!-- FE_003, FE_005 -->
   <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
@@ -175,21 +187,23 @@
       Option two can be something else and selecting it will deselect option one
     </label>
   </form>
-<pre class="prettyprint linenums">
-&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" value=""&gt;
-  Option one is this and that&mdash;be sure to include why it's great
-&lt;/label&gt;
+{{#markdown}}
+```markup
+<label class="checkbox">
+  <input type="checkbox" value="">
+  Option one is this and that—be sure to include why it's great
+</label>
 
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
-  Option one is this and that&mdash;be sure to include why it's great
-&lt;/label&gt;
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+<label class="radio">
+  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+  Option one is this and that—be sure to include why it's great
+</label>
+<label class="radio">
+  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
   Option two can be something else and selecting it will deselect option one
-&lt;/label&gt;
-</pre>
+</label>
+```
+{{/markdown}}
 
   <h4>Inline checkboxes</h4>
   <p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
@@ -204,17 +218,19 @@
       <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
     </label>
   </form>
-<pre class="prettyprint linenums">
-&lt;label class="checkbox inline"&gt;
-  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
-&lt;/label&gt;
-&lt;label class="checkbox inline"&gt;
-  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
-&lt;/label&gt;
-&lt;label class="checkbox inline"&gt;
-  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
-&lt;/label&gt;
-</pre>
+{{#markdown}}
+```markup
+<label class="checkbox inline">
+  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+</label>
+<label class="checkbox inline">
+  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+</label>
+<label class="checkbox inline">
+  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+</label>
+```
+{{/markdown}}
 
   <h3>Selects</h3>
   <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
@@ -235,23 +251,25 @@
       <option>5</option>
     </select>
   </form>
-<pre class="prettyprint linenums">
-&lt;select&gt;
-  &lt;option&gt;1&lt;/option&gt;
-  &lt;option&gt;2&lt;/option&gt;
-  &lt;option&gt;3&lt;/option&gt;
-  &lt;option&gt;4&lt;/option&gt;
-  &lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;
+{{#markdown}}
+```markup
+<select>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
 
-&lt;select multiple="multiple"&gt;
-  &lt;option&gt;1&lt;/option&gt;
-  &lt;option&gt;2&lt;/option&gt;
-  &lt;option&gt;3&lt;/option&gt;
-  &lt;option&gt;4&lt;/option&gt;
-  &lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select multiple="multiple">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -276,16 +294,18 @@
       <span class="add-on">.00</span>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="input-prepend"&gt;
-  &lt;span class="add-on"&gt;@&lt;/span&gt;
-  &lt;input class="col-lg-2" id="prependedInput" type="text" placeholder="Username"&gt;
-&lt;/div&gt;
-&lt;div class="input-append"&gt;
-  &lt;input class="col-lg-2" id="appendedInput" type="text"&gt;
-  &lt;span class="add-on"&gt;.00&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="input-prepend">
+  <span class="add-on">@</span>
+  <input class="col-lg-2" id="prependedInput" type="text" placeholder="Username">
+</div>
+<div class="input-append">
+  <input class="col-lg-2" id="appendedInput" type="text">
+  <span class="add-on">.00</span>
+</div>
+```
+{{/markdown}}
 
   <h4>Combined</h4>
   <p>Use both classes and two instances of <code>.add-on</code> to prepend and append an input.</p>
@@ -296,13 +316,15 @@
       <span class="add-on">.00</span>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="input-prepend input-append"&gt;
-  &lt;span class="add-on"&gt;$&lt;/span&gt;
-  &lt;input class="col-lg-2" id="appendedPrependedInput" type="text"&gt;
-  &lt;span class="add-on"&gt;.00&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="input-prepend input-append">
+  <span class="add-on">$</span>
+  <input class="col-lg-2" id="appendedPrependedInput" type="text">
+  <span class="add-on">.00</span>
+</div>
+```
+{{/markdown}}
 
   <h4>Buttons instead of text</h4>
   <p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
@@ -312,12 +334,14 @@
       <button class="btn" type="button">Go!</button>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="input-append"&gt;
-  &lt;input class="col-lg-2" id="appendedInputButton" type="text"&gt;
-  &lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="input-append">
+  <input class="col-lg-2" id="appendedInputButton" type="text">
+  <button class="btn" type="button">Go!</button>
+</div>
+```
+{{/markdown}}
   <form class="dive-docs-example">
     <div class="input-append">
       <input class="col-lg-2" id="appendedInputButtons" type="text">
@@ -325,13 +349,15 @@
       <button class="btn btn-secondary" type="button">Options</button>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class=&quot;input-append&quot;&gt;
-  &lt;input class=&quot;col-2&quot; id=&quot;appendedInputButtons&quot; type=&quot;text&quot;&gt;
-  &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;i class=&quot;icon-zoom&quot;&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button class=&quot;btn btn-secondary&quot; type=&quot;button&quot;&gt;Options&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="input-append">
+  <input class="col-2" id="appendedInputButtons" type="text">
+  <button class="btn btn-primary" type="button"><i class="icon-zoom"></i></button>
+  <button class="btn btn-secondary" type="button">Options</button>
+</div>
+```
+{{/markdown}}
 
   <h4>Button dropdowns</h4>
   <p></p>
@@ -350,20 +376,22 @@
       </div><!-- /btn-group -->
     </div><!-- /input-append -->
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="input-append"&gt;
-  &lt;input class="col-lg-2" id="appendedDropdownButton" type="text"&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+{{#markdown}}
+```markup
+<div class="input-append">
+  <input class="col-lg-2" id="appendedDropdownButton" type="text">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
       Action
-      &lt;span class="caret"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;ul class="dropdown-menu"&gt;
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
       ...
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </ul>
+  </div>
+</div>
+```
+{{/markdown}}
 
   <form class="dive-docs-example">
     <div class="input-prepend">
@@ -380,20 +408,22 @@
       <input class="col-lg-2" id="prependedDropdownButton" type="text">
     </div><!-- /input-prepend -->
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="input-prepend"&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+{{#markdown}}
+```markup
+<div class="input-prepend">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
       Action
-      &lt;span class="caret"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;ul class="dropdown-menu"&gt;
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
       ...
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;input class="col-lg-2" id="prependedDropdownButton" type="text"&gt;
-&lt;/div&gt;
-</pre>
+    </ul>
+  </div>
+  <input class="col-lg-2" id="prependedDropdownButton" type="text">
+</div>
+```
+{{/markdown}}
 
   <form class="dive-docs-example">
     <div class="input-prepend input-append">
@@ -420,29 +450,31 @@
       </div><!-- /btn-group -->
     </div><!-- /input-prepend input-append -->
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="input-prepend input-append"&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+{{#markdown}}
+```markup
+<div class="input-prepend input-append">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
       Action
-      &lt;span class="caret"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;ul class="dropdown-menu"&gt;
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
       ...
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;input class="col-lg-2" id="appendedPrependedDropdownButton" type="text"&gt;
-  &lt;div class="btn-group"&gt;
-    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    </ul>
+  </div>
+  <input class="col-lg-2" id="appendedPrependedDropdownButton" type="text">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
       Action
-      &lt;span class="caret"&gt;&lt;/span&gt;
-    &lt;/button&gt;
-    &lt;ul class="dropdown-menu"&gt;
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
       ...
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </ul>
+  </div>
+</div>
+```
+{{/markdown}}
 
   <h4>Segmented dropdown groups</h4>
   <form class="dive-docs-example">
@@ -479,18 +511,20 @@
       </div>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;form&gt;
-  &lt;div class="input-prepend"&gt;
-    &lt;div class="btn-group"&gt;...&lt;/div&gt;
-    &lt;input type="text"&gt;
-  &lt;/div&gt;
-  &lt;div class="input-append"&gt;
-    &lt;input type="text"&gt;
-    &lt;div class="btn-group"&gt;...&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form>
+  <div class="input-prepend">
+    <div class="btn-group">...</div>
+    <input type="text">
+  </div>
+  <div class="input-append">
+    <input type="text">
+    <div class="btn-group">...</div>
+  </div>
+</form>
+```
+{{/markdown}}
 
   <h4>Search form</h4>
   <form class="dive-docs-example form-search">
@@ -503,18 +537,20 @@
       <input type="text" class="col-2 search-query">
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;form class="form-search"&gt;
-  &lt;div class="input-append"&gt;
-    &lt;input type="text" class="col-2 search-query"&gt;
-    &lt;button type="submit" class="btn btn-secondary"&gt;Search&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;div class="input-prepend"&gt;
-    &lt;button type="submit" class="btn btn-secondary"&gt;Search&lt;/button&gt;
-    &lt;input type="text" class="col-2 search-query"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form class="form-search">
+  <div class="input-append">
+    <input type="text" class="col-2 search-query">
+    <button type="submit" class="btn btn-secondary">Search</button>
+  </div>
+  <div class="input-prepend">
+    <button type="submit" class="btn btn-secondary">Search</button>
+    <input type="text" class="col-2 search-query">
+  </div>
+</form>
+```
+{{/markdown}}
 
   <h3>Control sizing</h3>
   <p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
@@ -526,9 +562,11 @@
       <input class="input-block-level" type="text" placeholder=".input-block-level">
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
-</pre>
+{{#markdown}}
+```markup
+<input class="input-block-level" type="text" placeholder=".input-block-level">
+```
+{{/markdown}}
 
   <h4>Relative sizing</h4>
   <form class="dive-docs-example" style="padding-bottom: 15px;">
@@ -541,14 +579,16 @@
       <input class="col-xs-6" type="text" placeholder=".col-xs-6">
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;input class=&quot;col-sm-4&quot; type=&quot;text&quot; placeholder=&quot;.col-sm-4&quot;&gt;
-&lt;input class=&quot;col-sm-4&quot; type=&quot;text&quot; placeholder=&quot;.col-sm-4&quot;&gt;
-&lt;input class=&quot;col-sm-4&quot; type=&quot;text&quot; placeholder=&quot;.col-sm-4&quot;&gt;
-&lt;input class=&quot;col-sm-12&quot; type=&quot;text&quot; placeholder=&quot;.col-xs-12&quot;&gt;
-&lt;input class=&quot;col-xs-6&quot; type=&quot;text&quot; placeholder=&quot;.col-xs-6&quot;&gt;
-&lt;input class=&quot;col-xs-6&quot; type=&quot;text&quot; placeholder=&quot;.col-xs-6&quot;&gt;
-</pre>
+{{#markdown}}
+```markup
+<input class="col-sm-4" type="text" placeholder=".col-sm-4">
+<input class="col-sm-4" type="text" placeholder=".col-sm-4">
+<input class="col-sm-4" type="text" placeholder=".col-sm-4">
+<input class="col-sm-12" type="text" placeholder=".col-xs-12">
+<input class="col-xs-6" type="text" placeholder=".col-xs-6">
+<input class="col-xs-6" type="text" placeholder=".col-xs-6">
+```
+{{/markdown}}
   <p>
     <span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
   </p>
@@ -583,20 +623,22 @@
       </select>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="col-lg-1" type="text" placeholder=".col-1"&gt;
-&lt;input class="col-lg-2" type="text" placeholder=".col-2"&gt;
-&lt;input class="col-lg-3" type="text" placeholder=".col-3"&gt;
-&lt;select class="col-lg-1"&gt;
+{{#markdown}}
+```markup
+<input class="col-lg-1" type="text" placeholder=".col-1">
+<input class="col-lg-2" type="text" placeholder=".col-2">
+<input class="col-lg-3" type="text" placeholder=".col-3">
+<select class="col-lg-1">
   ...
-&lt;/select&gt;
-&lt;select class="col-lg-2"&gt;
+</select>
+<select class="col-lg-2">
   ...
-&lt;/select&gt;
-&lt;select class="col-lg-3"&gt;
+</select>
+<select class="col-lg-3">
   ...
-&lt;/select&gt;
-</pre>
+</select>
+```
+{{/markdown}}
 
   <p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and clears the float.</p>
   <form class="dive-docs-example" style="padding-bottom: 15px;">
@@ -620,25 +662,29 @@
       <input class="col-lg-4" type="text" placeholder=".col-4">
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="controls"&gt;
-  &lt;input class="col-lg-5" type="text" placeholder=".col-5"&gt;
-&lt;/div&gt;
-&lt;div class="controls controls-row"&gt;
-  &lt;input class="col-lg-4" type="text" placeholder=".col-4"&gt;
-  &lt;input class="col-lg-1" type="text" placeholder=".col-1"&gt;
-&lt;/div&gt;
+{{#markdown}}
+```markup
+<div class="controls">
+  <input class="col-lg-5" type="text" placeholder=".col-5">
+</div>
+<div class="controls controls-row">
+  <input class="col-lg-4" type="text" placeholder=".col-4">
+  <input class="col-lg-1" type="text" placeholder=".col-1">
+</div>
 ...
-</pre>
+```
+{{/markdown}}
 
   <h3>Uneditable inputs</h3>
   <p>Present data in a form that's not editable without using actual form markup.</p>
   <form class="dive-docs-example">
     <span class="input-xlarge uneditable-input">Some value here</span>
   </form>
-<pre class="prettyprint linenums">
-&lt;span class="input-xlarge uneditable-input"&gt;Some value here&lt;/span&gt;
-</pre>
+{{#markdown}}
+```markup
+<span class="input-xlarge uneditable-input">Some value here</span>
+```
+{{/markdown}}
 
   <h3>Form actions</h3>
   <p>End a form with a group of actions (buttons). When placed within a <code>.form-actions</code>, the buttons will automatically indent to line up with the form controls.</p>
@@ -648,12 +694,14 @@
       <button type="button" class="btn btn-secondary">Cancel</button>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="form-actions"&gt;
-  &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-  &lt;button type="button" class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="form-actions">
+  <button type="submit" class="btn btn-primary">Save changes</button>
+  <button type="button" class="btn btn-secondary">Cancel</button>
+</div>
+```
+{{/markdown}}
 
   <h3>Help text</h3>
   <p>Inline and block level support for help text that appears around form controls.</p>
@@ -661,18 +709,22 @@
   <form class="dive-docs-example form-inline">
     <input type="text"> <span class="help-inline">Inline help text</span>
   </form>
-<pre class="prettyprint linenums">
-&lt;input type="text"&gt;&lt;span class="help-inline"&gt;Inline help text&lt;/span&gt;
-</pre>
+{{#markdown}}
+```markup
+<input type="text"><span class="help-inline">Inline help text</span>
+```
+{{/markdown}}
 
   <h4>Block help</h4>
   <form class="dive-docs-example form-inline">
     <input type="text">
     <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
   </form>
-<pre class="prettyprint linenums">
-&lt;input type="text"&gt;&lt;span class="help-block"&gt;A longer block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
-</pre>
+{{#markdown}}
+```markup
+<input type="text"><span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -686,9 +738,11 @@
   <form class="dive-docs-example form-inline">
     <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused..."&gt;
-</pre>
+{{#markdown}}
+```markup
+<input class="input-xlarge" id="focusedInput" type="text" value="This is focused...">
+```
+{{/markdown}}
 
   <h3>Invalid inputs</h3>
   <p>Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code>, add the <code>required</code> attribute if the field is not optional, and (if applicable) specify a <code>pattern</code>.</p>
@@ -696,18 +750,22 @@
   <form class="dive-docs-example form-inline">
     <input class="col-lg-3" type="email" placeholder="test@example.com" required>
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="col-lg-3" type="email" required&gt;
-</pre>
+{{#markdown}}
+```markup
+<input class="col-lg-3" type="email" required>
+```
+{{/markdown}}
 
   <h3>Disabled inputs</h3>
   <p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
   <form class="dive-docs-example form-inline">
     <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
   </form>
-<pre class="prettyprint linenums">
-&lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;
-</pre>
+{{#markdown}}
+```markup
+<input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+```
+{{/markdown}}
 
   <h3>Validation states</h3> <!-- EH_001 -->
   <p>DiVE Library includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
@@ -742,38 +800,40 @@
       </div>
     </div>
   </form>
-<pre class="prettyprint linenums">
-&lt;div class="control-group warning"&gt;
-  &lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
-  &lt;div class="controls"&gt;
-    &lt;input type="text" id="inputWarning"&gt;
-    &lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+{{#markdown}}
+```markup
+<div class="control-group warning">
+  <label class="control-label" for="inputWarning">Input with warning</label>
+  <div class="controls">
+    <input type="text" id="inputWarning">
+    <span class="help-inline">Something may have gone wrong</span>
+  </div>
+</div>
 
-&lt;div class="control-group error"&gt;
-  &lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
-  &lt;div class="controls"&gt;
-    &lt;input type="text" id="inputError"&gt;
-    &lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<div class="control-group error">
+  <label class="control-label" for="inputError">Input with error</label>
+  <div class="controls">
+    <input type="text" id="inputError">
+    <span class="help-inline">Please correct the error</span>
+  </div>
+</div>
 
-&lt;div class="control-group info"&gt;
-  &lt;label class="control-label" for="inputInfo"&gt;Input with info&lt;/label&gt;
-  &lt;div class="controls"&gt;
-    &lt;input type="text" id="inputInfo"&gt;
-    &lt;span class="help-inline"&gt;Username is already taken&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+<div class="control-group info">
+  <label class="control-label" for="inputInfo">Input with info</label>
+  <div class="controls">
+    <input type="text" id="inputInfo">
+    <span class="help-inline">Username is already taken</span>
+  </div>
+</div>
 
-&lt;div class="control-group success"&gt;
-  &lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
-  &lt;div class="controls"&gt;
-    &lt;input type="text" id="inputSuccess"&gt;
-    &lt;span class="help-inline"&gt;Woohoo!&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div class="control-group success">
+  <label class="control-label" for="inputSuccess">Input with success</label>
+  <div class="controls">
+    <input type="text" id="inputSuccess">
+    <span class="help-inline">Woohoo!</span>
+  </div>
+</div>
+```
+{{/markdown}}
 
         </section>

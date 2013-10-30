@@ -21,18 +21,20 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="navbar"&gt;
-  &lt;div class="navbar-inner"&gt;
-    &lt;a class="brand" href="#"&gt;Title&lt;/a&gt;
-    &lt;ul class="nav"&gt;
-      &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </div>
+</div>
+```
+{{/markdown}}
 
 
           <hr class="dive-docs-separator">
@@ -49,9 +51,11 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
-</pre>
+{{#markdown}}
+```markup
+<a class="brand" href="#">Project name</a>
+```
+{{/markdown}}
 
           <h3>Nav links</h3>
           <p>Nav items are simple to add via unordered lists.</p>
@@ -66,15 +70,17 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav"&gt;
-  &lt;li class="active"&gt;
-    &lt;a href="#">Home&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="nav">
+  <li class="active">
+    <a href="#">Home</a>
+  </li>
+  <li><a href="#">Link</a></li>
+  <li><a href="#">Link</a></li>
+</ul>
+```
+{{/markdown}}
           <p>You can easily add dividers to your nav links with an empty list item and a simple class. Just add this between links:</p>
           <div class="dive-docs-example">
             <div class="navbar">
@@ -90,13 +96,15 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;ul class="nav"&gt;
+{{#markdown}}
+```markup
+<ul class="nav">
   ...
-  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  <li class="divider-vertical"></li>
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
 
           <h3>Forms</h3>
           <p>To properly style and position a form within the navbar, add the appropriate classes as shown below. For a default form, include <code>.navbar-form</code> and either <code>.pull-left</code> or <code>.pull-right</code> to properly align it.</p>
@@ -110,12 +118,14 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;form class="navbar-form pull-left"&gt;
-  &lt;input type="text" class="col-lg-2"&gt;
-  &lt;button type="submit" class="btn btn-secondary"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form class="navbar-form pull-left">
+  <input type="text" class="col-lg-2">
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+```
+{{/markdown}}
 
           <h3>Search form</h3>
           <p>For a more customized search form, add <code>.navbar-search</code> to the <code>form</code> and <code>.search-query</code> to the input for specialized styles in the navbar.</p>
@@ -128,31 +138,35 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;form class="navbar-search pull-left"&gt;
-  &lt;input type="text" class="search-query" placeholder="Search"&gt;
-&lt;/form&gt;
-</pre>
+{{#markdown}}
+```markup
+<form class="navbar-search pull-left">
+  <input type="text" class="search-query" placeholder="Search">
+</form>
+```
+{{/markdown}}
 
           <h3>Component alignment</h3>
           <p>Align nav links, search form, or text, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
 
           <h3>Using dropdowns</h3>
-          <p>Add dropdowns and dropups to the nav with a bit of markup and JavaScript.</p>
-<pre class="prettyprint linenums">
-&lt;ul class="nav"&gt;
-  &lt;li class="dropdown"&gt;
-    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown">
-      Account
-      &lt;b class="caret"&gt;&lt;/b&gt;
-    &lt;/a&gt;
-    &lt;ul class="dropdown-menu"&gt;
-      ...
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
 
+         <p>Add dropdowns and dropups to the nav with a bit of markup and JavaScript.</p>
+{{#markdown}}
+```markup
+<ul class="nav">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      Account
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </li>
+</ul>
+```
+{{/markdown}}
           <h3>Text</h3>
           <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
 

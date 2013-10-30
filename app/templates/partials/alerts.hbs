@@ -14,18 +14,31 @@
       <strong>Warning! TEST</strong> Best check yo self, you're not looking too good.
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
-  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Warning!</strong> Best check yo self, you're not looking too good.
+</div>
+```
+{{/markdown}}
 
   <h3>Dismiss buttons</h3>
   <p>Mobile Safari browser (and Mobile Opera), in addition to the <code>data-dismiss="alert"</code> attribute, require an <code>href="#"</code> for the dismissal of alerts when using an <code>&lt;a&gt;</code> tag.</p>
-  <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/a&gt;</pre>
+
+{{#markdown}}
+```markup
+<a href="#" class="close" data-dismiss="alert">&times;</a>
+```
+{{/markdown}}
+
   <p>Alternatively, you may use a <code>&lt;button&gt;</code> element with the data attribute, which we have opted to do. When using <code>&lt;button&gt;</code>, you must include <code>type="button"</code> or your forms may not submit.</p>
-  <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;</pre>
+
+{{#markdown}}
+```markup
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+```
+{{/markdown}}
 
   <h3>Dismiss alerts via JavaScript</h3>
   <p>Use JavaScript for quick and easy dismissal of alerts.</p>
@@ -42,13 +55,16 @@
       <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-block"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
-  &lt;h4&gt;Warning!&lt;/h4&gt;
+
+{{#markdown}}
+```markup
+<div class="alert alert-block">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>Warning!</h4>
   Best check yo self, you're not...
-&lt;/div&gt;
-</pre>
+</div>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -64,11 +80,13 @@
       <strong>Oh snap!</strong> Change a few things up and try submitting again.
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-error"&gt;
+{{#markdown}}
+```markup
+<div class="alert alert-error">
   ...
-&lt;/div&gt;
-</pre>
+</div>
+```
+{{/markdown}}
 
   <h3>Success</h3>
   <div class="dive-docs-example">
@@ -77,11 +95,13 @@
       <strong>Well done!</strong> You successfully read this important alert message.
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-success"&gt;
+{{#markdown}}
+```markup
+<div class="alert alert-success">
   ...
-&lt;/div&gt;
-</pre>
+</div>
+```
+{{/markdown}}
 
   <h3>Information</h3>
   <div class="dive-docs-example">
@@ -90,11 +110,13 @@
       <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="alert alert-info"&gt;
+{{#markdown}}
+```markup
+<div class="alert alert-info">
   ...
-&lt;/div&gt;
-</pre>
+</div>
+```
+{{/markdown}}
 
 </section>
 

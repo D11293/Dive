@@ -81,24 +81,26 @@
       <button type="button" class="btn btn-mini btn-secondary">Mini button</button>
     </p>
   </div>
-<pre class="prettyprint linenums">
-&lt;p&gt;
-  &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
-  &lt;button class="btn btn-large btn-secondary" type="button"&gt;Large button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
-  &lt;button class="btn btn-secondary" type="button"&gt;Default button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
-  &lt;button class="btn btn-small btn-secondary" type="button"&gt;Small button&lt;/button&gt;
-&lt;/p&gt;
-&lt;p&gt;
-  &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
-  &lt;button class="btn btn-mini btn-secondary" type="button"&gt;Mini button&lt;/button&gt;
-&lt;/p&gt;
-</pre>
+{{#markdown}}
+```markup
+<p>
+  <button class="btn btn-large btn-primary" type="button">Large button</button>
+  <button class="btn btn-large btn-secondary" type="button">Large button</button>
+</p>
+<p>
+  <button class="btn btn-primary" type="button">Default button</button>
+  <button class="btn btn-secondary" type="button">Default button</button>
+</p>
+<p>
+  <button class="btn btn-small btn-primary" type="button">Small button</button>
+  <button class="btn btn-small btn-secondary" type="button">Small button</button>
+</p>
+<p>
+  <button class="btn btn-mini btn-primary" type="button">Mini button</button>
+  <button class="btn btn-mini btn-secondary" type="button">Mini button</button>
+</p>
+```
+{{/markdown}}
   <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
   <div class="dive-docs-example">
     <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
@@ -106,10 +108,12 @@
       <button type="button" class="btn btn-large btn-block btn-secondary">Block level button</button>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
-&lt;button class="btn btn-large btn-block btn-secondary" type="button"&gt;Block level button&lt;/button&gt;
-</pre>
+{{#markdown}}
+```markup
+<button class="btn btn-large btn-block btn-primary" type="button">Block level button</button>
+<button class="btn btn-large btn-block btn-secondary" type="button">Block level button</button>
+```
+{{/markdown}}
 
 
   <h2>Disabled state</h2>
@@ -122,10 +126,12 @@
     <a href="#" class="btn btn-large btn-secondary disabled">Link</a>
   </p>
 
-<pre class="prettyprint linenums">
-&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
-&lt;a href="#" class="btn btn-large btn-secondary disabled"&gt;Link&lt;/a&gt;
-</pre>
+{{#markdown}}
+```markup
+<a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+<a href="#" class="btn btn-large btn-secondary disabled">Link</a>
+```
+{{/markdown}}
 
   <p>
     <span class="label label-info">Heads up!</span>
@@ -138,10 +144,12 @@
     <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
     <button type="button" class="btn btn-large btn-secondary" disabled>Button</button>
   </p>
-<pre class="prettyprint linenums">
-&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
-&lt;button type="button" class="btn btn-large btn-secondary" disabled&gt;Button&lt;/button&gt;
-</pre>
+{{#markdown}}
+```markup
+<button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+<button type="button" class="btn btn-large btn-secondary" disabled>Button</button>
+```
+{{/markdown}}
 
 
   <h2>One class, multiple tags</h2>
@@ -153,12 +161,14 @@
     <input class="btn" type="submit" value="Submit">
   </form>
 
-<pre class="prettyprint linenums">
-&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
-&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
-&lt;input class="btn" type="button" value="Input"&gt;
-&lt;input class="btn" type="submit" value="Submit"&gt;
-</pre>
+{{#markdown}}
+```markup
+<a class="btn" href="">Link</a>
+<button class="btn" type="submit">Button</button>
+<input class="btn" type="button" value="Input">
+<input class="btn" type="submit" value="Submit">
+```
+{{/markdown}}
 
   <p>As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
 
@@ -169,11 +179,13 @@
     <a class="btn btn-small" href="#"><i class="icon-save"></i> Save</a>
     <a class="btn btn-mini" href="#"><i class="icon-save"></i> Save</a>
   </div>
-<pre class="prettyprint linenums">
-&lt;a class="btn btn-large" href="#"&gt;&lt;i class="icon-save"&gt;&lt;/i&gt; Save&lt;/a&gt;
-&lt;a class="btn" href="#"&gt;&lt;i class="icon-save"&gt;&lt;/i&gt; Save&lt;/a&gt;
-&lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-save"&gt;&lt;/i&gt; Save&lt;/a&gt;
-&lt;a class="btn btn-mini" href="#"&gt;&lt;i class="icon-save"&gt;&lt;/i&gt; Save&lt;/a&gt;
-</pre>
+{{#markdown}}
+```markup
+<a class="btn btn-large" href="#"><i class="icon-save"></i> Save</a>
+<a class="btn" href="#"><i class="icon-save"></i> Save</a>
+<a class="btn btn-small" href="#"><i class="icon-save"></i> Save</a>
+<a class="btn btn-mini" href="#"><i class="icon-save"></i> Save</a>
+```
+{{/markdown}}
 
 </section>

@@ -99,30 +99,41 @@
 
           <h3>Via data attributes</h3>
           <p>Add <code>data-toggle="dropdown"</code> to a link or button to toggle a dropdown.</p>
-<pre class="prettyprint linenums">
-&lt;div class="dropdown"&gt;
-  &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;Dropdown trigger&lt;/a&gt;
-  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+{{#markdown}}
+```markup
+<div class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown trigger</a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+  </ul>
+</div>
+```
+{{/markdown}}
+
           <p>To keep URLs intact, use the <code>data-target</code> attribute instead of <code>href="#"</code>.</p>
-<pre class="prettyprint linenums">
-&lt;div class="dropdown"&gt;
-  &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html"&gt;
+
+{{#markdown}}
+```markup
+<div class="dropdown">
+  <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
     Dropdown
-    &lt;b class="caret"&gt;&lt;/b&gt;
-  &lt;/a&gt;
-  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+  </ul>
+</div>
+```
+{{/markdown}}
 
           <h3>Via JavaScript</h3>
           <p>Call the dropdowns via JavaScript:</p>
-          <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
+
+{{#markdown}}
+```javascript
+  $('.dropdown-toggle').dropdown()
+```
+{{/markdown}}
 
           <h3>Options</h3>
           <p><em>None</em></p>

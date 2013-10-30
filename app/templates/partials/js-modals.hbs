@@ -26,21 +26,23 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="modal hide fade"&gt;
-  &lt;div class="modal-header"&gt;
-    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
-    &lt;h3&gt;Modal header&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-body"&gt;
-    &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-footer"&gt;
-    &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
-    &lt;a href="#" class="btn btn-secondary"&gt;Close&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-primary">Save changes</a>
+    <a href="#" class="btn btn-secondary">Close</a>
+  </div>
+</div>
+```
+{{/markdown}}
 
           <h3>Modal Variants</h3>
           <p>You can use add these classes to modals to change the color of the border of the modal window.</p>
@@ -98,21 +100,23 @@
               </div>
             </div>
           </div>
-<pre class="prettyprint linenums">
-&lt;div class="modal modal-success hide fade"&gt;
-  &lt;div class="modal-header"&gt;
-    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
-    &lt;h3&gt;Modal header&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-body"&gt;
-    &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-footer"&gt;
-    &lt;a href="#" class="btn btn-secondary"&gt;Close&lt;/a&gt;
-    &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="modal modal-success hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-secondary">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
+```
+{{/markdown}}
 
           <h3>Live demo</h3>
           <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
@@ -151,39 +155,48 @@
           <div class="dive-docs-example" style="padding-bottom: 24px;">
             <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
           </div>
-<pre class="prettyprint linenums">
-&lt!-- Button to trigger modal --&gt;
-&lt;a href="#myModal" role="button" class="btn btn-secondary" data-toggle="modal"&gt;Launch demo modal&lt;/a&gt;
+{{#markdown}}
+```markup
+<!-- Button to trigger modal -->
+<a href="#myModal" role="button" class="btn btn-secondary" data-toggle="modal">Launch demo modal</a>
 
-&lt!-- Modal --&gt;
-&lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
-  &lt;div class="modal-header"&gt;
-    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&times;&lt;/button&gt;
-    &lt;h3 id="myModalLabel"&gt;Modal header&lt;/h3&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-body"&gt;
-    &lt;p&gt;One fine body&hellip;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-footer"&gt;
-    &lt;button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true"&gt;Close&lt;/button&gt;
-    &lt;button class="btn btn-primary"&gt;Save changes&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+```
+{{/markdown}}
 
           <hr class="dive-docs-separator">
-
 
           <h2>Usage</h2>
 
           <h3>Via data attributes</h3>
           <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
-          <pre class="prettyprint linenums">&lt;button type="button" data-toggle="modal" data-target="#myModal"&gt;Launch modal&lt;/button&gt;</pre>
+
+{{#markdown}}
+```markup
+<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>```
+{{/markdown}}
 
           <h3>Via JavaScript</h3>
           <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
-          <pre class="prettyprint linenums">$('#myModal').modal(options)</pre>
+
+{{#markdown}}
+```javascript
+$('#myModal').modal(options)
+```
+{{/markdown}}
 
           <h3>Options</h3>
           <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
@@ -220,7 +233,12 @@
                <td>path</td>
                <td>false</td>
                <td><p>If a remote url is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
-              <pre class="prettyprint linenums"><code>&lt;a data-toggle="modal" href="remote.html" data-target="#modal"&gt;click me&lt;/a&gt;</code></pre></td>
+{{#markdown}}
+```markup
+<a data-toggle="modal" href="remote.html" data-target="#modal">click me</a>
+```
+{{/markdown}}
+              </td>
              </tr>
             </tbody>
           </table>
@@ -228,20 +246,42 @@
           <h3>Methods</h3>
           <h4>.modal(options)</h4>
           <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
-<pre class="prettyprint linenums">
+
+{{#markdown}}
+```javascript
 $('#myModal').modal({
   keyboard: false
 })
-</pre>
+```
+{{/markdown}}
+
           <h4>.modal('toggle')</h4>
           <p>Manually toggles a modal.</p>
-          <pre class="prettyprint linenums">$('#myModal').modal('toggle')</pre>
+
+{{#markdown}}
+```javascript
+$('#myModal').modal('toggle')
+```
+{{/markdown}}
+
           <h4>.modal('show')</h4>
           <p>Manually opens a modal.</p>
-          <pre class="prettyprint linenums">$('#myModal').modal('show')</pre>
+
+{{#markdown}}
+```javascript
+$('#myModal').modal('show')
+```
+{{/markdown}}
+
           <h4>.modal('hide')</h4>
           <p>Manually hides a modal.</p>
-          <pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
+
+{{#markdown}}
+```javascript
+$('#myModal').modal('hide')
+```
+{{/markdown}}
+
           <h3>Events</h3>
           <p>DiVE Library's modal class exposes a few events for hooking into modal functionality.</p>
           <table class="table table-bordered table-striped">
@@ -270,9 +310,13 @@ $('#myModal').modal({
              </tr>
             </tbody>
           </table>
-<pre class="prettyprint linenums">
+
+{{#markdown}}
+```javascript
 $('#myModal').on('hidden', function () {
   // do something…
 })
-</pre>
+```
+{{/markdown}}
+
         </section>
