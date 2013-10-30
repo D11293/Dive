@@ -26,14 +26,22 @@
     <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
     <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
   </div>
-  <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+{{#markdown}}
+```markup
+<p>...</p>
+```
+{{/markdown}}
 
   <h3>Lead body copy</h3>
   <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
   <div class="dive-docs-example">
     <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
   </div>
-  <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+{{#markdown}}
+```markup
+<p class="lead">...</p>
+```
+{{/markdown}}
 
 
 
@@ -42,7 +50,11 @@
   <div class="dive-docs-example">
     This is text a <a href="#">this is a link</a>.
   </div>
-  <pre class="prettyprint">This is text a &lt;a href="#"&gt;this is a link&lt;/a&gt;.</pre>
+{{#markdown}}
+```markup
+This is text a <a href="#">this is a link</a>.
+```
+{{/markdown}}
 
 
 
@@ -60,25 +72,35 @@
   <div class="dive-docs-example">
     <p><small>This line of text is meant to be treated as fine print.</small></p>
   </div>
-<pre class="prettyprint">
-&lt;p&gt;
-  &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
-&lt;/p&gt;
-</pre>
+{{#markdown}}
+```markup
+<p>
+  <small>This line of text is meant to be treated as fine print.</small>
+</p>
+```
+{{/markdown}}
 
   <h3>Bold</h3>
   <p>For emphasizing a snippet of text with a heavier font-weight.</p>
   <div class="dive-docs-example">
     <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
   </div>
-  <pre class="prettyprint">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+{{#markdown}}
+```markup
+<strong>rendered as bold text</strong>
+```
+{{/markdown}}
 
   <h3>Italics</h3>
   <p>For emphasizing a snippet of text with italics.</p>
   <div class="dive-docs-example">
     <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
   </div>
-  <pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+{{#markdown}}
+```markup
+<em>rendered as italicized text</em>
+```
+{{/markdown}}
 
   <p><span class="label label-info">Heads up!</span> Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
 
@@ -89,11 +111,13 @@
     <p class="text-center">Center aligned text.</p>
     <p class="text-right">Right aligned text.</p>
   </div>
-<pre class="prettyprint linenums">
-&lt;p class="text-left"&gt;Left aligned text.&lt;/p&gt;
-&lt;p class="text-center"&gt;Center aligned text.&lt;/p&gt;
-&lt;p class="text-right"&gt;Right aligned text.&lt;/p&gt;
-</pre>
+{{#markdown}}
+```markup
+<p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+```
+{{/markdown}}
 
   <h3>Emphasis classes</h3>
   <p>Convey meaning through color with a handful of emphasis utility classes.</p>
@@ -104,13 +128,15 @@
     <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
     <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
   </div>
-<pre class="prettyprint linenums">
-&lt;p class="muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
-&lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
-&lt;p class="text-error"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
-&lt;p class="text-info"&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.&lt;/p&gt;
-&lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
-</pre>
+{{#markdown}}
+```markup
+<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -124,14 +150,22 @@
   <div class="dive-docs-example">
     <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
   </div>
-  <pre class="prettyprint">&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre>
+{{#markdown}}
+```markup
+<abbr title="attribute">attr</abbr>
+```
+{{/markdown}}
 
-  <h6><code>&lt;abbr class="initialism"&gt;</code></h6>
+  <h6><code>&lt;abbr class=&quot;initialism&quot;&gt;</code></h6>
   <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
   <div class="dive-docs-example">
     <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
   </div>
-  <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
+{{#markdown}}
+```markup
+<abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -149,11 +183,13 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
     </blockquote>
   </div>
-<pre class="prettyprint linenums">
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
-&lt;/blockquote&gt;
-</pre>
+{{#markdown}}
+```markup
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+```
+{{/markdown}}
 
   <h3>Blockquote options</h3>
   <p>Style and content changes for simple variations on a standard blockquote.</p>
@@ -166,12 +202,14 @@
       <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
     </blockquote>
   </div>
-<pre class="prettyprint linenums">
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
-  &lt;small&gt;Someone famous &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;
-&lt;/blockquote&gt;
-</pre>
+{{#markdown}}
+```markup
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+</blockquote>
+```
+{{/markdown}}
 
   <h4>Alternate displays</h4>
   <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
@@ -181,11 +219,13 @@
       <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
     </blockquote>
   </div>
-  <pre class="prettyprint linenums">
-  &lt;blockquote class="pull-right"&gt;
+  {{#markdown}}
+```markup
+  <blockquote class="pull-right">
     ...
-  &lt;/blockquote&gt;
-  </pre>
+  </blockquote>
+  ```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -215,11 +255,13 @@
       <li>Eget porttitor lorem</li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
-&lt;ul&gt;
-  &lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul>
+  <li>...</li>
+</ul>
+```
+{{/markdown}}
 
   <h3>Ordered</h3> <!-- ST_002 -->
   <p>A list of items in which the order <em>does</em> explicitly matter.</p>
@@ -242,11 +284,13 @@
         </li>
     </ol>
   </div>
-<pre class="prettyprint linenums">
-&lt;ol&gt;
-  &lt;li&gt;...&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+{{#markdown}}
+```markup
+<ol>
+  <li>...</li>
+</ol>
+```
+{{/markdown}}
 
   <h3>Unstyled</h3>
   <p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
@@ -269,11 +313,13 @@
       <li>Eget porttitor lorem</li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
-&lt;ul class="unstyled"&gt;
-  &lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="unstyled">
+  <li>...</li>
+</ul>
+```
+{{/markdown}}
 
   <h3>Inline</h3>
   <p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
@@ -284,11 +330,13 @@
       <li>Nulla volutpat</li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
-&lt;ul class="inline"&gt;
-  &lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="inline">
+  <li>...</li>
+</ul>
+```
+{{/markdown}}
 
   <h3>Description</h3>
   <p>A list of terms with their associated descriptions.</p>
@@ -303,12 +351,14 @@
       <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
     </dl>
   </div>
-<pre class="prettyprint linenums">
-&lt;dl&gt;
-  &lt;dt&gt;...&lt;/dt&gt;
-  &lt;dd&gt;...&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+{{#markdown}}
+```markup
+<dl>
+  <dt>...</dt>
+  <dd>...</dd>
+</dl>
+```
+{{/markdown}}
 
   <h4>Horizontal description</h4>
   <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
@@ -325,12 +375,14 @@
       <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
     </dl>
   </div>
-<pre class="prettyprint linenums">
-&lt;dl class="dl-horizontal"&gt;
-  &lt;dt&gt;...&lt;/dt&gt;
-  &lt;dd&gt;...&lt;/dd&gt;
-&lt;/dl&gt;
-</pre>
+{{#markdown}}
+```markup
+<dl class="dl-horizontal">
+  <dt>...</dt>
+  <dd>...</dd>
+</dl>
+```
+{{/markdown}}
   <p>
     <span class="label label-info">Heads up!</span>
     Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.

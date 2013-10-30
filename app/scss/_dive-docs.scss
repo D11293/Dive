@@ -247,9 +247,8 @@ section {
 }
 
 /* Remove spacing between an example and it's code */
-.dive-docs-example + .prettyprint,
- {
-  margin-top: -20px;
+.dive-docs-example + pre {
+  margin-top: -20px !important;
   padding-top: 15px;
 }
 

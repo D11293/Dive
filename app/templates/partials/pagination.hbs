@@ -20,19 +20,21 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="pagination"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="pagination">
+  <ul>
+    <li><a href="#">Prev</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</div>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -55,25 +57,29 @@
      </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="pagination"&gt;
-  &lt;ul&gt;
-    &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
-    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+{{#markdown}}
+```markup
+<div class="pagination">
+  <ul>
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+  </ul>
+</div>
+```
+{{/markdown}}
   <p>You can optionally swap out active or disabled anchors for spans to remove click functionality while retaining intended styles.</p>
-<pre class="prettyprint linenums">
-&lt;div class="pagination"&gt;
-  &lt;ul&gt;
-    &lt;li class="disabled"&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
-    &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+{{#markdown}}
+```markup
+<div class="pagination">
+  <ul>
+    <li class="disabled"><span>&laquo;</span></li>
+    <li class="active"><span>1</span></li>
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+  </ul>
+</div>
+```
+{{/markdown}}
 
 
   <h3>Extended pagination</h3>
@@ -94,22 +100,24 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class=&quot;pagination&quot;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;11&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;12&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;13&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;14&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#&quot;&gt;...&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;25&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div class="pagination">
+  <ul>
+    <li><a href="#">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li class="disabled"><a href="#">...</a></li>
+    <li><a href="#">11</a></li>
+    <li><a href="#">12</a></li>
+    <li class="active"><a href="#">13</a></li>
+    <li><a href="#">14</a></li>
+    <li class="disabled"><a href="#">...</a></li>
+    <li><a href="#">25</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</div>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -162,28 +170,30 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="pagination pagination-large"&gt;
-  &lt;ul&gt;
+{{#markdown}}
+```markup
+<div class="pagination pagination-large">
+  <ul>
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="pagination"&gt;
-  &lt;ul&gt;
+  </ul>
+</div>
+<div class="pagination">
+  <ul>
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="pagination pagination-small"&gt;
-  &lt;ul&gt;
+  </ul>
+</div>
+<div class="pagination pagination-small">
+  <ul>
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="pagination pagination-mini"&gt;
-  &lt;ul&gt;
+  </ul>
+</div>
+<div class="pagination pagination-mini">
+  <ul>
     ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
+  </ul>
+</div>
+```
+{{/markdown}}
 
   <h3>Alignment</h3>
   <p>Add one of two optional classes to change the alignment of pagination links: <code>.pagination-centered</code> and <code>.pagination-right</code>.</p>
@@ -200,11 +210,13 @@
      </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="pagination pagination-centered"&gt;
+{{#markdown}}
+```markup
+<div class="pagination pagination-centered">
   ...
-&lt;/div&gt;
-</pre>
+</div>
+```
+{{/markdown}}
   <div class="dive-docs-example">
     <div class="pagination pagination-right">
       <ul>
@@ -218,11 +230,13 @@
       </ul>
     </div>
   </div>
-<pre class="prettyprint linenums">
-&lt;div class="pagination pagination-right"&gt;
+{{#markdown}}
+```markup
+<div class="pagination pagination-right">
   ...
-&lt;/div&gt;
-</pre>
+</div>
+```
+{{/markdown}}
 
 
   <hr class="dive-docs-separator">
@@ -239,12 +253,14 @@
       <li><a href="#">Next</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
-&lt;ul class="pager"&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="pager">
+  <li><a href="#">Previous</a></li>
+  <li><a href="#">Next</a></li>
+</ul>
+```
+{{/markdown}}
 
   <h3>Aligned links</h3>
   <p>Alternatively, you can align each link to the sides:</p>
@@ -254,16 +270,18 @@
       <li class="next"><a href="#">Newer &rarr;</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
-&lt;ul class="pager"&gt;
-  &lt;li class="previous"&gt;
-    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
-  &lt;/li&gt;
-  &lt;li class="next"&gt;
-    &lt;a href="#"&gt;Newer &amp;rarr;&lt;/a&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{#markdown}}
+```markup
+<ul class="pager">
+  <li class="previous">
+    <a href="#">&larr; Older</a>
+  </li>
+  <li class="next">
+    <a href="#">Newer &rarr;</a>
+  </li>
+</ul>
+```
+{{/markdown}}
 
   <h3>Optional disabled state</h3>
   <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
@@ -273,13 +291,15 @@
       <li class="next"><a href="#">Newer &rarr;</a></li>
     </ul>
   </div>
-<pre class="prettyprint linenums">
-&lt;ul class="pager"&gt;
-  &lt;li class="previous disabled"&gt;
-    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
-  &lt;/li&gt;
+{{#markdown}}
+```markup
+<ul class="pager">
+  <li class="previous disabled">
+    <a href="#">&larr; Older</a>
+  </li>
   ...
-&lt;/ul&gt;
-</pre>
+</ul>
+```
+{{/markdown}}
 
 </section>

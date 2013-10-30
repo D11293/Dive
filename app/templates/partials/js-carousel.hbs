@@ -39,24 +39,26 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
               </div>
             </div>
-<pre class="prettyprint linenums">
-&lt;div id="myCarousel" class="carousel slide"&gt;
-  &lt;ol class="carousel-indicators"&gt
-    &lt;li data-target="#myCarousel" data-slide-to="0" class="active"&gt&lt;/li&gt
-    &lt;li data-target="#myCarousel" data-slide-to="1"&gt&lt;/li&gt
-    &lt;li data-target="#myCarousel" data-slide-to="2"&gt&lt;/li&gt
-  &lt;/ol&gt
-  &lt;!-- Carousel items --&gt;
-  &lt;div class="carousel-inner"&gt;
-    &lt;div class="active item"&gt;…&lt;/div&gt;
-    &lt;div class="item"&gt;…&lt;/div&gt;
-    &lt;div class="item"&gt;…&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;!-- Carousel nav --&gt;
-  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
-  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
-&lt;/div&gt;
-</pre>
+{{#markdown}}
+```markup
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">…</div>
+    <div class="item">…</div>
+    <div class="item">…</div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+```
+{{/markdown}}
 
 			<p><span class="label label-info">Heads up!</span> When implementing this carousel, remove the images we have provided and replace them with your own.</p>
 
@@ -71,7 +73,11 @@
 
             <h3>Via JavaScript</h3>
             <p>Call carousel manually with:</p>
-            <pre class="prettyprint linenums">$('.carousel').carousel()</pre>
+{{#markdown}}
+```javascript
+$('.carousel').carousel()
+```
+{{/markdown}}
 
             <h3>Options</h3>
             <p>Options can be passed via data attributes or JavaScriptz. For data attributes, append the option name to <code>data-</code>, as in <code>data-interval=""</code>.</p>
@@ -103,11 +109,13 @@
             <h3>Methods</h3>
             <h4>.carousel(options)</h4>
             <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
-<pre class="prettyprint linenums">
+{{#markdown}}
+```javascript
 $('.carousel').carousel({
   interval: 2000
 })
-</pre>
+```
+{{/markdown}}
             <h4>.carousel('cycle')</h4>
             <p>Cycles through the carousel items from left to right.</p>
             <h4>.carousel('pause')</h4>
