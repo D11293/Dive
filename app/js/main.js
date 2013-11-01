@@ -76,7 +76,7 @@
       })
 
     // button state demo
-    $('#fat-btn')
+    $('#fat-btn, #fat-btn1')
       .click(function () {
         var btn = $(this)
         btn.button('loading')

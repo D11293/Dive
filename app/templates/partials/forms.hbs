@@ -286,11 +286,11 @@
   <form class="dive-docs-example">
     <div class="input-prepend">
       <span class="add-on">@</span>
-      <input class="col-lg-2" id="prependedInput" type="text" placeholder="Username">
+      <input   id="prependedInput" type="text" placeholder="Username">
     </div>
     <br>
     <div class="input-append">
-      <input class="col-lg-2" id="appendedInput" type="text">
+      <input   id="appendedInput" type="text">
       <span class="add-on">.00</span>
     </div>
   </form>
@@ -298,10 +298,10 @@
 ```markup
 <div class="input-prepend">
   <span class="add-on">@</span>
-  <input class="col-lg-2" id="prependedInput" type="text" placeholder="Username">
+  <input   id="prependedInput" type="text" placeholder="Username">
 </div>
 <div class="input-append">
-  <input class="col-lg-2" id="appendedInput" type="text">
+  <input   id="appendedInput" type="text">
   <span class="add-on">.00</span>
 </div>
 ```
@@ -312,7 +312,7 @@
   <form class="dive-docs-example form-inline">
     <div class="input-prepend input-append">
       <span class="add-on">$</span>
-      <input class="col-lg-2" id="appendedPrependedInput" type="text">
+      <input   id="appendedPrependedInput" type="text">
       <span class="add-on">.00</span>
     </div>
   </form>
@@ -320,7 +320,7 @@
 ```markup
 <div class="input-prepend input-append">
   <span class="add-on">$</span>
-  <input class="col-lg-2" id="appendedPrependedInput" type="text">
+  <input   id="appendedPrependedInput" type="text">
   <span class="add-on">.00</span>
 </div>
 ```
@@ -330,21 +330,21 @@
   <p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
   <form class="dive-docs-example">
     <div class="input-append">
-      <input class="col-lg-2" id="appendedInputButton" type="text">
+      <input   id="appendedInputButton" type="text">
       <button class="btn" type="button">Go!</button>
     </div>
   </form>
 {{#markdown}}
 ```markup
 <div class="input-append">
-  <input class="col-lg-2" id="appendedInputButton" type="text">
+  <input   id="appendedInputButton" type="text">
   <button class="btn" type="button">Go!</button>
 </div>
 ```
 {{/markdown}}
   <form class="dive-docs-example">
     <div class="input-append">
-      <input class="col-lg-2" id="appendedInputButtons" type="text">
+      <input   id="appendedInputButtons" type="text">
       <button class="btn btn-primary" type="button"><i class="icon-zoom"></i></button>
       <button class="btn btn-secondary" type="button">Options</button>
     </div>
@@ -363,7 +363,7 @@
   <p></p>
   <form class="dive-docs-example">
     <div class="input-append">
-      <input class="col-lg-2" id="appendedDropdownButton" type="text">
+      <input   id="appendedDropdownButton" type="text">
       <div class="btn-group">
         <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
         <ul class="dropdown-menu">
@@ -379,7 +379,7 @@
 {{#markdown}}
 ```markup
 <div class="input-append">
-  <input class="col-lg-2" id="appendedDropdownButton" type="text">
+  <input   id="appendedDropdownButton" type="text">
   <div class="btn-group">
     <button class="btn dropdown-toggle" data-toggle="dropdown">
       Action
@@ -396,7 +396,16 @@
   <form class="dive-docs-example">
     <div class="input-prepend">
       <div class="btn-group">
-        <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+       <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul> <button class="btn dropdown-toggle" data-toggle="dropdown">
+          Action
+          <span class="caret"></span>
+        </button>
         <ul class="dropdown-menu">
           <li><a href="#">Action</a></li>
           <li><a href="#">Another action</a></li>
@@ -405,7 +414,7 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </div><!-- /btn-group -->
-      <input class="col-lg-2" id="prependedDropdownButton" type="text">
+      <input   id="prependedDropdownButton" type="text">
     </div><!-- /input-prepend -->
   </form>
 {{#markdown}}
@@ -420,7 +429,7 @@
       ...
     </ul>
   </div>
-  <input class="col-lg-2" id="prependedDropdownButton" type="text">
+  <input   id="prependedDropdownButton" type="text">
 </div>
 ```
 {{/markdown}}
@@ -437,7 +446,7 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </div><!-- /btn-group -->
-      <input class="col-lg-2" id="appendedPrependedDropdownButton" type="text">
+      <input   id="appendedPrependedDropdownButton" type="text">
       <div class="btn-group">
         <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
         <ul class="dropdown-menu">
@@ -462,7 +471,7 @@
       ...
     </ul>
   </div>
-  <input class="col-lg-2" id="appendedPrependedDropdownButton" type="text">
+  <input   id="appendedPrependedDropdownButton" type="text">
   <div class="btn-group">
     <button class="btn dropdown-toggle" data-toggle="dropdown">
       Action
@@ -592,6 +601,8 @@
   <p>
     <span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
   </p>
+
+
 
   <h4>Grid sizing</h4>
   <p>Use <code>.col-1</code> to <code>.col-12</code> for inputs that match the same sizes of the grid columns.</p>
