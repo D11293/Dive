@@ -10,16 +10,37 @@
 
             <h4>Stateful</h4>
             <p>Add <code>data-loading-text="Loading..."</code> to use a loading state on a button.</p>
-            <div class="dive-docs-example" style="padding-bottom: 24px;">
-              <button type="button" id="fat-btn" data-loading-text="loading..." class="btn btn-primary">
-                Loading state
+            <div class="dive-docs-example"  >
+
+                   <button type="button" id="fat-btn1" data-loading-text="Loading..." class="btn btn-primary">
+               Loading state
               </button>
+
+
+
             </div>
 {{#markdown}}
 ```markup
 <button type="button" class="btn btn-primary" data-loading-text="Loading...">Loading state</button>
 ```
 {{/markdown}}
+
+      <h4>Stateful with icon</h4>
+            <p>Add any icon you want inside the <code>data-loading-text="..."</code> to have an icon loading state on a button.</p>
+            <div class="dive-docs-example"  >
+                <button type="button" id="fat-btn" data-loading-text="<i class='icon-spin icon-refresh'></i>  Loading..." class="btn btn-primary">
+              Loading with icon
+              </button>
+
+            </div>
+{{#markdown}}
+```markup
+<button type="button" id="fat-btn" data-loading-text="<i class='icon-spin icon-refresh'></i>  Loading..." class="btn btn-primary"> Loading with icon</button>
+```
+{{/markdown}}
+
+
+
 
             <h4>Single toggle</h4>
             <p>Add <code>data-toggle="button"</code> to activate toggling on a single button.</p>
