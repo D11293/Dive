@@ -141,3 +141,16 @@ $switch-width-lg: 120px;
 .switch-green .switch-content--left  { background-color: $greenLight; }
 .switch-orange .switch-content--left { background-color: $orangeLight; }
 .switch-red .switch-content--left    { background-color: $redLight; }
+
+// disabled
+
+
+  
+
+
+.switch-checkbox:disabled + .switch .switch-content--left, 
+.switch-checkbox:disabled + .switch .switch-content--right 
+{   background-color: $tertiaryO;   cursor: default; color:$tertiaryM; }
+
+.switch-checkbox:disabled  + .switch .switch-button{ background-color: $tertiaryN;   cursor: default;}
+ 

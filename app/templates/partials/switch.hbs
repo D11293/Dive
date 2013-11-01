@@ -122,6 +122,8 @@
 ```
 {{/markdown}}
 
+
+
   <h2>Switch Colors</h2>
 
   <p>Want some color options? No problem.</p>
@@ -190,5 +192,48 @@
     </tbody>
   </table>
 
+  <h2>Switch Disabled</h2>
 
+  <p>Want to have the switch disabled? just add to the input field the property <code>disabled</code></p>
+
+  <div class="dive-docs-example">
+
+    <input type="checkbox" id="switch-mini1" class="switch-checkbox" checked disabled />
+    <label class="switch switch-mini" for="switch-mini1">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>|</span></div>
+        <div class="switch-content switch-content--right"><span>O</span></div>
+      </div>
+    </label>
+
+
+    <input type="checkbox" id="switch-sm1" class="switch-checkbox "  disabled />
+    <label class="switch switch-sm" for="switch-sm1">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>ON</span></div>
+        <div class="switch-content switch-content--right"><span>OFF</span></div>
+      </div>
+    </label>
+
+    <input type="checkbox" id="switch-md1" class="switch-checkbox"     disabled />
+    <label class="switch switch-md" for="switch-md1">
+      <div class="switch-slider">
+        <div class="switch-button">&nbsp;</div>
+        <div class="switch-content switch-content--left"><span>Active</span></div>
+        <div class="switch-content switch-content--right"><span>Inactive</span></div>
+      </div>
+    </label>
+
+  </div>
+
+{{#markdown}}
+```markup
+ <input type="checkbox" id="..." class="switch-checkbox" disabled />
+  <label class="switch" for="...">
+    ...
+  </label>
+```
+{{/markdown}}
 </section>

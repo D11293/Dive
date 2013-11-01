@@ -221,7 +221,7 @@ section {
   *padding-top: 19px;
   min-height: 90px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid $grayLightish;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -238,7 +238,7 @@ section {
   font-size: 12px;
   font-weight: bold;
   background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  border: 1px solid $grayLightish;
   color: #9da0a4;
   -webkit-border-radius: 4px 0 4px 0;
   -moz-border-radius: 4px 0 4px 0;
@@ -259,13 +259,25 @@ section {
 .dive-docs-example footer {
   margin: 20px 0;
 }
+// popover example
+.dive-docs-example.dive-docs-example-popover .popover{
+ position:relative;
+ display: inline-block;
+ margin:20px;
+}
 
+.dive-docs-example.dive-docs-tooltip-examples ul{
+  list-style: none; margin:0px;
+}
+.dive-docs-example.dive-docs-tooltip-examples ul li{
+  margin:15px 0px;
+}
 // Custom Hero Unit
 // ------------------
 
 .dive-docs-hero-unit {
   color: $textColor;
-  background-color: #DDD;
+  background-color: $grayLightish;
   &.orange     {
     @include background(linear-gradient(lighten($orangeLight, 5%), $orangeLight) transparent);
     color: $white;
@@ -755,7 +767,7 @@ hr {
 .dive-docs-home-everything {
   position: relative;
   img {
-    border: 1px solid #ddd;
+    border: 1px solid $grayLightish;
     @include box-shadow(0 0 3px rgba($black, .2));
     margin: 5px 0;
     position: relative;
@@ -851,7 +863,7 @@ a[href^="http"] {
 .hidden-on .col-xs-6 .hidden-md,
 .hidden-on .col-xs-6 .hidden-lg {
   color: #999;
-  border: 1px solid #ddd;
+  border: 1px solid $grayLightish;
 }
 .visible-on .col-xs-6 .visible-xs,
 .visible-on .col-xs-6 .visible-sm,
@@ -890,7 +902,7 @@ a[href^="http"] {
 .hidden-on .col-xs-6 .hidden-md,
 .hidden-on .col-xs-6 .hidden-lg {
   color: #999;
-  border: 1px solid #ddd;
+  border: 1px solid $grayLightish;
 }
 .visible-on .col-xs-6 .visible-xs,
 .visible-on .col-xs-6 .visible-sm,

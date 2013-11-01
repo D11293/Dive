@@ -12,7 +12,7 @@
         <p>Four options are available: top, right, bottom, and left aligned.</p>
 
         <div class="dive-docs-example dive-docs-example-popover">
-               
+
           <div class="popover top">
             <div class="arrow"></div>
             <h3 class="popover-title">Popover top</h3>
@@ -55,8 +55,8 @@
         </div>
 
         <h4>Four directions</h4>
-        <div class="dive-docs-example tooltip-demo">
-          <ul class="dive-docs-tooltip-examples">
+        <div class="dive-docs-example dive-docs-tooltip-examples">
+          <ul>
             <li><a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a></li>
             <li><a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a></li>
             <li><a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a></li>
@@ -64,6 +64,74 @@
           </ul>
         </div>
 
+{{#markdown}}
+```markup
+<a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a>
+
+<a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a>
+
+<a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a>
+
+<a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left">Popover on left</a>
+```
+{{/markdown}}
+
+<h3>Popover with HTML Conten <small>(Form, text ...)</small></h3>
+     <p>To insert a form or any other html content inside a popover; set the attribute <code>data-html=""</code> to <code>true</code> and insert your html code into the <code>data-content=""</code> attribute.</p>
+
+        <div class="dive-docs-example dive-docs-tooltip-examples">
+          <ul>
+            <li><a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="bottom"  data-html="true"
+        data-content="
+        <form><fieldset><label>Ticket Number:</label><span class='help-block'><strong>123456 -123456</strong></span>
+        <label>Subject:</label>
+        <input type='text' placeholder='Type something…'>
+        <br/>
+        <label>Describe your Ticket:</label>
+        <textarea  rows='4'></textarea>
+        <span class='help-block'>Example block-level help text here.</span>
+        <label class='checkbox'>
+          <input type='checkbox'> Check me out
+        </label>
+        <p>  <small><i class='icon-info-sign'></i> Lorem ipsum  dolor </small></p>
+        <div class='form-inline'>
+        <button type='submit' class='btn btn-primary'>Send</button>
+        <button type='button' class='btn btn-secondary'>Cancel</button>
+        </div>
+      </fieldset>
+    </form>"
+    title="Send a ticket to PMI Ticketing">Popover Content Form</a></li>
+           </ul>
+        </div>
+
+
+
+{{#markdown}}
+```markup
+<a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="bottom"  data-html="true"
+        data-content="
+        <form><fieldset><label>Ticket Number:</label><span class='help-block'><strong>123456 -123456</strong></span>
+        <label>Subject:</label>
+        <input type='text' placeholder='Type something…'>
+        <br/>
+        <label>Describe your Ticket:</label>
+        <textarea  rows='4'></textarea>
+        <span class='help-block'>Example block-level help text here.</span>
+        <label class='checkbox'>
+          <input type='checkbox'> Check me out
+        </label>
+        <p>  <small><i class='icon-info-sign'></i> Lorem ipsum  dolor </small></p>
+        <div class='form-inline'>
+          <button type='submit' class='btn btn-primary'>Send</button>
+          <button type='button' class='btn btn-secondary'>Cancel</button>
+        </div>
+      </fieldset>
+    </form>"
+    title="Send a ticket to PMI Ticketing">
+  Popover Content Form
+</a>
+```
+{{/markdown}}
 
         <hr class="dive-docs-separator">
 

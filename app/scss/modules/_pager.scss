@@ -17,7 +17,7 @@
   display: inline-block;
   padding: 5px 14px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid $grayLightish;
   @include ctb-border-radius(3px);
 }
 .pager li > a:hover {

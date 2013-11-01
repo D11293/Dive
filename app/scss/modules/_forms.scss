@@ -95,7 +95,6 @@ input[type="color"],
 
 .no-touch {
   select,
-  textarea,
   input[type="text"],
   input[type="password"],
   input[type="datetime"],
@@ -114,6 +113,9 @@ input[type="color"],
     height: $inputHeight;
   }
 }
+
+
+
 
 // Reset appearance properties for textual inputs and textarea
 // Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
@@ -188,14 +190,15 @@ input[type="file"] {
 
 // Make select elements obey height by applying a border
 select {
-  width: 220px; // default input width + 10px of padding that doesn't get applied
+  width:100%;
+  // width: 220px; // default input width + 10px of padding that doesn't get applied
   border: 1px solid $inputBorder;
   background-color: $inputBackground; // Chrome on Linux and Mobile Safari need background-color
 }
 
 .select-striped {
  option:nth-child(2n) {
-  background: $red;
+  background: $grayLighter;
  }
 }
 
@@ -723,3 +726,7 @@ legend + .control-group {
     padding-left: $horizontalComponentOffset;
   }
 }
+
+
+// new sqli classes
+.select-inline > select{ width:auto; } 
