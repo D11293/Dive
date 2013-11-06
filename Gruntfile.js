@@ -333,7 +333,6 @@ module.exports = function(grunt) {
             '<%= yeoman.app %>/templates/pages/*.hbs',
             '!<%= yeoman.app %>/templates/pages/404.hbs'
           ]
-
         }
       },
       root: {

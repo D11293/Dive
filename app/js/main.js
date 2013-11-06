@@ -135,4 +135,4 @@
 
 
 
-}(window.jQuery)
+}(window.jQuery);

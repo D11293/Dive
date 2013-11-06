@@ -4,7 +4,7 @@
   <head>
   {{> head }}
 
- 
+
     {{#if page.fixed-top }}
       <style>
         @media (min-width: 980px) {
@@ -35,6 +35,9 @@
 
     {{> body }}
     <!-- JS scripts go here -->
-    {{> scripts }} 
+    {{> scripts }}
+ {{#if page.masonry }}
+    <script src="{{ page.base_url }}js/vendor/masonry.js"></script>
+        {{/if}}
   </body>
 </html>

@@ -1,0 +1,170 @@
+
+<!-- Typeahead
+================================================== -->
+<section id="datepicker">
+  <div class="page-header">
+    <h1>Date picker</h1>
+  </div>
+
+
+  <h2>Example</h2>
+  <p>Lorem ipsum.</p>
+  <div class="dive-docs-example"  >
+   <input data-provide="datepicker">
+
+
+
+   <div class="input-append date">
+    <input value="12-02-2012" data-provide="datepicker">
+    <span class="add-on"><i class="icon-calendar"></i></span>
+</div>
+
+
+   <div class="input-daterange">
+    <input value="05-04-2013" data-provide="datepicker" data-date-format="mm/dd/yyyy" />
+    <span class="add-on">to</span>
+    <input value="2012-04-07" data-provide="datepicker" />
+</div>
+
+
+<div class="input-append date " >
+
+  <input type="text"  data-provide="datepicker"
+     data-date-clear-btn="true"
+     data-date-week-start="1"
+    data-date-days-of-week-disabled="0,6"
+    data-date-calendar-weeks="true"
+    data-date-autoclose="true"
+    data-date-today-highlight="true"
+data-date-format="mm/dd/yyyy"
+
+data-date-force-parse="true"
+
+data-date-today-btn="true"
+data-date-min-view-mode="0"
+
+>
+  <span class="add-on"><i class="icon-calendar"></i></span>
+</div>
+
+
+
+
+
+
+   <div class="input-daterange" >
+    <input type="text" class="input-small" name="start" data-provide="datepicker" />
+    <span class="add-on">to</span>
+    <input type="text" class="input-small" name="end" data-provide="datepicker" />
+</div>
+
+
+
+
+   <div class=" "  ><div class="input-append date">
+    <input type="text"  data-provide="datepicker"
+     data-date-clear-btn="true"
+     data-date-week-start="1"
+    data-date-days-of-week-disabled="0,6"
+    data-date-calendar-weeks="false"
+    data-date-autoclose="true"
+    data-date-today-highlight="true"
+data-date-format="mm/dd/yyyy"
+
+data-date-force-parse="true"
+
+data-date-today-btn="true"
+data-date-min-view-mode="0"
+
+><span class="add-on"><i class="icon-calendar"></i></span>
+</div></div>
+
+
+
+  </div>
+
+{{#markdown}}
+```markup
+<input data-provide="datepicker">
+```
+{{/markdown}}
+
+  <p>You'll want to set <code>autocomplete="off"</code> to prevent default browser menus from appearing over the DiVE Library's typeahead dropdown.</p>
+
+  <hr class="dive-docs-separator">
+
+  <h2>Usage</h2>
+
+  <h3>Via data attributes</h3>
+  <p>Add data attributes to register an element with typeahead functionality as shown in the example above.</p>
+
+  <h3>Via JavaScript</h3>
+  <p>Call the typeahead manually with:</p>
+{{#markdown}}
+```javascript
+$('.typeahead').typeahead()
+```
+{{/markdown}}
+
+  <h3>Options</h3>
+  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-source=""</code>.</p>
+  <table class="table table-bordered table-striped">
+    <thead>
+     <tr>
+       <th style="width: 100px;">Name</th>
+       <th style="width: 50px;">type</th>
+       <th style="width: 100px;">default</th>
+       <th>description</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+       <td>source</td>
+       <td>array, function</td>
+       <td>[ ]</td>
+       <td>The data source to query against. May be an array of strings or a function. The function is passed two arguments, the <code>query</code> value in the input field and the <code>process</code> callback. The function may be used synchronously by returning the data source directly or asynchronously via the <code>process</code> callback's single argument.</td>
+     </tr>
+     <tr>
+       <td>items</td>
+       <td>number</td>
+       <td>8</td>
+       <td>The max number of items to display in the dropdown.</td>
+     </tr>
+     <tr>
+       <td>minLength</td>
+       <td>number</td>
+       <td>1</td>
+       <td>The minimum character length needed before triggering autocomplete suggestions</td>
+     </tr>
+     <tr>
+       <td>matcher</td>
+       <td>function</td>
+       <td>case insensitive</td>
+       <td>The method used to determine if a query matches an item. Accepts a single argument, the <code>item</code> against which to test the query. Access the current query with <code>this.query</code>. Return a boolean <code>true</code> if query is a match.</td>
+     </tr>
+     <tr>
+       <td>sorter</td>
+       <td>function</td>
+       <td>exact match,<br> case sensitive,<br> case insensitive</td>
+       <td>Method used to sort autocomplete results. Accepts a single argument <code>items</code> and has the scope of the typeahead instance. Reference the current query with <code>this.query</code>.</td>
+     </tr>
+     <tr>
+       <td>updater</td>
+       <td>function</td>
+       <td>returns selected item</td>
+       <td>The method used to return selected item. Accepts a single argument, the <code>item</code> and has the scope of the typeahead instance.</td>
+     </tr>
+     <tr>
+       <td>highlighter</td>
+       <td>function</td>
+       <td>highlights all default matches</td>
+       <td>Method used to highlight autocomplete results. Accepts a single argument <code>item</code> and has the scope of the typeahead instance. Should return html.</td>
+     </tr>
+    </tbody>
+  </table>
+
+  <h3>Methods</h3>
+  <h4>.typeahead(options)</h4>
+  <p>Initializes an input with a typeahead.</p>
+</section>
+

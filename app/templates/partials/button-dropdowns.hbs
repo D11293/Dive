@@ -261,6 +261,36 @@
 </div>
 ```
 {{/markdown}}
+<h3>Split button "loading" dropdowns</h3>
+<div class="dive-docs-example">
+  <div class="btn-toolbar" >
+    <div class="btn-group">
+      <button class="btn"><i class='icon-spin icon-refresh'></i> loading ...</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+        <li><i class='icon-spin icon-refresh'></i> Loading...</li>
+      </ul>
+    </div>
+  </div><!-- /btn-group -->
+</div><!-- /btn-toolbar -->
+
+{{#markdown}}
+```markup
+<div class="btn-group">
+  <button class="btn"><i class='icon-spin icon-refresh'></i> loading ...</button>
+  <button class="btn dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+    <li><i class='icon-spin icon-refresh'></i> Loading...</li>
+  </ul>
+</div>
+```
+{{/markdown}}
 
   <h3>Sizes</h3>
   <p>Utilize the extra button classes <code>.btn-mini</code>, <code>.btn-small</code>, or <code>.btn-large</code> for sizing.</p>

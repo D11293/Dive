@@ -48,6 +48,11 @@
   margin-top: 0;
 }
 
+// icon inside a dropdown menu
+.btn-group > .dropdown-menu li i{
+  margin-left: 10px; 
+}
+
 // Reset fonts for other sizes
 .btn-group > .btn-mini {
   font-size: $fontSizeMini;
