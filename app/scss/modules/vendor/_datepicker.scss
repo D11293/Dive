@@ -28,7 +28,7 @@
     /*   top: -7px;
        left: 6px;*/
   }
-   
+
   &:after {
     content: '';
     display: inline-block;
@@ -59,7 +59,6 @@
     border-bottom: 0;
     border-top: 6px solid $white;
   }
-
   >div {
     display: none;
   }
@@ -68,7 +67,6 @@
   }
   &.months div.datepicker-months {
     display: block;
-
   }
   &.years div.datepicker-years {
     display: block;
@@ -76,6 +74,7 @@
   table{
     margin: 0;
     border-bottom: none;
+min-width:199px;
   }
   td,
   th{
@@ -104,8 +103,10 @@
     &.today:hover,
       &.today.disabled,
       &.today.disabled:hover {
-      $todayBackground: lighten($orange, 30%);
-      @include ctb-buttonBackground($todayBackground, adjust_hue($todayBackground, 20));
+      $todayBackground: $grayLight;
+      // @include ctb-buttonBackground($todayBackground, adjust_hue($todayBackground, 20));
+      background: $todayBackground;
+      color:$white;
     }
 
 
@@ -115,7 +116,9 @@
     &.active:hover,
       &.active.disabled,
       &.active.disabled:hover {
-      @include ctb-buttonBackground($btnPrimaryBackground, adjust_hue($btnPrimaryBackground, 20));
+      background: $btnPrimaryBackground;
+      //  @include ctb-buttonBackground($btnPrimaryBackground, adjust_hue($btnPrimaryBackground, 20));
+
       color: #fff;
       text-shadow: 0 -1px 0 rgba(0,0,0,.25);
     }
@@ -127,6 +130,7 @@
       float: left;
       margin: 1%;
       cursor: pointer;
+
       @include ctb-border-radius(4px);
       &:hover {
         background: $grayLighter;
@@ -141,7 +145,8 @@
       &.active:hover,
         &.active.disabled,
         &.active.disabled:hover {
-        @include ctb-buttonBackground($btnPrimaryBackground, adjust_hue($btnPrimaryBackground, 20));
+        //  @include ctb-buttonBackground($btnPrimaryBackground, adjust_hue($btnPrimaryBackground, 20));
+        background: $btnPrimaryBackground;
         color: #fff;
         text-shadow: 0 -1px 0 rgba(0,0,0,.25);
       }
@@ -156,7 +161,9 @@
   }
 
 
-  tfoot tr th, tfoot tr, thead tr th {  border-bottom: 1px solid $white;}
+  tfoot tr th, tfoot tr, thead tr th , tbody tr,tbody tr td  {  border-bottom: 1px solid $white;}
+
+
 
   thead tr:first-child th,
     tfoot tr th {
@@ -195,4 +202,3 @@
   }
 }
 .input-daterange{ @extend .input-append}
- 

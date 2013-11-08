@@ -1335,7 +1335,7 @@
 								'<th class="next">&raquo;</th>'+
 							'</tr>'+
 						'</thead>',
-		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
+		contTemplate: '<tbody><tr><td colspan="8"></td></tr></tbody>',
 		footTemplate: '<tfoot><tr><th colspan="8" class="today"></th></tr><tr><th colspan="8" class="clear"></th></tr></tfoot>'
 	};
 	DPGlobal.template = '<div class="datepicker">'+
