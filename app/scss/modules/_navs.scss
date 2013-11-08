@@ -412,7 +412,7 @@
   //@include ctb-border-radius(4px 0 0 4px);
 }
 .tabs-left > .nav-tabs > li > a:hover {
-  border-color: $grayLighter $grayLightish $grayLighter $grayLighter;
+  border-color: $grayLighter transparent $grayLighter $grayLighter;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
@@ -428,11 +428,13 @@
 .tabs-left > .nav-tabs > .nav-tabs_draft.active > a:hover {
    border-color: $grayLightish  transparent $grayLightish $secondaryD ;
 }
+.tabs-left > .nav-tabs > li.nav-tabs_edit > a:hover ,
 .tabs-left > .nav-tabs > .nav-tabs_edit > a:hover {
-   border-left-color: $tertiaryA ;
+    border-color: $grayLightish  $grayLightish $grayLightish $tertiaryA ;
 }
+.tabs-left > .nav-tabs > li.nav-tabs_draft > a:hover ,
 .tabs-left > .nav-tabs > .nav-tabs_draft > a:hover {
-   border-left-color: $secondaryD ;
+   border-color: $grayLightish  $grayLightish $grayLightish $secondaryD ;
 }
  
 // Tabs on the right
@@ -462,11 +464,13 @@
 .tabs-right > .nav-tabs > .nav-tabs_draft.active > a:hover {
    border-color: $grayLightish $secondaryD $grayLightish transparent ;
 }
-.tabs-left > .nav-tabs > .nav-tabs_edit > a:hover {
-   border-right-color: $tertiaryA ;
+.tabs-right > .nav-tabs > li.nav-tabs_edit > a:hover ,
+.tabs-right > .nav-tabs > .nav-tabs_edit > a:hover {  
+     border-color: $grayLightish $tertiaryA $grayLightish transparent ;
 }
-.tabs-left > .nav-tabs > .nav-tabs_draft > a:hover {
-   border-right-color: $secondaryD ;
+.tabs-right > .nav-tabs > li.nav-tabs_draft > a:hover,
+.tabs-right > .nav-tabs > .nav-tabs_draft > a:hover {
+     border-color: $grayLightish $secondaryD $grayLightish transparent ;
 }
 
 // DISABLED STATES

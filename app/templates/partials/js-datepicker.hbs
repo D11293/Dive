@@ -1,170 +1,327 @@
 
-<!-- Typeahead
+<!-- Datepicker
 ================================================== -->
 <section id="datepicker">
   <div class="page-header">
-    <h1>Date picker</h1>
+    <h1>Datepicker</h1>
   </div>
 
+  <p>Datepicker provides a flexible Datepicker widget in the Dive style</p>
 
   <h2>Example</h2>
-  <p>Lorem ipsum.</p>
+
+   <h4>Standard</h4>
+
+  <p>Basic integration with only one option <code>data-date-format="dd/mm/yyyy"</code>.</p>
+
+<div class="dive-docs-example"  >
+<input data-provide="datepicker" data-date-format="dd/mm/yyyy">
+ </div>
+  {{#markdown}}
+```markup
+<input data-provide="datepicker" data-date-format="dd/mm/yyyy">
+```
+{{/markdown}}
+   <h4>Advanced - full options</h4>
+<p>Integration with <strong>all the option activated</strong> <code>data-date-[OPTION_NAME]=" "</code> and <code>class="add-on"</code> pre-pended and appended to display calendar icon.</p>
+
   <div class="dive-docs-example"  >
-   <input data-provide="datepicker">
+    <div class="input-append date"
+         data-provide="datepicker"
+         data-date-clear-btn="true"
+         data-date-week-start="1"
+         data-date-days-of-week-disabled="0,6"
+         data-date-calendar-weeks="true"
+         data-date-autoclose="true"
+         data-date-today-highlight="true"
+         data-date-format="dd/mm/yyyy"
+         data-date-force-parse="true"
+         data-date-today-btn="true"
+         data-date-min-view-mode="0"
+         >
+      <input placeholder="Pick a date!" type="text" >
+      <span class="add-on"><i class="icon-calendar"></i></span>
+    </div>
 
-
-
-   <div class="input-append date">
-    <input value="12-02-2012" data-provide="datepicker">
-    <span class="add-on"><i class="icon-calendar"></i></span>
-</div>
-
-
-   <div class="input-daterange">
-    <input value="05-04-2013" data-provide="datepicker" data-date-format="mm/dd/yyyy" />
-    <span class="add-on">to</span>
-    <input value="2012-04-07" data-provide="datepicker" />
-</div>
-
-
-<div class="input-append date " >
-
-  <input type="text"  data-provide="datepicker"
+    <div class="input-prepend date"  data-provide="datepicker"
+         data-date-clear-btn="false"
+         data-date-week-start="1"
+         data-date-days-of-week-disabled=""
+         data-date-calendar-weeks="false"
+         data-date-autoclose="false"
+         data-date-today-highlight="true"
+          data-date-format="dd/mm/yyyy"
+         data-date-force-parse="true"
+         data-date-today-btn="true"
+         data-date-min-view-mode="0"
+         data-date-orientation="auto"
+         >
+      <span class="add-on"><i class="icon-calendar"></i></span>
+      <input placeholder="Pick a date!"  type="text" value="28-09-1982">
+    </div>
+ </div>
+{{#markdown}}
+```markup
+<div class="input-append date"
+     data-provide="datepicker"
      data-date-clear-btn="true"
      data-date-week-start="1"
-    data-date-days-of-week-disabled="0,6"
-    data-date-calendar-weeks="true"
-    data-date-autoclose="true"
-    data-date-today-highlight="true"
-data-date-format="mm/dd/yyyy"
-
-data-date-force-parse="true"
-
-data-date-today-btn="true"
-data-date-min-view-mode="0"
-
->
+     data-date-days-of-week-disabled="0,6"
+     data-date-calendar-weeks="true"
+     data-date-autoclose="true"
+     data-date-today-highlight="true"
+     data-date-format="dd/mm/yyyy"
+     data-date-force-parse="true"
+     data-date-today-btn="true"
+     data-date-min-view-mode="0"
+     >
+  <input placeholder="Pick a date!" type="text" >
   <span class="add-on"><i class="icon-calendar"></i></span>
 </div>
 
-
-
-
-
-
-   <div class="input-daterange" >
-    <input type="text" class="input-small" name="start" data-provide="datepicker" />
-    <span class="add-on">to</span>
-    <input type="text" class="input-small" name="end" data-provide="datepicker" />
-</div>
-
-
-
-
-   <div class=" "  ><div class="input-append date">
-    <input type="text"  data-provide="datepicker"
-     data-date-clear-btn="true"
+<div class="input-prepend date"  data-provide="datepicker"
+     data-date-clear-btn="false"
      data-date-week-start="1"
-    data-date-days-of-week-disabled="0,6"
-    data-date-calendar-weeks="false"
-    data-date-autoclose="true"
-    data-date-today-highlight="true"
-data-date-format="mm/dd/yyyy"
+     data-date-days-of-week-disabled=""
+     data-date-calendar-weeks="false"
+     data-date-autoclose="false"
+     data-date-today-highlight="true"
+      data-date-format="dd/mm/yyyy"
+     data-date-force-parse="true"
+     data-date-today-btn="true"
+     data-date-min-view-mode="0"
+     data-date-orientation="auto"
+     >
+  <span class="add-on"><i class="icon-calendar"></i></span>
+  <input placeholder="Pick a date!"  type="text" value="28-09-1982">
+</div>
+```
+{{/markdown}}
+   <h4>Advanced - variation</h4>
+  <div class="dive-docs-example"  >
+    <div class="input-prepend date"  data-provide="datepicker" data-date-format="dd/mm/yyyy"  data-date-autoclose="false" >
+      <button class="btn" type="button"><i class="icon-calendar"></i></button>
+      <input placeholder="Pick a date!"  type="text">
+    </div>
 
-data-date-force-parse="true"
-
-data-date-today-btn="true"
-data-date-min-view-mode="0"
-
-><span class="add-on"><i class="icon-calendar"></i></span>
-</div></div>
-
-
-
+    <div class="input-append date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-autoclose="false" >
+      <input placeholder="Pick a date!"   type="text">
+      <button class="btn" type="button"><i class="icon-calendar"></i></button>
+    </div>
   </div>
 
 {{#markdown}}
 ```markup
-<input data-provide="datepicker">
+<div class="input-prepend date"  data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-autoclose="false" >
+  <button class="btn" type="button"><i class="icon-calendar"></i></button>
+  <input placeholder="Pick a date!"  type="text">
+</div>
+<div class="input-append date" data-provide="datepicker" data-date-format="dd/mm/yyyy" data-date-autoclose="false" >
+  <input placeholder="Pick a date!"   type="text">
+  <button class="btn" type="button"><i class="icon-calendar"></i></button>
+</div>
 ```
 {{/markdown}}
+   <h4>Date Range</h4>
+ <p>Integration with the class <code>class="input-prepend ..."</code> to display a range style date selector.</p>
 
-  <p>You'll want to set <code>autocomplete="off"</code> to prevent default browser menus from appearing over the DiVE Library's typeahead dropdown.</p>
 
+<div class="dive-docs-example"  >
+  <div class=" input-daterange date" >
+    <span class="add-on"><i class="icon-calendar"></i></span>
+    <input type="text" class="input-medium" name="start" placeholder="Starting date!"  data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+    <span class="add-on">to</span>
+    <input type="text" class="input-small" name="end"  placeholder="End date!" data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+    <span class="add-on">end</span>
+  </div>
+
+  <br>
+
+  <div class=" input-daterange date" >
+    <input type="text" class="input-small" name="start" placeholder="Start date"  data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+    <span class="add-on">to</span>
+    <input type="text" class="input-small" name="end"  placeholder="End date" data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+  </div>
+</div>
+{{#markdown}}
+```markup
+<div class=" input-daterange date" >
+   <span class="add-on"><i class="icon-calendar"></i></span>
+   <input type="text" class="input-medium" name="start" placeholder="Starting date!"  data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+   <span class="add-on">to</span>
+   <input type="text" class="input-small" name="end"  placeholder="End date!" data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+   <span class="add-on">end</span>
+ </div>
+
+ <div class=" input-daterange date" >
+   <input type="text" class="input-small" name="start" placeholder="Start date"  data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+   <span class="add-on">to</span>
+   <input type="text" class="input-small" name="end"  placeholder="End date" data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+ </div>
+```
+{{/markdown}}
   <hr class="dive-docs-separator">
 
   <h2>Usage</h2>
+<p>As with Dive’s own plugins, datepicker provides a data-api that can be used to instantiate datepickers without the need for custom javascript. Simply set <code>data-provide="datepicker"</code> on the element you want to initialize, and it will be intialized lazily.</p>
 
-  <h3>Via data attributes</h3>
-  <p>Add data attributes to register an element with typeahead functionality as shown in the example above.</p>
 
   <h3>Via JavaScript</h3>
-  <p>Call the typeahead manually with:</p>
+  <p>Call the Datepicker manually with:</p>
 {{#markdown}}
 ```javascript
-$('.typeahead').typeahead()
+$('.datepicker').datepicker()
+```
+{{/markdown}}
+  <p>Options are passed to the datepicker function via an options hash at instantiation::</p>
+{{#markdown}}
+```javascript
+$('.datepicker').datepicker({
+    format: 'dd/mm/yyyy'
+})
 ```
 {{/markdown}}
 
+
+ <h3>Via data attributes</h3>
+
+ <p>Add data attributes to register an element with typeahead functionality as shown in the example above.<br>
+ For data attributes, append the option name to <code>data-date-</code>, as displayed below:</p>
+{{#markdown}}
+```javascript
+data-date-autoclose="true"
+data-date-calendar-weeks="true"
+data-date-clear-btn="true"
+data-date-days-of-week-disabled="0,6"
+data-date-end-date="01/10/2013"
+data-date-force-parse="true"
+data-date-format="dd/mm/yyyy"
+data-date-min-view-mode="0"
+data-date-orientation="left bottom"
+data-date-start-date="01/10/2012"
+data-date-start-view="0"
+data-date-today-btn="true"
+data-date-today-highlight="true"
+data-date-week-start="1"
+```
+{{/markdown}}
+
+
   <h3>Options</h3>
-  <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-source=""</code>.</p>
+
+
+  <p>Options can be passed via data attributes or JavaScript as explained and demonstrated above.</p>
   <table class="table table-bordered table-striped">
     <thead>
-     <tr>
-       <th style="width: 100px;">Name</th>
-       <th style="width: 50px;">type</th>
-       <th style="width: 100px;">default</th>
-       <th>description</th>
-     </tr>
+      <tr>
+        <th style="width: 100px;">Name</th>
+        <th style="width: 50px;">type</th>
+        <th style="width: 100px;">default</th>
+        <th>description</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
-       <td>source</td>
-       <td>array, function</td>
-       <td>[ ]</td>
-       <td>The data source to query against. May be an array of strings or a function. The function is passed two arguments, the <code>query</code> value in the input field and the <code>process</code> callback. The function may be used synchronously by returning the data source directly or asynchronously via the <code>process</code> callback's single argument.</td>
-     </tr>
-     <tr>
-       <td>items</td>
-       <td>number</td>
-       <td>8</td>
-       <td>The max number of items to display in the dropdown.</td>
-     </tr>
-     <tr>
-       <td>minLength</td>
-       <td>number</td>
-       <td>1</td>
-       <td>The minimum character length needed before triggering autocomplete suggestions</td>
-     </tr>
-     <tr>
-       <td>matcher</td>
-       <td>function</td>
-       <td>case insensitive</td>
-       <td>The method used to determine if a query matches an item. Accepts a single argument, the <code>item</code> against which to test the query. Access the current query with <code>this.query</code>. Return a boolean <code>true</code> if query is a match.</td>
-     </tr>
-     <tr>
-       <td>sorter</td>
-       <td>function</td>
-       <td>exact match,<br> case sensitive,<br> case insensitive</td>
-       <td>Method used to sort autocomplete results. Accepts a single argument <code>items</code> and has the scope of the typeahead instance. Reference the current query with <code>this.query</code>.</td>
-     </tr>
-     <tr>
-       <td>updater</td>
-       <td>function</td>
-       <td>returns selected item</td>
-       <td>The method used to return selected item. Accepts a single argument, the <code>item</code> and has the scope of the typeahead instance.</td>
-     </tr>
-     <tr>
-       <td>highlighter</td>
-       <td>function</td>
-       <td>highlights all default matches</td>
-       <td>Method used to highlight autocomplete results. Accepts a single argument <code>item</code> and has the scope of the typeahead instance. Should return html.</td>
-     </tr>
+        <td>autoclose</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>Whether or not to close the datepicker immediately when a date is selected.</td>
+      </tr>
+
+      <tr>
+        <td>calendarWeeks</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>Whether or not to show week numbers to the left of week rows.</td>
+      </tr>
+      <tr>
+        <td>clearBtn</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>If true, displays a "Clear" button at the bottom of the datepicker to clear the input value. If "autoclose" is also set to true, this button will also close the datepicker.</td>
+      </tr>
+      <tr>
+        <td>daysOfWeekDisabled</td>
+        <td>String, Array</td>
+        <td>[]</td>
+        <td>Days of the week that should be disabled. Values are 0 (Sunday) to 6 (Saturday). Multiple values should be comma-separated. Example: disable weekends: <code>'0,6'</code> or <code>[0,6]</code>.</td>
+      </tr>
+      <tr>
+        <td>endDate</td>
+        <td>Date</td>
+        <td>End of time</td>
+        <td>The latest date that may be selected; all later dates will be disabled.</td>
+      </tr>
+      <tr>
+        <td>forceParse</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>Whether or not to force parsing of the input value when the picker is closed. That is, when an invalid date is left in the input field by the user, the picker will forcibly parse that value, and set the input’s value to the new, valid date, conforming to the given <i>format</i>.</td>
+      </tr>
+      <tr>
+        <td>format</td>
+        <td>String</td>
+        <td>"mm/dd/yyyy"</td>
+        <td>The date format, combination of d, dd, D, DD, m, mm, M, MM, yy, yyyy.
+          <ul class="simple">
+            <li>d, dd: Numeric date, no leading zero and leading zero, respectively.<br>Eg, 5, 05.</li>
+            <li>D, DD: Abbreviated and full weekday names, respectively.<br>Eg, Mon, Monday.</li>
+            <li>m, mm: Numeric month, no leading zero and leading zero, respectively.<br>Eg, 7, 07.</li>
+            <li>M, MM: Abbreviated and full month names, respectively.<br>Eg, Jan, January</li>
+            <li>yy, yyyy: 2- and 4-digit years, respectively.<br>Eg, 12, 2012.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>minViewMode</td>
+        <td>Number, String</td>
+        <td>0, "days"</td>
+        <td>Set a limit for the view mode. Accepts: "days" or 0, "months" or 1, and "years" or 2. Gives the ability to pick only a month or an year. The day is set to the 1st for "months", and the month is set to January for "years".</td>
+      </tr>
+      <tr>
+        <td>orientation</td>
+        <td>String</td>
+        <td>"auto"</td>
+        <td>
+A space-separated string consisting of one or two of "left" or "right", "top" or "bottom", and "auto" (may be omitted); for example, "top left", "bottom" (horizontal orientation will default to "auto"), "right" (vertical orientation will default to "auto"), "auto top". Allows for fixed placement of the picker popup.
+<br><br>
+"orientation" refers to the location of the picker popup’s "anchor"; you can also think of it as the location of the trigger element (input, component, etc) relative to the picker.
+<br><br>
+"auto" triggers "smart orientation" of the picker. Horizontal orientation will default to "left" and left offset will be tweaked to keep the picker inside the browser viewport; vertical orientation will simply choose "top" or "bottom", whichever will show more of the picker in the viewport.</td>
+      </tr>
+      <tr>
+        <td>startDate</td>
+        <td>Date</td>
+        <td>Beginning of time</td>
+        <td>The earliest date that may be selected; all earlier dates will be disabled.</td>
+      </tr>
+      <tr>
+        <td>startView</td>
+        <td>Number, String</td>
+        <td>0, "month"</td>
+        <td>The view that the datepicker should show when it is opened. Accepts values of 0 or "month" for month view (the default), 1 or "year" for the 12-month overview, and 2 or "decade" for the 10-year overview. Useful for date-of-birth datepickers.</td>
+      </tr>
+      <tr>
+        <td>todayBtn</td>
+        <td>Boolean, "linked"</td>
+        <td>false</td>
+        <td>If true or "linked", displays a "Today" button at the bottom of the datepicker to select the current date. If true, the "Today" button will only move the current date into view; if "linked", the current date will also be selected.</td>
+      </tr>
+      <tr>
+        <td>todayHighlight</td>
+        <td>Boolean</td>
+        <td>false</td>
+        <td>If true, highlights the current date.</td>
+      </tr>
+      <tr>
+        <td>weekStart</td>
+        <td>Integer</td>
+        <td>0</td>
+        <td>Day of the week start. 0 (Sunday) to 6 (Saturday)</td>
+      </tr>
     </tbody>
   </table>
 
-  <h3>Methods</h3>
-  <h4>.typeahead(options)</h4>
-  <p>Initializes an input with a typeahead.</p>
+  
 </section>
 

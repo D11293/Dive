@@ -20,8 +20,8 @@ module.exports = function(grunt) {
       dist: 'dist'
     },
     watch: {
-      compass: {
-        files: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}'],
+      compass: {    
+        files: ['<%= yeoman.app %>/scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
       },
       styles: {
@@ -34,7 +34,8 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= yeoman.app %>/templates/**/*.hbs',
-          '{.tmp,<%= yeoman.app %>}/scss/{,*/}*.css',
+         // '{.tmp,<%= yeoman.app %>}/scss/{,*/}*.css',   
+          '.tmp/css/*.css',
           '{.tmp,<%= yeoman.app %>}/js/{,*/}*.js',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],

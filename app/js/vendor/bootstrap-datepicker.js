@@ -1345,7 +1345,7 @@
 									'<tbody></tbody>'+
 									DPGlobal.footTemplate+
 								'</table>'+
-							'</div>'+
+							'</div>'+ 
 							'<div class="datepicker-months">'+
 								'<table class="table table-condensed">'+
 									DPGlobal.headTemplate+

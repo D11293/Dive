@@ -4,15 +4,11 @@
         <div class="page-header">
           <h1>Popovers</h1>
         </div>
-
         <h2>Examples</h2>
         <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong>Requires <a href="#tooltips">Tooltips</a> to be included.</strong></p>
-
         <h3>Static popover</h3>
         <p>Four options are available: top, right, bottom, and left aligned.</p>
-
         <div class="dive-docs-example dive-docs-example-popover">
-
           <div class="popover top">
             <div class="arrow"></div>
             <h3 class="popover-title">Popover top</h3>
@@ -20,7 +16,6 @@
               <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
             </div>
           </div>
-
           <div class="popover right">
             <div class="arrow"></div>
             <h3 class="popover-title">Popover right</h3>
@@ -28,7 +23,6 @@
               <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
             </div>
           </div>
-
           <div class="popover bottom">
             <div class="arrow"></div>
             <h3 class="popover-title">Popover bottom</h3>
@@ -36,7 +30,6 @@
               <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
             </div>
           </div>
-
           <div class="popover left">
             <div class="arrow"></div>
             <h3 class="popover-title">Popover left</h3>
@@ -44,10 +37,162 @@
               <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
             </div>
           </div>
-
           <div class="clearfix"></div>
         </div>
         <p>No markup shown as popovers are generated from JavaScript and content within a <code>data</code> attribute.</p>
+
+
+<h2>Contextual alternatives</h2>
+<p>Add optional classes to change a popover's connotation.</p>
+
+<h3>Error</h3>
+ <div class="dive-docs-example dive-docs-example-popover">
+          <div class="popover top popover-error">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover top</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover right popover-error">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover right</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover bottom popover-error">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover bottom</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover left popover-error">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><i class="icon-minus-circle"></i> <strong>Popover left</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+</div>
+{{#markdown}}
+```markup
+<div class="... popover-error"> ... </div>
+```
+{{/markdown}}
+<h3>Warning</h3>
+ <div class="dive-docs-example dive-docs-example-popover">
+          <div class="popover top popover-warning">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover top</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover right popover-warning">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover right</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover bottom popover-warning">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover bottom</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover left popover-warning">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><i class="icon-alert-sign"></i> <strong>Popover left</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+</div>
+{{#markdown}}
+```markup
+<div class="... popover-warning"> ... </div>
+```
+{{/markdown}}
+<h3>Success</h3>
+ <div class="dive-docs-example dive-docs-example-popover">
+          <div class="popover top popover-success">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover top</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover right popover-success">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover right</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover bottom popover-success">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover bottom</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover left popover-success">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><i class="icon-like"></i> <strong>Popover left</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+</div>
+{{#markdown}}
+```markup
+<div class="... popover-success"> ... </div>
+```
+{{/markdown}}
+<h3>Information</h3>
+ <div class="dive-docs-example dive-docs-example-popover">
+          <div class="popover top popover-info">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover top</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover right popover-info">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover right</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover bottom popover-info">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><strong>Popover bottom</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="popover left popover-info">
+            <div class="arrow"></div>
+            <h3 class="popover-title"><i class="icon-info-sign"></i> <strong>Popover left</strong></h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+</div>
+{{#markdown}}
+```markup
+<div class="... popover-info"> ... </div>
+```
+{{/markdown}}
 
         <h3>Live demo</h3>
         <div class="dive-docs-example" style="padding-bottom: 24px;">
@@ -76,30 +221,33 @@
 ```
 {{/markdown}}
 
-<h3>Popover with HTML Conten <small>(Form, text ...)</small></h3>
+<h3>Popover with HTML Content <small>(Form, text ...)</small></h3>
      <p>To insert a form or any other html content inside a popover; set the attribute <code>data-html=""</code> to <code>true</code> and insert your html code into the <code>data-content=""</code> attribute.</p>
 
         <div class="dive-docs-example dive-docs-tooltip-examples">
           <ul>
             <li><a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="bottom"  data-html="true"
         data-content="
-        <form><fieldset><label>Ticket Number:</label><span class='help-block'><strong>123456 -123456</strong></span>
-        <label>Subject:</label>
-        <input type='text' placeholder='Type something…'>
-        <br/>
-        <label>Describe your Ticket:</label>
-        <textarea  rows='4'></textarea>
-        <span class='help-block'>Example block-level help text here.</span>
-        <label class='checkbox'>
-          <input type='checkbox'> Check me out
-        </label>
-        <p>  <small><i class='icon-info-sign'></i> Lorem ipsum  dolor </small></p>
-        <div class='form-inline'>
-        <button type='submit' class='btn btn-primary'>Send</button>
-        <button type='button' class='btn btn-secondary'>Cancel</button>
-        </div>
-      </fieldset>
-    </form>"
+        <form>
+       <fieldset>
+         <label>Ticket Number:</label>
+         <span class='help-block'><strong>123456 -123456</strong></span>
+         <label>Subject:</label>
+         <input type='text' placeholder='Type something…'>
+         <br/>
+         <label>Describe your Ticket:</label>
+         <textarea  rows='4'></textarea>
+         <span class='help-block'>Example block-level help text here.</span>
+         <label class='checkbox'>
+           <input type='checkbox'> Check me out
+         </label>
+         <p><small><i class='icon-info-sign'></i> Lorem ipsum  dolor </small></p>
+         <div class='form-inline'>
+           <button type='submit' class='btn btn-primary'>Send</button>
+           <button type='button' class='btn btn-secondary'>Cancel</button>
+         </div>
+       </fieldset>
+     </form>"
     title="Send a ticket to PMI Ticketing">Popover Content Form</a></li>
            </ul>
         </div>
@@ -110,23 +258,26 @@
 ```markup
 <a href="#" class="btn btn-secondary" data-toggle="popover" data-placement="bottom"  data-html="true"
         data-content="
-        <form><fieldset><label>Ticket Number:</label><span class='help-block'><strong>123456 -123456</strong></span>
-        <label>Subject:</label>
-        <input type='text' placeholder='Type something…'>
-        <br/>
-        <label>Describe your Ticket:</label>
-        <textarea  rows='4'></textarea>
-        <span class='help-block'>Example block-level help text here.</span>
-        <label class='checkbox'>
-          <input type='checkbox'> Check me out
-        </label>
-        <p>  <small><i class='icon-info-sign'></i> Lorem ipsum  dolor </small></p>
-        <div class='form-inline'>
-          <button type='submit' class='btn btn-primary'>Send</button>
-          <button type='button' class='btn btn-secondary'>Cancel</button>
-        </div>
-      </fieldset>
-    </form>"
+          <form>
+            <fieldset>
+              <label>Ticket Number:</label>
+              <span class='help-block'><strong>123456 -123456</strong></span>
+              <label>Subject:</label>
+              <input type='text' placeholder='Type something…'>
+              <br/>
+              <label>Describe your Ticket:</label>
+              <textarea  rows='4'></textarea>
+              <span class='help-block'>Example block-level help text here.</span>
+              <label class='checkbox'>
+                <input type='checkbox'> Check me out
+              </label>
+              <p><small><i class='icon-info-sign'></i> Lorem ipsum  dolor </small></p>
+              <div class='form-inline'>
+                <button type='submit' class='btn btn-primary'>Send</button>
+                <button type='button' class='btn btn-secondary'>Cancel</button>
+              </div>
+            </fieldset>
+          </form>"
     title="Send a ticket to PMI Ticketing">
   Popover Content Form
 </a>

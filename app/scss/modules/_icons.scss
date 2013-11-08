@@ -13,10 +13,10 @@ $iconMuted:         #eee;
 
 @font-face {
   font-family: 'DIVEicons';
-  src: url('#{$fontPath}/DiVE-Icon-Font.eot');
-  src: url('#{$fontPath}/DiVE-Icon-Font.eot?#iefix') format("embedded-opentype"),
-    url('#{$fontPath}/DiVE-Icon-Font.woff') format("woff"),
-    url('#{$fontPath}/DiVE-Icon-Font.ttf') format("truetype");
+  src: url('#{$fontPath}DiVE-Icon-Font.eot');
+  src: url('#{$fontPath}DiVE-Icon-Font.eot?#iefix') format("embedded-opentype"),
+    url('#{$fontPath}DiVE-Icon-Font.woff') format("woff"),
+    url('#{$fontPath}DiVE-Icon-Font.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
