@@ -208,7 +208,7 @@ module.exports = function(grunt) {
       options: {
         dirs: ['<%= yeoman.dist %>']
       },
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/{,**/}*.html'],
       css: ['<%= yeoman.dist %>/css/{,*/}*.css']
     },
     imagemin: {
@@ -414,6 +414,27 @@ module.exports = function(grunt) {
     'copy:dist',
     'usemin',
     'compress'
+    /*
+    'clean:dist',
+    'compass',
+    'assemble',
+    'useminPrepare',
+    'concurrent:dist',
+    'autoprefixer',
+    'concat',
+    'cssmin',
+    'uglify',
+    'modernizr',
+    'copy:dist',
+    'usemin',
+    'compress'
+    
+    
+      'compass',
+        'copy:styles',
+        'imagemin',
+        'htmlmin'
+     */
   ]);
   grunt.registerTask('default', [
     'jshint',

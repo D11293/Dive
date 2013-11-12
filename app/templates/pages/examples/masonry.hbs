@@ -6,7 +6,7 @@ title: Masonry-based Sample Page
 ---
 
 
-<div id="masonry-container" class="masonry-container">
+<div id="masonry-container" class="js-masonry" >
   <div class="msnry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, cupiditate autem quisquam cumque. <img src="http://placehold.it/600x400" alt=""> Dolores, quisquam repellendus voluptate tenetur dolorum aliquid ducimus temporibus tempora magnam beatae? Consequuntur facere repellendus illo nam.</div>
   <div class="msnry msnry-2x">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, id, rem in iusto ipsam dolores reiciendis obcaecati nulla porro minus similique accusantium maxime molestiae temporibus deleniti iure incidunt voluptatem provident?</div>
   <div class="msnry">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, cupiditate autem quisquam cumque. Dolores, quisquam repellendus voluptate tenetur dolorum aliquid ducimus temporibus tempora magnam beatae? Consequuntur facere repellendus illo nam.</div>
@@ -21,4 +21,20 @@ title: Masonry-based Sample Page
   <div class="msnry msnry-2x">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, id, rem in iusto ipsam dolores reiciendis obcaecati nulla porro minus similique accusantium maxime molestiae temporibus deleniti iure incidunt voluptatem provident?</div>
 </div>
 
- 
+
+  
+    <script>
+         // Masonry Initializer for /examples/masonry/
+  if(jQuery().masonry) {
+    var $container = $('#masonry-container');
+    // initialize Masonry after all images have loaded
+    $container.imagesLoaded( function() {
+      $container.masonry({
+        columnWidth: 400,
+        itemSelector: '.msnry',
+        gutter: 20,
+        isFitWidth: true
+      });
+    });
+  }
+    </script>
