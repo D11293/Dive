@@ -76,7 +76,7 @@
       })
 
     // button state demo
-    $('#fat-btn')
+    $('#fat-btn, #fat-btn1')
       .click(function () {
         var btn = $(this)
         btn.button('loading')
@@ -111,23 +111,7 @@
 
   })
 
-
-
-  // Masonry Initializer for /examples/masonry/
-  if(jQuery().masonry) {
-
-    var $container = $('#masonry-container');
-    // initialize Masonry after all images have loaded
-    $container.imagesLoaded( function() {
-      $container.masonry({
-        columnWidth: 400,
-        itemSelector: '.msnry',
-        gutter: 20,
-        isFitWidth: true
-      });
-    });
-  }
-
+ 
   // Ion.RangeSlider Initializer
   $('#range_1').ionRangeSlider();
   $('#range_2').ionRangeSlider();
@@ -135,4 +119,4 @@
 
 
 
-}(window.jQuery)
+}(window.jQuery);

@@ -58,7 +58,7 @@ textarea {
 // Identify controls by their labels
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: $baseLineHeight / 4;
 }
 
 // Form controls
@@ -93,9 +93,29 @@ input[type="color"],
   vertical-align: middle;
 }
 
-.no-touch {
+table {
   select,
   textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  .uneditable-input {
+    margin-bottom: 0px;
+  }
+}
+.no-touch {
+  select,
   input[type="text"],
   input[type="password"],
   input[type="datetime"],
@@ -114,6 +134,9 @@ input[type="color"],
     height: $inputHeight;
   }
 }
+
+
+
 
 // Reset appearance properties for textual inputs and textarea
 // Declare width for legacy (can't be on input[type=*] selectors or it's too specific)
@@ -150,12 +173,12 @@ input[type="color"],
 
   // Focus state
   &:focus {
-    border-color: $blueLight;
-    outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
-    //@include ctb-box-shadow(#{inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)});
-    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.1));
+    
+    @include ctb-formFieldFocused();
   }
+}
+#focusedInput{  
+@include ctb-formFieldFocused();
 }
 
 // Position radios and checkboxes better
@@ -188,14 +211,15 @@ input[type="file"] {
 
 // Make select elements obey height by applying a border
 select {
-  width: 220px; // default input width + 10px of padding that doesn't get applied
+  width:100%;
+  // width: 220px; // default input width + 10px of padding that doesn't get applied
   border: 1px solid $inputBorder;
   background-color: $inputBackground; // Chrome on Linux and Mobile Safari need background-color
 }
 
 .select-striped {
  option:nth-child(2n) {
-  background: $red;
+  background: $grayLighter;
  }
 }
 
@@ -363,6 +387,8 @@ select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
   background-color: $inputDisabledBackground;
+  color: $inputDisabledColor;
+ 
 }
 // Explicitly reset the colors here
 input[type="radio"][disabled],
@@ -370,10 +396,22 @@ input[type="checkbox"][disabled],
 input[type="radio"][readonly],
 input[type="checkbox"][readonly] {
   background-color: transparent;
+    
 }
 
+// LOADING STATE
+// --------------
+ 
 
-
+ 
+ 
+ .loading::-webkit-input-placeholder::before  { /* webkit */
+  content: "\00a0 \00a0 \00a0 \00a0 \00a0";
+  background: url('../img/ajax-loader.gif') 0px 0px no-repeat; 
+  }  
+ .loading:-ms-input-placeholder     { /* IE 10*/
+    padding-left:25px;
+  background: url('../img/ajax-loader.gif') 4px 5px no-repeat; } 
 
 // FORM FIELD FEEDBACK STATES
 // --------------------------
@@ -421,6 +459,7 @@ select:focus:invalid {
   background-color: $formActionsBackground;
   border-top: 1px solid $formActionsBorderColor;
   @include ctb-clearfix(); // Adding clearfix to allow for .pull-right button containers
+  ul.pager{margin:0px;}
 }
 
 
@@ -477,6 +516,7 @@ select:focus:invalid {
     // Make input on top when focused so blue border and shadow always show
     &:focus {
       z-index: 2;
+    
     }
   }
   .add-on {
@@ -723,3 +763,7 @@ legend + .control-group {
     padding-left: $horizontalComponentOffset;
   }
 }
+
+
+// new sqli classes
+.select-inline > select{ width:auto; } 

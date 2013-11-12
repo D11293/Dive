@@ -3,7 +3,7 @@
         ================================================== -->
         <section id="navs">
           <div class="page-header">
-            <h1>Navigations: tabs, pills, and lists</small></h1>
+            <h1>Navigations: <small>tabs, pills, and lists</small></h1>
           </div>
 
           <h2>Navigation defaults <small>Same markup, different classes</small></h2>
@@ -16,6 +16,8 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">Profile</a></li>
               <li><a href="#">Messages</a></li>
+              <li class="nav-tabs_draft"><a href="#">Draft</a></li>
+              <li class="nav-tabs_edit"><a href="#">Edit</a></li>
             </ul>
           </div>
 {{#markdown}}
@@ -26,6 +28,8 @@
   </li>
   <li><a href="#">...</a></li>
   <li><a href="#">...</a></li>
+  <li class="nav-tabs_draft"><a href="#">Draft</a></li>
+  <li class="nav-tabs_edit"><a href="#">Edit</a></li>
 </ul>
 ```
 {{/markdown}}
@@ -37,6 +41,7 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">Profile</a></li>
               <li><a href="#">Messages</a></li>
+
             </ul>
           </div>
 {{#markdown}}
@@ -86,6 +91,8 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">Profile</a></li>
               <li><a href="#">Messages</a></li>
+              <li class="nav-tabs_draft"><a href="#">Draft</a></li>
+              <li class="nav-tabs_edit"><a href="#">Edit</a></li>
             </ul>
           </div>
 {{#markdown}}
@@ -111,14 +118,9 @@
 </ul>
 ```
 {{/markdown}}
-
-
           <hr class="dive-docs-separator">
-
-
           <h2>Dropdowns</h2>
           <p>Add dropdown menus with a little extra HTML and JavaScript.</p>
-
           <h3>Tabs with dropdowns</h3>
           <div class="dive-docs-example">
             <ul class="nav nav-tabs">
@@ -188,14 +190,9 @@
 </ul>
 ```
 {{/markdown}}
-
-
           <hr class="dive-docs-separator">
-
-
           <h2>Nav lists</h2>
           <p>A simple and easy way to build groups of nav links with optional headers. They're best used in sidebars like the Finder in OS X.</p>
-
           <h3>Example nav list</h3>
           <p>Take a list of links and add <code>class="nav nav-list"</code>:</p>
           <div class="dive-docs-example">
@@ -227,7 +224,6 @@
             <span class="label label-info">Note</span>
             For nesting within a nav list, include <code>class="nav nav-list"</code> on any nested <code>&lt;ul&gt;</code>.
           </p>
-
           <h3>Horizontal dividers</h3>
           <p>Add a horizontal divider by creating an empty list item with the class <code>.divider</code>, like so:</p>
 {{#markdown}}
@@ -239,22 +235,18 @@
 </ul>
 ```
 {{/markdown}}
-
-
           <hr class="dive-docs-separator">
-
-
           <h2>Tabbable nav</h2> <!-- CC_001 -->
           <p>Bring your tabs to life with a simple plugin to toggle between content via tabs. DiVE Library integrates tabbable tabs in four styles: top (default), right, bottom, and left.</p>
-
           <h3>Tabbable example</h3>
           <p>To make tabs tabbable, create a <code>.tab-pane</code> with unique ID for every tab and wrap them in <code>.tab-content</code>.</p>
           <div class="dive-docs-example">
-            <div class="tabbable" style="margin-bottom: 18px;">
+            <div class="tabbable"  >
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+                <li ><a href="#tab2" data-toggle="tab">Section 2</a></li>
+                <li class="nav-tabs_draft"><a href="#tab3" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+                 <li class="nav-tabs_edit"><a href="#tab4" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
               </ul>
               <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
                 <div class="tab-pane active" id="tab1">
@@ -264,7 +256,10 @@
                   <p>Howdy, I'm in Section 2.</p>
                 </div>
                 <div class="tab-pane" id="tab3">
-                  <p>What up girl, this is Section 3.</p>
+                  <p>What up girl, this is Section Draft.</p>
+                </div>
+                 <div class="tab-pane" id="tab4">
+                  <p>This is it, this is Section Edit.</p>
                 </div>
               </div>
             </div> <!-- /tabbable -->
@@ -274,14 +269,22 @@
 <div class="tabbable"> <!-- Only required for left/right tabs -->
   <ul class="nav nav-tabs">
     <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
-    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+    <li ><a href="#tab2" data-toggle="tab">Section 2</a></li>
+    <li class="nav-tabs_draft"><a href="#tab3" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+    <li class="nav-tabs_edit"><a href="#tab4" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
   </ul>
-  <div class="tab-content">
+  <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
     <div class="tab-pane active" id="tab1">
       <p>I'm in Section 1.</p>
     </div>
     <div class="tab-pane" id="tab2">
       <p>Howdy, I'm in Section 2.</p>
+    </div>
+    <div class="tab-pane" id="tab3">
+      <p>What up girl, this is Section Draft.</p>
+    </div>
+    <div class="tab-pane" id="tab4">
+      <p>This is it, this is Section Edit.</p>
     </div>
   </div>
 </div>
@@ -307,11 +310,22 @@
                 <div class="tab-pane" id="C">
                   <p>What up girl, this is Section C.</p>
                 </div>
+                 <div class="tab-pane" id="D">
+                  <p>This is Section D (Draft).</p>
+                </div>
+                 <div class="tab-pane" id="E">
+                  <p>This is Section E (Edit).</p>
+                </div>
+
+
               </div>
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
-                <li><a href="#B" data-toggle="tab">Section 2</a></li>
-                <li><a href="#C" data-toggle="tab">Section 3</a></li>
+                <li class="active"><a href="#A" data-toggle="tab">Section A</a></li>
+                <li><a href="#B" data-toggle="tab">Section B</a></li>
+                <li><a href="#C" data-toggle="tab">Section C</a></li>
+                 <li class="nav-tabs_draft"><a href="#D" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+                 <li class="nav-tabs_edit"><a href="#E" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
+
               </ul>
             </div> <!-- /tabbable -->
           </div>
@@ -323,6 +337,8 @@
   </div>
   <ul class="nav nav-tabs">
     ...
+    <li class="nav-tabs_draft"><a href="#D" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+    <li class="nav-tabs_edit"><a href="#E" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
   </ul>
 </div>
 ```
@@ -334,8 +350,10 @@
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-                <li><a href="#lB" data-toggle="tab">Section 2</a></li>
-                <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+                <li><a href="#lB" data-toggle="tab">Section A</a></li>
+                <li><a href="#lC" data-toggle="tab">Section B</a></li>
+                 <li class="nav-tabs_draft"><a href="#1D" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+                 <li class="nav-tabs_edit"><a href="#1E" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="lA">
@@ -346,6 +364,12 @@
                 </div>
                 <div class="tab-pane" id="lC">
                   <p>What up girl, this is Section C.</p>
+                </div>
+                 <div class="tab-pane" id="1D">
+                  <p>This is Section D (Draft).</p>
+                </div>
+                 <div class="tab-pane" id="1E">
+                  <p>This is Section E (Edit).</p>
                 </div>
               </div>
             </div> <!-- /tabbable -->
@@ -367,20 +391,28 @@
           <p>Swap the class to put tabs on the right.</p>
           <div class="dive-docs-example">
             <div class="tabbable tabs-right">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#rA" data-toggle="tab">Section 1</a></li>
-                <li><a href="#rB" data-toggle="tab">Section 2</a></li>
-                <li><a href="#rC" data-toggle="tab">Section 3</a></li>
+                 <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
+                <li><a href="#lB" data-toggle="tab">Section A</a></li>
+                <li><a href="#lC" data-toggle="tab">Section B</a></li>
+                 <li class="nav-tabs_draft"><a href="#1D" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+                 <li class="nav-tabs_edit"><a href="#1E" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="rA">
+                <div class="tab-pane active" id="lA">
                   <p>I'm in Section A.</p>
                 </div>
-                <div class="tab-pane" id="rB">
+                <div class="tab-pane" id="lB">
                   <p>Howdy, I'm in Section B.</p>
                 </div>
-                <div class="tab-pane" id="rC">
+                <div class="tab-pane" id="lC">
                   <p>What up girl, this is Section C.</p>
+                </div>
+                 <div class="tab-pane" id="1D">
+                  <p>This is Section D (Draft).</p>
+                </div>
+                 <div class="tab-pane" id="1E">
+                  <p>This is Section E (Edit).</p>
                 </div>
               </div>
             </div> <!-- /tabbable -->

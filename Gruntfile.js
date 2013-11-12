@@ -20,8 +20,8 @@ module.exports = function(grunt) {
       dist: 'dist'
     },
     watch: {
-      compass: {
-        files: ['<%= yeoman.app %>/scss/{,*/}*.{scss,sass}'],
+      compass: {    
+        files: ['<%= yeoman.app %>/scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
       },
       styles: {
@@ -34,7 +34,8 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= yeoman.app %>/templates/**/*.hbs',
-          '{.tmp,<%= yeoman.app %>}/scss/{,*/}*.css',
+         // '{.tmp,<%= yeoman.app %>}/scss/{,*/}*.css',   
+          '.tmp/css/*.css',
           '{.tmp,<%= yeoman.app %>}/js/{,*/}*.js',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ],
@@ -76,13 +77,13 @@ module.exports = function(grunt) {
     clean: {
       dist: {
         files: [{
-          dot: true,
-          src: [
-            '.tmp/**/*',
-            '<%= yeoman.dist %>/*',
-            '!<%= yeoman.dist %>/.git*'
-          ]
-        }]
+            dot: true,
+            src: [
+              '.tmp/**/*',
+              '<%= yeoman.dist %>/*',
+              '!<%= yeoman.dist %>/.git*'
+            ]
+          }]
       },
       server: '.tmp/**/*'
     },
@@ -150,12 +151,13 @@ module.exports = function(grunt) {
         },
         files: [
           {expand: true, cwd: '<%= yeoman.app %>/_boilerplate/', src: ['**'], dest: 'DiVE/', filter: 'isFile'},
-          {expand: true, cwd: '<%= yeoman.dist %>/css/', src: ['dive.min.css', 'dive.css'], dest: 'DiVE/css/', filter: 'isFile'},
-          {expand: true, cwd: '<%= yeoman.app %>/js/', src: ['dive.min.js', 'dive.js'], dest: 'DiVE/js/', filter: 'isFile'},
-          {expand: true, cwd: '<%= yeoman.app %>/fonts/', src: ['**'], dest: 'DiVE/fonts/', filter: 'isFile'}
-
+          {expand: true, cwd: '.tmp/css/', src: ['dive.min.css'], dest: 'DiVE/css/', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.dist %>/img/', src: ['**'], dest: 'DiVE/img/', filter: 'isFile'},
+          {expand: true, cwd: '.tmp/js/', src: ['dive.min.js'], dest: 'DiVE/js/', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.app %>/fonts/', src: ['**'], dest: 'DiVE/fonts/', filter: 'isFile'},
+          //     {expand: true, cwd: '<%= yeoman.dist %>', src: ['everything/index.html'], dest: 'DiVE', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.dist %>', src: ['favicon.ico'], dest: 'DiVE', filter: 'isFile'}
         ]
-
       },
       source: {
         options: {
@@ -167,16 +169,6 @@ module.exports = function(grunt) {
       }
 
     },
-    /*
-    concat: {
-      dist: {
-      }
-    },
-    uglify: {
-      dist: {
-      }
-    },
-    */
     'bower-install': {
       app: {
         html: '<%= yeoman.app %>/index.html',
@@ -187,7 +179,13 @@ module.exports = function(grunt) {
     // check index.html to edit your build targets
     // enable this task if you prefer defining your build targets here
     // Usemin adds files to uglify
-
+    uglify: {
+      dive_min: {
+        files: {
+          '.tmp/js/dive.min.js': ['<%= yeoman.app %>/js/dive.js']
+        }
+      }
+    },
     rev: {
       dist: {
         files: {
@@ -210,7 +208,7 @@ module.exports = function(grunt) {
       options: {
         dirs: ['<%= yeoman.dist %>']
       },
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/{,**/}*.html'],
       css: ['<%= yeoman.dist %>/css/{,*/}*.css']
     },
     imagemin: {
@@ -236,7 +234,7 @@ module.exports = function(grunt) {
     cssmin: {
       combine: {
         files: {
-          '<%= yeoman.dist %>/css/main.css': ['.tmp/css/{,*/}*.css']
+          '.tmp/css/dive.min.css': ['.tmp/css/dive.css']
         }
       }
       // This task is pre-configured if you do not wish to use Usemin
@@ -279,17 +277,17 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.app %>',
-          dest: '<%= yeoman.dist %>',
-          src: [
-            '*.{ico,png,txt}',
-            '.htaccess',
-            'img/{,*/}*.{webp,gif,png,jpg,svg}',
-            'fonts/{,*/}*.*'
-          ]
-        }]
+            expand: true,
+            dot: true,
+            cwd: '<%= yeoman.app %>',
+            dest: '<%= yeoman.dist %>',
+            src: [
+              '*.{ico,png,txt}',
+              '.htaccess',
+              'img/{,**/}*.{webp,gif,png,jpg,svg}',
+              'fonts/{,*/}*.*'
+            ]
+          }]
       },
       styles: {
         expand: true,
@@ -332,13 +330,18 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          '.tmp/': '<%= yeoman.app %>/templates/pages/*.hbs'
+          '.tmp/': [
+            '<%= yeoman.app %>/templates/pages/*.hbs',
+            '!<%= yeoman.app %>/templates/pages/404.hbs'
+          ]
         }
       },
-      index: {
-         
+      root: {
         files: {
-          '.tmp/': '<%= yeoman.app %>/templates/pages/index.hbs'
+          '.tmp/': [
+            '<%= yeoman.app %>/templates/pages/index.hbs',
+            '<%= yeoman.app %>/templates/pages/404.hbs'
+          ]
         }
       },
       examples: {
@@ -354,8 +357,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-
     concurrent: {
       server: [
         'assemble',
@@ -414,17 +415,17 @@ module.exports = function(grunt) {
     'usemin',
     'compress'
   ]);
-
-
-
   grunt.registerTask('default', [
     'jshint',
     'test',
     'build'
   ]);
+  grunt.registerTask('aldo', [
+    'clean:dist',
+    'compass',
+    'cssmin',
+    'copy:dist'
 
-  grunt.registerTask('andy', [
-    'clean:server',
-    'compass'
   ]);
+
 };

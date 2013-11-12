@@ -117,6 +117,10 @@
 }
 // Actual tabs (as links)
 .nav-tabs > li > a {
+
+
+
+
   padding-top: 8px;
   padding-bottom: 8px;
   line-height: $baseLineHeight;
@@ -124,18 +128,61 @@
   //@include ctb-border-radius(4px 4px 0 0);
   background: $grayLighter;
   &:hover {
-    border-color: $grayLighter $grayLighter #ddd;
+    border-color: $grayLighter $grayLighter $grayLightish;
   }
 }
 // Active state, and it's :hover to override normal :hover
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
+
+
+
   color: $gray;
   background-color: $bodyBackground;
-  border: 1px solid #ddd;
+  border: 1px solid $grayLightish;
   border-bottom-color: transparent;
   cursor: default;
 }
+
+// Draft mode tabs
+
+.nav-tabs > .nav-tabs_draft > a,
+.nav-tabs > .nav-tabs_draft > a:hover {
+  color: $secondaryD;
+  background-color: $tertiaryI;
+  border: 1px solid $tertiaryI;
+}
+
+  .nav-tabs > .nav-tabs_draft > a:hover {  border-top: 1px solid $secondaryD;}
+.nav-tabs > .nav-tabs_draft.active > a,
+.nav-tabs > .nav-tabs_draft.active > a:hover {
+  background-color: $bodyBackground;
+  border: 1px solid $grayLightish;
+  border-bottom-color: transparent;
+  border-top: 1px solid $secondaryD;
+  cursor: default;
+}
+
+// Draft mode tabs
+
+.nav-tabs > .nav-tabs_edit > a,
+.nav-tabs > .nav-tabs_edit > a:hover {
+   color:$white;
+  background-color: $tertiaryB;
+  border: 1px solid $tertiaryB;
+}
+  .nav-tabs > .nav-tabs_edit > a:hover {  border-top: 1px solid $tertiaryA;}
+.nav-tabs > .nav-tabs_edit.active > a,
+.nav-tabs > .nav-tabs_edit.active > a:hover {
+  background-color: $bodyBackground;
+  border: 1px solid $grayLightish;
+  border-bottom-color: transparent;
+  border-top: 1px solid $tertiaryA;
+  cursor: default;
+  color: $tertiaryB;
+}
+
+
 
 
 // PILLS
@@ -186,7 +233,7 @@
   //@include ctb-border-bottom-radius(4px);
 }
 .nav-tabs.nav-stacked > li > a:hover {
-  border-color: #ddd;
+  border-color: $grayLightish;
   z-index: 2;
 }
 
@@ -305,22 +352,38 @@
 // ------
 
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $grayLightish;
 }
 .tabs-below > .nav-tabs > li {
   margin-top: -1px;
   margin-bottom: 0;
 }
 .tabs-below > .nav-tabs > li > a {
-  @include ctb-border-radius(0 0 4px 4px);
+ // @include ctb-border-radius(0 0 4px 4px);
   &:hover {
     border-bottom-color: transparent;
-    border-top-color: #ddd;
+    border-top-color: $grayLightish;
   }
 }
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: transparent $grayLightish $grayLightish $grayLightish;
+}
+ 
+
+.tabs-below > .nav-tabs > .nav-tabs_edit.active > a,
+.tabs-below > .nav-tabs > .nav-tabs_edit.active > a:hover{
+   border-color: transparent $grayLightish $tertiaryA $grayLightish;
+}
+.tabs-below > .nav-tabs > .nav-tabs_draft.active > a,
+.tabs-below > .nav-tabs > .nav-tabs_draft.active > a:hover{
+   border-color: transparent $grayLightish $secondaryD $grayLightish;
+}
+.tabs-below >  .nav-tabs > .nav-tabs_draft > a:hover {
+       border-bottom-color:$secondaryD ;
+}
+.tabs-below >  .nav-tabs > .nav-tabs_edit > a:hover {
+       border-bottom-color:$tertiaryA ;
 }
 
 // LEFT & RIGHT
@@ -342,41 +405,73 @@
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid $grayLightish;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
   //@include ctb-border-radius(4px 0 0 4px);
 }
 .tabs-left > .nav-tabs > li > a:hover {
-  border-color: $grayLighter #ddd $grayLighter $grayLighter;
+  border-color: $grayLighter transparent $grayLighter $grayLighter;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: $grayLightish transparent $grayLightish $grayLightish;
   *border-right-color: $white;
 }
 
+.tabs-left > .nav-tabs > .nav-tabs_edit.active > a,
+.tabs-left > .nav-tabs > .nav-tabs_edit.active > a:hover{
+   border-color: $grayLightish  transparent $grayLightish $tertiaryA ;
+}
+.tabs-left > .nav-tabs > .nav-tabs_draft.active > a,
+.tabs-left > .nav-tabs > .nav-tabs_draft.active > a:hover {
+   border-color: $grayLightish  transparent $grayLightish $secondaryD ;
+}
+.tabs-left > .nav-tabs > li.nav-tabs_edit > a:hover ,
+.tabs-left > .nav-tabs > .nav-tabs_edit > a:hover {
+    border-color: $grayLightish  $grayLightish $grayLightish $tertiaryA ;
+}
+.tabs-left > .nav-tabs > li.nav-tabs_draft > a:hover ,
+.tabs-left > .nav-tabs > .nav-tabs_draft > a:hover {
+   border-color: $grayLightish  $grayLightish $grayLightish $secondaryD ;
+}
+ 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid $grayLightish;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
   //@include ctb-border-radius(0 4px 4px 0);
 }
 .tabs-right > .nav-tabs > li > a:hover {
-  border-color: $grayLighter $grayLighter $grayLighter #ddd;
+  border-color: $grayLighter $grayLighter $grayLighter $grayLightish;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: $grayLightish $grayLightish $grayLightish transparent;
   *border-left-color: $white;
 }
 
-
+.tabs-right > .nav-tabs > .nav-tabs_edit.active > a,
+.tabs-right > .nav-tabs > .nav-tabs_edit.active > a:hover {
+   border-color: $grayLightish $tertiaryA $grayLightish transparent ;
+}
+.tabs-right > .nav-tabs > .nav-tabs_draft.active > a,
+.tabs-right > .nav-tabs > .nav-tabs_draft.active > a:hover {
+   border-color: $grayLightish $secondaryD $grayLightish transparent ;
+}
+.tabs-right > .nav-tabs > li.nav-tabs_edit > a:hover ,
+.tabs-right > .nav-tabs > .nav-tabs_edit > a:hover {  
+     border-color: $grayLightish $tertiaryA $grayLightish transparent ;
+}
+.tabs-right > .nav-tabs > li.nav-tabs_draft > a:hover,
+.tabs-right > .nav-tabs > .nav-tabs_draft > a:hover {
+     border-color: $grayLightish $secondaryD $grayLightish transparent ;
+}
 
 // DISABLED STATES
 // ---------------
