@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       dist: 'dist'
     },
     watch: {
-      compass: {    
+      compass: {
         files: ['<%= yeoman.app %>/scss/**/*.{scss,sass}'],
         tasks: ['compass:server', 'autoprefixer']
       },
@@ -34,7 +34,6 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= yeoman.app %>/templates/**/*.hbs',
-         // '{.tmp,<%= yeoman.app %>}/scss/{,*/}*.css',   
           '.tmp/css/*.css',
           '{.tmp,<%= yeoman.app %>}/js/{,*/}*.js',
           '<%= yeoman.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -152,7 +151,7 @@ module.exports = function(grunt) {
         files: [
           {expand: true, cwd: '<%= yeoman.app %>/_boilerplate/', src: ['**'], dest: 'DiVE/', filter: 'isFile'},
           {expand: true, cwd: '.tmp/css/', src: ['dive.min.css'], dest: 'DiVE/css/', filter: 'isFile'},
-          {expand: true, cwd: '<%= yeoman.dist %>/img/', src: ['**'], dest: 'DiVE/img/', filter: 'isFile'},
+          {expand: true, cwd: '<%= yeoman.dist %>/img/', src: ['*'], dest: 'DiVE/img/', filter: 'isFile'},
           {expand: true, cwd: '.tmp/js/', src: ['dive.min.js'], dest: 'DiVE/js/', filter: 'isFile'},
           {expand: true, cwd: '<%= yeoman.app %>/fonts/', src: ['**'], dest: 'DiVE/fonts/', filter: 'isFile'},
           //     {expand: true, cwd: '<%= yeoman.dist %>', src: ['everything/index.html'], dest: 'DiVE', filter: 'isFile'},
@@ -206,7 +205,7 @@ module.exports = function(grunt) {
     },
     usemin: {
       options: {
-        dirs: ['<%= yeoman.dist %>']
+        dirs: ['<%= yeoman.dist %>'] 
       },
       html: ['<%= yeoman.dist %>/{,**/}*.html'],
       css: ['<%= yeoman.dist %>/css/{,*/}*.css']
@@ -263,7 +262,7 @@ module.exports = function(grunt) {
            removeRedundantAttributes: true,
            useShortDoctype: true,
            removeEmptyAttributes: true,
-           removeOptionalTags: true */
+           removeOptionalTags: true */ 
         },
         files: [{
             expand: true,
@@ -367,10 +366,10 @@ module.exports = function(grunt) {
         'copy:fonts'
       ],
       dist: [
-        'compass',
+      //  'compass',
         'copy:styles',
         'imagemin',
-        'htmlmin'
+         'htmlmin'
       ]
     }
 
@@ -405,7 +404,7 @@ module.exports = function(grunt) {
     'compass',
     'assemble',
     'useminPrepare',
-    'concurrent:dist',
+     'concurrent:dist',
     'autoprefixer',
     'concat',
     'cssmin',
@@ -414,39 +413,10 @@ module.exports = function(grunt) {
     'copy:dist',
     'usemin',
     'compress'
-    /*
-    'clean:dist',
-    'compass',
-    'assemble',
-    'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'cssmin',
-    'uglify',
-    'modernizr',
-    'copy:dist',
-    'usemin',
-    'compress'
-    
-    
-      'compass',
-        'copy:styles',
-        'imagemin',
-        'htmlmin'
-     */
   ]);
   grunt.registerTask('default', [
     'jshint',
     'test',
     'build'
   ]);
-  grunt.registerTask('aldo', [
-    'clean:dist',
-    'compass',
-    'cssmin',
-    'copy:dist'
-
-  ]);
-
 };

@@ -89,7 +89,18 @@
           animation: progress-bar-stripes 2s linear infinite;
 }
 
-
+//progress Loader
+.progress-loading{ 
+  @extend .progress;
+  @extend .progress-striped;
+  @extend .progress.active ;
+ height:25px;
+ width:100px;
+ .bar{ width:100%;}
+ 
+}
+.progress-loading.square{ height:40px;
+ width:40px;}
 
 // COLORS
 // ------

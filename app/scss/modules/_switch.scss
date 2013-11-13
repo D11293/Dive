@@ -53,6 +53,13 @@ $switch-width-lg: 120px;
   height: $switch-height;
   width: $switch-height;
   cursor: pointer;
+  
+  /*
+     -webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+*/
 }
 
 .switch-content {
@@ -67,25 +74,35 @@ $switch-width-lg: 120px;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
+  
+   
+
 }
 
 // Checked
 .switch-content--left {
   background: $blueLight;
   color: $white;
+  
+ 
 }
 
 .switch-content--left span  {
   float: left;
+ 
 }
 
 // Unchecked
 .switch-content--right {
   background-color: $grayLighter;
+  
+    
+ 
 
 }
 .switch-content--right span {
   float: right;
+
 }
 
 
@@ -94,6 +111,8 @@ $switch-width-lg: 120px;
   margin: 0;
   width: $switch-width - $switch-height;
   text-align: center;
+  
+ 
 }
 
 

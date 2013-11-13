@@ -5,149 +5,13 @@
     <h1>Forms</h1>
   </div>
 
-  <h2>Default styles</h2>
-  <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
-  <form class="dive-docs-example">
-    <fieldset>
-      <legend>Legend</legend>
-      <label>Label name</label>
-      <input type="text" placeholder="Type something…">
-      <span class="help-block">Example block-level help text here.</span>
-      <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
-      <button type="submit" class="btn btn-secondary">Submit</button>
-    </fieldset>
-  </form>
-{{#markdown}}
-```markup
-<form>
-  <fieldset>
-    <legend>Legend</legend>
-    <label>Label name</label>
-    <input type="text" placeholder="Type something…">
-    <span class="help-block">Example block-level help text here.</span>
-    <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
-    <button type="submit" class="btn">Submit</button>
-  </fieldset>
-</form>
-```
-{{/markdown}}
 
-
-  <hr class="dive-docs-separator">
-
-
-  <h2>Optional layouts</h2>
-  <p>Included with DiVE Library are three optional form layouts for common use cases.</p>
-
-  <h3>Search form</h3> <!-- SR_001 -->
-  <p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
-  <form class="dive-docs-example form-search">
-    <input type="text" class="input-medium search-query">
-    <button type="submit" class="btn">Search</button>
-  </form>
-{{#markdown}}
-```markup
-<form class="form-search">
-  <input type="text" class="input-medium search-query">
-  <button type="submit" class="btn">Search</button>
-</form>
-```
-{{/markdown}}
-
-  <h3>Inline form</h3>
-  <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
-  <form class="dive-docs-example form-inline">
-    <input type="text" class="input-small" placeholder="Email">
-    <input type="password" class="input-small" placeholder="Password">
-    <label class="checkbox">
-      <input type="checkbox"> Remember me
-    </label>
-    <button type="submit" class="btn">Sign in</button>
-  </form>
-{{#markdown}}
-```markup
-<form class="form-inline">
-  <input type="text" class="input-small" placeholder="Email">
-  <input type="password" class="input-small" placeholder="Password">
-  <label class="checkbox">
-    <input type="checkbox"> Remember me
-  </label>
-  <button type="submit" class="btn">Sign in</button>
-</form>
-```
-{{/markdown}}
-
-  <h3>Horizontal form</h3>
-  <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
-  <ul>
-    <li>Add <code>.form-horizontal</code> to the form</li>
-    <li>Wrap labels and controls in <code>.control-group</code></li>
-    <li>Add <code>.control-label</code> to the label</li>
-    <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
-  </ul>
-  <form class="dive-docs-example form-horizontal">
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">Email</label>
-      <div class="controls">
-        <input type="text" id="inputEmail" placeholder="Email">
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="inputPassword">Password</label>
-      <div class="controls">
-        <input type="password" id="inputPassword" placeholder="Password">
-      </div>
-    </div>
-    <div class="control-group">
-      <div class="controls">
-        <label class="checkbox">
-          <input type="checkbox"> Remember me
-        </label>
-        <button type="submit" class="btn">Sign in</button>
-      </div>
-    </div>
-  </form>
-{{#markdown}}
-```markup
-<div class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
-    <div class="controls">
-      <input type="text" id="inputEmail" placeholder="Email">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">Password</label>
-    <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Password">
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <label class="checkbox">
-
-      <input type="checkbox"> Remember me
-      </label>
-      <button type="submit" class="btn">Sign in</button>
-    </div>
-  </div>
-</div>
-```
-{{/markdown}}
-
-
-
-  <hr class="dive-docs-separator">
 
 
   <h2>Supported form controls</h2>
   <p>Examples of standard form controls supported in an example form layout.</p>
 
-  <h3>Inputs</h3>
+  <h3>Standard HTML5 inputs</h3>
   <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <em>text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, file and color</em>.</p>
   <p>Requires the use of a specified <code>type</code> at all times.</p>
   <div class="dive-docs-example ">
@@ -407,6 +271,145 @@
 </form>
 ```
 {{/markdown}}
+
+     <hr class="dive-docs-separator">
+
+  <h2>Default styles</h2>
+  <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+  <form class="dive-docs-example">
+    <fieldset>
+      <legend>Legend</legend>
+      <label>Label name</label>
+      <input type="text" placeholder="Type something…">
+      <span class="help-block">Example block-level help text here.</span>
+      <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+      <button type="submit" class="btn btn-secondary">Submit</button>
+    </fieldset>
+  </form>
+{{#markdown}}
+```markup
+<form>
+  <fieldset>
+    <legend>Legend</legend>
+    <label>Label name</label>
+    <input type="text" placeholder="Type something…">
+    <span class="help-block">Example block-level help text here.</span>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+```
+{{/markdown}}
+
+
+  <hr class="dive-docs-separator">
+
+
+  <h2>Optional layouts</h2>
+  <p>Included with DiVE Library are three optional form layouts for common use cases.</p>
+
+  <h3>Search form</h3> <!-- SR_001 -->
+  <p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
+  <form class="dive-docs-example form-search">
+    <input type="text" class="input-medium search-query">
+    <button type="submit" class="btn">Search</button>
+  </form>
+{{#markdown}}
+```markup
+<form class="form-search">
+  <input type="text" class="input-medium search-query">
+  <button type="submit" class="btn">Search</button>
+</form>
+```
+{{/markdown}}
+
+  <h3>Inline form</h3>
+  <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
+  <form class="dive-docs-example form-inline">
+    <input type="text" class="input-small" placeholder="Email">
+    <input type="password" class="input-small" placeholder="Password">
+    <label class="checkbox">
+      <input type="checkbox"> Remember me
+    </label>
+    <button type="submit" class="btn">Sign in</button>
+  </form>
+{{#markdown}}
+```markup
+<form class="form-inline">
+  <input type="text" class="input-small" placeholder="Email">
+  <input type="password" class="input-small" placeholder="Password">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button type="submit" class="btn">Sign in</button>
+</form>
+```
+{{/markdown}}
+
+  <h3>Horizontal form</h3>
+  <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+  <ul>
+    <li>Add <code>.form-horizontal</code> to the form</li>
+    <li>Wrap labels and controls in <code>.control-group</code></li>
+    <li>Add <code>.control-label</code> to the label</li>
+    <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+  </ul>
+  <form class="dive-docs-example form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="inputEmail">Email</label>
+      <div class="controls">
+        <input type="text" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="inputPassword">Password</label>
+      <div class="controls">
+        <input type="password" id="inputPassword" placeholder="Password">
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="btn">Sign in</button>
+      </div>
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<div class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+
+      <input type="checkbox"> Remember me
+      </label>
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </div>
+</div>
+```
+{{/markdown}}
+
+
+
 
    <hr class="dive-docs-separator">
 

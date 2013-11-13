@@ -555,12 +555,15 @@ select:focus:invalid {
   .add-on,
   .btn {
     margin-right: -1px;
+   
   }
   .add-on:first-child,
   .btn:first-child {
-    // FYI, `.btn:first-child` accounts for a button group that's prepended
+  
     @include ctb-border-radius($inputBorderRadius 0 0 $inputBorderRadius);
   }
+  .btn-group > .btn:first-child { @include ctb-border-radius($inputBorderRadius 0 0 $inputBorderRadius);}
+  
 }
 
 .input-append {
@@ -570,6 +573,7 @@ select:focus:invalid {
     @include ctb-border-radius($inputBorderRadius 0 0 $inputBorderRadius);
     + .btn-group .btn:last-child {
       @include ctb-border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+    
     }
   }
   .add-on,
@@ -581,7 +585,15 @@ select:focus:invalid {
   .btn:last-child,
   .btn-group:last-child > .dropdown-toggle {
     @include ctb-border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+   // @include ctb-border-radius(0 $baseBorderRadius $baseBorderRadius 0);
   }
+  /* force segmented dropdown */
+  .btn-group > .btn:first-child {
+     @include ctb-border-radius(0);
+   
+  }
+   
+   
 }
 
 // Remove all border-radius for inputs with both prepend and append
@@ -596,15 +608,19 @@ select:focus:invalid {
   }
   .add-on:first-child,
   .btn:first-child {
+    
     margin-right: -1px;
     @include ctb-border-radius($inputBorderRadius 0 0 $inputBorderRadius);
+    
   }
   .add-on:last-child,
   .btn:last-child {
     margin-left: -1px;
     @include ctb-border-radius(0 $inputBorderRadius $inputBorderRadius 0);
+   
   }
   .btn-group:first-child {
+     
     margin-left: 0;
   }
 }

@@ -1,4 +1,4 @@
- .datepicker {
+.datepicker {
   top: 0;
   left: 0;
   padding: 4px;
@@ -61,7 +61,7 @@
   table{
     margin: 0;
     border-bottom: none;
-min-width:199px;
+    min-width:199px;
   }
   td,
   th{
@@ -71,7 +71,21 @@ min-width:199px;
     @include ctb-border-radius(4px);
 
   }
+  th{
+    &.clear,
+    &.clear:hover, &.clear.disabled,
+      &.clear.disabled:hover {
+      font-style: italic;
+      color:$grey;
+    }
+    &.switch {
+      width: 145px;
+    }
+
+  }
   td {
+    &.cw{ font-size: $baseFontSize - 2;
+          font-style: italic;}
     &.day:hover {
       background: $grayLighter;
       cursor: pointer;
@@ -95,6 +109,7 @@ min-width:199px;
       background: $todayBackground;
       color:$white;
     }
+
 
 
 
@@ -143,9 +158,7 @@ min-width:199px;
     }
   }
 
-  th.switch {
-    width: 145px;
-  }
+
 
 
   tfoot tr th, tfoot tr, thead tr th , tbody tr,tbody tr td  {  border-bottom: 1px solid $white;}

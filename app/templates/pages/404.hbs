@@ -1,6 +1,6 @@
 ---
 base_url:
-nav: 
+nav:
 title: DiVE Library - Page not found
 ---
 
@@ -18,7 +18,7 @@ title: DiVE Library - Page not found
 
     <!-- image -->
     <div class="col-sm-6 col-md-5">
-    	<img src="../../img/404_image.jpg"/>
+    	<img src="{{ page.base_url }}img/404_image.jpg"/>
 
       &nbsp;
     </div>
@@ -32,7 +32,7 @@ title: DiVE Library - Page not found
     	<h2>What can I do now?</h2>
     	<p>If it is the first time visiting DiVE Library, Welcome! sorry fir the circumstances under which we're meeting. Here's where you can go from here:</p>
     	<ul>
-    		<li>Go back to <a href="#">DiVE Library Home Page</a></li>
+    		<li>Go back to <a href="{{ page.base_url }}index.html">DiVE Library Home Page</a></li>
     		<li>Click on any items in the navigation above</li>
     		<li>If you believe that a page should be here and that siomething's went wrong please do not hesistate to contact either <a href="#">Jeremie Obserson</a> or <a href="#">Christophe Renaut</a></li>
     	</ul>

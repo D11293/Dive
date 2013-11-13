@@ -2055,7 +2055,7 @@
 
   , keypress: function (e) {
       if (this.suppressKeyPressRepeat) return
-      this.move(e)
+      this.move(e);
     }
 
   , keyup: function (e) {
@@ -2109,11 +2109,11 @@
     }
 
   , mouseleave: function (e) {
-      this.mousedover = false
-      if (!this.focused && this.shown) this.hide()
+      this.mousedover = false;
+      if (!this.focused && this.shown) this.hide();
     }
 
-  }
+  };
 
 
   /* TYPEAHEAD PLUGIN DEFINITION
@@ -2128,8 +2128,8 @@
         , options = typeof option == 'object' && option
       if (!data) $this.data('typeahead', (data = new Typeahead(this, options)))
       if (typeof option == 'string') data[option]()
-    })
-  }
+    });
+  };
 
   $.fn.typeahead.defaults = {
     source: []
@@ -2137,18 +2137,18 @@
   , menu: '<ul class="typeahead dropdown-menu"></ul>'
   , item: '<li><a href="#"></a></li>'
   , minLength: 1
-  }
+  };
 
-  $.fn.typeahead.Constructor = Typeahead
+  $.fn.typeahead.Constructor = Typeahead;
 
 
  /* TYPEAHEAD NO CONFLICT
   * =================== */
 
   $.fn.typeahead.noConflict = function () {
-    $.fn.typeahead = old
-    return this
-  }
+    $.fn.typeahead = old;
+    return this;
+  };
 
 
  /* TYPEAHEAD DATA-API
