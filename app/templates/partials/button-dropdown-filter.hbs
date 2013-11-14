@@ -1,0 +1,223 @@
+<!-- Split button dropdowns AI_001
+================================================== -->
+<section id="button-dropdown-filter">
+  <div class="page-header">
+    <h1>Button dropdown Filtered</h1>
+  </div>
+
+
+ <h3>Filtered dropdown list</h3>
+  <p>it is possible to add a standard input component inside a dropdown-mwenu list as displayed below to be able to filter the list itself.</p>
+  <div class="dive-docs-example">
+
+   <div class="btn-group">
+  <button class="btn dropdown-toggle" data-toggle="dropdown" >Filtered dropdown &nbsp;<span class="caret"></span></button>
+  <div  class="dropdown dropdown-menu">
+    <form>
+      <input type="text" id="filter" placeholder="Type to Filter...">
+      <ul class="dropdown-striped ">
+        <li><a href="#">Action 01</a></li>
+        <li><a href="#">Action 02</a></li>
+        <li><a href="#">Action 03</a></li>
+        <li><a href="#">Action 04</a></li>
+        <li><a href="#">Action 05</a></li>
+        <li><a href="#">Action 06</a></li>
+        <li><a href="#">Action 07</a></li>
+        <li><a href="#">Action 08</a></li>
+         <li><a href="#">Action 09</a></li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+  </div>
+
+{{#markdown}}
+``` markup
+<div class="btn-group">
+  <button class="btn dropdown-toggle" data-toggle="dropdown" >Filtered dropdown &nbsp;<span class="caret"></span></button>
+  <div  class="dropdown dropdown-menu">
+    <form>
+      <input  class=" input-medium"  type="text" id="filter" placeholder="Type to Filter...">
+      <ul class="dropdown-striped ">
+        <li><a href="#">Action 01</a></li>
+        <li><a href="#">Action 02</a></li>
+        <li><a href="#">Action 03</a></li>
+        <li><a href="#">Action 04</a></li>
+        <li><a href="#">Action 05</a></li>
+        <li><a href="#">Action 06</a></li>
+        <li><a href="#">Action 07</a></li>
+        <li><a href="#">Action 08</a></li>
+        <li><a href="#">Action 09</a></li>
+      </ul>
+    </form>
+  </div>
+</div>
+```
+{{/markdown}}
+
+
+<h2>Usage</h2>
+ 
+  <h3>Via JavaScript</h3>
+  <p>Call the filterList manually with:</p>
+{{#markdown}}
+```javascript
+ $('#filter').filterList();
+```
+{{/markdown}}
+
+ <h2> Scrollable list</h2>
+ <p>
+   with just one class on the <code>ul</code> tag it is possible to have one long list inside a scrollbar.
+   Three calsses are provided: <br>
+   <code> class="dropdown-scrolled-small"</code> who will display 5 items scrollable. <br>
+ <code> class="dropdown-scrolled-medium"</code> who will display 9 items scrollable. <br>
+ <code> class="dropdown-scrolled-large"</code> who will display 15 items scrollable. <br>
+
+ </p>
+
+<div class="dive-docs-example">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown" >Scrollable list &nbsp;<span class="caret"></span></button>
+    <div class="dropdown dropdown-menu">
+        <ul class="dropdown-striped dropdown-scrolled-small">
+          <li><a href="#">Action 01</a></li>
+          <li><a href="#">Action 02</a></li>
+          <li><a href="#">Action 03</a></li>
+          <li><a href="#">Action 04</a></li>
+          <li><a href="#">Action 05</a></li>
+          <li><a href="#">Action 06</a></li>
+          <li><a href="#">Action 07</a></li>
+          <li><a href="#">Action 08</a></li>
+          <li><a href="#">Action 09</a></li>
+          <li><a href="#">Action 10</a></li>
+          <li><a href="#">Action 11</a></li>
+          <li><a href="#">Action 12</a></li>
+          <li><a href="#">Action 13</a></li>
+          <li><a href="#">Action 14</a></li>
+          <li><a href="#">Action 15</a></li>
+          <li><a href="#">Action 01</a></li>
+          <li><a href="#">Action 02</a></li>
+          <li><a href="#">Action 03</a></li>
+          <li><a href="#">Action 04</a></li>
+          <li><a href="#">Action 05</a></li>
+          <li><a href="#">Action 06</a></li>
+          <li><a href="#">Action 07</a></li>
+          <li><a href="#">Action 08</a></li>
+          <li><a href="#">Action 09</a></li>
+          <li><a href="#">Action 10</a></li>
+          <li><a href="#">Action 11</a></li>
+          <li><a href="#">Action 12</a></li>
+          <li><a href="#">Action 13</a></li>
+          <li><a href="#">Action 14</a></li>
+          <li><a href="#">Action 15</a></li>
+          <li><a href="#">Action 01</a></li>
+          <li><a href="#">Action 02</a></li>
+          <li><a href="#">Action 03</a></li>
+          <li><a href="#">Action 04</a></li>
+          <li><a href="#">Action 05</a></li>
+          <li><a href="#">Action 06</a></li>
+          <li><a href="#">Action 07</a></li>
+          <li><a href="#">Action 08</a></li>
+          <li><a href="#">Action 09</a></li>
+          <li><a href="#">Action 10</a></li>
+          <li><a href="#">Action 11</a></li>
+          <li><a href="#">Action 12</a></li>
+          <li><a href="#">Action 13</a></li>
+          <li><a href="#">Action 14</a></li>
+          <li><a href="#">Action 15</a></li>
+        </ul>
+
+    </div>
+  </div></div>
+  {{#markdown}}
+``` markup
+<div class="btn-group">
+ <button class="btn dropdown-toggle" data-toggle="dropdown" >Scrollable list &nbsp;<span class="caret"></span></button>
+   <div class="dropdown dropdown-menu">
+      <ul class="dropdown-striped dropdown-scrolled-small">
+      ...
+      </ul>
+   </div>
+</div>
+```
+{{/markdown}}
+
+ <h2> Scrollable list + filter</h2>
+ <p>
+   Both the Filter plugin and the scrollbar classes are comaptible and can be used together as shown in the below example.
+ </p>
+
+<div class="dive-docs-example">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown" >Scrollable list &nbsp;<span class="caret"></span></button>
+    <div  class="dropdown dropdown-menu">
+      <form>
+        <input class=" input-large" type="text" id="filter1" placeholder="Type to Filter...">
+        <ul class="dropdown-striped dropdown-scrolled-small">
+          <li><a href="#">Action 01</a></li>
+          <li><a href="#">Action 02</a></li>
+          <li><a href="#">Action 03</a></li>
+          <li><a href="#">Action 04</a></li>
+          <li><a href="#">Action 05</a></li>
+          <li><a href="#">Action 06</a></li>
+          <li><a href="#">Action 07</a></li>
+          <li><a href="#">Action 08</a></li>
+          <li><a href="#">Action 09</a></li>
+          <li><a href="#">Action 10</a></li>
+          <li><a href="#">Action 11</a></li>
+          <li><a href="#">Action 12</a></li>
+          <li><a href="#">Action 13</a></li>
+          <li><a href="#">Action 14</a></li>
+          <li><a href="#">Action 15</a></li>
+          <li><a href="#">Action 01</a></li>
+          <li><a href="#">Action 02</a></li>
+          <li><a href="#">Action 03</a></li>
+          <li><a href="#">Action 04</a></li>
+          <li><a href="#">Action 05</a></li>
+          <li><a href="#">Action 06</a></li>
+          <li><a href="#">Action 07</a></li>
+          <li><a href="#">Action 08</a></li>
+          <li><a href="#">Action 09</a></li>
+          <li><a href="#">Action 10</a></li>
+          <li><a href="#">Action 11</a></li>
+          <li><a href="#">Action 12</a></li>
+          <li><a href="#">Action 13</a></li>
+          <li><a href="#">Action 14</a></li>
+          <li><a href="#">Action 15</a></li>
+          <li><a href="#">Action 01</a></li>
+          <li><a href="#">Action 02</a></li>
+          <li><a href="#">Action 03</a></li>
+          <li><a href="#">Action 04</a></li>
+          <li><a href="#">Action 05</a></li>
+          <li><a href="#">Action 06</a></li>
+          <li><a href="#">Action 07</a></li>
+          <li><a href="#">Action 08</a></li>
+          <li><a href="#">Action 09</a></li>
+          <li><a href="#">Action 10</a></li>
+          <li><a href="#">Action 11</a></li>
+          <li><a href="#">Action 12</a></li>
+          <li><a href="#">Action 13</a></li>
+          <li><a href="#">Action 14</a></li>
+          <li><a href="#">Action 15</a></li>
+        </ul>
+      </form>
+    </div>
+  </div></div>
+  {{#markdown}}
+``` markup
+<div class="btn-group">
+ <button class="btn dropdown-toggle" data-toggle="dropdown" >Scrollable list &nbsp;<span class="caret"></span></button>
+ <div  class="dropdown dropdown-menu">
+  <form>
+    <input class=" input-large" type="text" id="filter1" placeholder="Type to Filter...">
+    <ul class="dropdown-striped dropdown-scrolled-small">
+    ...
+    </ul>
+  </form>
+ </div>
+</div>
+```
+{{/markdown}}
+</section>

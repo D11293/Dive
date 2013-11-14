@@ -1,0 +1,292 @@
+<!-- Forms  extended
+================================================== -->
+<section id="forms_extended">
+  <div class="page-header">
+    <h1>Extending form controls</h1>
+  </div>
+ 
+  <p>Adding on top of existing browser controls, DiVE Library includes other useful form components.</p>
+
+  <h3>Prepended and appended inputs</h3>
+  <p>Add text or buttons before or after any text-based input. Do note that <code>select</code> elements are not supported here.</p>
+
+  <h4>Default options</h4>
+  <p>Wrap an <code>.add-on</code> and an <code>input</code> with one of two classes to prepend or append text to an input.</p>
+  <form class="dive-docs-example">
+    <div class="input-prepend">
+      <span class="add-on">@</span>
+      <input   id="prependedInput" type="text" placeholder="Username">
+    </div>
+    <br>
+    <div class="input-append">
+      <input   id="appendedInput" type="text">
+      <span class="add-on">.00</span>
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<div class="input-prepend">
+  <span class="add-on">@</span>
+  <input   id="prependedInput" type="text" placeholder="Username">
+</div>
+<div class="input-append">
+  <input   id="appendedInput" type="text">
+  <span class="add-on">.00</span>
+</div>
+```
+{{/markdown}}
+
+  <h4>Combined</h4>
+  <p>Use both classes and two instances of <code>.add-on</code> to prepend and append an input.</p>
+  <form class="dive-docs-example form-inline">
+    <div class="input-prepend input-append">
+      <span class="add-on">$</span>
+      <input   id="appendedPrependedInput" type="text">
+      <span class="add-on">.00</span>
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<div class="input-prepend input-append">
+  <span class="add-on">$</span>
+  <input   id="appendedPrependedInput" type="text">
+  <span class="add-on">.00</span>
+</div>
+```
+{{/markdown}}
+
+  <h4>Buttons instead of text</h4>
+  <p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
+  <form class="dive-docs-example">
+    <div class="input-append">
+      <input   id="appendedInputButton" type="text">
+      <button class="btn" type="button">Go!</button>
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<div class="input-append">
+  <input   id="appendedInputButton" type="text">
+  <button class="btn" type="button">Go!</button>
+</div>
+```
+{{/markdown}}
+  <form class="dive-docs-example">
+    <div class="input-append">
+      <input   id="appendedInputButtons" type="text">
+      <button class="btn btn-primary" type="button"><i class="icon-zoom"></i></button>
+      <button class="btn btn-secondary" type="button">Options</button>
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<div class="input-append">
+  <input class="col-2" id="appendedInputButtons" type="text">
+  <button class="btn btn-primary" type="button"><i class="icon-zoom"></i></button>
+  <button class="btn btn-secondary" type="button">Options</button>
+</div>
+```
+{{/markdown}}
+
+  <h4>Button dropdowns</h4>
+  <p></p>
+  <form class="dive-docs-example">
+    <div class="input-append">
+      <input   id="appendedDropdownButton" type="text">
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-append -->
+  </form>
+{{#markdown}}
+```markup
+<div class="input-append">
+  <input   id="appendedDropdownButton" type="text">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      Action
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </div>
+</div>
+```
+{{/markdown}}
+
+  <form class="dive-docs-example">
+    <div class="input-prepend">
+      <div class="btn-group">
+       <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul> <button class="btn dropdown-toggle" data-toggle="dropdown">
+          Action
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <input   id="prependedDropdownButton" type="text">
+    </div><!-- /input-prepend -->
+  </form>
+{{#markdown}}
+```markup
+<div class="input-prepend">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      Action
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </div>
+  <input   id="prependedDropdownButton" type="text">
+</div>
+```
+{{/markdown}}
+
+  <form class="dive-docs-example">
+    <div class="input-prepend input-append">
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <input   id="appendedPrependedDropdownButton" type="text">
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /input-prepend input-append -->
+  </form>
+{{#markdown}}
+```markup
+<div class="input-prepend input-append">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      Action
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </div>
+  <input   id="appendedPrependedDropdownButton" type="text">
+  <div class="btn-group">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      Action
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </div>
+</div>
+```
+{{/markdown}}
+
+  <h4>Segmented dropdown groups</h4>
+  <form class="dive-docs-example">
+    <div class="input-prepend">
+      <div class="btn-group">
+        <button class="btn" tabindex="-1">Action</button>
+        <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+      <input type="text">
+    </div>
+    <div class="input-append">
+      <input type="text">
+      <div class="btn-group">
+        <button class="btn btn-secondary" tabindex="-1">Action</button>
+        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<form>
+  <div class="input-prepend">
+    <div class="btn-group">...</div>
+    <input type="text">
+  </div>
+  <div class="input-append">
+    <input type="text">
+    <div class="btn-group">...</div>
+  </div>
+</form>
+```
+{{/markdown}}
+
+  <h4>Search form</h4>
+  <form class="dive-docs-example form-search">
+    <div class="input-append">
+      <input type="text" class="col-2 search-query">
+      <button type="submit" class="btn btn-primary"><i class="icon-zoom"></i></button>
+    </div>
+    <div class="input-prepend">
+      <button type="submit" class="btn btn-primary"><i class="icon-zoom"></i></button>
+      <input type="text" class="col-2 search-query">
+    </div>
+  </form>
+{{#markdown}}
+```markup
+<form class="form-search">
+  <div class="input-append">
+    <input type="text" class="col-2 search-query">
+    <button type="submit" class="btn btn-secondary">Search</button>
+  </div>
+  <div class="input-prepend">
+    <button type="submit" class="btn btn-secondary">Search</button>
+    <input type="text" class="col-2 search-query">
+  </div>
+</form>
+```
+{{/markdown}}
+</section>

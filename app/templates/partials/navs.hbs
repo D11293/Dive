@@ -220,6 +220,119 @@
 </ul>
 ```
 {{/markdown}}
+
+
+
+
+          <hr class="dive-docs-separator">
+          <h2>Nav lists Tree view</h2>
+          <p>It is possible to activate the tree view on a nav-list.<br>
+          just adding the class <code>tree-toggler</code> on the tree trigger and a class <code>tree</code> on the tree to be open/close.</p>
+
+
+          <div class="dive-docs-example">
+            <div class="well">
+          <ul class="nav nav-list nav-list-tree">
+            <li><label class="tree-toggler nav-header"><i class=''></i> Header 1</label>
+                <ul class="nav nav-list tree ">
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                    <li><label class="tree-toggler nav-header"><i class=''></i> Header 1.1</label>
+                        <ul class="nav nav-list tree">
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                            <li><label class="tree-toggler nav-header"><i class=''></i> Header 1.1.1</label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><label class="tree-toggler nav-header"><i class=''></i> Header 2.2</label>
+                        <ul class="nav nav-list tree">
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                            <li><label class="tree-toggler nav-header"><i class=''></i> Header 2.2.1</label>
+                                <ul class="nav nav-list tree">
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                    <li><a href="#">Link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+            </div> <!-- /well -->
+          </div>
+{{#markdown}}
+```markup
+<ul class="nav nav-list nav-list-tree">
+  <li><label class="tree-toggler nav-header"><i class=''></i> Header 1</label>
+    <ul class="nav nav-list tree ">
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><label class="tree-toggler nav-header"><i class=''></i> Header 1.1</label>
+        <ul class="nav nav-list tree">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><label class="tree-toggler nav-header"><i class=''></i> Header 1.1.1</label>
+            <ul class="nav nav-list tree">
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><label class="tree-toggler nav-header"><i class=''></i> Header 2.2</label>
+        <ul class="nav nav-list tree">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><label class="tree-toggler nav-header"><i class=''></i> Header 2.2.1</label>
+            <ul class="nav nav-list tree">
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
+{{/markdown}}
+
+
+
+
+
+
+
+
+
+
+
           <p>
             <span class="label label-info">Note</span>
             For nesting within a nav list, include <code>class="nav nav-list"</code> on any nested <code>&lt;ul&gt;</code>.

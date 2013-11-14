@@ -662,10 +662,14 @@
   var toggle = '[data-toggle=dropdown]'
     , Dropdown = function (element) {
         var $el = $(element).on('click.dropdown.data-api', this.toggle)
-        $('html').on('click.dropdown.data-api', function () {
-          $el.parent().removeClass('open')
-        })
-      }
+        $('html').on('click.dropdown.data-api', function (e) {        
+          $el.parent().removeClass('open');
+        });
+      };
+
+
+
+
 
   Dropdown.prototype = {
 
@@ -743,7 +747,7 @@
   function clearMenus() {
     $('.dropdown-backdrop').remove()
     $(toggle).each(function () {
-      getParent($(this)).removeClass('open')
+     getParent($(this)).removeClass('open');
     })
   }
 
@@ -795,7 +799,7 @@
 
   $(document)
     .on('click.dropdown.data-api', clearMenus)
-    .on('click.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('click.dropdown.data-api', '.dropdown form input', function (e) { e.stopPropagation() })
     .on('click.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
@@ -1636,7 +1640,7 @@
           active = active.closest('li.dropdown').addClass('active')
         }
 
-        active.trigger('activate')
+        active.trigger('activate');
       }
 
   }
@@ -2276,5 +2280,31 @@
     })
   })
 
+
+
+ /* TREE VIEW PLUGIN - custom -
+  * ============== */
+ 
+  $('.nav-list-tree').each(function() {
+    $('.tree-toggler').children('i').addClass('icon-plus-sign');
+  });
+ 
+ $('.tree-toggler').parent().children('ul.tree').toggle();
+  //
+  $('.tree-toggler').click(function() {  
+    $(this).parent().children('ul.tree').toggle(300);
+    
+    if ($('.tree-toggler').hasClass('open')) {
+      //   e.stopPropagation(); 
+      $(this).children('i').removeClass().addClass('icon-minus-sign');
+      $(this).removeClass('open');
+    } else {
+      $(this).addClass('open');
+      $(this).children('i').removeClass().addClass('icon-plus-sign');
+    }
+  
+  });
+
+  
 
 }(window.jQuery);

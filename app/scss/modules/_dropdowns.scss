@@ -38,6 +38,7 @@
 
 // The dropdown menu (ul)
 // ----------------------
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -57,9 +58,41 @@
   //@include ctb-border-radius(6px);
   @include ctb-box-shadow(0 5px 10px rgba(0,0,0,.2));
   -webkit-background-clip: padding-box;
-     -moz-background-clip: padding;
-          background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  form { 
 
+    margin:0; padding: 0;
+    
+    input{ margin: 0 5px;}
+
+  }
+  ul { 
+      list-style: none;
+      margin: 2px 0 0; 
+
+    }
+  .dropdown-scrolled-small{
+    //5 elements
+    max-height: 170px;  
+    overflow: auto; 
+    overflow-x:hidden; 
+
+  }
+  .dropdown-scrolled-medium{
+    //9 elements 
+    max-height: 306px;  
+    overflow: auto; 
+    overflow-x:hidden; 
+
+  }
+  .dropdown-scrolled-large{
+    //15 elements 
+    max-height: 408px;  
+    overflow: auto; 
+    overflow-x:hidden; 
+
+  }
   // Aligns the dropdown menu to right
   &.pull-right {
     right: 0;
@@ -83,8 +116,8 @@
     border-top: 1px solid $grayLighter;
   }
   li:first-child > a,
-  li.divider > a,
-  li.divider + li > a { border-top: none; }
+    li.divider > a,
+    li.divider + li > a { border-top: none; }
 }
 
 // Striped Dropdowns
