@@ -36,28 +36,30 @@ title: "Basic Form"
 
           <div class="row">
 
-            <div class="control-group col-xs-8">
+            <div class="control-group col-xs-4">
               <input id="postalCode" type="text" class="col-xs-12" placeholder="Postal Code">
             </div>
 
             <div class="control-group col-xs-4">
               <input id="city" type="text" class="col-xs-12" placeholder="City" required>
             </div>
+            
+            <div class="control-group col-xs-4">
+	            <select required>
+	              <option disabled selected="selected">Country</option>
+	              <option>Bangladesh</option>
+	              <option>France</option>
+	              <option>Switzerland</option>
+	              <option>United Kingdom</option>
+	              <option>United States</option>
+	            </select>
+	        </div>
 
           </div>
 
 
 
-          <div class="controls controls-row">
-            <select required>
-              <option disabled selected="selected">Country</option>
-              <option>Bangladesh</option>
-              <option>France</option>
-              <option>Switzerland</option>
-              <option>United Kingdom</option>
-              <option>United States</option>
-            </select>
-          </div>
+
 
         </fieldset>
 
