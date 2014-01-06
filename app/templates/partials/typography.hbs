@@ -258,7 +258,21 @@ This is text a <a href="#">this is a link</a>.
 {{#markdown}}
 ```markup
 <ul>
-  <li>...</li>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>Integer molestie lorem at massa</li>
+  <li>Facilisis in pretium nisl aliquet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
 </ul>
 ```
 {{/markdown}}
@@ -287,7 +301,21 @@ This is text a <a href="#">this is a link</a>.
 {{#markdown}}
 ```markup
 <ol>
-  <li>...</li>
+    <li><span>First item</span></li>
+    <li><span>And here comes the second one</span></li>
+    <li><span>Third element in the list</span>
+        <ol>
+            <li><span>List item level 2</span></li>
+            <li><span>List item level 2</span></li>
+            <li><span>List item level 2</span>
+                <ol>
+                    <li><span>List item level 3</span></li>
+                    <li><span>List item level 3</span></li>
+                    <li><span>List item level 3</span></li>
+                </ol>
+            </li>
+        </ol>
+    </li>
 </ol>
 ```
 {{/markdown}}
@@ -333,8 +361,11 @@ This is text a <a href="#">this is a link</a>.
 {{#markdown}}
 ```markup
 <ul class="inline">
-  <li>...</li>
+  <li>Lorem ipsum</li>
+  <li>Phasellus iaculis</li>
+  <li>Nulla volutpat</li>
 </ul>
+</div>
 ```
 {{/markdown}}
 
