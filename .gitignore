@@ -5,7 +5,6 @@ dist
 app/bower_components
 nbproject
 .DS_Store 
-
 # Editors
 *.sublime-project
 *.sublime-workspace
