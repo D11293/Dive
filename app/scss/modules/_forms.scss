@@ -177,6 +177,9 @@ input[type="color"],
     @include ctb-formFieldFocused();
   }
 }
+textarea[class^="col-"]{
+  padding-bottom:15px;
+}
 #focusedInput{  
 @include ctb-formFieldFocused();
 }
