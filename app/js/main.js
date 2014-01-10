@@ -10,7 +10,7 @@
 
     // Disable certain links in docs
     $('section [href^=#]').click(function(e) {
-      e.preventDefault();
+      //e.preventDefault();
     })
 
     // side bar
@@ -161,7 +161,5 @@
           
         }
         */
-
-
 
 }(window.jQuery);

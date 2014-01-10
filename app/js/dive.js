@@ -2294,13 +2294,13 @@
   $('.tree-toggler').click(function() {  
     $(this).parent().children('ul.tree').toggle(300);
     
-    if ($('.tree-toggler').hasClass('open')) {
+    if ($(this).hasClass('open')) {
       //   e.stopPropagation(); 
-      $(this).children('i').removeClass().addClass('icon-minus-sign');
+      $(this).children('i').removeClass().addClass('icon-plus-sign');
       $(this).removeClass('open');
     } else {
       $(this).addClass('open');
-      $(this).children('i').removeClass().addClass('icon-plus-sign');
+      $(this).children('i').removeClass().addClass('icon-minus-sign');
     }
   
   });
