@@ -365,9 +365,9 @@ module.exports = function(grunt) {
         'copy:fonts'
       ],
       dist: [
-        'compass',
-        'copy:styles',
-        //'imagemin',
+       'compass',
+      'copy:styles',
+       'imagemin',
        'htmlmin'
       ]
     }
