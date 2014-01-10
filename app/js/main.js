@@ -9,7 +9,7 @@
     var $window = $(window);
 
     // Disable certain links in docs
-    $('section [href^=#]').click(function(e) {
+    $('section').not('#scrollspy').find('[href^=#]').click(function(e) {
       e.preventDefault();
     })
 
@@ -161,5 +161,19 @@
           
         }
         */
+
+// Scrollspy for navigation in default.hbs page
+  var $window = $(window)
+  var $body   = $(document.body)
+
+  $body.scrollspy({
+    target: '.dive-docs-sidebar',
+    offset: -250
+  })
+
+  $window.on('load', function () {
+    $body.scrollspy('refresh')
+  })
+
 
 }(window.jQuery);
