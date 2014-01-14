@@ -132,36 +132,6 @@
   $('#filter').filterList();
     $('#filter1').filterList();
 
-
-// tree view plugin
-
- /*
-
-  $('.tree-toggler.open').parent().children('ul.tree').show(function() {  
-    $('.tree-toggler').children('i').removeClass().addClass('icon-plus-sign');
-  });
-   $('.tree-toggler').parent().children('ul.tree ').hide(function() { 
-    $('.tree-toggler').children('i').removeClass().addClass('icon-minus-sign');
-  });
-//var trig
-*/
-/*
- if ($('.tree-toggler.open')) {
-         //   e.stopPropagation(); 
-         //  $('.tree-toggler').children('i').removeClass().addClass('icon-plus-sign');
-          //  $(this).removeClass('open');
-          //  $(this).parent().children('ul.tree').slideToggle();
-               $('.tree-toggler').addClass('OPENED');
-                $('.tree-toggler').children('i').removeClass().addClass('icon-plus-sign');
-                $('.tree-toggler').parent().children('ul.tree').show(300);
-        }else{
-           $('.tree-toggler').addClass('CLOSED');
-       //  $(this).addClass('close');
-         // $('.tree-toggler').children('i').removeClass().addClass('icon-minus-sign');
-          
-        }
-        */
-
 // Scrollspy for navigation in default.hbs page
   var $window = $(window)
   var $body   = $(document.body)
@@ -174,6 +144,26 @@
   $window.on('load', function () {
     $body.scrollspy('refresh')
   })
+
+// Prevent default anchor click behavior
+  /*if ($('#scrollspy').length > 0) {
+    $("#navbarExample ul li a[href^='#']").on('click', function() {
+      e.stopPropagation();
+
+      var conteneur = $('.scrollspy-example'),
+          conteneurPos = conteneur.offset().top,
+          destination = $(this.hash).offset().top,
+          relativeDest = destination - conteneurPos,
+          speed = 300;
+
+      conteneur.animate({scrollTop: relativeDest}, speed);
+
+      console.log('Pos de base: ' + destination + ', Pos relative: ' + relativeDest + '');
+
+      return false;
+    });
+  }*/
+
 
 
 }(window.jQuery);
