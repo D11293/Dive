@@ -1,0 +1,251 @@
+
+/*------------------------------------*\
+    $Variables
+\*------------------------------------*/
+// Major Breakpoints
+$bp-1:   600px;
+$bp-2:   1000px;
+$bp-3:   1250px;
+$nav-col:    200px;
+$z-l-topbar:         111;
+$z-l-content:        110;
+$z-panel-main-right: 103;
+$z-panel-main-left:  102;
+$z-panel-main:       101;
+$z-panel-menu:       100;
+// Layout
+// ------------------
+// Layout Variables
+$topbar: 50px;
+$nav-col: 200px;
+// Layout Styles
+%l-panel-menu {
+  @include box-sizing(border-box);
+  @include single-transition(left);
+  bottom: 0;
+  clear: both;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $z-panel-main;
+}
+%l-panel-main {
+  @include box-sizing(border-box);
+  @include single-transition(left);
+  bottom: 0;
+  clear: both;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $z-panel-main;
+}
+%l-panel-main--left,
+%l-panel-main--right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+%l-panel-main--left {
+  @include single-transition(width);
+  left: 0;
+  width: 100%;
+  z-index: $z-panel-main-left;
+}
+%l-panel-main--right {
+  @include single-transition();
+  left: 100%;
+  right: -100%;
+  z-index: $z-panel-main-right;
+}
+%l-topbar {
+  @include clearfix;
+  @include box-sizing(border-box);
+  height: $topbar;
+  left: 0;
+  line-height: $topbar;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: $z-l-topbar;
+}
+%l-content {
+  @include box-sizing(border-box);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  right: 0;
+  top: $topbar;
+  z-index: $z-l-content;
+    padding-top:10px;
+}
+%l-content--menu {
+  @extend %l-content;
+  padding: 0;
+}
+%l-panel--list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  li {
+    @include box-sizing(border-box);
+    //height: $baseLineHeight;
+    line-height: $baseLineHeight;
+    margin: 0;
+    padding: 0 1em;
+    width: 100%;
+  }
+}
+
+// For Prototyping, OO later
+// ------------------
+body,
+html {
+  height: 100%;
+}
+.wrap {
+  @include single-transition();
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.menu-toggle,
+.details-toggle {
+  display: inline-block;
+  margin-top: 10px;
+}
+@media (min-width: $bp-1) {
+  .details-toggle,
+  .menu-toggle {
+    display: none;
+  }
+  .show-right .menu-toggle {
+    display: inline-block;
+  }
+}
+// The Panels
+%panel {
+  background: $grayLighter;
+  padding: 0;
+  overflow-x: hidden;
+}
+$panel-shadow: 0 0 5px rgba($black, .6);
+.panel-menu {
+  @extend %l-panel-menu;
+  @extend %panel;
+}
+.panel-main {
+  @extend %l-panel-main;
+  @include box-shadow($panel-shadow);
+}
+.panel-main--left {
+  @extend %l-panel-main--left;
+  @extend %panel;
+}
+.panel-main--right {
+  @extend %l-panel-main--right;
+  @extend %panel;
+  @include box-shadow($panel-shadow);
+  background: $white;
+}
+// Hide/Show Panels
+.show-menu {
+  .panel-menu { left: 0; }
+  .panel-main { left: 100%; }
+}
+.show-right {
+  .panel-main--right {
+    left: 0;
+    right: 0;
+  }
+}
+@media (min-width: $bp-1) {
+  .panel-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $nav-col;
+    bottom: 0;
+  }
+  .panel-main,
+  .show-menu .panel-main {
+    left: $nav-col;
+  }
+  .panel-main { clear: none; }
+  //Stacking Panels
+  .show-right {
+    .panel-main        { left: 0; }
+    .panel-main--left  { width: 265px; }
+    .panel-main--right { left: 265px; }
+  }
+}
+@media (min-width: $bp-2) {
+  //Stacking Panels
+  .show-right {
+    .panel-main--left { width: 30%; }
+    .panel-main--right { left: 30%; }
+  }
+}
+@media (min-width: $bp-3) {
+  .panel-main,
+  .show-right .panel-main {
+    left: $nav-col;
+    .menu-toggle { display: none; }
+  }
+  .panel-main--left {
+    width: 40%;
+  }
+  .panel-main--right {
+    left: 40%;
+    right: 0;
+    overflow-x: hidden;
+  }
+}
+.topbar {
+  @extend %l-topbar;
+  @include box-shadow(0 0 10px rgba($black, .8));
+  background: $grayLighter;
+  color: $primaryB;
+ /* font-weight: bold;*/
+  padding: 0 10px;
+  text-align: center;
+  font-size: 20px;
+}
+ 
+.panel-content { @extend %l-content;
+ 
+  background: $white; }
+ 
+/*------------------------------------*\
+    $Menu Button
+\*------------------------------------*/
+ 
+.topbar .btn-navbar {
+  display: block;
+  float: left;
+  padding: 7px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  @include ctb-box-shadow(#{inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)});
+}
+.topbar .btn { margin-top: 6px; }
+.topbar .btn-navbar .icon-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #f5f5f5;
+  @include ctb-border-radius(1px);
+  @include ctb-box-shadow(0 1px 0 rgba(0,0,0,.25));
+}
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+} 

@@ -4,8 +4,9 @@
  */
 
 @import 'compass';
-
+ 
 @import 'modules/mixins';
+
 
 // CSS Reset
 @import 'modules/reset';
@@ -83,3 +84,6 @@
 @import 
     'modules/responsive-utilities', 
     'modules/utilities'; // Has to be last to override when necessary
+ 
+
+@import 'modules/3column';

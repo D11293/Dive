@@ -134,9 +134,6 @@
 // Active state, and it's :hover to override normal :hover
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
-
-
-
   color: $gray;
   background-color: $bodyBackground;
   border: 1px solid $grayLightish;
@@ -199,7 +196,7 @@
 
 // Active state
 .nav-pills > .active > a,
-.nav-pills > .active > a:hover {
+.nav-pills > .active > a:hover, .nav-pills a.active,.nav-pills a:hover.active  {
   color: $white;
   background-color: $linkColor;
 }
@@ -218,7 +215,7 @@
 }
 
 // Tabs
-.nav-tabs.nav-stacked {
+.nav-tabs.nav-stacked  {
   border-bottom: 0;
 }
 .nav-tabs.nav-stacked > li > a {
@@ -240,6 +237,7 @@
 // Pills
 .nav-pills.nav-stacked > li > a {
   margin-bottom: 3px;
+    @include ctb-border-radius(0);
 }
 .nav-pills.nav-stacked > li:last-child > a {
   margin-bottom: 1px; // decrease margin to match sizing of stacked tabs
