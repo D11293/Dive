@@ -66,15 +66,20 @@ title: 3 column responsive layout
             </div>
           </fieldset>
           <fieldset >
-            <div class="control-group col-xs-6">
+         
+       
+         <div class="row">
+
+            <div class="control-group   col-xs-12  ">
               <div class="controls">
-                <div class="input-prepend date pull-left" data-provide="datepicker" data-date-format="dd/mm/yyyy">
-                  <span class="add-on"><i class="icon-calendar"></i></span>
-                  <input type="text" class="input-medium" name="start" placeholder="Starting date!">
+                <div class="input-prepend date" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+                  <span class="add-on  "><i class="icon-calendar"></i></span>
+                  <input type="text" class="  "   name="start" placeholder="Starting date!">
                 </div>      
               </div>
             </div>
-            <div class="control-group col-xs-6">
+       
+            <div class="control-group  col-xs-12     ">
               <div class="controls">
                 <select>
                   <option selected="selected">All sites</option>
@@ -86,6 +91,8 @@ title: 3 column responsive layout
                 </select>
               </div>
             </div>
+
+              </div>
           </fieldset>
         </form>
         <div class="panel--list">
@@ -168,16 +175,17 @@ title: 3 column responsive layout
          <h4><i class="icon-info-sign"></i> Error</h4>
          lorem ipsum 
        </div>
-       <div class="  well">
-        <table class="table table-condensed   ">
+       <div class="well">
+        
+        <table class="table table-condensed    ">
           <tbody>
             <tr>
               <td><strong>Total Expenses:</strong></td>
-              <td><strong>2500,00 CHF</strong></td>
+              <td><strong>250,00 CHF</strong></td>
             </tr>
             <tr>
               <td>Business Expense:</td>
-              <td>2000,00 CHF</td>
+              <td>200,00 CHF</td>
             </tr>
             <tr>
               <td>Less: Private (Nonbusiness):</td>
@@ -189,23 +197,39 @@ title: 3 column responsive layout
             </tr>
             <tr>
               <td>Amount Reimbursed:</td>
-              <td><strong>2300,00 CHF</strong></td>
+              <td><strong>230,00 CHF</strong></td>
             </tr>
           </tbody>
         </table>
-      </div> 
+          </div> 
+      
     </div> 
     <h4>Open and review the following <span class="badge">2</span> warning statements</h4>
-    <div class="alert alert-warning clearfix">
+ <div class="alert alert-warning clearfix"  style="margin:0; padding:8px;">  
+  <div class="row" >
+    <div class="col-xs-12 col-sm-10 ">
       <i class="icon-alert-sign"></i>
-      <a href="#" >1 warning from the audit tool</a>
-      <a href="#" class="btn btn-warning pull-right"  >Review</a>
-    </div>
-    <div class="alert clearfix">
-      <i class="icon-alert-sign"></i>
+       <a href="#" >1 warning from the audit tool</a>
+      </div>
+        <div class="col-xs-12 col-sm-2  ">
+       <a href="#" class="btn btn-small btn-warning "  >Review</a>
+      </div>
+      </div>
+          </div>
+          <br>
+<div class="alert alert-warning clearfix" style="margin:0; padding:8px;">  
+   <div class="row" >
+      <div class="col-xs-12 col-sm-10 ">
+       <i class="icon-alert-sign"></i>
       Reciept 1 (PDF, 579 Kb) <i class="icon-open"></i> <i class="icon-document"></i> 
-      <a href="#" target="_blank" class="btn btn-warning pull-right" data-open="pdf">Open</a>
-    </div>
+     
+      </div>
+       <div class="col-xs-12 col-sm-2  ">
+       <a href="#" target="_blank" class="btn btn-small btn-warning "  >Open</a>
+      </div> 
+      </div>
+    
+  </div>
   </div>
   <div class="form-actions">
     <button type="submit" class="btn btn-primary"><i class="icon-zoom"></i> Search</button>
