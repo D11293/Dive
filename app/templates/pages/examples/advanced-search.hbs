@@ -18,7 +18,7 @@ title: "Advanced Search"
               <div class="input-append">
 
 
- <input id="firstName" type="text" class="col-xs-12" placeholder="Type your search here..." required> <span class="add-on"> on </span>
+ <input id="firstName" type="text" class="col-xs-12" placeholder="Type your search here..."> <span class="add-on"> on </span>
 </div>
 
             </div>
@@ -29,11 +29,11 @@ title: "Advanced Search"
             <div class="controls">
               <select required>
               <option  selected="selected">All sites</option>
-              <option>Site #1</option>
-               <option>Site #2</option>
-                <option>Site #3</option>
-                 <option>Site #4</option>
-                  <option>Site #5</option>
+              <option>http://www.pmi.com/intranet/documents</option>
+               <option>http://workpoint.pmiapps.com/references/wiki3/</option>
+                <option>http://www.pmi.com/intranet/documents</option>
+                 <option>http://workpoint.pmiapps.com/references/wiki3/</option>
+                  <option>http://www.pmi.com/intranet/documents</option>
 
             </select>
             </div>
@@ -51,7 +51,7 @@ title: "Advanced Search"
               <div class="control-group col-xs-5 text-right">
 
 
-               <button class="btn btn-small btn-secondary" type="button">Add Filter <i class="icon-plus-sign"></i></button>
+               <button class="btn btn-small btn-secondary" type="button"><i class="icon-plus-sign"></i></button>
             </div>
           </div>
 
@@ -71,122 +71,92 @@ title: "Advanced Search"
 
 
 
-<table class="table table-striped">
- <tr  >
+          <table class="table table-striped">
+           <tr  >
 
-   <td>
-     <div class="controls">
-       <select required >
-         <option  selected="selected">Nickname</option>
-         <option>Site #1</option>
-         <option>Site #2</option>
-         <option>Site #3</option>
-         <option>Site #4</option>
-         <option>Site #5</option>
-       </select>
-     </div>
-   </td>
-   <td>
-     <div class="controls">
-       <select required class="input-mini">
-         <option  selected="selected">is</option>
-         <option>is not</option>
-       </select>
-     </div>
-   </td>
-   <td>
-     <div class="controls">
-      <select required class="input-small">
-         <option  selected="selected">True</option>
-         <option>False</option>
-       </select>
-     </div>
-   </td>
-    <td> <a href="#"  class="pull-right">    Remove Filter <i class="icon-minus-sign"></i></a></td>
-  </tr>
-  <tr  >
+             <td>
+               <div class="controls">
+                 <select required >
+                   <option selected="selected">Nickname</option>
+                   <option>Site #1</option>
+                   <option>Site #2</option>
+                   <option>Site #3</option>
+                   <option>Site #4</option>
+                   <option>Site #5</option>
+                 </select>
+               </div>
+             </td>
+             <td>
+               <div class="controls">
+                 <select required class="input-mini">
+                   <option  selected="selected">is</option>
+                   <option>is not</option>
+                 </select>
+               </div>
+             </td>
+             <td>
+               <div class="controls">
+                <select required class="input-small">
+                 <option  selected="selected">True</option>
+                 <option>False</option>
+               </select>
+             </div>
+           </td>
+           <td> <a href="#"  class="pull-right"><i class="icon-minus-sign"></i></a></td>
+         </tr>
+         <tr  >
 
-   <td>
-     <div class="controls">
-       <select required class="">
-         <option  selected="selected">Nickname</option>
-         <option>Site #1</option>
-         <option>Site #2</option>
-         <option>Site #3</option>
-         <option>Site #4</option>
-         <option>Site #5</option>
-       </select>
-     </div>
-   </td>
-   <td>
-     <div class="controls">
-         <select required class="input-small">
-         <option  >is</option>
-         <option selected="selected">is not</option>
-       </select>
-     </div>
-   </td>
-   <td>
-     <div class="controls">
-            <input id=" " type="text" class="col-xs-12" placeholder="">
-     </div>
-   </td>
-    <td> <a href="#"  class="pull-right">    Remove Filter <i class="icon-minus-sign"></i></a></td>
-  </tr>
+           <td>
+             <div class="controls">
+               <select required class="">
+                 <option  selected="selected">Nickname</option>
+                 <option>Site #1</option>
+                 <option>Site #2</option>
+                 <option>Site #3</option>
+                 <option>Site #4</option>
+                 <option>Site #5</option>
+               </select>
+             </div>
+           </td>
+           <td>
+             <div class="controls">
+               <select required class="input-small">
+                 <option  >is</option>
+                 <option selected="selected">is not</option>
+               </select>
+             </div>
+           </td>
+           <td>
+             <div class="controls">
+              <input id=" " type="text" class="col-xs-12" placeholder="">
+            </div>
+          </td>
+          <td> <a href="#"  class="pull-right"><i class="icon-minus-sign"></i></a></td>
+        </tr>
+        <tr  >
 
+         <td>
+           <div class="controls">
+             Time in the system:
+           </div>
+         </td>
 
-
-  <tr  >
-
-   <td>
-     <div class="controls">
-       <div class="btn-group">
-  <button class="btn dropdown-toggle" data-toggle="dropdown">Striped Dropdown <span class="caret"></span></button>
-  <ul class="dropdown-menu dropdown-striped">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li><a href="#">And look at this</a></li>
-    <li><a href="#">This won't do anything</a></li>
-  </ul>
-</div>
-     </div>
-   </td>
-
-   <td colspan="2">
-     <div class="controls">
-            <input id=" " type="text" class="col-xs-12" placeholder="">
-     </div>
-   </td>
-    <td> <a href="#"  class="pull-right">    Remove Filter <i class="icon-minus-sign"></i></a></td>
-  </tr>
-
-
-
-
-
-   <tr  >
-
-   <td>
-     <div class="controls">
-     Time in the system:
-     </div>
-   </td>
-
-   <td colspan="2">
-     <div class="controls">
-              <div class=" input-daterange date" >
-   <span class="add-on"><i class="icon-calendar"></i></span>
-   <input type="text" class="input-medium" name="start" placeholder="Starting date!"  data-provide="datepicker" data-date-format="dd/mm/yyyy" >
-   <span class="add-on">to</span>
-   <input type="text" class="input-small" name="end"  placeholder="End date!" data-provide="datepicker" data-date-format="dd/mm/yyyy" >
-   <span class="add-on">end</span>
- </div>
-     </div>
-   </td>
-    <td> <a href="#"  class="pull-right">    Remove Filter <i class="icon-minus-sign"></i></a></td>
-  </tr>
-</table>
+         <td colspan="2">
+           <div class="controls">
+            <div class="input-daterange date">
+              <div class="input-prepend date pull-left" data-provide="datepicker" data-date-format="dd/mm/yyyy">
+                <span class="add-on"><i class="icon-calendar"></i></span>
+                <input type="text" class="input-medium" name="start" placeholder="Starting date!" >
+              </div>
+              <span class="add-on">to</span>
+              <input type="text" class="input-small" name="end"  placeholder="End date!" data-provide="datepicker" data-date-format="dd/mm/yyyy" >
+              <span class="add-on">end</span>
+            </div>
+          </div>
+        </td>
+        <td> <a href="#" class="pull-right"><i class="icon-minus-sign"></i></a></td>
+      </tr>
+    </table>
 
  </fieldset>
 
@@ -199,7 +169,7 @@ title: "Advanced Search"
 
 
 
-<dl class="dl-horizontal">
+<dl class="dl-vertical">
   <dt class="text-left">Find results using </dt>
   <dd>
 <label class="radio">

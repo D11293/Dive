@@ -36,6 +36,40 @@
   to    { background-position: 0 0; }
 }
 
+// SQUARE
+// ----------
+
+// Webkit
+@-webkit-keyframes progress-bar-square {
+  from  { background-position: 100px 0; }
+  to    { background-position: -100px 0; }
+}
+
+// Firefox
+@-moz-keyframes progress-bar-square {
+  from  { background-position: 100px 0; }
+  to    { background-position: -100px 0; }
+}
+
+// IE9
+@-ms-keyframes progress-bar-square {
+  from  { background-position: 100px 0; }
+  to    { background-position: -100px 0; }
+}
+
+// Opera
+@-o-keyframes progress-bar-square {
+  from  { background-position: -100px 0; }
+  to    { background-position: 100px 0; }
+}
+
+// Spec
+@keyframes progress-bar-square {
+  from  { background-position: 100px 0; }
+  to    { background-position: -100px 0; }
+}
+
+
 
 
 // THE BARS
@@ -87,6 +121,15 @@
       -ms-animation: progress-bar-stripes 2s linear infinite;
        -o-animation: progress-bar-stripes 2s linear infinite;
           animation: progress-bar-stripes 2s linear infinite;
+}
+
+// Call animation for the active one
+.progress.active.square .bar {
+  -webkit-animation: progress-bar-square 6s linear infinite;
+     -moz-animation: progress-bar-square 6s linear infinite;
+      -ms-animation: progress-bar-square 6s linear infinite;
+       -o-animation: progress-bar-square 6s linear infinite;
+          animation: progress-bar-square 6s linear infinite;
 }
 
 //progress Loader

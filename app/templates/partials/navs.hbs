@@ -57,7 +57,7 @@
 {{/markdown}}
 
           <h3>Disabled state</h3>
-          <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>. Links will remain clickable, however, unless you remove the <code>href</code> attribute. Alternatively, you could implement custom JavaScript to prevent those clicks.</p>
+          <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>. Links will remain clickable, however, unless you remove the <code>href</code> attribute.</p>
           <div class="dive-docs-example">
             <ul class="nav nav-pills">
               <li><a href="#">Clickable link</a></li>
@@ -109,6 +109,7 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">Profile</a></li>
               <li><a href="#">Messages</a></li>
+              <li><a href="#" class="active">Active class inside link </a></li>
             </ul>
           </div>
 {{#markdown}}
@@ -369,7 +370,7 @@
                   <p>Howdy, I'm in Section 2.</p>
                 </div>
                 <div class="tab-pane" id="tab3">
-                  <p>What up girl, this is Section Draft.</p>
+                  <p>I'm in Section 3.</p>
                 </div>
                  <div class="tab-pane" id="tab4">
                   <p>This is it, this is Section Edit.</p>
@@ -394,7 +395,7 @@
       <p>Howdy, I'm in Section 2.</p>
     </div>
     <div class="tab-pane" id="tab3">
-      <p>What up girl, this is Section Draft.</p>
+      <p>I'm in Section 3.</p>
     </div>
     <div class="tab-pane" id="tab4">
       <p>This is it, this is Section Edit.</p>
@@ -421,7 +422,7 @@
                   <p>Howdy, I'm in Section B.</p>
                 </div>
                 <div class="tab-pane" id="C">
-                  <p>What up girl, this is Section C.</p>
+                  <p>I'm in Section C.</p>
                 </div>
                  <div class="tab-pane" id="D">
                   <p>This is Section D (Draft).</p>
@@ -462,20 +463,20 @@
           <div class="dive-docs-example">
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-                <li><a href="#lB" data-toggle="tab">Section A</a></li>
-                <li><a href="#lC" data-toggle="tab">Section B</a></li>
+                <li class="active"><a href="#1A" data-toggle="tab">Section A</a></li>
+                <li><a href="#1B" data-toggle="tab">Section B</a></li>
+                <li><a href="#1C" data-toggle="tab">Section C</a></li>
                  <li class="nav-tabs_draft"><a href="#1D" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
                  <li class="nav-tabs_edit"><a href="#1E" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane active" id="lA">
+                <div class="tab-pane active" id="1A">
                   <p>I'm in Section A.</p>
                 </div>
-                <div class="tab-pane" id="lB">
+                <div class="tab-pane" id="1B">
                   <p>Howdy, I'm in Section B.</p>
                 </div>
-                <div class="tab-pane" id="lC">
+                <div class="tab-pane" id="1C">
                   <p>What up girl, this is Section C.</p>
                 </div>
                  <div class="tab-pane" id="1D">
@@ -505,11 +506,11 @@
           <div class="dive-docs-example">
             <div class="tabbable tabs-right">
                  <ul class="nav nav-tabs">
-                <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-                <li><a href="#lB" data-toggle="tab">Section A</a></li>
-                <li><a href="#lC" data-toggle="tab">Section B</a></li>
-                 <li class="nav-tabs_draft"><a href="#1D" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
-                 <li class="nav-tabs_edit"><a href="#1E" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
+                <li class="active"><a href="#lA" data-toggle="tab">Section A</a></li>
+                <li><a href="#lB" data-toggle="tab">Section B</a></li>
+                <li><a href="#lC" data-toggle="tab">Section C</a></li>
+                 <li class="nav-tabs_draft"><a href="#lD" data-toggle="tab"><i class="icon-alert-sign"></i> Draft</a></li>
+                 <li class="nav-tabs_edit"><a href="#lE" data-toggle="tab"><i class="icon-pencil"></i> Edit</a></li>
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="lA">
@@ -519,12 +520,12 @@
                   <p>Howdy, I'm in Section B.</p>
                 </div>
                 <div class="tab-pane" id="lC">
-                  <p>What up girl, this is Section C.</p>
+                  <p>I'm in Section C.</p>
                 </div>
-                 <div class="tab-pane" id="1D">
+                 <div class="tab-pane" id="lD">
                   <p>This is Section D (Draft).</p>
                 </div>
-                 <div class="tab-pane" id="1E">
+                 <div class="tab-pane" id="lE">
                   <p>This is Section E (Edit).</p>
                 </div>
               </div>
