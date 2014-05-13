@@ -2,65 +2,44 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-     {{> head }}
+     {{> head }}  
+
   </head>
   <body>
-  <!-- Add your site or application content here -->
-
-    <div class="ie8-warning">
-      <div class="container">
-        <h1>Sorry. the DiVE Library is not compatible with your Web-Browser.</h1>
-        <p>Please visit this site from a modern browser such as Internet Explorer 10.  You can also download the DiVE Guidelines PDF:</p>
-        <a href="#" class="btn btn-primary btn-large">Download DiVE Guidelines PDF</a> or <a href="#" class="btn btn-large btn-secondary">Visit the classic components library</a>
-      </div>
-    </div>
-
     <div class="navbar navbar-fixed-top dive-docs-navbar">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="{{ page.base_url }}">DiVE Library</a>
-          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="brand" href="{{ page.base_url }}index.html">DiVE Library</a>
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-
           <div class="nav-collapse collapse">
             {{> navigation }}
           </div>
         </div>
       </div>
     </div>
-
     {{> body }}
-
-
     <footer class="dive-docs-footer">
       <div class="container">
-
         <hr>
         <div class="row">
           <div class="col-sm-5 col-md-7 col-lg-8">
             <img src="{{ page.base_url }}img/pmi-logo.png" class="footer-logo" alt="PMI">
           </div>
-
           <div class="col-sm-7 col-md-5 col-lg-4">
             <p>Copyright Philip Morris International Management SA, all rights reserved</p>
             <ul class="unstyled inline">
-              <li><a href="{{ page.base_url }}contact/">Contact</a></li>
-              <li><a href="{{ page.base_url }}changelog/">Changelog</a></li>
-              <li><a href="{{ page.base_url }}license/">License</a></li>
+              <li><a href="{{ page.base_url }}DiVE-doc/contact/index.html">Contact</a></li>
+              <li><a href="{{ page.base_url }}DiVE-doc/changelog/index.html">Changelog</a></li>
+              <li><a href="{{ page.base_url }}DiVE-doc/license/index.html">License</a></li>
             </ul>
           </div>
-
         </div> <!--  /row  -->
       </div> <!--  /container  -->
     </footer>
-
-    <!-- JS scripts go here -->
-
-    {{> scripts }}
-
+       {{> scripts }}
   </body>
 </html>

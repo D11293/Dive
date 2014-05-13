@@ -1,7 +1,11 @@
-// DOCS STYLES
-// ------------------
+ 
+@import 'compass';
 
-@import 'modules/syntax';
+@import 'dive_doc/syntax';
+
+ @import   'dive_doc/prism';
+
+ @import   'dive_doc/variables';
 
 // Compensating for the fixed Navbar
 @media (min-width: $navbarCollapseWidth) {

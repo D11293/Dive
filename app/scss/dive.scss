@@ -1,2 +1,85 @@
-@import 'dive-compiler';
+
+@import 'compass';
+ 
+@import 'dive_modules/mixins';
+
+// CSS Reset
+@import 'dive_modules/reset';
+
+// Core variables and mixins
+@import 'dive_modules/variables'; // Modify this for custom colors, font-sizes, etc
+
+
+
+
+// Grid system and page structure
+@import
+  'dive_modules/scaffolding',
+  'dive_modules/grid',
+  'dive_modules/layouts';
+
+// Base CSS
+@import
+  'dive_modules/type',
+  'dive_modules/code',
+  'dive_modules/forms',
+  'dive_modules/sliders',
+  'dive_modules/tables';
+
+// Components: common
+@import
+  'dive_modules/icons',
+  'dive_modules/dropdowns',
+  'dive_modules/wells',
+  'dive_modules/component-animations',
+  'dive_modules/close';
+
+// Components: Buttons & Alerts
+@import
+  'dive_modules/buttons',
+  'dive_modules/button-groups',
+  'dive_modules/alerts'; 
+
+// Components: Nav
+@import
+  'dive_modules/navs',
+  'dive_modules/navbar',
+  'dive_modules/breadcrumbs',
+  'dive_modules/pagination',
+  'dive_modules/pager';
+
+// Components: Popovers
+@import
+  'dive_modules/modals',
+  'dive_modules/tooltip',
+  'dive_modules/popovers';
+
+// Components: Misc
+@import
+  'dive_modules/thumbnails',
+  'dive_modules/labels-badges',
+  'dive_modules/progress-bars',
+  'dive_modules/accordion',
+  'dive_modules/carousel',
+  'dive_modules/hero-unit',
+  'dive_modules/switch',
+  'dive_modules/extendables';
+
+  // Bootstrap 3
+  @import 'dive_modules/panels';
+
+@import 'dive_modules/3column';
+
+ // plugins styles
+  @import 
+    'dive_modules/plugins/masonry',
+   'dive_modules/plugins/ion-rangeslider',
+  'dive_modules/plugins/datepicker';
+
+// Utility classes // Has to be last to override when necessary
+@import 
+    'dive_modules/responsive-utilities', 
+    'dive_modules/utilities'; 
+ 
+
 

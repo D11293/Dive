@@ -1,0 +1,32 @@
+$navbarCollapseWidth:                  992px !default;
+$bigBreak:                        $navbarCollapseWidth + 1;
+$navbarHeight:                    40px !default;
+
+$orangeDark:               #EB690B !default; // PMI Dark Orange
+$white:                 #fff !default;
+$red:  #B80718 !default; // PMI Light Red;
+$grayLightish:          #ddd !default;
+$grayDarker:            #222 !default;
+$grayDark:              #333 !default;
+$black:                 #000 !default;
+$orangeLight:          #F49D00 !default; // PMI Light Orange
+$greenLight:            #97BF0D !default; // PMI Light Green
+$blueLight:             #00A3E0 !default; // PMI Light Blue
+$redLight:             #B80718 !default; // PMI Light Red
+$blue: #003DA5 !default; // PMI Blue
+
+$baseFontSize:          14px !default;
+$textColor:             $grayDark !default;
+ 
+$screen-sm:                  768px !default;
+$screen-md:                  992px !default;
+$screen-lg:                  1200px !default;
+
+$baseLineHeight:        20px !default;
+
+ 
+// Links
+// -------------------------
+$linkColor:             $blueLight !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
+

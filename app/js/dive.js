@@ -20,7 +20,7 @@
 !function ($) {
   "use strict"; // jshint ;_;
   /* CSS TRANSITION SUPPORT (http://www.modernizr.com/)
-   * ======================================================= */
+   * ======================================================= */ 
   $(function () {
     $.support.transition = (function () {
       var transitionEnd = (function () {
@@ -43,7 +43,34 @@
       }
     })()
   })
-}(window.jQuery);/* ==========================================================
+}(window.jQuery);
+
+
+
+// Avoid `console` errors in browsers that lack a console.
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+
+/* ==========================================================
  * bootstrap-alert.js v2.3.2
  * http://getbootstrap.com/2.3.2/javascript.html#alerts
  * ==========================================================
@@ -368,7 +395,10 @@
     }
     e.preventDefault()
   })
-}(window.jQuery);/* =============================================================
+}(window.jQuery);
+
+
+/* =============================================================
  * bootstrap-collapse.js v2.3.2
  * http://getbootstrap.com/2.3.2/javascript.html#collapse
  * =============================================================
@@ -497,7 +527,10 @@
     $this[$(target).hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
     $(target).collapse(option)
   })
-}(window.jQuery);/* ============================================================
+}(window.jQuery);
+
+
+/* ============================================================
  * bootstrap-dropdown.js v2.3.2
  * http://getbootstrap.com/2.3.2/javascript.html#dropdowns
  * ============================================================
@@ -625,6 +658,8 @@
     .on('click.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 }(window.jQuery);
+
+
 /* =========================================================
  * bootstrap-modal.js v2.3.2
  * http://getbootstrap.com/2.3.2/javascript.html#modals
@@ -1882,4 +1917,41 @@
  // end
 //----------------------------------------------
 // ============================================== 
+
+
+// ============================================== 
+//----------------------------------------------
+ // JQUERY FILTER LIST
+ // custom plugin to filter a list of UL
+//----------------------------------------------
+// ============================================== 
+(function( $ ){
+  $.fn.filterList = function() {
+
+    // Case-insensitive "contains"
+    $.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+    };
+
+    // Hide list items that do not contain filter term/show ones that do
+    $(this).keyup(function() {
+      var filterListTerm = $(this).val();
+      if(filterListTerm) {
+        $(this).next('ul').find("li:not(:Contains(" + filterListTerm + "))").slideUp();
+        $(this).next('ul').find("li:Contains(" + filterListTerm + ")").slideDown();
+      } else {
+        // Input is blank; show all
+        $(this).next('ul').children('li').slideDown();
+      }
+      return false;
+    });
+
+    return this;
+
+  };
+})( $ );
+
+
+
+
 }(window.jQuery);
