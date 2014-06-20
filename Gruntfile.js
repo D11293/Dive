@@ -374,8 +374,16 @@ module.exports = function (grunt) {
                         '.htaccess',
                         'img/{,**/}*.{webp,gif,png,jpg,svg}',
                         'fonts/{,*/}*.*',
+                        'documentation/{,**/}*'
                     ]
-                }]
+                },
+                {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/_bower_components/fontawesome/fonts/',
+                   src: ['**', '!*.otf'],
+                    dest: '<%= yeoman.dist %>/fonts/'
+                }
+                ]
             },
             js: {
                 expand: true,
@@ -408,9 +416,9 @@ module.exports = function (grunt) {
             fonts: {
                 expand: true,
                 dot: true,
-                cwd: '<%= yeoman.app %>/fonts',
+                cwd: '<%= yeoman.app %>/_bower_components/fontawesome/fonts/',
                 dest: '.tmp/fonts/',
-                src: 'fonts/{,*/}*.*'
+              src: ['**', '!*.otf']
             }
         },
         'ftp-deploy': {

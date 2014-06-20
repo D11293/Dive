@@ -187,10 +187,11 @@ textarea[class|="col"]{
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   *margin-top: 0; /* IE7 */
-  margin-top: 1px \9; /* IE8-9 */
+  margin-top: 0px \9; /* IE8-9 */
   line-height: normal;
+ /* background-color: red;*/
 }
 
 // Reset width of input images, buttons, radios, checkboxes
@@ -280,6 +281,8 @@ textarea {
 // CHECKBOXES & RADIOS
 // -------------------
 
+                
+// -------------------
 // Indent the labels to position radios/checkboxes as hanging
 .radio,
 .checkbox {
@@ -312,12 +315,20 @@ textarea {
   margin-left: 10px; // space out consecutive inline controls
 }
 
+ // --- highlight selected CHECKBOXES & RADIOS
+.highlightedCheck,
+.highlightedRadio{
+    
+    font-weight: bold;
+}
 
 
 // INPUT SIZES
 // -----------
 
 // General classes for quick sizes
+.input-micro       { width: 30px; }
+.input-tiny       { width: 40px; }
 .input-mini       { width: 60px; }
 .input-small      { width: 90px; }
 .input-medium     { width: 150px; }
@@ -393,6 +404,7 @@ textarea[readonly] {
   color: $inputDisabledColor;
  
 }
+ 
 // Explicitly reset the colors here
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
@@ -401,7 +413,7 @@ input[type="checkbox"][readonly] {
   background-color: transparent;
     
 }
-
+ 
 // LOADING STATE
 // --------------
  

@@ -161,6 +161,8 @@ $tableBackgroundAccent:             rgba($blue, .06); // for striping
 $tableBackgroundHover:              #f5f5f5; // for hover
 $tableBorder:                       $grayLighter - 10; // table and cell border
 
+$table-bg-accent:               #f9f9f9 !default;
+
 // Buttons
 // -------------------------
 $btnBackground:                     $blueLight !default;
@@ -343,6 +345,10 @@ $successBorder:           $green !default;
 $infoText:                $blue !default;
 $infoBackground:          lighten($blueLight, 47%) !default;
 $infoBorder:              $blue !default;
+
+$primaryText:                $blueLight !default;
+$primaryBackground:          lighten($blueLight, 47%) !default;
+$primaryBorder:              $blueLight !default;
 
 
 // Tooltips and popovers

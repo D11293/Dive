@@ -1,0 +1,27 @@
+/*!
+ *  FONTAWESOME
+ *  -------------------------------------------------------
+ */
+
+@import '../_bower_components/fontawesome/scss/font-awesome';
+$fa-font-path:   "../font"  !default;
+$fa-css-prefix:       fa !default;
+
+ /* fix smooth problem in Chrome */
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+      font-family: 'FontAwesome';
+      src:   url('#{$fa-font-path}/fontawesome-webfont.svg') format('svg') !important; 
+  }
+}
+.#{$fa-css-prefix} {
+ /*
+ -webkit-text-stroke: 0.25px
+ -webkit-text-stroke-width: .1px;
+-webkit-text-stroke-color: #000;*/ 
+}
+ 
+ 
+
+
+

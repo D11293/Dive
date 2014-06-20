@@ -5,33 +5,38 @@
  *
  */
 
+
 $fontPath:   "../fonts/" !default;
 $borderColor:       #eee;
 $iconMuted:         #eee;
-@mixin border-radius($radius) { -webkit-border-radius: $radius; -moz-border-radius: $radius; border-radius: $radius; }
 
-
+ 
 @font-face {
   font-family: 'DIVEicons';
-  src: url('#{$fontPath}DiVE-Icon-Font.eot');
-  src: url('#{$fontPath}DiVE-Icon-Font.eot?#iefix') format("embedded-opentype"),
-    url('#{$fontPath}DiVE-Icon-Font.woff') format("woff"),
-    url('#{$fontPath}DiVE-Icon-Font.ttf') format("truetype");
+ src: url('#{$fontPath}/DiVE-Icon-Font.eot');
+  src: url('#{$fontPath}/DiVE-Icon-Font.eot?#iefix') format('embedded-opentype'),
+    url('#{$fontPath}/DiVE-Icon-Font.woff') format('woff'),
+    url('#{$fontPath}/DiVE-Icon-Font.ttf') format('truetype'),
+    url('#{$fontPath}/DiVE-Icon-Font.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+ /* fix smooth problem in Chrome */
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+      font-family: 'DIVEicons';
+      src:   url('#{$fontPath}DiVE-Icon-Font.svg') format('svg') !important; 
+  }
+}
 
-/*  Font Awesome styles
-    ------------------------------------------------------- */
+
+
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: DIVEicons;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
-  -webkit-font-smoothing: antialiased;
-
-  /* sprites.less reset */
   display: inline;
   width: auto;
   height: auto;
@@ -40,10 +45,12 @@ $iconMuted:         #eee;
   background-image: none;
   background-position: 0% 0%;
   background-repeat: repeat;
-  margin-top: 0;
+  margin-top: 0;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* more sprites.less reset */
+/* more  reset */
 .icon-white,
 .nav-pills > .active > a > [class^="icon-"],
 .nav-pills > .active > a > [class*=" icon-"],
@@ -59,6 +66,7 @@ $iconMuted:         #eee;
 .dropdown-submenu:hover > a > [class*=" icon-"] {
   background-image: none;
 }
+.icon-white{ color:$white;}
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -167,12 +175,7 @@ ul.icons {
   }
 }
 
-// Floats
-// -------------------------
-
-// Quick floats
-.pull-right { float: right; }
-.pull-left { float: left; }
+ 
 
 [class^="icon-"],
 [class*=" icon-"] {

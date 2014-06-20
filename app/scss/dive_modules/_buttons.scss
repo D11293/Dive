@@ -173,7 +173,10 @@ input[type="button"] {
 .btn-inverse {
   @include dive-buttonBackground($btnInverseBackground, $btnInverseBackgroundHover);
 }
-
+// light appera white with light grey on hover. gray text
+.btn-light {
+   @include dive-buttonBackground($btnSecondaryBackgroundHover, $btnSecondaryBackground, $black);
+}
 
 // Cross-browser Jank
 // --------------------------------------------------

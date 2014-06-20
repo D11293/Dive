@@ -1,0 +1,194 @@
+//
+// Tables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// ----------- BOOTSTRAP
+// --------------------------------------------------
+
+// RESPONSIVE TABLES
+// -----------------
+// Responsive tables
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+    margin-bottom: ($baseLineHeight* 0.75);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid $tableBorder;
+    -webkit-overflow-scrolling: touch;
+
+    // Tighten up spacing
+    > .table {
+      margin-bottom: 0;
+
+      // Ensure the content doesn't wrap
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th,
+          > td {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    // Special overrides for the bordered tables
+    > .table-bordered {
+      border: 0;
+
+      // Nuke the appropriate borders so that the parent can handle them
+      > thead,
+      > tbody,
+      > tfoot {
+        > tr {
+          > th:first-child,
+          > td:first-child {
+            border-left: 0;
+          }
+          > th:last-child,
+          > td:last-child {
+            border-right: 0;
+          }
+        }
+      }
+
+      // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+      // chances are there will be only one `tr` in a `thead` and that would
+      // remove the border altogether.
+      > tbody,
+      > tfoot {
+        > tr:last-child {
+          > th,
+          > td {
+            border-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// --------------------------------------------------
+// ----------- CUSTOM DiVE
+// --------------------------------------------------
+
+.table-responsDive {
+  /*
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+body { 
+  font: 14px/1.4 Georgia, Serif; 
+}
+#page-wrap {
+  margin: 50px;
+}
+p {
+  margin: 20px 0; 
+}
+
+ 
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+ 
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+  }
+
+*/
+ 
+
+    /*  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  { */
+
+ @media screen and (max-width: $screen-xs-max) {
+  
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+
+
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+/*   Label the data   */
+      content: attr(data-title); 
+    }
+    
+     
+ 
+  
+   // Special overrides for the striped tables
+ 
+  > .table-striped {
+          td:nth-of-type(odd) { 
+   
+   background-color: transparent
+   /* $table-bg-accent;*/
+  } 
+      
+      /*   td:nth-of-type(even) { 
+   
+   background-color: transparent;
+  }  */
+
+    }
+    
+   
+ 
+
+
+  }
+
+    }

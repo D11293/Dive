@@ -1952,6 +1952,51 @@
 })( $ );
 
 
+ 
+//----------------------------------------------
+ //HIGHLIGHT the RADIo and CHECKBOX 
+//----------------------------------------------
+// ============================================== 
+var selClassCheck ="highlightedCheck";
+var selClassRadio ="highlightedRadio";
+//--- CHECKBOX
+$("input[type='checkbox']").click(function(){
+  if( $(this).is(':checked')){
+    //selected
+      $(this).parent().removeClass(selClassCheck).addClass(selClassCheck);
+  }else{
+       $(this).parent().removeClass(selClassCheck);
+      //un selected
+  }
+});
+
+$("input[type='checkbox']:checked").each(
+    function() {
+  // auto highlight checkbox
+ $(this).parent().addClass(selClassCheck);
+    }
+
+);
+
+//--- RADIO
+ 
+$("input[type='radio']").click(function(){
+  if( $(this).is(':checked')){
+    $(this).parent().siblings().removeClass(selClassRadio);
+      $(this).parent().removeClass(selClassRadio).addClass(selClassRadio);
+
+  } 
+});
+//
+$("input[type='radio']:checked").each(
+    function() {
+       // auto highlight radio
+ $(this).parent().addClass(selClassRadio);
+    }
+);
+ 
+
+
 
 
 }(window.jQuery);

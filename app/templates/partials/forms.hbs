@@ -1,29 +1,28 @@
-<!-- Forms
-================================================== -->
+<!-- Forms   -->
 <section id="forms">
-  <div class="page-header">
-    <h1>Forms</h1>
-  </div>
+<div class="page-header">
+<h1>Forms</h1>
+</div>
 
 
 
 
-  <h2>Supported form controls</h2>
-  <p>Examples of standard form controls supported in an example form layout.</p>
+<h2>Supported form controls</h2>
+<p>Examples of standard form controls supported in an example form layout.</p>
 
-  <h3>Standard HTML5 inputs</h3>
-  <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <em>text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, file and color</em>.</p>
-  <p>Requires the use of a specified <code>type</code> at all times.</p>
-  <div class="dive-docs-example ">
-  <form >
-    <input type="text" placeholder="Text input">
-    <br>
-     <input type="password" placeholder="Password input">  <br>
+<h3>Standard HTML5 inputs</h3>
+<p>Most common form control, text-based input fields. Includes support for all HTML5 types: <em>text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, file and color</em>.</p>
+<p>Requires the use of a specified <code>type</code> at all times.</p>
+<div class="dive-docs-example ">
+<form >
+<input type="text" placeholder="Text input">
+<br>
+<input type="password" placeholder="Password input">  <br>
 <input type="range" min="0"     max="10"     step="1"    value="6">  <br>
 <input type="file">
 
-  </form>
-  </div>
+</form>
+</div>
 {{#markdown}}
 ```markup
 <input type="text" placeholder="Text input">
@@ -32,13 +31,13 @@
 <input type="file">
 ```
 {{/markdown}}
-
-  <h3>Textarea</h3>
-  <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
-  <div class="dive-docs-example form-inline">
-    <form >
-    <textarea rows="3"></textarea>
-  </form>
+<hr class="dive-docs-separator">
+<h3>Textarea</h3>
+<p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+<div class="dive-docs-example form-inline">
+<form >
+<textarea rows="3"></textarea>
+</form>
 </div>
 {{#markdown}}
 ```markup
@@ -46,360 +45,437 @@
 ```
 {{/markdown}}
 
-  <h3>Checkboxes and radios</h3> <!-- FE_003, FE_005 -->
-  <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
-  <h4>Default (stacked)</h4>
-  <form class="dive-docs-example">
-    <label class="checkbox">
-      <input type="checkbox" value="">
-      Option one is this and that&mdash;be sure to include why it's great
-    </label>
-    <br>
-    <label class="radio">
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      Option one is this and that&mdash;be sure to include why it's great
-    </label>
-    <label class="radio">
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      Option two can be something else and selecting it will deselect option one
-    </label>
-  </form>
-{{#markdown}}
-```markup
+
+
+
+
+
+
+<hr class="dive-docs-separator">
+<h3>Checkboxes</h3> 
+
+<p>Checkboxes are for selecting one or several options in a list.</p>
+<h4>Default (stacked)</h4>
+<form class="dive-docs-example">
 <label class="checkbox">
-  <input type="checkbox" value="">
-  Option one is this and that—be sure to include why it's great
+<input type="checkbox" value="" checked=""> Option one  
 </label>
-
-<label class="radio">
-  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-  Option one is this and that—be sure to include why it's great
+<label class="checkbox">
+<input type="checkbox" value=""> Option two
 </label>
-<label class="radio">
-  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-  Option two can be something else and selecting it will deselect option one
+<label class="checkbox">
+<input type="checkbox" value=""> Option three
 </label>
-```
-{{/markdown}}
-
-  <h4>Inline checkboxes</h4>
-  <p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
-  <form class="dive-docs-example">
-    <label class="checkbox inline">
-      <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-    </label>
-    <label class="checkbox inline">
-      <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-    </label>
-    <label class="checkbox inline">
-      <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-    </label>
-  </form>
-{{#markdown}}
-```markup
-<label class="checkbox inline">
-  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-</label>
-<label class="checkbox inline">
-  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-</label>
-<label class="checkbox inline">
-  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-</label>
-```
-{{/markdown}}
-
-  <h3>Selects</h3>
-  <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
-  <form class="dive-docs-example">
-    <select>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <br>
-    <select multiple="multiple">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </form>
-{{#markdown}}
-```markup
-<select>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-
-<select multiple="multiple">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-```
-{{/markdown}}
- <h3>Selects inline date</h3>
- <p>To create a list of Selects aligned inline like for a date selector:<br>
- add the class <code>select-inline</code> arount your select tags as shown in the example below</p>
-
- <div class="dive-docs-example">
-
-
-
-   <form >
-     <div class="select-inline select-striped">
-     <select >
-       <option>MM</option>
-       <option>01</option>
-       <option>02</option>
-       <option>03</option>
-       <option>04</option>
-       <option>05</option>
-       <option>06</option>
-       <option>07</option>
-       <option>08</option>
-       <option>09</option>
-       <option>10</option>
-       <option>11</option>
-       <option>12</option>
-
-     </select>
-
-     <select >
-       <option>DD</option>
-       <option>01</option>
-       <option>02</option>
-       <option>03</option>
-       <option>04</option>
-       <option>05</option>
-       <option>06</option>
-       <option>07</option>
-       <option>08</option>
-       <option>09</option>
-       <option>10</option>
-       <option>11</option>
-       <option>12</option>
-       <option>13</option>
-       <option>14</option>
-       <option>15</option>
-       <option>16</option>
-       <option>17</option>
-       <option>18</option>
-       <option>19</option>
-       <option>20</option>
-       <option>21</option>
-       <option>22</option>
-       <option>23</option>
-       <option>24</option>
-       <option>25</option>
-       <option>26</option>
-       <option>27</option>
-       <option>28</option>
-       <option>29</option>
-       <option>30</option>
-       <option>31</option>
-      </select>
-
-     <select >
-       <option>YYYY</option>
-       <option>1980</option>
-       <option>1981</option>
-       <option>1982</option>
-       <option>1983</option>
-       <option>1984</option>
-       <option>1985</option>
-       <option>1986</option>
-       <option>1987</option>
-       <option>1988</option>
-       <option>1989</option>
-       <option>1990</option>
-       <option>1991</option>
-       <option>1992</option>
-       <option>1993</option>
-       <option>1994</option>
-       <option>1995</option>
-       <option>1996</option>
-       <option>1997</option>
-       <option>1998</option>
-       <option>1999</option>
-       <option>2000</option>
-       <option>2001</option>
-       <option>2002</option>
-       <option>2003</option>
-       <option>2004</option>
-       <option>2005</option>
-       <option>2006</option>
-       <option>2007</option>
-       <option>2008</option>
-       <option>2009</option>
-       <option>2010</option>
-       <option>2011</option>
-       <option>2012</option>
-       <option>2013</option>
-
-  </select>
-     </div>
-  </form> </div>
-{{#markdown}}
-```markup
-<form >
-  <div class="select-inline select-striped">
-     <select >
-       <option>MM</option>
-       ...
-     </select>
-     <select >
-       <option>DD</option>
-       ...
-      </select>
-     <select >
-       <option>YYYY</option>
-       ...
-  </select>
-  </div>
 </form>
-```
-{{/markdown}}
-
-     <hr class="dive-docs-separator">
-
-  <h2>Default styles</h2>
-  <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
-  <form class="dive-docs-example">
-    <fieldset>
-      <legend>Legend</legend>
-      <label>Label name</label>
-      <input type="text" placeholder="Type something…">
-      <span class="help-block">Example block-level help text here.</span>
-      <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
-      <button type="submit" class="btn btn-secondary">Submit</button>
-    </fieldset>
-  </form>
 {{#markdown}}
 ```markup
 <form>
-  <fieldset>
-    <legend>Legend</legend>
-    <label>Label name</label>
-    <input type="text" placeholder="Type something…">
-    <span class="help-block">Example block-level help text here.</span>
-    <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
-    <button type="submit" class="btn">Submit</button>
-  </fieldset>
+<label class="checkbox">
+<input type="checkbox" value=""  checked=""> Option one  
+</label>
+<label class="checkbox">
+<input type="checkbox" value=""> Option two
+</label>
+<label class="checkbox">
+<input type="checkbox" value=""> Option three
+</label>
 </form>
 ```
 {{/markdown}}
 
-  <hr class="dive-docs-separator">
+<h4>Inline checkboxes</h4>
+<p>Add the <code>.inline</code> class to a series of checkboxes for controls appear on the same line.</p>
+<form class="dive-docs-example">
+<label class="checkbox inline">
+<input type="checkbox" id="inlineCheckbox1" value="option1"  checked=""> Option one  
+</label>
+<label class="checkbox inline">
+<input type="checkbox" id="inlineCheckbox2" value="option2"> Option two  
+</label>
+<label class="checkbox inline">
+<input type="checkbox" id="inlineCheckbox3" value="option3"> Option three  
+</label>
+</form>
+{{#markdown}}
+```markup
+<form>
+<label class="checkbox inline">
+<input type="checkbox" id="inlineCheckbox1" value="option1"  checked=""> Option one  
+</label>
+<label class="checkbox inline">
+<input type="checkbox" id="inlineCheckbox2" value="option2"> Option two  
+</label>
+<label class="checkbox inline">
+<input type="checkbox" id="inlineCheckbox3" value="option3"> Option three  
+</label>
+</form>
+```
+{{/markdown}}
 
-  <h2>Optional layouts</h2>
-  <p>Included with DiVE Library are three optional form layouts for common use cases.</p>
+<hr class="dive-docs-separator">
 
-  <h3>Search form</h3> <!-- SR_001 -->
-  <p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
-  <form class="dive-docs-example form-search">
-    <input type="text" class="input-medium search-query">
-    <button type="submit" class="btn">Search</button>
-  </form>
+<h3>Radios</h3> 
+<p>Radios are for selecting one option  in a list from many.</p>
+<h4>Default (stacked)</h4>
+<form class="dive-docs-example">
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+Option one
+</label>
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+Option two  
+</label>
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+Option three  
+</label>
+</form>
+{{#markdown}}
+```markup
+<form>
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+Option one
+</label>
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+Option two  
+</label>
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+Option three  
+</label>
+</form>
+```
+{{/markdown}}
+
+<h4>Inline radios</h4>
+<p>Add the <code>.inline</code> class to a series of radios for controls appear on the same line.</p>
+<form class="dive-docs-example">
+<label class="radio inline">
+<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+Option one 
+</label>
+<label class="radio inline">
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+Option two  
+</label>
+<label class="radio inline">
+<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+Option three  
+</label>
+</form>
+{{#markdown}}
+```markup
+<form>
+<label class="radio inline">
+<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+Option one 
+</label>
+<label class="radio inline">
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+Option two  
+</label>
+<label class="radio inline">
+<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+Option three  
+</label>
+</form>
+```
+{{/markdown}}
+<hr class="dive-docs-separator">
+<h3>Selects</h3>
+<p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
+<form class="dive-docs-example">
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+<br>
+<select multiple="multiple">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</form>
+{{#markdown}}
+```markup
+<select>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+<select multiple="multiple">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+```
+{{/markdown}}
+<h3>Selects inline date</h3>
+<p>To create a list of Selects aligned inline like for a date selector:<br>
+add the class <code>select-inline</code> arount your select tags as shown in the example below</p>
+
+<div class="dive-docs-example">
+
+
+
+<form >
+<div class="select-inline select-striped">
+<select >
+<option>MM</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+
+</select>
+
+<select >
+<option>DD</option>
+<option>01</option>
+<option>02</option>
+<option>03</option>
+<option>04</option>
+<option>05</option>
+<option>06</option>
+<option>07</option>
+<option>08</option>
+<option>09</option>
+<option>10</option>
+<option>11</option>
+<option>12</option>
+<option>13</option>
+<option>14</option>
+<option>15</option>
+<option>16</option>
+<option>17</option>
+<option>18</option>
+<option>19</option>
+<option>20</option>
+<option>21</option>
+<option>22</option>
+<option>23</option>
+<option>24</option>
+<option>25</option>
+<option>26</option>
+<option>27</option>
+<option>28</option>
+<option>29</option>
+<option>30</option>
+<option>31</option>
+</select>
+
+<select >
+<option>YYYY</option>
+<option>1980</option>
+<option>1981</option>
+<option>1982</option>
+<option>1983</option>
+<option>1984</option>
+<option>1985</option>
+<option>1986</option>
+<option>1987</option>
+<option>1988</option>
+<option>1989</option>
+<option>1990</option>
+<option>1991</option>
+<option>1992</option>
+<option>1993</option>
+<option>1994</option>
+<option>1995</option>
+<option>1996</option>
+<option>1997</option>
+<option>1998</option>
+<option>1999</option>
+<option>2000</option>
+<option>2001</option>
+<option>2002</option>
+<option>2003</option>
+<option>2004</option>
+<option>2005</option>
+<option>2006</option>
+<option>2007</option>
+<option>2008</option>
+<option>2009</option>
+<option>2010</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+
+</select>
+</div>
+</form> </div>
+{{#markdown}}
+```markup
+<form >
+<div class="select-inline select-striped">
+<select >
+<option>MM</option>
+...
+</select>
+<select >
+<option>DD</option>
+...
+</select>
+<select >
+<option>YYYY</option>
+...
+</select>
+</div>
+</form>
+```
+{{/markdown}}
+
+<hr class="dive-docs-separator">
+
+<h2>Default styles</h2>
+<p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+<form class="dive-docs-example">
+<fieldset>
+<legend>Legend</legend>
+<label>Label name</label>
+<input type="text" placeholder="Type something…">
+<span class="help-block">Example block-level help text here.</span>
+<label class="checkbox">
+<input type="checkbox"> Check me out
+</label>
+<button type="submit" class="btn btn-secondary">Submit</button>
+</fieldset>
+</form>
+{{#markdown}}
+```markup
+<form>
+<fieldset>
+<legend>Legend</legend>
+<label>Label name</label>
+<input type="text" placeholder="Type something…">
+<span class="help-block">Example block-level help text here.</span>
+<label class="checkbox">
+<input type="checkbox"> Check me out
+</label>
+<button type="submit" class="btn">Submit</button>
+</fieldset>
+</form>
+```
+{{/markdown}}
+
+<hr class="dive-docs-separator">
+
+<h2>Optional layouts</h2>
+<p>Included with DiVE Library are three optional form layouts for common use cases.</p>
+
+<h3>Search form</h3> <!-- SR_001 -->
+<p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
+<form class="dive-docs-example form-search">
+<input type="text" class="input-medium search-query">
+<button type="submit" class="btn">Search</button>
+</form>
 {{#markdown}}
 ```markup
 <form class="form-search">
-  <input type="text" class="input-medium search-query">
-  <button type="submit" class="btn">Search</button>
+<input type="text" class="input-medium search-query">
+<button type="submit" class="btn">Search</button>
 </form>
 ```
 {{/markdown}}
 
-  <h3>Inline form</h3>
-  <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
-  <form class="dive-docs-example form-inline">
-    <input type="text" class="input-small" placeholder="Email">
-    <input type="password" class="input-small" placeholder="Password">
-    <label class="checkbox">
-      <input type="checkbox"> Remember me
-    </label>
-    <button type="submit" class="btn">Sign in</button>
-  </form>
+<h3>Inline form</h3>
+<p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
+<form class="dive-docs-example form-inline">
+<input type="text" class="input-small" placeholder="Email">
+<input type="password" class="input-small" placeholder="Password">
+<label class="checkbox">
+<input type="checkbox"> Remember me
+</label>
+<button type="submit" class="btn">Sign in</button>
+</form>
 {{#markdown}}
 ```markup
 <form class="form-inline">
-  <input type="text" class="input-small" placeholder="Email">
-  <input type="password" class="input-small" placeholder="Password">
-  <label class="checkbox">
-    <input type="checkbox"> Remember me
-  </label>
-  <button type="submit" class="btn">Sign in</button>
+<input type="text" class="input-small" placeholder="Email">
+<input type="password" class="input-small" placeholder="Password">
+<label class="checkbox">
+<input type="checkbox"> Remember me
+</label>
+<button type="submit" class="btn">Sign in</button>
 </form>
 ```
 {{/markdown}}
 
-  <h3>Horizontal form</h3>
-  <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
-  <ul>
-    <li>Add <code>.form-horizontal</code> to the form</li>
-    <li>Wrap labels and controls in <code>.control-group</code></li>
-    <li>Add <code>.control-label</code> to the label</li>
-    <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
-  </ul>
-  <form class="dive-docs-example form-horizontal">
-    <div class="control-group">
-      <label class="control-label" for="inputEmail">Email</label>
-      <div class="controls">
-        <input type="text" id="inputEmail" placeholder="Email">
-      </div>
-    </div>
-    <div class="control-group">
-      <label class="control-label" for="inputPassword">Password</label>
-      <div class="controls">
-        <input type="password" id="inputPassword" placeholder="Password">
-      </div>
-    </div>
-    <div class="control-group">
-      <div class="controls">
-        <label class="checkbox">
-          <input type="checkbox"> Remember me
-        </label>
-        <button type="submit" class="btn">Sign in</button>
-      </div>
-    </div>
-  </form>
+<h3>Horizontal form</h3>
+<p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+<ul>
+<li>Add <code>.form-horizontal</code> to the form</li>
+<li>Wrap labels and controls in <code>.control-group</code></li>
+<li>Add <code>.control-label</code> to the label</li>
+<li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+</ul>
+<form class="dive-docs-example form-horizontal">
+<div class="control-group">
+<label class="control-label" for="inputEmail">Email</label>
+<div class="controls">
+<input type="text" id="inputEmail" placeholder="Email">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="inputPassword">Password</label>
+<div class="controls">
+<input type="password" id="inputPassword" placeholder="Password">
+</div>
+</div>
+<div class="control-group">
+<div class="controls">
+<label class="checkbox">
+<input type="checkbox"> Remember me
+</label>
+<button type="submit" class="btn">Sign in</button>
+</div>
+</div>
+</form>
 {{#markdown}}
 ```markup
 <div class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label" for="inputEmail">Email</label>
-    <div class="controls">
-      <input type="text" id="inputEmail" placeholder="Email">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">Password</label>
-    <div class="controls">
-      <input type="password" id="inputPassword" placeholder="Password">
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <label class="checkbox">
+<div class="control-group">
+<label class="control-label" for="inputEmail">Email</label>
+<div class="controls">
+<input type="text" id="inputEmail" placeholder="Email">
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="inputPassword">Password</label>
+<div class="controls">
+<input type="password" id="inputPassword" placeholder="Password">
+</div>
+</div>
+<div class="control-group">
+<div class="controls">
+<label class="checkbox">
 
-      <input type="checkbox"> Remember me
-      </label>
-      <button type="submit" class="btn">Sign in</button>
-    </div>
-  </div>
+<input type="checkbox"> Remember me
+</label>
+<button type="submit" class="btn">Sign in</button>
+</div>
+</div>
 </div>
 ```
 {{/markdown}}
@@ -407,35 +483,69 @@
 
 
 
-   <hr class="dive-docs-separator">
+<hr class="dive-docs-separator">
 
-  <h3>Control sizing</h3>
-  <p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
+<h3>Control sizing</h3>
+<p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
 
-  <h4>Block level inputs</h4>
-  <p>Make any <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element behave like a block level element.</p>
-  <form class="dive-docs-example" style="padding-bottom: 15px;">
-    <div class="controls">
-      <input class="input-block-level" type="text" placeholder=".input-block-level">
-    </div>
-  </form>
+<h4>Block level inputs</h4>
+<p>Make any <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element behave like a block level element.</p>
+<form class="dive-docs-example" style="padding-bottom: 15px;">
+<div class="controls">
+<input class="input-block-level" type="text" placeholder=".input-block-level">
+</div>
+</form>
 {{#markdown}}
 ```markup
 <input class="input-block-level" type="text" placeholder=".input-block-level">
 ```
 {{/markdown}}
 
-  <h4>Relative sizing</h4>
-  <form class="dive-docs-example" style="padding-bottom: 15px;">
-    <div class="controls docs-input-sizes clearfix">
-      <input class="col-sm-4" type="text" placeholder=".col-sm-4">
-      <input class="col-sm-4" type="text" placeholder=".col-sm-4">
-      <input class="col-sm-4" type="text" placeholder=".col-sm-4">
-      <input class="col-sm-12" type="text" placeholder=".col-xs-12">
-      <input class="col-xs-6" type="text" placeholder=".col-xs-6">
-      <input class="col-xs-6" type="text" placeholder=".col-xs-6">
-    </div>
-  </form>
+
+
+
+<h4>General sizing</h4>
+<p>Relative sizing classes.</p>
+<form class="dive-docs-example" >
+<input class="input-micro" type="text" placeholder=".input-micro"> input-micro <br>
+<input class="input-tiny" type="text" placeholder=".input-tiny"> input-tiny <br>
+<input class="input-mini" type="text" placeholder=".input-mini"> input-mini <br>
+<input class="input-small" type="text" placeholder=".input-small"> input-small <br>
+<input class="input-medium" type="text" placeholder=".input-medium"> input-medium <br>
+<input class="input-large" type="text" placeholder=".input-large"> input-large <br>
+<input class="input-xlarge" type="text" placeholder=".input-xlarge"> input-xlarge <br>
+<input class="input-xxlarge" type="text" placeholder=".input-xxlarge"> input-xxlarge <br>
+</form>
+
+{{#markdown}}
+```markup
+<form>
+<input class="input-micro" type="text" placeholder=".input-micro"> input-micro <br>
+<input class="input-tiny" type="text" placeholder=".input-tiny"> input-tiny <br>
+<input class="input-mini" type="text" placeholder=".input-mini"> input-mini <br>
+<input class="input-small" type="text" placeholder=".input-small"> input-small <br>
+<input class="input-medium" type="text" placeholder=".input-medium"> input-medium <br>
+<input class="input-large" type="text" placeholder=".input-large"> input-large <br>
+<input class="input-xlarge" type="text" placeholder=".input-xlarge"> input-xlarge <br>
+<input class="input-xxlarge" type="text" placeholder=".input-xxlarge"> input-xxlarge <br>
+</form>
+```
+{{/markdown}}
+
+
+
+
+<h4>Relative sizing</h4>
+<form class="dive-docs-example" style="padding-bottom: 15px;">
+<div class="controls docs-input-sizes clearfix">
+<input class="col-sm-4" type="text" placeholder=".col-sm-4">
+<input class="col-sm-4" type="text" placeholder=".col-sm-4">
+<input class="col-sm-4" type="text" placeholder=".col-sm-4">
+<input class="col-sm-12" type="text" placeholder=".col-xs-12">
+<input class="col-xs-6" type="text" placeholder=".col-xs-6">
+<input class="col-xs-6" type="text" placeholder=".col-xs-6">
+</div>
+</form>
 {{#markdown}}
 ```markup
 <input class="col-sm-4" type="text" placeholder=".col-sm-4">
@@ -446,128 +556,126 @@
 <input class="col-xs-6" type="text" placeholder=".col-xs-6">
 ```
 {{/markdown}}
-  <p>
-    <span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
-  </p>
+<p>
+<span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
+</p>
 
-
-
-  <h4>Grid sizing</h4>
-  <p>Use <code>.col-1</code> to <code>.col-12</code> for inputs that match the same sizes of the grid columns.</p>
-  <form class="dive-docs-example" style="padding-bottom: 15px;">
-    <div class="controls docs-input-sizes">
-      <input class="col-lg-1" type="text" placeholder=".col-1">
-      <input class="col-lg-2" type="text" placeholder=".col-2">
-      <input class="col-lg-3" type="text" placeholder=".col-3">
-      <select class="col-lg-1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-      <select class="col-lg-2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-      <select class="col-lg-3">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-  </form>
+<h4>Grid sizing</h4>
+<p>Use <code>.col-1</code> to <code>.col-12</code> for inputs that match the same sizes of the grid columns.</p>
+<form class="dive-docs-example" style="padding-bottom: 15px;">
+<div class="controls docs-input-sizes">
+<input class="col-lg-1" type="text" placeholder=".col-1">
+<input class="col-lg-2" type="text" placeholder=".col-2">
+<input class="col-lg-3" type="text" placeholder=".col-3">
+<select class="col-lg-1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+<select class="col-lg-2">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+<select class="col-lg-3">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+</form>
 {{#markdown}}
 ```markup
 <input class="col-lg-1" type="text" placeholder=".col-1">
 <input class="col-lg-2" type="text" placeholder=".col-2">
 <input class="col-lg-3" type="text" placeholder=".col-3">
 <select class="col-lg-1">
-  ...
+...
 </select>
 <select class="col-lg-2">
-  ...
+...
 </select>
 <select class="col-lg-3">
-  ...
+...
 </select>
 ```
 {{/markdown}}
 
-  <p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and clears the float.</p>
-  <form class="dive-docs-example" style="padding-bottom: 15px;">
-    <div class="controls">
-      <input class="col-lg-5" type="text" placeholder=".col-5">
-    </div>
-    <div class="controls controls-row">
-      <input class="col-lg-4" type="text" placeholder=".col-4">
-      <input class="col-lg-1" type="text" placeholder=".col-1">
-    </div>
-    <div class="controls controls-row">
-      <input class="col-lg-3" type="text" placeholder=".col-3">
-      <input class="col-lg-2" type="text" placeholder=".col-2">
-    </div>
-    <div class="controls controls-row">
-      <input class="col-lg-2" type="text" placeholder=".col-2">
-      <input class="col-lg-3" type="text" placeholder=".col-3">
-    </div>
-    <div class="controls controls-row">
-      <input class="col-lg-1" type="text" placeholder=".col-1">
-      <input class="col-lg-4" type="text" placeholder=".col-4">
-    </div>
-  </form>
+<p>For multiple grid inputs per line, <strong>use the <code>.controls-row</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and clears the float.</p>
+<form class="dive-docs-example" style="padding-bottom: 15px;">
+<div class="controls">
+<input class="col-lg-5" type="text" placeholder=".col-5">
+</div>
+<div class="controls controls-row">
+<input class="col-lg-4" type="text" placeholder=".col-4">
+<input class="col-lg-1" type="text" placeholder=".col-1">
+</div>
+<div class="controls controls-row">
+<input class="col-lg-3" type="text" placeholder=".col-3">
+<input class="col-lg-2" type="text" placeholder=".col-2">
+</div>
+<div class="controls controls-row">
+<input class="col-lg-2" type="text" placeholder=".col-2">
+<input class="col-lg-3" type="text" placeholder=".col-3">
+</div>
+<div class="controls controls-row">
+<input class="col-lg-1" type="text" placeholder=".col-1">
+<input class="col-lg-4" type="text" placeholder=".col-4">
+</div>
+</form>
 {{#markdown}}
 ```markup
 <div class="controls">
-  <input class="col-lg-5" type="text" placeholder=".col-5">
+<input class="col-lg-5" type="text" placeholder=".col-5">
 </div>
 <div class="controls controls-row">
-  <input class="col-lg-4" type="text" placeholder=".col-4">
-  <input class="col-lg-1" type="text" placeholder=".col-1">
+<input class="col-lg-4" type="text" placeholder=".col-4">
+<input class="col-lg-1" type="text" placeholder=".col-1">
 </div>
 ...
 ```
 {{/markdown}}
 
-  <h3>Form actions</h3>
-  <p>End a form with a group of actions (buttons). When placed within a <code>.form-actions</code>, the buttons will automatically indent to line up with the form controls.</p>
-  <form class="dive-docs-example">
-    <div class="form-actions">
-      <button type="submit" class="btn btn-primary">Save changes</button>
-      <button type="button" class="btn btn-secondary">Cancel</button>
-    </div>
-  </form>
+<h3>Form actions</h3>
+<p>End a form with a group of actions (buttons). When placed within a <code>.form-actions</code>, the buttons will automatically indent to line up with the form controls.</p>
+<form class="dive-docs-example">
+<div class="form-actions">
+<button type="submit" class="btn btn-primary">Save changes</button>
+<button type="button" class="btn btn-secondary">Cancel</button>
+</div>
+</form>
 {{#markdown}}
 ```markup
 <div class="form-actions">
-  <button type="submit" class="btn btn-primary">Save changes</button>
-  <button type="button" class="btn btn-secondary">Cancel</button>
+<button type="submit" class="btn btn-primary">Save changes</button>
+<button type="button" class="btn btn-secondary">Cancel</button>
 </div>
 ```
 {{/markdown}}
 
-  <h3>Help text</h3>
-  <p>Inline and block level support for help text that appears around form controls.</p>
-  <h4>Inline help</h4>
-  <form class="dive-docs-example form-inline">
-    <input type="text"> <span class="help-inline">Inline help text</span>
-  </form>
+<h3>Help text</h3>
+<p>Inline and block level support for help text that appears around form controls.</p>
+<h4>Inline help</h4>
+<form class="dive-docs-example form-inline">
+<input type="text"> <span class="help-inline">Inline help text</span>
+</form>
 {{#markdown}}
 ```markup
 <input type="text"><span class="help-inline">Inline help text</span>
 ```
 {{/markdown}}
 
-  <h4>Block help</h4>
-  <form class="dive-docs-example form-inline">
-    <input type="text">
-    <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-  </form>
+<h4>Block help</h4>
+<form class="dive-docs-example form-inline">
+<input type="text">
+<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+</form>
 {{#markdown}}
 ```markup
 <input type="text"><span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
@@ -576,4 +684,4 @@
 
 
 
-        </section>
+</section>

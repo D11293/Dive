@@ -31,7 +31,7 @@
   <div class="dive-docs-example">
     <div class="btn-toolbar" style="margin: 0;">
       <div class="btn-group">
-        <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#">Action</a></li>
           <li><a href="#">Another action</a></li>
@@ -41,7 +41,7 @@
         </ul>
       </div><!-- /btn-group -->
       <div class="btn-group">
-        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+        <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">Secondary <span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#">Action</a></li>
           <li><a href="#">Another action</a></li>
@@ -100,26 +100,34 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </div><!-- /btn-group -->
+      <div class="btn-group">
+        <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">Light <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->
     </div><!-- /btn-toolbar -->
   </div>
 
 {{#markdown}}
 ``` markup
 <div class="btn-group">
-  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    Action
-    <span class="caret"></span>
-  </a>
+  <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span>
+  </button>
   <ul class="dropdown-menu">
     <!-- dropdown menu links -->
   </ul>
-</div>
+</div> 
 ```
 {{/markdown}}
 
   <div class="alert alert-danger">
     <h3>Requires JavaScript</h3>
-    <p>Button dropdowns require the <code>dive.js</code> or <code>dive.min.js</code> file to function.<br>
+    <p>Button dropdowns require the <code>dive.js</code> or <code>dive.dev.js</code> file to function.<br>
     In some cases&mdash;like mobile&mdash;dropdown menus will extend outside the viewport. You need to resolve the alignment manually or with custom JavaScript.</p>
   </div>
 
@@ -169,7 +177,7 @@
   <div class="dive-docs-example">
     <div class="btn-toolbar" style="margin: 0;">
       <div class="btn-group">
-        <button class="btn">Action</button>
+        <button class="btn">Primary</button>
         <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#">Action</a></li>
@@ -180,7 +188,7 @@
         </ul>
       </div><!-- /btn-group -->
       <div class="btn-group">
-        <button class="btn btn-secondary">Action</button>
+        <button class="btn btn-secondary">Secondary</button>
         <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
         <ul class="dropdown-menu">
           <li><a href="#">Action</a></li>
@@ -245,6 +253,17 @@
           <li><a href="#">Separated link</a></li>
         </ul>
       </div><!-- /btn-group -->
+    <div class="btn-group">
+        <button class="btn btn-light">Light</button>
+        <button class="btn btn-light dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div><!-- /btn-group -->      
     </div><!-- /btn-toolbar -->
   </div>
 {{#markdown}}

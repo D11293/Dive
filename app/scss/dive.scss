@@ -24,11 +24,14 @@
   'dive_modules/code',
   'dive_modules/forms',
   'dive_modules/sliders',
-  'dive_modules/tables';
+  'dive_modules/tables',
+    'dive_modules/tables-responsive';
 
 // Components: common
 @import
-  'dive_modules/icons',
+  'dive_modules/icons-fontawesome',
+  'dive_modules/icons-dive',
+
   'dive_modules/dropdowns',
   'dive_modules/wells',
   'dive_modules/component-animations',

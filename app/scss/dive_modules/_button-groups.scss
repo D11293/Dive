@@ -148,6 +148,9 @@
   .btn-primary.dropdown-toggle {
     background-color: $btnPrimaryBackgroundHighlight;
   }
+    .btn-secondary.dropdown-toggle {
+    background-color: $btnSecondaryBackgroundHighlight;
+  }
   .btn-warning.dropdown-toggle {
     background-color: $btnWarningBackgroundHighlight;
   }
@@ -162,6 +165,9 @@
   }
   .btn-inverse.dropdown-toggle {
     background-color: $btnInverseBackgroundHighlight;
+  }
+   .btn-light.dropdown-toggle {
+    background-color: $btnSecondaryBackground;
   }
 }
 
@@ -204,7 +210,7 @@
 }
 
 // Account for other colors
-.btn-secondary .caret {
+.btn-secondary .caret, .btn-light .caret {
   border-top-color: $gray;
   border-bottom-color: $gray;
 }

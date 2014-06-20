@@ -10,7 +10,7 @@ title: "User info - Confirmation"
     <div class="col-lg-8 col-lg-offset-2 form-example">
       <form>
         <legend>Confirmation</legend>
-       <fieldset class='row'>
+        <fieldset class='row'>
           <div class="control-group col-xs-6">
             <label class="control-label" for="firstName">First Name:</label>
             <div class="controls">
@@ -103,14 +103,13 @@ title: "User info - Confirmation"
             </div>
           </div>
 
-          <div class="row">
-            <div class="control-group col-xs-7">
-              Skills:
-            </div>
-            <div class="control-group col-xs-5 text-right">
 
-            </div>
-          </div>
+    
+           <div class="col-md-12">   
+
+              Skills:          
+               
+
           <table class="table table-striped">
             <tr>
               <td>
@@ -140,7 +139,7 @@ title: "User info - Confirmation"
               <td>  </td>
             </tr>
 
-<tr>
+            <tr>
               <td>
                 <div class="controls">
                   Name of the skill
@@ -225,24 +224,19 @@ title: "User info - Confirmation"
               <td> </td>
             </tr>
           </table>
-
-  <label> More informations: </label>
-     <textarea class="col-xs-12" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras adipiscing imperdiet neque nec elementum. Sed sem ipsum, accumsan cursus ornare non, vehicula ut metus. </textarea>
+ 
+       
+          <label> More informations: </label>
+          <textarea class="col-xs-12" disabled>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras adipiscing imperdiet neque nec elementum. Sed sem ipsum, accumsan cursus ornare non, vehicula ut metus. </textarea>
+          
         </fieldset>
 
 
-<ul class="pager ">
-          <li class="previous">
-            <a href="{{ page.base_url }}examples/user-info-1/" class="btn btn-secondary">&larr; Previous</a>
-          </li>
-          <li class="next">
 
-          </li>
-        </ul>
         <div class="form-actions">
           <button type="submit" class="btn btn-primary"><i class="icon-like"></i> Confirm</button>
-          <button type="reset" class="btn btn-secondary"><i class="icon-remove-circle"></i> Cancel</button>
-
+          <button type="reset" class="btn btn-secondary"> Cancel</button>
+          <a href="{{ page.base_url }}DiVE-examples/user-info-1/" class="btn btn-secondary pull-right">&larr; Previous</a>
         </div>
 
       </form>

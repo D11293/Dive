@@ -1,0 +1,88 @@
+<!-- Template
+  ================================================== -->
+  <section id="start-simple">
+    <hr class="soften">
+    <div class="page-header">
+      <h1>Start simple</h1>
+    </div>
+    <p class="lead">Make use of the Boilerplate (a super basic HTML template), or <a href="{{ page.base_url }}DiVE-doc/examples/index.html"> browse the examples</a> we've setup for you. We encourage you to iterate on these examples. Be inspired, reuse. And tell us about your experience!</p>
+
+    <p>The following HTML structure is the index.html file from the <a href="{{ page.base_url }}DiVE-boilerplate.zip">DiVE Boilerplate zip</a>.</p>
+
+{{#markdown}}
+```markup
+<!doctype html>
+<html> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Boilerplate</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- start DiVE CSS-->
+  <link rel="stylesheet" href="css/dive.css">
+  <!-- end DiVE CSS-->
+  <!-- start mandatory JQUERY -->
+  <script type="text/javascript"  src="js/jquery.js"></script> 
+  <!-- end mandatory JQUERY -->
+</head>
+<body>
+  <!-- START of your HTML code -->
+  <div class="navbar navbar-fixed-top ">
+    ... navigation-bar content ...
+  </div>
+  <div class="container ">
+    ... main content area ...
+  </div>  
+  <footer class="">
+    ... footer content ...
+  </footer>
+  <!-- END of your HTML code -->
+  <!-- start SCRIPT JAVASCRIPT -->
+  <!-- mandatory plugins -->
+  <script type="text/javascript" src="js/dive.js"></script> 
+  <!-- below the not mandatory plugins -->
+  <script type="text/javascript" src="js/plugins/datepicker.js"></script> 
+  <script type="text/javascript" src="js/plugins/ion.rangeSlider.js"></script> 
+  <script type="text/javascript" src="js/plugins/masonry.js"></script> 
+  <!-- end SCRIPT JAVASCRIPT -->
+</body>
+</html>
+```
+{{/markdown}}
+  </section>
+
+  <p> This is the standard way to create a DiVE project, including all CSS. It applies DiVE Library’s structure to the content.</p>
+  <p>
+    <h4>DiVE CSS and JS</h4>
+
+    There is only one CSS file for DiVE:
+{{#markdown}}
+```markup
+<link rel="stylesheet" href="css/dive.css">
+```
+{{/markdown}}
+
+These two DiVE Javascript files are mandatory for your project:
+{{#markdown}}
+```markup
+<script type="text/javascript"  src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/dive.js"></script>
+```
+{{/markdown}}
+
+
+
+    <p>The following Javascript files are not mandatory. Include them if you plan on using components as <a href="{{ page.base_url }}DiVE-doc/forms/index.html#datepicker">Datepicker</a>, <a href="{{ page.base_url }}DiVE-doc/forms/index.html#sliders">Slider</a> or <a href="{{ page.base_url }}DiVE-doc/layouts/index.html#masonry">Masonry</a>.</p>
+
+{{#markdown}}
+```markup
+<script type="text/javascript" src="js/plugins/datepicker.js"></script> 
+<script type="text/javascript" src="js/plugins/ion.rangeSlider.js"></script> 
+<script type="text/javascript" src="js/plugins/masonry.js"></script> 
+```
+{{/markdown}}
+
+

@@ -37,6 +37,9 @@
 {{/markdown}}
 
 
+  
+
+
   <hr class="dive-docs-separator">
 
 
@@ -249,15 +252,15 @@
   <p>By default, the pager centers links.</p>
   <div class="dive-docs-example">
     <ul class="pager">
-      <li><a href="#">Previous</a></li>
-      <li><a href="#">Next</a></li>
+      <li><a href="#" class="btn btn-secondary">Previous</a></li>
+      <li><a href="#" class="btn btn-secondary">Next</a></li>
     </ul>
   </div>
 {{#markdown}}
 ```markup
 <ul class="pager">
-  <li><a href="#">Previous</a></li>
-  <li><a href="#">Next</a></li>
+  <li><a href="#" class="btn btn-secondary">Previous</a></li>
+  <li><a href="#" class="btn btn-secondary">Next</a></li>
 </ul>
 ```
 {{/markdown}}
@@ -266,18 +269,18 @@
   <p>Alternatively, you can align each link to the sides:</p>
   <div class="dive-docs-example">
     <ul class="pager">
-      <li class="previous"><a href="#">&larr; Older</a></li>
-      <li class="next"><a href="#">Newer &rarr;</a></li>
+      <li class="previous"><a href="#" class="btn btn-secondary">&larr; Older</a></li>
+      <li class="next"><a href="#" class="btn btn-secondary">Newer &rarr;</a></li>
     </ul>
   </div>
 {{#markdown}}
 ```markup
 <ul class="pager">
   <li class="previous">
-    <a href="#">&larr; Older</a>
+    <a href="#" class="btn btn-secondary">&larr; Older</a>
   </li>
   <li class="next">
-    <a href="#">Newer &rarr;</a>
+    <a href="#"  class="btn btn-secondary">Newer &rarr;</a>
   </li>
 </ul>
 ```
@@ -287,18 +290,48 @@
   <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
   <div class="dive-docs-example">
     <ul class="pager">
-      <li class="previous disabled"><a href="#">&larr; Older</a></li>
-      <li class="next"><a href="#">Newer &rarr;</a></li>
+      <li class="previous disabled"><a href="#" class="btn btn-secondary">&larr; Older</a></li>
+      <li class="next"><a href="#" class="btn btn-secondary">Newer &rarr;</a></li>
     </ul>
   </div>
 {{#markdown}}
 ```markup
 <ul class="pager">
   <li class="previous disabled">
-    <a href="#">&larr; Older</a>
+    <a href="#"  class="btn btn-secondary">&larr; Older</a>
   </li>
   ...
 </ul>
+```
+{{/markdown}}
+
+
+
+<hr class="dive-docs-separator">
+
+ 
+  <h2>Jump To page</h2>
+This is a good alternative of standard pagination whenever the number of pages is high.
+ 
+ <div class="dive-docs-example">
+
+ 
+<form class="form-inline">
+  <label class="control-label" for="jumptopage">Jump to page</label>
+  <input type="text" id="jumptopage" placeholder="" maxlength="3" class="input-tiny">
+  /45
+  <button type="submit" class="btn">OK</button>
+</form>
+
+  </div>
+{{#markdown}}
+```markup
+<form class="form-inline">
+  <label class="control-label" for="jumptopage">Jump to page</label>
+  <input type="text" id="jumptopage" placeholder="" maxlength="3" class="input-tiny">
+  /#of pages
+  <button type="submit" class="btn">OK</button>
+</form>
 ```
 {{/markdown}}
 
