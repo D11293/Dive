@@ -82,113 +82,118 @@
 // ----------- CUSTOM DiVE
 // --------------------------------------------------
 
-.table-responsDive {
-  /*
-* { 
-  margin: 0; 
-  padding: 0; 
-}
-body { 
-  font: 14px/1.4 Georgia, Serif; 
-}
-#page-wrap {
-  margin: 50px;
-}
-p {
-  margin: 20px 0; 
-}
-
- 
-  table { 
-    width: 100%; 
-    border-collapse: collapse; 
-  }
- 
-  tr:nth-of-type(odd) { 
-    background: #eee; 
-  }
-  th { 
-    background: #333; 
-    color: white; 
-    font-weight: bold; 
-  }
-  td, th { 
-    padding: 6px; 
-    border: 1px solid #ccc; 
-    text-align: left; 
-  }
-
-*/
  
 
-    /*  @media 
-  only screen and (max-width: 760px),
-  (min-device-width: 768px) and (max-device-width: 1024px)  { */
+
+
+.table-responsDiVE {
+
+
 
  @media screen and (max-width: $screen-xs-max) {
+
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+
+
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+
+
+  tr {  border-top: 2px solid #ddd;  }
+
+  td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid $tableBorder; 
   
-    /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr { 
-      display: block; 
-    }
-    
+
+    position: relative;
+
+    padding-left:  50%; 
+
+overflow: hidden;
 
 
-    /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr { 
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
+  }
+  td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+       top: 0px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 0px; 
+
+        padding-top: 6px;
+
     
+      /*  Label the data   */
+    content: attr(data-title); 
+  height:100%; 
+     white-space: normal;
 
 
-    tr { border: 1px solid #ccc; }
-    
-    td { 
-      /* Behave  like a "row" */
-      border: none;
-      border-bottom: 1px solid #eee; 
-      position: relative;
-      padding-left: 50%; 
-    }
-    
-    td:before { 
-      /* Now like a table header */
-      position: absolute;
-      /* Top/left values mimic padding */
-      top: 6px;
-      left: 6px;
-      width: 45%; 
-      padding-right: 10px; 
-      white-space: nowrap;
-/*   Label the data   */
-      content: attr(data-title); 
-    }
-    
-     
- 
-  
-   // Special overrides for the striped tables
- 
-  > .table-striped {
-          td:nth-of-type(odd) { 
-   
-   background-color: transparent
-   /* $table-bg-accent;*/
-  } 
-      
-      /*   td:nth-of-type(even) { 
-   
-   background-color: transparent;
-  }  */
-
-    }
-    
-   
- 
+/* NO TEXT WRAP and DOTS at the end */
+ white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
 
 
   }
 
-    }
+
+
+  
+  // Special overrides for the striped tables
+ > .table-striped { 
+    td:nth-of-type(odd) { 
+      background-color: transparent;
+    } 
+    td:nth-of-type(even) { 
+     background-color:   $table-bg-accent;
+   }  
+
+ } 
+
+/* --- table BORDERED --- */
+> .table-bordered {
+    
+      td{   
+  
+ border-left: 1px solid $tableBorder; 
+       height:100%;
+        
+
+ @media screen and (max-width: 400px) {
+padding-left:53%;
+  }
+
+ 
+  } 
+   td:before {  
+   
+
+ display: block;
+       padding-right: 5px; 
+ border-right: 1px solid $tableBorder;
+ 
+ 
+
+  }
+
+ 
+
+}
+
+}
+
+}

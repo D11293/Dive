@@ -71,7 +71,6 @@
         </tr>
       </tbody>
     </table>
-
 ```
 {{/markdown}}
   <hr class="dive-docs-separator">
@@ -485,7 +484,257 @@
 ```
 {{/markdown}}
 
+  <hr class="dive-docs-separator">
 
+
+  <h2>Table highlight & sorting</h2>
+
+
+    <h4>Table sorting</h4>
+ 
+ <p>Apply contextual classes to the <code>th</code> tag, to display sorting icons</p>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>.sorting</code>
+        </td>
+        <td>Will activate the standard sorting icons.</td>
+      </tr>
+      <tr>
+        <td>
+          <code>.sorting_desc</code>
+        </td>
+        <td>Will activate the descending sorting icon.</td>
+      </tr>
+      <tr>
+        <td>
+          <code>.sorting_asc</code>
+        </td>
+        <td>Will activate the ascending sorting icon.</td>
+      </tr>
+       
+    </tbody>
+  </table>
+
+
+     </p>
+       <h4>Table highlight </h4>
+ <p>Use contextual classes to highlight table rows/columns</p>
+<p>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>.highlight</code> on a row
+        </td>
+        <td>Applying the class on a <code>tr</code>, will underline all the row.</td>
+      </tr>
+      <tr>
+        <td>
+          <code>.highlight</code> on a column
+        </td>
+        <td>Applying the class on a <code>th</code>, will underline all the column.</td>
+      </tr>
+      
+       
+    </tbody>
+  </table> 
+
+
+     </p>
+
+ <div class="dive-docs-example">
+ <table  class="table table-bordered table-hover table-striped">
+   <thead>
+    <tr>
+      <th class=""  >#</th>
+ <th class="sorting">Name</th>
+      <th class="sorting_desc highlight" >Surname</th>
+      <th class="sorting_asc">Account</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+      <td  >1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td  >2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr class="highlight">
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+       <td>3</td>
+       <td>Larry</td>
+      <td>The Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+   </div>
+{{#markdown}}
+```markup
+ <table class="table table-bordered table-hover table-striped">
+  <thead>
+    <tr>
+      <th class="sorting">Name</th>
+      <th class="sorting_desc highlight" >Surname</th>
+      <th class="sorting_asc">Account</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr class="highlight">
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <!-- more table lines -->
+  </tbody>
+</table>
+```
+{{/markdown}}
+
+ <hr>
+
+ <h3>Table highlight & sorting - functional example</h3>
+  <p>Below a functional example on how to activate the  row highlighted and the sorting icons .</p>
+
+
+  <div class="dive-docs-example">
+   <table  id="table-highlight-example" class="table table-bordered table-hover table-striped">
+    <thead>
+      <tr>
+        <th class="sorting">#</th>
+        <th class="sorting">Name</th>
+        <th class="sorting_desc" >Surname</th>
+        <th class="sorting_asc">Account</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr class="highlight">
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr >
+        <td>3</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@Thorn</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td  >Larry</td>
+        <td  >The Bird</td>
+        <td>@twitter</td>
+      </tr>
+      <tr class="highlight">
+        <td>6</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@Jac</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+{{#markdown}}
+```markup
+<table id="table-highlight-example" class="table table-bordered table-hover table-striped">
+    <thead>
+      <tr>
+        <th class="sorting">#</th>
+        <th class="sorting">Name</th>
+        <th class="sorting_desc" >Surname</th>
+        <th class="sorting_asc">Account</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr class="highlight">
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+  <!-- more TR elements -->
+    </tbody>
+  </table>
+```
+{{/markdown}}
+{{#markdown}}
+```javascript
+JAVASCRIPT CODE:
+// example of line highlight
+$('#table-highlight-example').on('click','tbody tr',function(e){
+  $(this).toggleClass('highlight');
+});
+
+// example of table SORTING arrows
+$('#table-highlight-example').on('click','th',function(e){
+  if ($(this).hasClass('sorting')){
+    $(this).removeClass('sorting').addClass('sorting_desc');
+  };
+  $(this).toggleClass('sorting_desc sorting_asc');   
+});
+```
+{{/markdown}}
+<p>
+ <span class="label label-info">Note!</span> Functional JS behaviours for sorting and highlight are not included in DiVE library. We suggest, to evaluate jquery plugins like: <a href="http://www.datatables.net/" target="_blank">Data Tables - Table plug-in for jQuery</a>
+</p>
   <hr class="dive-docs-separator">
 
 
@@ -580,5 +829,8 @@
 </table>
 ```
 {{/markdown}}
+
+
+
 
 </section>

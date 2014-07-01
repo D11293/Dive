@@ -1,0 +1,120 @@
+---
+base_url: "../../"
+url: /examples/responsive-table/
+title: Example Responsive table
+---
+
+<style>
+.row{ padding-top: 10px; padding-bottom: 10px; }
+</style>
+<div  style=" margin-right:20px; margin-left:20px;  padding:10px; clear:both; display:block;">
+
+ <h1>DiVE grid </h1>
+
+
+
+<div class="row  show-grid">
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+  <div class="col-md-1">.col-md-1</div>
+</div>
+<div class="row  show-grid">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row  show-grid">
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+<div class="row  show-grid">
+  <div class="col-md-6">.col-md-6</div>
+  <div class="col-md-6">.col-md-6</div>
+</div>
+
+
+
+
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row  show-grid">
+  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row show-grid">
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row show-grid">
+  <div class="col-xs-6">.col-xs-6</div>
+  <div class="col-xs-6">.col-xs-6</div>
+</div>
+
+
+ 
+ <hr class="dive-docs-separator">
+<h2> Responsive  utilities</h2>
+
+<div class="row show-grid" >
+ 
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    I'm content!
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    I'm content!
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    I'm content!
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    I'm content!
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+    I'm content!
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 visible-lg">
+    I'm content only visible on large devices!
+  </div>
+ 
+</div> 
+
+<div class="row show-grid" >
+ 
+  <div class="col-sm-9 col-lg-6 text-danger">
+    I am the main content.
+  </div>
+  <div class="col-sm-3 text-warning">
+    I am the main sidebar.
+  </div>
+  <div class="col-lg-3 visible-lg text-success">
+    I am the secondary sidebar that only shows up on LARGE devices.
+</div>
+ 
+</div>
+
+
+<div class="row show-grid" >
+  <div class="col-md-12 col-lg-12">
+   
+    <div class="visible-lg text-success">Large Devices!</div>
+    <div class="visible-md text-warning">Medium Devices!</div>
+    <div class="visible-xs visible-sm text-danger">Extra Small and Small Devices</div>
+ 
+</div>
+</div>
+
+
+</div>

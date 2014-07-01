@@ -10,7 +10,8 @@
 // Mobile-first defaults
 .row {
   @include make-row;
-}
+  clear: both;
+  }
 
 // Common styles for small and large grid columns
 .col-xs-1,

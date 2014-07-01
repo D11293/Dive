@@ -220,3 +220,62 @@ table th[class*="span"],
     background-color: darken($infoBackground, 5%);
   }
 }
+
+
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
+
+.table {
+  tbody tr {
+    &.highlight td, td.highlight {
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+      user-select: none;
+      background-color: $tableBackgroundSelected;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  td.highlight{
+      border-bottom: 1px solid $tableBorder;
+  }
+
+ 
+
+  th.sorting{
+     -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+      user-select: none;
+background: url("../img/sort_both.png") center right no-repeat ;
+cursor: pointer;
+  }
+
+  th.sorting_desc{
+        -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+      user-select: none;
+background: url("../img/sort_desc.png") center right no-repeat;
+cursor: pointer;
+  }
+    th.sorting_asc{
+     -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+      user-select: none;
+background: url("../img/sort_asc.png") center right no-repeat;
+cursor: pointer;
+  }
+}

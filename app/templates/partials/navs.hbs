@@ -119,26 +119,77 @@
 </ul>
 ```
 {{/markdown}}
-          <hr class="dive-docs-separator">
-          <h2>Dropdowns</h2>
-          <p>Add dropdown menus with a little extra HTML and JavaScript.</p>
-          <h3>Tabs with dropdowns</h3>
-          <div class="dive-docs-example">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Help</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+
+
+
+  <h3>Stacked pills, multi-level</h3>
+  <p>The stacked pills navigation support multi-level lists. just add your <code>ul</code> list inside your desired <code>li</code>. No need of further css classes.</p>
+  <div class="dive-docs-example">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#"><i class="fa fa-folder-open"></i> Start level 1</a></li>
+      <li><a href="#"><i class="fa fa-camera-retro"></i> Profile</a></li>
+      <li>
+        <ul>
+          <li><a href="#" class="active"><i class="fa fa-folder-open"></i> Start level 2</a></li>
+          <li><a href="#"><i class="fa fa-paw"></i> Profile</a></li>
+          <li><a href="#"><i class="fa fa-cube "></i> Messages</a></li>
+          <li>
+           <ul>
+             <li><a href="#" class="active"><i class="fa fa-folder-open"></i> Start level 3</a></li>
+             <li>
+              <ul>
+               <li><a href="#" class="active"><i class="fa fa-folder-open "></i> Start level 4</a></li>
+               <li ><a href="#"><i class="fa  fa-paper-plane-o"></i> Profile</a></li>
+               <li  class="active"><a href="#"><i class="fa fa-print"></i> Messages</a></li>
+               <li><a href="#"><i class="fa fa-folder"></i> End level 4</a></li>
+             </ul>
+           </li>
+           <li  class="active"><a href="#"><i class="fa fa-question"></i> Messages</a></li>
+           <li><a href="#"><i class="fa fa-folder"></i> End level 3</a></li>
+         </ul>
+       </li>
+       <li><a href="#"><i class="fa fa-microphone"></i> Messages</a></li>
+       <li><a href="#"><i class="fa fa-folder"></i> End level 2</a></li>
+     </ul>
+   </li>
+   <li><a href="#"><i class="fa fa-file-text-o"></i> Profile</a></li>
+   <li><a href="#"><i class="fa fa-cog"></i> Messages</a></li>
+   <li><a href="#"><i class="fa fa-folder"></i> End level 1</a></li>
+ </ul>
+</div>
+{{#markdown}}
+```markup
+<ul class="nav nav-pills nav-stacked">
+  <li>...</li>
+  <!-- LI list links -->
+  <ul>
+   <li>...</li>
+   <!-- LI list links -->
+ </ul>
+ <li>...</li>
+</ul>
+```
+{{/markdown}}
+<hr class="dive-docs-separator">
+<h2>Dropdowns</h2>
+<p>Add dropdown menus with a little extra HTML and JavaScript.</p>
+<h3>Tabs with dropdowns</h3>
+<div class="dive-docs-example">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Help</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
 {{#markdown}}
 ```markup
 <ul class="nav nav-tabs">

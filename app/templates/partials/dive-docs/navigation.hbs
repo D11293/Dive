@@ -15,11 +15,11 @@
   <li class="dropdown {{#compare page.nav  "==" "Components" }}active{{/compare}}">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <b class="caret"></b></a>
     <ul class="dropdown-menu">
-      <li><a href="{{ page.base_url }}DiVE-doc/browsing/index.html">Browsing</a></li>
-      <li><a href="{{ page.base_url }}DiVE-doc/buttons/index.html">Buttons</a></li>
-      <li><a href="{{ page.base_url }}DiVE-doc/content/index.html">Content</a></li>
-      <li><a href="{{ page.base_url }}DiVE-doc/feedback/index.html">Feedback &amp; Dialogue</a></li>
-      <li><a href="{{ page.base_url }}DiVE-doc/forms/index.html">Forms</a></li>
+      <li><a href="{{ page.base_url }}DiVE-doc/browsing/index.html" {{#compare basename  "==" "browsing" }}class="active"{{/compare}}>Browsing</a></li>
+      <li><a href="{{ page.base_url }}DiVE-doc/buttons/index.html" {{#compare basename  "==" "buttons" }}class="active"{{/compare}}>Buttons</a></li>
+      <li><a href="{{ page.base_url }}DiVE-doc/content/index.html" {{#compare basename  "==" "content" }}class="active"{{/compare}}>Content</a></li>
+      <li><a href="{{ page.base_url }}DiVE-doc/feedback/index.html" {{#compare basename  "==" "feedback" }}class="active"{{/compare}}>Feedback &amp; Dialogue</a></li>
+      <li><a href="{{ page.base_url }}DiVE-doc/forms/index.html" {{#compare basename  "==" "forms" }}class="active"{{/compare}}>Forms</a></li>
     </ul>
   </li>
   <li {{#compare page.nav  "==" "Examples" }}class="active"{{/compare}}>

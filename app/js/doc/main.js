@@ -147,24 +147,21 @@
     $body.scrollspy('refresh')
   })
 
-// Prevent default anchor click behavior
-  /*if ($('#scrollspy').length > 0) {
-    $("#navbarExample ul li a[href^='#']").on('click', function() {
-      e.stopPropagation();
 
-      var conteneur = $('.scrollspy-example'),
-          conteneurPos = conteneur.offset().top,
-          destination = $(this.hash).offset().top,
-          relativeDest = destination - conteneurPos,
-          speed = 300;
+// example of line highlight
+$('#table-highlight-example').on('click','tbody tr',function(e){
+  $(this).toggleClass('highlight');
+});
 
-      conteneur.animate({scrollTop: relativeDest}, speed);
+// example of table SORTING arrows
+$('#table-highlight-example').on('click','th',function(e){
+  if ($(this).hasClass('sorting')){
+    $(this).removeClass('sorting').addClass('sorting_desc');
+  };
+  $(this).toggleClass('sorting_desc sorting_asc');   
+});
 
-      console.log('Pos de base: ' + destination + ', Pos relative: ' + relativeDest + '');
 
-      return false;
-    });
-  }*/
 
 
 

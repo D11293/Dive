@@ -1954,6 +1954,50 @@
 
  
 //----------------------------------------------
+ //RESPONSIVE TABLE .table-responsDiVE
+ // set the same td height when responsive
+//----------------------------------------------
+// ============================================== 
+
+/*
+(function( $ ){
+  $.fn.setTDheight = function() { 
+  if( $('div.table-responsDiVE table').hasClass('table') ){
+ 
+
+$('div.table-responsDiVE table tr td').each(function() {
+
+ var heightLeftPseudo,heightRight,maxx;
+heightLeftPseudo = document.defaultView.getComputedStyle(this, ':before').getPropertyValue('height');
+ console.log(heightLeftPseudo);
+if(heightLeftPseudo){
+  // var aldo = $(this).getComputedStyle();
+heightLeftPseudo = heightLeftPseudo.replace("px", "");
+heightLeftPseudo = parseInt(heightLeftPseudo) + 15;
+heightRight = $(this).outerHeight();
+
+maxx = Math.max(heightLeftPseudo, heightRight);
+  //  $(this).append(' <br>right:'+heightRight+' - left:'+heightLeftPseudo +' - <strong>'+maxx+'</strong>');
+$(this).outerHeight(maxx);
+}
+
+ 
+
+});
+
+}
+    return this;
+  };
+})( $ );
+
+
+
+
+    $.fn.setTDheight();
+
+    */
+
+//----------------------------------------------
  //HIGHLIGHT the RADIo and CHECKBOX 
 //----------------------------------------------
 // ============================================== 
@@ -1975,16 +2019,13 @@ $("input[type='checkbox']:checked").each(
   // auto highlight checkbox
  $(this).parent().addClass(selClassCheck);
     }
-
 );
 
 //--- RADIO
- 
 $("input[type='radio']").click(function(){
   if( $(this).is(':checked')){
     $(this).parent().siblings().removeClass(selClassRadio);
       $(this).parent().removeClass(selClassRadio).addClass(selClassRadio);
-
   } 
 });
 //
@@ -1996,6 +2037,15 @@ $("input[type='radio']:checked").each(
 );
  
 
+//* highlight columns when the class highlight is on the TH */
+
+$("table.table thead tr th").each(function (i) {
+  if ($(this).hasClass('highlight')){
+   var columnIndex;
+   columnIndex = $(this).index() +1;
+   $(this).parent().parent().parent().find("td:nth-child("+columnIndex+")").addClass('highlight');
+ }
+}); 
 
 
 

@@ -175,13 +175,13 @@
 // Reposition the caret
 .btn .caret {
   margin-top: 8px;
-  margin-left: 0;
+  margin-left: 2px;
 }
 // Carets in other button sizes
 .btn-mini .caret,
 .btn-small .caret,
 .btn-large .caret {
-  margin-top: 6px;
+  margin-top:10px;
 }
 .btn-large .caret {
   border-left-width:  5px;

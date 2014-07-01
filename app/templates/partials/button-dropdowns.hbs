@@ -131,6 +131,94 @@
     In some cases&mdash;like mobile&mdash;dropdown menus will extend outside the viewport. You need to resolve the alignment manually or with custom JavaScript.</p>
   </div>
 
+
+ <h3>Multi-level dropdown</h3>
+  
+   <p>Button dropdowns can handle multi-level, with no limitation on the amount of levels.<br>Just include inside your desired link/list <code>li</code> or <code>ul</code> the calss <code> class="dropdown-menu"</code>.</p>
+
+
+  <div class="dive-docs-example">
+    <div class="btn-toolbar" style="margin: 0;">
+      <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">Primary <span class="caret"></span></button>
+        <ul class="dropdown-menu" >
+          <li><a href="#">Some action</a></li>
+          <li><a href="#">Some other action</a></li>
+          <li class="dropdown-submenu">
+            <a href="#">Hover me for more options</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Second level</a></li>
+              <li><a href="#">Second level</a></li>
+              <li class="dropdown-submenu">
+                <a href="#">Even More..</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">3rd level</a></li>
+                  <li class="dropdown-submenu"> 
+                    <a href="#">Even more level...</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">4th level</a></li>
+                      <li><a href="#">4th level</a></li>
+                      <li><a href="#">4th level</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">3rd level</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Second level</a></li>
+              <li><a href="#">Second level</a></li>
+              <li class="dropdown-submenu">
+                <a href="#">Even More..</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">3rd level</a></li>
+                  <li  class="dropdown-submenu"> 
+                    <a href="#">Even more level...</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">4th level</a></li>
+                      <li class="dropdown-submenu">
+                        <a href="#">Let's exaggerate..</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">5th level</a></li>
+                          <li><a href="#">5th level</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">4th level</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">3rd level</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Second level</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Some more action</a></li>
+        </ul>
+      </div><!-- /btn-group -->
+    </div><!-- /btn-toolbar -->
+  </div>
+
+{{#markdown}}
+``` markup
+<div class="btn-group">
+  <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+    <li><a href="#">link example</a></li>
+    <li><a href="#">link example</a></li>
+    <li class="dropdown-submenu"> 
+      <a href="#">link with sub-level</a>
+      <ul class="dropdown-menu">
+       <!-- dropdown menu links -->
+       <li><a href="#">link example</a></li>
+       <li><a href="#">link example</a></li>
+     </ul>
+   </li>
+ </ul>
+</div> 
+```
+{{/markdown}}
+
+
   <h3>Works with all button sizes</h3>
   <p>Button dropdowns work at any size:  <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code>.</p>
   <div class="dive-docs-example">
