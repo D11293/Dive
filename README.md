@@ -1,8 +1,16 @@
 # DiVE Library
-### version 3.2.0
+### version 1.5.0
 
-Now with Assemble!
-Now with 3 column layout!
+DiVE Library is a front-end component library for PMI.
+This project is based on the open-source front-end framework:
+You can have a look on the [deployed version on WAX agency server](http://agency-iis.sqli.com/pmi/dive/v1.2.0/) 
+
+## Copyright and license
+
+Copyright 2013 Twitter, Inc under [the Apache 2.0 license](LICENSE).
+
+This project is based on the open-source front-end framework: [Twitter Bootstrap](http://getbootstrap.com) 
+
 
 ## Get Started with this project
 
