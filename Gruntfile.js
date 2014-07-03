@@ -382,7 +382,8 @@ tasks: ['assemble']
                     '.htaccess',
                 'img/{,**/}*.{webp,gif,png,jpg,svg}',
             'fonts/{,*/}*.*',
-        'documentation/{,**/}*'
+        'documentation/{,**/}*',
+         'licenses/{,**/}*'
         ]
     },
     {

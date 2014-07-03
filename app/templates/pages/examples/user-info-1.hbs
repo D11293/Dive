@@ -3,184 +3,349 @@ base_url: "../../"
 url: /examples/user-info-1/
 title: "User info - Step 2"
 ---
+<style>
+.rating-input{
+  float:left;
+  padding-top: 0px;
+  padding-left:5px;
+  font-size:16px;
+}
+.ratinglabel{
+    float:left;
+}
+.rating-input span{
+  margin-right: 2px;
+  
+}
+.rating-clear{
+  font-size: 12px;
+}
+.form-horizontal{
+
+}
+</style>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 form-example">
-      <form>
-        <legend>Additional information</legend>
-        <fieldset class='row'>
-          <div class="control-group col-xs-6">
-            <div class="controls">
-              <div class="input-append">
-                <label class="control-label" for="lastName">job Postion: </label>
-                <input id="firstName" type="text" class="col-xs-11" placeholder="Type your position" required> <span class="add-on"> part of: </span>
-              </div>
-            </div>
-          </div>
-          <div class="control-group col-xs-6">
-            <div class="controls">
-              <label class="control-label" for="lastName">Team: </label>
-              <select required>
-                <option  selected="selected">All Teams</option>
-                <option>Team #1</option>
-                <option>Team #2</option>
-                <option>Team #3</option>
-                <option>Team #4</option>
-                <option>Team #5</option>
-              </select>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div class="row">
-            <div class="control-group col-xs-7">
-              Skills:
-            </div>
-            <div class="control-group col-xs-5 text-right">
-              <button class="btn btn-primary" type="button">Add Skill <i class="icon-plus-sign"></i></button>
-            </div>
-          </div>
-          <table class="table table-striped">
-            <tr>
-              <td>
-                <div class="controls">
-                  Name of the skill
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  <input type="checkbox" id="switch-md" class="switch-checkbox" checked/>
-                  <label class="switch switch-md" for="switch-md">
-                    <div class="switch-slider">
-                      <div class="switch-button">&nbsp;</div>
-                      <div class="switch-content switch-content--left"><span>Active</span></div>
-                      <div class="switch-content switch-content--right"><span>Inactive</span></div>
-                    </div>
-                  </label>
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  Rating:
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                </div>
-              </td>
-              <td> <a href="#"  class="pull-right">    Remove Skill <i class="icon-minus-sign"></i></a></td>
-            </tr>
+ <div class="row">
+   <div class="col-lg-8 col-lg-offset-2 form-example">
+ 
 
-<tr>
-              <td>
-                <div class="controls">
-                  Name of the skill
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  <input type="checkbox" id="switch-md1" class="switch-checkbox" />
-                  <label class="switch switch-md" for="switch-md1">
-                    <div class="switch-slider">
-                      <div class="switch-button">&nbsp;</div>
-                      <div class="switch-content switch-content--left"><span>Active</span></div>
-                      <div class="switch-content switch-content--right"><span>Inactive</span></div>
-                    </div>
-                  </label>
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  Rating:
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                </div>
-              </td>
-              <td> <a href="#"  class="pull-right">    Remove Skill <i class="icon-minus-sign"></i></a></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="controls">
-                  Name of the skill
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  <input type="checkbox" id="switch-md2" class="switch-checkbox" checked/>
-                  <label class="switch switch-md" for="switch-md2">
-                    <div class="switch-slider">
-                      <div class="switch-button">&nbsp;</div>
-                      <div class="switch-content switch-content--left"><span>Active</span></div>
-                      <div class="switch-content switch-content--right"><span>Inactive</span></div>
-                    </div>
-                  </label>
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  Rating:
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--active"></i>
-                </div>
-              </td>
-              <td> <a href="#"  class="pull-right">    Remove Skill <i class="icon-minus-sign"></i></a></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="controls">
-                  Name of the skill
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  <input type="checkbox" id="switch-md3" class="switch-checkbox" />
-                  <label class="switch switch-md" for="switch-md3">
-                    <div class="switch-slider">
-                      <div class="switch-button">&nbsp;</div>
-                      <div class="switch-content switch-content--left"><span>Active</span></div>
-                      <div class="switch-content switch-content--right"><span>Inactive</span></div>
-                    </div>
-                  </label>
-                </div>
-              </td>
-              <td>
-                <div class="controls">
-                  Rating:
-                  <i class="icon-star icon-star--active"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                  <i class="icon-star icon-star--inactive"></i>
-                </div>
-              </td>
-              <td> <a href="#"  class="pull-right">    Remove Skill <i class="icon-minus-sign"></i></a></td>
-            </tr>
-          </table>
-  <label> More informations: </label>
-     <textarea rows="5" class="col-xs-12"></textarea>
-        </fieldset>
-        <ul class="pager">
-          <li class="previous">
-            <a href="{{ page.base_url }}DiVE-examples/user-info/" class="btn btn-secondary">&larr; Previous</a>
-          </li>
+    
+    <form id="form-two" class="user-form" action="{{ page.base_url }}DiVE-examples/user-info-2/index.html" autocomplete="on"  >  
 
-          <li class="next"> 
-            <a href="{{ page.base_url }}DiVE-examples/user-info-2/" class="btn btn-secondary">Next &rarr;</a>
-          </li>
+<legend>Additional information <span class=" pull-right"><small class="text-warning">* required field</small></span></legend></legend>
+<fieldset class='row'>
+ <div class="control-group col-xs-6">
+   <div class="controls">
+     <div class="input-append">
+       <label class="control-label" for="jobPosition">job Postion: <span class="text-warning"><sup>*</sup></span></label>
+       <input id="jobPosition" name="jobPosition" type="text" class="col-xs-11" placeholder="Type your position" required> <span class="add-on"> part of: </span>
+     </div>
+   </div>
+ </div>
+ <div class="control-group col-xs-6">
+   <div class="controls">
+     <label class="control-label" for="YourTeam">Team: <span class="text-warning"><sup>*</sup></span></label>
+       <select name="YourTeam" id="YourTeam" onchange="" size="1"  required > <!-- required -->
+       <option value="">- Select your Team -</option>
+       <option value="All Teams">All Teams</option>
+       <option value="Team #1">Team #1</option>
+       <option value="Team #2">Team #2</option>
+       <option value="Team #3">Team #3</option>
+       <option value="Team #4">Team #4</option>
+       <option value="Team #5">Team #5</option>
+     </select>
+   </div>
+ </div>
+</fieldset>
+<fieldset>
+ <div class="row">
+   <div class="control-group col-xs-7">
+     Skills: <span class="text-warning"><sup>*</sup></span>
+   </div>
+   <div class="control-group col-xs-5 text-right">
+     <button name="addSkill" id="addSkill" class="btn btn-primary" type="button">Add Skill <i class="icon-plus-sign"></i></button>
+   </div>
+ </div>
+ <table id="tableSkills" class="table table-striped">
+ 
+
+  
 
 
+ 
+ <!--
+<tr id='lineskill"+number+"'> <td> <div class= 'controls'>  <input id='skillname"+number+"' name='skillname"+number+"' type='text' class='input-medium' style='background-color:transparent; padding-top:1px; padding-bottom:1px; line-height: 15px; height:23px;' placeholder='Skill name "+number+"' required autocomplete='on'></div> </td> <td> <div class='controls highlightedCheck'> <input name='checkbox"+number+"' type='checkbox' id='checkbox"+number+"' class= 'switch-checkbox'> <label class= 'switch switch-md' for= 'checkbox"+number+"'> <div class= 'switch-slider'> <div class= 'switch-button '>&nbsp;</div> <div class= 'switch-content switch-content--left '><span>Active</span></div> <div class= 'switch-content switch-content--right '><span>Inactive</span></div> </div> </label> </div> </td> <td>   <div class='form-horizontal'><div class='control-group'><label class='control-label' for='rating"+number+"'>Rating:</label><div class='controls'><input class='rating"+number+"' data-max='5' data-min='1' id='rating"+number+"' name='rating"+number+"' type='number' data-clearable='clear' /></div></div></div></td><td> <a href= '#' class='removeSkill pull-right'> Remove Skill <i class= 'icon-minus-sign '></i></a></td></tr>
+ -->
 
-        </ul>
-      </form>
-    </div>
-  </div>
+
+ 
+</table>
+<label for="moreinfo"> More informations: </label>
+<textarea name="moreinfo" id="moreinfo" rows="5" class="col-xs-12"></textarea>
+</fieldset>
+<ul class="pager">
+ <li class="previous">
+   <a id="previousBtn" href="{{ page.base_url }}DiVE-examples/user-info/index.html" class="btn btn-secondary">&larr; Previous</a>
+ </li>
+ <li class="next"> 
+  <input id="frompage" name="frompage" type="hidden"  value="2"/> 
+   <input id="nextBtn" type="submit" class="btn btn-secondary pull-right" value="Next &rarr;"/> 
+ </li>
+</ul>
+
+</form>
+</div>
+</div>
 </div> <!-- /container -->
 
+<script>
+/** START
+ * @author Kyle Florence <kyle[dot]florence[at]gmail[dot]com>
+ * @website https://github.com/kflorence/jquery-deserialize/
+ * @version 1.2.1
+ *
+ * Dual licensed under the MIT and GPLv2 licenses.
+ */
+ (function( jQuery, undefined ) {
+  var push = Array.prototype.push, rcheck = /^(?:radio|checkbox)$/i, rplus = /\+/g, rselect = /^(?:option|select-one|select-multiple)$/i,   rvalue = /^(?:button|color|date|datetime|datetime-local|email|hidden|month|number|password|range|reset|search|submit|tel|text|textarea|time|url|week)$/i;
+  function getElements( elements ) { return elements.map(function() { return this.elements ? jQuery.makeArray( this.elements ) : this; }).filter( ":input:not(:disabled)" ).get();}; function getElementsByName( elements ) { var current, elementsByName = {};   jQuery.each( elements, function( i, element ) { current = elementsByName[ element.name ];    elementsByName[ element.name ] = current === undefined ? element : ( jQuery.isArray( current ) ? current.concat( element ) : [ current, element ] ); }); return elementsByName;}; jQuery.fn.deserialize = function( data, options ) { var i, length, elements = getElements( this ), normalized = []; if ( !data || !elements.length ) { return this; }; if ( jQuery.isArray( data ) ) { normalized = data; } else if ( jQuery.isPlainObject( data ) ) { var key, value;    for ( key in data ) { jQuery.isArray( value = data[ key ] ) ? push.apply( normalized, jQuery.map( value, function( v ) { return { name: key, value: v };  })) : push.call( normalized, { name: key, value: value } ); } } else if ( typeof data === "string" ) { var parts; data = data.split( "&" );      for ( i = 0, length = data.length; i < length; i++ ) { parts = data[ i ].split( "=" ); push.call( normalized, {    name: decodeURIComponent( parts[ 0 ].replace( rplus, "%20" ) ), value: decodeURIComponent( parts[ 1 ].replace( rplus, "%20" ) ) }); } };   if ( !( length = normalized.length ) ) { return this; } var current, element, j, len, name, property, type, value,  change = jQuery.noop, complete = jQuery.noop, names = {}; options = options || {}; elements = getElementsByName( elements );   if ( jQuery.isFunction( options ) ) { complete = options; } else { change = jQuery.isFunction( options.change ) ? options.change : change; complete = jQuery.isFunction( options.complete ) ? options.complete : complete; };   for ( i = 0; i < length; i++ ) { current = normalized[ i ]; name = current.name; value = current.value; if ( !( element = elements[ name ] ) ) { continue; };     type = ( len = element.length ) ? element[ 0 ] : element; type = ( type.type || type.nodeName ).toLowerCase(); property = null;    if ( rvalue.test( type ) ) { if ( len ) { j = names[ name ]; element = element[ names[ name ] = ( j == undefined ) ? 0 : ++j ]; };   change.call( element, ( element.value = value ) ); } else if ( rcheck.test( type ) ) { property = "checked"; } else if ( rselect.test( type ) ) { property = "selected"; }; if ( property ) { if ( !len ) { element = [ element ]; len = 1; } for ( j = 0; j < len; j++ ) { current = element[ j ]; if ( current.value == value ) { change.call( current, ( current[ property ] = true ) && value ); } } } } complete.call( this ); return this;};})( jQuery );
+/** END
+ * @author Kyle Florence <kyle[dot]florence[at]gmail[dot]com>
+ * @website https://github.com/kflorence/jquery-deserialize/
+ * @version 1.2.1
+ *
+ * Dual licensed under the MIT and GPLv2 licenses.
+ */
+
+/** START
+ * @website https://github.com/javiertoledo/bootstrap-rating-input/blob/master/src/bootstrap-rating-input.js
+ *
+ *MIT License (MIT).
+ */
+(function ($) {
+  $.fn.rating = function () {
+    var element;
+    // A private function to highlight a star corresponding to a given value
+    function _paintValue(ratingInput, value) {
+      var selectedStar = $(ratingInput).find('[data-value=' + value + ']');
+      selectedStar.removeClass('icon-star icon-star--inactive').addClass('icon-star icon-star--active');
+      selectedStar.prevAll('[data-value]').removeClass('icon-star icon-star--inactive').addClass('icon-star icon-star--active');
+      selectedStar.nextAll('[data-value]').removeClass('icon-star icon-star--active').addClass('icon-star icon-star--inactive');
+    }
+    // A private function to remove the highlight for a selected rating
+    function _clearValue(ratingInput) {
+      var self = $(ratingInput);   self.find('[data-value]').removeClass('icon-star').addClass('icon-star icon-star--inactive');
+    }
+    // A private function to change the actual value to the hidden field
+    function _updateValue(input, val) {
+      input.val(val).trigger('change');
+      if (val === input.data('empty-value')) {
+        input.siblings('.rating-clear').hide();
+      }
+      else {
+        input.siblings('.rating-clear').show();
+      }
+    }
+    // Iterate and transform all selected inputs
+    for (element = this.length - 1; element >= 0; element--) {
+      var el, i,
+        originalInput = $(this[element]),
+        max = originalInput.data('max') || 5,
+        min = originalInput.data('min') || 0,
+        clearable = originalInput.data('clearable') || null,
+        stars = '';
+      // HTML element construction
+      for (i = min; i <= max; i++) {
+        // Create <max> empty stars
+        stars += ['<span class="icon-star icon-star icon-star--inactive" data-value="', i, '"></span>'].join('');
+      }
+      // Add a clear link if clearable option is set
+      if (clearable) {
+        stars += [
+          ' <a class="rating-clear" style="display:none;" href="javascript:void">',
+          '<span class="glyphicon glyphicon-remove"></span> ',
+          clearable,
+          '</a>'].join('');
+      }
+      // Clone with data and events the original input to preserve any additional data and event bindings.
+      var newInput = originalInput.clone(true)
+        .attr('type', 'hidden')
+        .data('max', max)
+        .data('min', min);
+      // Rating widget is wrapped inside a div
+      el = [
+        '<div class="rating-input">',
+        stars,
+        '</div>'].join('');
+      // Replace original inputs HTML with the new one
+      originalInput.replaceWith($(el).append(newInput));
+    }
+    // Give live to the newly generated widgets
+    $('.rating-input')
+      // Highlight stars on hovering
+      .on('mouseenter', '[data-value]', function () {
+        var self = $(this);
+        _paintValue(self.closest('.rating-input'), self.data('value'));
+      })
+      // View current value while mouse is out
+      .on('mouseleave', '[data-value]', function () {
+        var self = $(this),
+          input = self.siblings('input'),
+          val = input.val(),
+          min = input.data('min'),
+          max = input.data('max');
+        if (val >= min && val <= max) {
+          _paintValue(self.closest('.rating-input'), val);
+        } else {
+          _clearValue(self.closest('.rating-input'));
+        }
+      })
+      // Set the selected value to the hidden field
+      .on('click', '[data-value]', function (e) {
+        var self = $(this),
+          val = self.data('value'),
+          input = self.siblings('input');
+        _updateValue(input,val);
+        e.preventDefault();
+        return false;
+      })
+      // Remove value on clear
+      .on('click', '.rating-clear', function (e) {
+        var self = $(this),
+          input = self.siblings('input');
+        _updateValue(input, input.data('empty-value'));
+        _clearValue(self.closest('.rating-input'));
+        e.preventDefault();
+        return false;
+      })
+      // Initialize view with default value
+      .each(function () {
+        var input = $(this).find('input'),
+          val = input.val(),
+          min = input.data('min'),
+          max = input.data('max');
+        if (val !== "" && +val >= min && +val <= max) {
+          _paintValue(this, val);
+          $(this).find('.rating-clear').show();
+        }
+        else {
+          input.val(input.data('empty-value'));
+          _clearValue(this);
+        }
+      });
+  };
+/** END
+ * @website https://github.com/javiertoledo/bootstrap-rating-input/blob/master/src/bootstrap-rating-input.js
+ *
+ * MIT License (MIT).
+ */
+  // Auto apply conversion of number fields with class 'rating' into rating-fields
+  $(function () {
+    if ($('input.rating[type=number]').length > 0) {
+      $('input.rating[type=number]').rating();
+    }
+  });
+
+}(jQuery));
+
+
+
+function rollDice(){
+   return (Math.floor(Math.random()*5)+1);
+}
+/*----------*/
+  var goToURL =function(linkto){
+window.location.replace(linkto);
+ }
+/*----------*/
+
+var number =0;
+ var $form = $('form');
+ var data = $form.serialize();
+ var dataThisPage = location.search.substr(1);
+ 
+ //fill the form with actual data
+jQuery(function( $ ) {
+    $form.deserialize(dataThisPage);
+});
+
+
+
+$( '#previousBtn').on( "click", function( event ) {
+  //event.preventDefault();
+  datastring = $form.serialize()+"&"+dataThisPage;
+    $(this).attr("href",  $(this).attr("href")+"?"+ datastring );
+  });
+ 
+
+  /*
+ 
+$( '#previousBtn').on( "click", function( event ) {
+  event.preventDefault();
+//  console.log($form.serialize()+"&"+dataThisPage );
+ if(dataThisPage){
+// datastring = $form.serialize()+"&"+dataThisPage;
+  datastring = $form.serialize();
+}else{
+  datastring = $form.serialize();
+}
+ 
+  $(this).attr("href",  $(this).attr("href")+"?"+ datastring );
+ 
+
+
+newurl =  $(this).attr("href")+"?"+ datastring;
+alert(datastring);  
+ goToURL(newurl);
+
+  
+});
+  
+$('form').on('submit', function() {
+ event.preventDefault();
+
+datastring = $form.serialize()+"&"+dataThisPage;
+console.log(datastring);
+
+
+var newurl = $form.attr('action') + "?"+datastring;
+ goToURL(newurl);
+ 
+ //alert(newurl);
+
+});
+
+ 
+ */
+
+
+var functionalSkills = function(){
+
+  $("#tableSkills tr .removeSkill").on("click", function(){
+  console.log('remove');
+//  $(this).parent("tr").remove();
+$(this).parent().parent().remove();
+ 
+});  
+
+
+};
+
+ 
+ $("#addSkill").on("click", function () {
+  number = number +1;
+var newLine = "<tr id='lineskill"+number+"'> <td  width='30%'> <div class= 'controls'>  <input id='skillname"+number+"' name='skillname"+number+"' type='text' class='input-medium' style='background-color:transparent; padding-top:1px; padding-bottom:1px; line-height: 15px; height:23px;' placeholder='Skill name "+number+"' required autocomplete='on'></div> </td> <td  width='20%'> <div class='controls highlightedCheck'> <input name='checkbox"+number+"' type='checkbox' id='checkbox"+number+"' class= 'switch-checkbox'> <label class= 'switch switch-md' for= 'checkbox"+number+"'> <div class= 'switch-slider'> <div class= 'switch-button '>&nbsp;</div> <div class= 'switch-content switch-content--left '><span>Active</span></div> <div class= 'switch-content switch-content--right '><span>Inactive</span></div> </div> </label> </div> </td> <td  width='30%'>   <div class='form-horizontal'>  <span class='ratinglabel'>Rating:</span> <input class='rating"+number+"' data-max='5' data-min='1' id='rating"+number+"' name='rating"+number+"' type='number' data-clearable='clear' required /> </div></td><td  width='20%'> <a href= '#' class='removeSkill pull-right'> Remove Skill <i class= 'icon-minus-sign '></i></a></td></tr>"
+
+    $("#tableSkills").append(newLine);
+    //  return true;
+$('input.rating'+number).rating();
+
+functionalSkills();
+  });
+ 
+
+
+
+
+</script>
