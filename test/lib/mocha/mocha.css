@@ -45,7 +45,7 @@ body {
 #mocha h2 {
   font-size: 12px;
   font-weight: normal;
-  cursor: pointer;
+  cursor: waiter;
 }
 
 #mocha .suite {
